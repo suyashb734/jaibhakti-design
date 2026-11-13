@@ -1,0 +1,9 @@
+
+body{margin:0;-webkit-font-smoothing:antialiased}
+input::placeholder{color:rgba(58,43,26,0.34)}
+@keyframes dhFade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@keyframes dhGlow{0%,100%{opacity:.72;transform:scale(1)}50%{opacity:1;transform:scale(1.045)}}
+@keyframes dhSpin{to{transform:rotate(360deg)}}
+@keyframes dhRise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@keyframes jbMarquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes dhSoft{0%,100%{opacity:.5}50%{opacity:.9}}

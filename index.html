@@ -3,482 +3,174 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Jai Bhakti Design Hub</title>
-    <link rel="stylesheet" href="assets/brand/original-brand.css" />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>Jai Bhakti design preview</title>
+    <link rel="stylesheet" href="walkthroughs/assets/guide.css" />
     <style>
-      * {
-        box-sizing: border-box;
-      }
-      body {
-        margin: 0;
-        background: var(--jb-canvas);
-        color: var(--jb-ink);
-        font: 15px/1.7 var(--jb-font-body);
-      }
-      main {
-        max-width: 1180px;
-        margin: auto;
-        padding: 40px 30px 60px;
-      }
-      h1 {
-        font-size: 43px;
-        line-height: 1.2;
-        letter-spacing: -1.2px;
-        margin: 10px 0 18px;
-      }
-      h2 {
-        font-size: 25px;
-        margin: 30px 0 14px;
-        letter-spacing: -0.4px;
-      }
-      h3 {
-        margin: 0 0 10px;
-        font-size: 20px;
-      }
-      p {
-        margin: 0 0 16px;
-      }
-      .eyebrow {
-        font-size: 11px;
-        text-transform: uppercase;
-        letter-spacing: 1.8px;
-        color: #895929;
-        font-weight: 700;
-      }
-      .lead {
-        font-size: 18px;
-        max-width: 850px;
-        color: #6d513a;
-      }
-      .notice {
-        border: 1px solid #e1be7e;
-        background: #fff0ce;
-        padding: 18px 22px;
-        border-radius: 14px;
-        margin: 25px 0;
-        font-size: 14px;
-      }
-      .stats {
-        display: flex;
-        gap: 36px;
-        flex-wrap: wrap;
-        margin: 26px 0 35px;
-      }
-      .stats strong {
-        font-size: 30px;
-        line-height: 1.2;
-        display: block;
-      }
-      .stats span {
-        font-size: 12px;
-        color: #806347;
-      }
       .cards {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 18px;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 22px;
+        margin: 32px 0;
       }
       .card {
-        border: 1px solid #e6d4b9;
-        background: #fff;
-        border-radius: 17px;
+        background: white;
+        border: 1px solid #e6d4b8;
+        border-radius: 18px;
         overflow: hidden;
       }
-      .thumb {
-        height: 270px;
-        overflow: hidden;
-        background: #fff0d3;
-        border-bottom: 1px solid #e9d8c0;
-      }
-      .thumb img {
-        width: 100%;
-        height: auto;
+      .card img {
         display: block;
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+        object-position: top;
       }
-      .body {
+      .card div {
         padding: 22px;
       }
-      .body p {
-        font-size: 13px;
-        color: #74583e;
+      .card h2 {
+        margin-top: 0;
       }
-      .card a,
-      .links a {
-        font-size: 13px;
-        color: #874017;
-        text-underline-offset: 3px;
+      .notice {
+        padding: 20px;
+        border: 1px solid #e6c68c;
+        background: #fff0c8;
+        border-radius: 14px;
+      }
+      .primary {
+        display: inline-block;
+        background: var(--jb-cta);
+        color: var(--jb-cta-ink);
+        padding: 12px 20px;
+        border-radius: 30px;
+        text-decoration: none;
       }
       .links {
         display: flex;
-        gap: 15px;
+        gap: 20px;
+        align-items: center;
         flex-wrap: wrap;
-        margin: 20px 0 30px;
+        margin: 24px 0;
       }
-      .links .primary {
-        background: var(--jb-cta);
-        border-radius: 999px;
-        padding: 11px 18px;
-        color: var(--jb-cta-ink);
-        text-decoration: none;
-      }
-      .docs {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
-        margin: 22px 0;
-      }
-      .docs a {
-        display: block;
-        border: 1px solid #e5d3b6;
-        border-radius: 11px;
-        padding: 16px 18px;
-        background: white;
-        text-decoration: none;
-        color: var(--jb-link);
-        font-size: 14px;
-      }
-      .table-wrap {
-        overflow: auto;
-        border: 1px solid #e7d6ba;
-        border-radius: 12px;
-        background: white;
-      }
-      table {
-        border-collapse: collapse;
-        width: 100%;
-        font-size: 12px;
-      }
-      td,
-      th {
-        padding: 13px 14px;
-        text-align: left;
-        vertical-align: top;
-        border-bottom: 1px solid #f0e4d1;
-      }
-      th {
-        background: #f5e6ca;
-        font-weight: 700;
-      }
-      .pill {
-        padding: 4px 7px;
-        background: #fff0c6;
-        border-radius: 5px;
-        font-size: 10px;
-        font-weight: 700;
-      }
-      .pill.blocker {
-        background: #ffe6db;
-        color: #9d3c1d;
-      }
-      .pill.gap {
-        background: #eee7da;
-        color: #675640;
-      }
-      .foot {
-        color: #80674d;
-        font-size: 12px;
-        margin-top: 30px;
-      }
-      a:focus-visible {
-        outline: 3px solid #006699;
-        outline-offset: 3px;
-      }
-      @media (max-width: 800px) {
+      @media (max-width: 850px) {
         .cards {
           grid-template-columns: 1fr;
-        }
-        .thumb {
-          height: 320px;
-        }
-        .thumb img {
-          max-width: 390px;
-          margin: auto;
-        }
-        .docs {
-          grid-template-columns: 1fr;
-        }
-        main {
-          padding: 28px 20px;
-        }
-        h1 {
-          font-size: 33px;
-        }
-        .stats {
-          gap: 23px;
         }
       }
     </style>
   </head>
   <body>
-    <main>
-      <div class="eyebrow">
-        Versioned product design and engineering handoff
-      </div>
-      <a class="jb-brand" href="index.html" aria-label="Jai Bhakti"
+    <header>
+      <a
+        class="jb-brand"
+        href="index.html"
+        aria-label="Jai Bhakti design preview"
         ><img src="assets/brand/temple-mark.svg" alt="" /><span lang="hi"
           >जय भक्ति</span
         ></a
       >
-      <h1>Jai Bhakti Design Hub</h1>
-      <p class="lead">
-        One product contract, separate web and mobile interfaces, and a
-        traceable record of what changed before the tech team builds it.
+      <nav aria-label="Resources">
+        <a href="design-system/index.html">Styling reference</a><a href="catalogue/index.html">Live seva catalogue</a>
+        <a href="walkthroughs/index.html">Walkthroughs</a
+        ><a href="explorations/index.html">Explorations</a
+        ><a href="https://github.com/suyashb734/jaibhakti-design"
+          >GitHub documentation ↗</a
+        >
+      </nav>
+    </header>
+    <main>
+      <p class="eyebrow">
+        Owner-selected original complete design · Separate proposals
       </p>
-      <div class="notice">
-        <b>Shared draft workspace.</b> Explorations and the current Daan Seva
-        candidate are open for review. The original HTML was the first final
-        design given for website execution. No new Daan Seva handoff release has
-        been issued; main holds the current working drafts.
-      </div>
+      <h1>The original Jai Bhakti design, end to end</h1>
+      <p class="intro">
+        Walk through the design first supplied for website execution, review the
+        proposed booking updates experience and compare ideas still being
+        explored.
+      </p>
+      <p class="notice">
+        The original <strong>Jai Bhakti App.html</strong> was the first final
+        design handed over for execution on jaibhakti.com. The newer 49-state
+        app candidate and layout explorations remain drafts; no new versioned
+        engineering handoff has been issued.
+      </p>
       <div class="links">
-        <a class="primary" href="walkthroughs/index.html"
-          >Start guided walkthrough</a
+        <a href="catalogue/index.html">Three launched sevas — images and details →</a>
+        <a class="primary" href="walkthroughs/index.html#current/0"
+          >Walk through the original baseline →</a
+        ><a href="walkthroughs/index.html#all-app/0"
+          >Browse original and proposed states</a
         >
-        <a href="explorations/index.html">Browse explorations</a>
-        <a href="catalogue/index.html"
-          >Three launched sevas — images and details</a
-        >
-        <a href="START_HERE.md">Start here — project and agent guide</a>
-      </div>
-      <div class="stats">
-        <div><strong>12</strong><span>Original entry states</span></div>
-        <div><strong>6</strong><span>Live web observations</span></div>
-        <div><strong>49</strong><span>App candidate states</span></div>
-        <div><strong>22</strong><span>Source acceptance criteria</span></div>
-        <div><strong>15</strong><span>Open inconsistencies</span></div>
       </div>
       <div class="cards">
         <article class="card">
-          <div class="thumb">
-            <img
-              src="references/initial-prototype/screens/home.png"
-              alt="Original Jai Bhakti home reference"
-            />
-          </div>
-          <div class="body">
-            <div class="eyebrow">First final design · execution baseline</div>
-            <h3>Original complete design</h3>
+          <img
+            src="references/initial-prototype/screens/home.png"
+            alt="First final Jai Bhakti design home"
+          />
+          <div>
+            <p class="eyebrow">Current baseline · Original complete UI</p>
+            <h2>Current design — original journey</h2>
             <p>
-              The first final design given for execution on jaibhakti.com,
-              preserved unchanged with 12 advertised entry states.
+              All 12 advertised entry states from the first final design
+              supplied for website execution.
             </p>
-            <a href="references/initial-prototype/Jai%20Bhakti%20App.html"
-              >Open original prototype ↗</a
+            <a href="previews/mobile/index.html"
+              >Open original listing, cart and checkout →</a
             >
           </div>
         </article>
         <article class="card">
-          <div class="thumb">
-            <img
-              src="references/live-web/2026-11-13/observed-home.png"
-              alt="Public live web observation"
-            />
-          </div>
-          <div class="body">
-            <div class="eyebrow">Observed 13 November 2026</div>
-            <h3>Live web</h3>
+          <img
+            src="references/daan-seva-candidate/Revised_Designs/screens/03_Bookings_Nirantar.png"
+            alt="Draft My Bookings interface"
+          />
+          <div>
+            <p class="eyebrow">Draft · JB-CHG-0001</p>
+            <h2>Proposed booking updates</h2>
             <p>
-              Public home, active product details and initial checkout views.
-              Later payment stages remain unverified.
+              Booking, ongoing sevas, dated history, media, beneficiaries and
+              payment-recovery samples.
             </p>
-            <a href="references/live-web/2026-11-13/observations.json"
-              >Observation manifest ↗</a
-            >
+            <a href="walkthroughs/index.html#app/0">Review the later proposal →</a>
+            <p>
+              <a href="explorations/EXP-0001/draft/Prototype.html"
+                >Open proposed draft ↗</a
+              >
+            </p>
           </div>
         </article>
         <article class="card">
-          <div class="thumb">
-            <img
-              src="references/daan-seva-candidate/Revised_Designs/screens/03_Bookings_Nirantar.png"
-              alt="Draft Daan Seva bookings design"
-            />
-          </div>
-          <div class="body">
-            <div class="eyebrow">Draft candidate</div>
-            <h3>Daan Seva update</h3>
+          <img
+            src="references/daan-seva-candidate/Revised_Designs/screens/06_Bookings_Sections.png"
+            alt="Unselected sections alternative"
+          />
+          <div>
+            <p class="eyebrow">Active · EXP-0001</p>
+            <h2>My Bookings explorations</h2>
             <p>
-              49 design states, sample interactions and the earlier change
-              brief.
+              Compare category tabs and combined sections. Neither option has
+              been selected.
             </p>
-            <a
-              href="references/daan-seva-candidate/Revised_Designs/Gallery.html"
-              >Screen gallery ↗</a
-            >
-            ·
-            <a
-              href="references/daan-seva-candidate/Revised_Designs/Prototype.html"
-              >Prototype ↗</a
-            >
+            <a href="explorations/index.html">Compare the alternatives →</a>
           </div>
         </article>
       </div>
-      <div class="links">
-        <a class="primary" href="previews/mobile/Prototype.html"
-          >Working mobile prototype</a
-        ><a href="README.md">Repository guide</a
-        ><a href="previews/web/index.html">Web design baseline</a
-        ><a href="PLANS.md">Migration plan</a
-        ><a href="registries/inconsistencies.json"
-          >Structured inconsistency register</a
-        >
-      </div>
-      <h2>Choose what to review</h2>
-      <div class="docs">
-        <a href="explorations/index.html"
-          >Explorations — ideas and alternatives →</a
-        >
-        <a href="previews/mobile/Prototype.html">Integrated mobile draft →</a>
-        <a href="releases/README.md"
-          >Original final handoff and future releases →</a
-        >
-        <a href="https://github.com/users/suyashb734/projects/1"
-          >Private project and work queue →</a
-        >
-      </div>
-      <h2>Management and handoff</h2>
-      <div class="docs">
-        <a href="docs/00_Review_the_Whole_Design.md"
-          >Run and review the whole design →</a
-        >
-        <a href="docs/06_Shared_Design_Workspace.md"
-          >Shared explorations, agents and finalization →</a
-        >
-        <a href="docs/01_Source_Audit.md">Source audit and inconsistencies →</a
-        ><a href="docs/02_Web_and_Mobile_Model.md"
-          >Web and mobile responsibilities →</a
-        ><a href="docs/03_GitHub_Workflow.md"
-          >GitHub review and release workflow →</a
-        ><a href="docs/04_Measurement_Protocol.md"
-          >Measurement and evidence protocol →</a
-        ><a href="docs/05_Engineering_Handoff.md">Engineering handoff gate →</a
-        ><a href="changes/JB-CHG-0001/README.md"
-          >First tracked design change →</a
-        >
-      </div>
-      <h2>Decisions to resolve</h2>
       <p>
-        Assign the owner roles and link decisions to the relevant change. A
-        scoped blocker prevents that part of the handoff; unrelated design work
-        can continue.
+        <a href="previews/mobile/Gallery.html"
+          >View the full frozen reference gallery ↗</a
+        >
+        · <a href="https://jaibhakti.com">Open the live web app ↗</a>
       </p>
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>ID</th>
-              <th>Priority</th>
-              <th>Issue</th>
-              <th>Owner role</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>INC-001</td>
-              <td><span class="pill blocker">blocker</span></td>
-              <td>Recurring duration contradicts itself</td>
-              <td>Product and payments</td>
-            </tr>
-            <tr>
-              <td>INC-002</td>
-              <td><span class="pill blocker">blocker</span></td>
-              <td>Pause and cancellation ownership differ</td>
-              <td>Product and payments</td>
-            </tr>
-            <tr>
-              <td>INC-003</td>
-              <td><span class="pill blocker">blocker</span></td>
-              <td>Temple and product identity have drifted</td>
-              <td>Product and operations</td>
-            </tr>
-            <tr>
-              <td>INC-004</td>
-              <td><span class="pill blocker">blocker</span></td>
-              <td>Recurring pricing must be configurable</td>
-              <td>Product and payments</td>
-            </tr>
-            <tr>
-              <td>INC-005</td>
-              <td><span class="pill blocker">blocker</span></td>
-              <td>Sankalp and family rules are unresolved across sources</td>
-              <td>Product and operations</td>
-            </tr>
-            <tr>
-              <td>INC-006</td>
-              <td><span class="pill blocker">blocker</span></td>
-              <td>
-                Web bookings do not yet have a documented app ownership contract
-              </td>
-              <td>Product and engineering</td>
-            </tr>
-            <tr>
-              <td>INC-007</td>
-              <td><span class="pill blocker">blocker</span></td>
-              <td>
-                Booking receipt and performed seva certificate are different
-                artifacts
-              </td>
-              <td>Product and operations</td>
-            </tr>
-            <tr>
-              <td>INC-008</td>
-              <td><span class="pill gap">gap</span></td>
-              <td>
-                The candidate is a prototype with separate scenario branches
-              </td>
-              <td>Design and engineering</td>
-            </tr>
-            <tr>
-              <td>INC-009</td>
-              <td><span class="pill decision">decision</span></td>
-              <td>Support configuration differs between live and candidate</td>
-              <td>Operations</td>
-            </tr>
-            <tr>
-              <td>INC-010</td>
-              <td><span class="pill blocker">blocker</span></td>
-              <td>Elapsed time is not a fulfilment event</td>
-              <td>Operations and engineering</td>
-            </tr>
-            <tr>
-              <td>INC-011</td>
-              <td><span class="pill blocker">blocker</span></td>
-              <td>
-                Initial live checkout displays the first amount without the
-                regular rate
-              </td>
-              <td>Product and payments</td>
-            </tr>
-            <tr>
-              <td>INC-012</td>
-              <td><span class="pill decision">decision</span></td>
-              <td>Original-final branding selected; alignment under review</td>
-              <td>Design</td>
-            </tr>
-            <tr>
-              <td>INC-013</td>
-              <td><span class="pill decision">decision</span></td>
-              <td>Information architecture remains a comparison</td>
-              <td>Product and design</td>
-            </tr>
-            <tr>
-              <td>INC-014</td>
-              <td><span class="pill blocker">blocker</span></td>
-              <td>Legacy mandate migration is unspecified</td>
-              <td>Product and payments</td>
-            </tr>
-            <tr>
-              <td>INC-015</td>
-              <td><span class="pill blocker">blocker</span></td>
-              <td>Source confirmation and release approval are different</td>
-              <td>Product, design and engineering</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="foot">
-        Original imports are preserved with hashes. Future screenshots are
-        generated review evidence; approved release packages are versioned
-        separately from implementation and live verification.
+      <p class="hint">
+        All prototype bookings, payments and media are demonstrations. Frozen
+        thumbnails can differ from current editable source. Documentation links
+        may require access to the private GitHub repository.
+      </p>
+      <p class="hint" id="snapshot">
+        Review snapshot: checked-out source revision. Public hosting does not constitute
+        design approval.
       </p>
     </main>
   </body>

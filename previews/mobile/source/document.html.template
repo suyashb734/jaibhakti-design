@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="assets/original/resources.js"></script>
+<meta charset="utf-8">
+<title>Jai Bhakti · working prototype</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<script src="assets/original/dc-runtime.js"></script>
+<meta name="hz:slide-selector" content="[data-canvas-width]"><meta name="hz:canvas-width" content="393"><meta name="hz:canvas-height" content="852">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<script src="assets/original/starter-components.js"></script>
+<style>[[JB:FONTS]]</style>
+<style>[[JB:STYLES]]</style>
+</helmet>
+<div style="width: 393px; height: 852px; position: relative; overflow: hidden; font-family: 'Poppins', 'Noto Sans Devanagari', system-ui, sans-serif; color: #3A2B1A; background-color: #FFFDF9; font-size: 14px; line-height: 20px;" data-canvas-width="393" data-canvas-height="852" data-document-role="page" data-label="Working prototype · press Play">
+
+<svg width="0" height="0" style="position: absolute; width: 0; height: 0;" aria-hidden="true" focusable="false">
+<defs>
+<linearGradient id="dGold" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFF3C4"></stop><stop offset="0.45" stop-color="#FFC93C"></stop><stop offset="1" stop-color="#E08A00"></stop></linearGradient>
+<linearGradient id="dGoldDeep" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFD66B"></stop><stop offset="1" stop-color="#B7791F"></stop></linearGradient>
+<linearGradient id="dSaffron" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFB547"></stop><stop offset="0.55" stop-color="#FF7A00"></stop><stop offset="1" stop-color="#D9480F"></stop></linearGradient>
+<linearGradient id="dSindoor" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F0643A"></stop><stop offset="1" stop-color="#9E2A0B"></stop></linearGradient>
+<linearGradient id="dFlame" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#FF5A00"></stop><stop offset="0.5" stop-color="#FFB300"></stop><stop offset="1" stop-color="#FFF4B8"></stop></linearGradient>
+<radialGradient id="dHalo" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#FFE9A0" stop-opacity="0.95"></stop><stop offset="0.5" stop-color="#FFB547" stop-opacity="0.35"></stop><stop offset="1" stop-color="#FF8A00" stop-opacity="0"></stop></radialGradient>
+<linearGradient id="dClay" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#D2743A"></stop><stop offset="1" stop-color="#7A2E10"></stop></linearGradient>
+<radialGradient id="dDoor" cx="0.5" cy="0.7" r="0.7"><stop offset="0" stop-color="#FFFBE0"></stop><stop offset="0.5" stop-color="#FFD24D"></stop><stop offset="1" stop-color="#E86A00"></stop></radialGradient>
+<radialGradient id="bMaroon" cx="0.5" cy="0.35" r="0.8"><stop offset="0" stop-color="#A8350E"></stop><stop offset="0.55" stop-color="#5A1606"></stop><stop offset="1" stop-color="#2A0802"></stop></radialGradient>
+<radialGradient id="bNight" cx="0.5" cy="0.35" r="0.8"><stop offset="0" stop-color="#3B3470"></stop><stop offset="0.55" stop-color="#1A1538"></stop><stop offset="1" stop-color="#0B0918"></stop></radialGradient>
+<radialGradient id="bSaffron" cx="0.5" cy="0.35" r="0.8"><stop offset="0" stop-color="#F07A1A"></stop><stop offset="0.55" stop-color="#9A3208"></stop><stop offset="1" stop-color="#4A1404"></stop></radialGradient>
+<radialGradient id="bCrimson" cx="0.5" cy="0.35" r="0.8"><stop offset="0" stop-color="#C62E22"></stop><stop offset="0.55" stop-color="#6E0F0C"></stop><stop offset="1" stop-color="#330605"></stop></radialGradient>
+<radialGradient id="bDusk" cx="0.5" cy="0.35" r="0.8"><stop offset="0" stop-color="#7A3B72"></stop><stop offset="0.55" stop-color="#3A1638"></stop><stop offset="1" stop-color="#1A0819"></stop></radialGradient>
+<radialGradient id="bIndigo" cx="0.5" cy="0.35" r="0.8"><stop offset="0" stop-color="#2A5A8C"></stop><stop offset="0.55" stop-color="#12304F"></stop><stop offset="1" stop-color="#081626"></stop></radialGradient>
+<radialGradient id="dRose" cx="0.4" cy="0.35" r="0.7"><stop offset="0" stop-color="#FF7A8C"></stop><stop offset="0.6" stop-color="#D81B3C"></stop><stop offset="1" stop-color="#8A0A22"></stop></radialGradient>
+<linearGradient id="dLeaf" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8FE08F"></stop><stop offset="1" stop-color="#1E7A3A"></stop></linearGradient>
+<radialGradient id="dTeal" cx="0.45" cy="0.4" r="0.6"><stop offset="0" stop-color="#5EEAD4"></stop><stop offset="1" stop-color="#0E6377"></stop></radialGradient>
+<linearGradient id="lPink" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFC4D4"></stop><stop offset="1" stop-color="#E8527A"></stop></linearGradient>
+<linearGradient id="lGold" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFE9A0"></stop><stop offset="1" stop-color="#D99A06"></stop></linearGradient>
+<linearGradient id="lOil" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F8D35A"></stop><stop offset="1" stop-color="#A86A12"></stop></linearGradient>
+<linearGradient id="dCopper" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F7B27A"></stop><stop offset="0.5" stop-color="#D0702F"></stop><stop offset="1" stop-color="#8A3A12"></stop></linearGradient>
+<radialGradient id="dLaddoo" cx="0.35" cy="0.3" r="0.75"><stop offset="0" stop-color="#FFE08A"></stop><stop offset="0.55" stop-color="#FF9F1C"></stop><stop offset="1" stop-color="#C75A00"></stop></radialGradient>
+<radialGradient id="dMari" cx="0.35" cy="0.3" r="0.75"><stop offset="0" stop-color="#FFE580"></stop><stop offset="1" stop-color="#F59E0B"></stop></radialGradient>
+<radialGradient id="dMari2" cx="0.35" cy="0.3" r="0.75"><stop offset="0" stop-color="#FFC069"></stop><stop offset="1" stop-color="#E8590C"></stop></radialGradient>
+<radialGradient id="dBlue" cx="0.35" cy="0.3" r="0.75"><stop offset="0" stop-color="#B9CCFF"></stop><stop offset="1" stop-color="#3346B8"></stop></radialGradient>
+<radialGradient id="dWhite" cx="0.35" cy="0.3" r="0.75"><stop offset="0" stop-color="#FFFFFF"></stop><stop offset="1" stop-color="#E6DCC4"></stop></radialGradient>
+<radialGradient id="dCoin" cx="0.35" cy="0.25" r="0.85"><stop offset="0" stop-color="#FFF4C7"></stop><stop offset="0.45" stop-color="#FFC93C"></stop><stop offset="1" stop-color="#C77A00"></stop></radialGradient>
+<radialGradient id="dCoinSaffron" cx="0.35" cy="0.25" r="0.85"><stop offset="0" stop-color="#FFD08A"></stop><stop offset="0.5" stop-color="#FF7A00"></stop><stop offset="1" stop-color="#B8390A"></stop></radialGradient>
+</defs>
+</svg>
+
+<div style="position: absolute; left: 0; top: 0; width: 393px; height: 852px; pointer-events: none; background-image: radial-gradient(100% 44% at 50% 0%, #FFEEC0 0%, rgba(255,214,102,0.4) 40%, rgba(255,253,249,0) 80%), radial-gradient(70% 34% at 100% 100%, rgba(255,166,74,0.16) 0%, rgba(255,166,74,0) 70%), radial-gradient(rgba(150,70,0,0.035) 1px, rgba(0,0,0,0) 1.4px); background-size: 100% 100%, 100% 100%, 14px 14px;"></div>
+<div style="position: absolute; top: -120px; right: -110px; width: 340px; height: 340px; border-radius: 50%; pointer-events: none; background: radial-gradient(circle, rgba(255,201,60,0.5) 0%, rgba(255,138,61,0.14) 55%, rgba(255,138,61,0) 72%); filter: blur(6px); {{glow}}"></div>
+<div style="position: absolute; top: 420px; left: -160px; width: 320px; height: 320px; border-radius: 50%; pointer-events: none; background: radial-gradient(circle, rgba(255,214,102,0.26) 0%, rgba(255,214,102,0) 70%); filter: blur(8px);"></div>
+<svg sc-camel-view-box="0 0 220 220" width="300" height="300" style="position: absolute; right: -110px; top: -90px; opacity: 0.13; pointer-events: none;" fill="none" stroke="#D08A2E" stroke-width="0.8" aria-hidden="true"><circle cx="110" cy="110" r="104"></circle><circle cx="110" cy="110" r="86"></circle><circle cx="110" cy="110" r="64" stroke-dasharray="2 3"></circle><circle cx="110" cy="110" r="40"></circle><circle cx="110" cy="110" r="14"></circle><ellipse cx="110" cy="110" rx="18" ry="84"></ellipse><ellipse cx="110" cy="110" rx="18" ry="84" transform="rotate(22.5 110 110)"></ellipse><ellipse cx="110" cy="110" rx="18" ry="84" transform="rotate(45 110 110)"></ellipse><ellipse cx="110" cy="110" rx="18" ry="84" transform="rotate(67.5 110 110)"></ellipse><ellipse cx="110" cy="110" rx="18" ry="84" transform="rotate(90 110 110)"></ellipse><ellipse cx="110" cy="110" rx="18" ry="84" transform="rotate(112.5 110 110)"></ellipse><ellipse cx="110" cy="110" rx="18" ry="84" transform="rotate(135 110 110)"></ellipse><ellipse cx="110" cy="110" rx="18" ry="84" transform="rotate(157.5 110 110)"></ellipse></svg>
+
+[[JB:SCREENS]]</x-dc>
+<script type="text/x-dc" data-dc-script="" data-props="{&quot;start&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;home&quot;,&quot;sevaOrder&quot;,&quot;bhent&quot;,&quot;detail&quot;,&quot;cart&quot;,&quot;pay&quot;,&quot;success&quot;,&quot;seva&quot;,&quot;sevaSetup&quot;,&quot;mandate&quot;,&quot;sevaSuccess&quot;,&quot;profile&quot;],&quot;default&quot;:&quot;home&quot;},&quot;still&quot;:{&quot;editor&quot;:null},&quot;$preview&quot;:{&quot;width&quot;:393,&quot;height&quot;:852}}">[[JB:LOGIC]]</script>
+
+
+<script src="assets/original/preview-navigation.js"></script>
+</body></html>

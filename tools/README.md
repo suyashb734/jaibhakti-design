@@ -26,7 +26,7 @@ metadata, following [Google's guidance](https://developers.google.com/search/doc
 python3 -m venv .venv
 .venv/bin/pip install -r requirements-dev.txt
 .venv/bin/python -m playwright install chromium
-.venv/bin/python tools/capture_design_evidence.py --source working-mobile --screen JB-APP-001
+.venv/bin/python tools/capture_design_evidence.py --source working-mobile --screen JB-APP-050
 .venv/bin/python tools/capture_design_evidence.py --source initial
 ```
 
@@ -40,3 +40,10 @@ validates relevant main changes, builds a clean export and calls
 `sync_preview_checkout.py` against the dedicated public checkout. The helper checks
 the destination, preserves uncommitted work and verifies asset checksums. Pages
 refreshes the same shared URL. See [the connected workflow](../docs/07_Preview_and_Collaboration.md).
+
+`build_original_design.py` assembles the editable original screen fragments into
+the ready-to-open current Prototype.html. Use --check to detect stale output.
+`build_style_guide.py` generates design-system/index.html from measured original
+component recipes. Use --check before committing styling-reference changes.
+The capture source working-mobile now renders the 12 restored original states;
+proposal renders the separate 49-state candidate under EXP-0001.

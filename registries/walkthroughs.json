@@ -1,6 +1,75 @@
 {
   "tours": [
     {
+      "id": "current",
+      "title": "Current design \u2014 original complete journey",
+      "status": "Owner-selected original UI baseline",
+      "summary": "The original listing, offering details, cart, checkout, recurring setup and confirmation are the design baseline. All interactions are local demonstrations.",
+      "context": "changes/JB-CHG-0002/README.md",
+      "steps": [
+        {
+          "screen_id": "JB-APP-050",
+          "label": "Home and seva listing",
+          "note": "Preserved original design. Compare with its unchanged SRC-INITIAL reference; later proposals are separate."
+        },
+        {
+          "screen_id": "JB-APP-052",
+          "label": "One-time seva listing",
+          "note": "Preserved original design. Compare with its unchanged SRC-INITIAL reference; later proposals are separate."
+        },
+        {
+          "screen_id": "JB-APP-053",
+          "label": "Offering detail",
+          "note": "Preserved original design. Compare with its unchanged SRC-INITIAL reference; later proposals are separate."
+        },
+        {
+          "screen_id": "JB-APP-054",
+          "label": "Cart and sankalp",
+          "note": "Preserved original design. Compare with its unchanged SRC-INITIAL reference; later proposals are separate."
+        },
+        {
+          "screen_id": "JB-APP-055",
+          "label": "Checkout and payment",
+          "note": "Preserved original design. Compare with its unchanged SRC-INITIAL reference; later proposals are separate."
+        },
+        {
+          "screen_id": "JB-APP-056",
+          "label": "Booking confirmation",
+          "note": "Preserved original design. Compare with its unchanged SRC-INITIAL reference; later proposals are separate."
+        },
+        {
+          "screen_id": "JB-APP-057",
+          "label": "Recurring seva detail",
+          "note": "Preserved original design. Compare with its unchanged SRC-INITIAL reference; later proposals are separate."
+        },
+        {
+          "screen_id": "JB-APP-058",
+          "label": "Recurring setup",
+          "note": "Preserved original design. Compare with its unchanged SRC-INITIAL reference; later proposals are separate."
+        },
+        {
+          "screen_id": "JB-APP-059",
+          "label": "Mandate demonstration",
+          "note": "Preserved original design. Compare with its unchanged SRC-INITIAL reference; later proposals are separate."
+        },
+        {
+          "screen_id": "JB-APP-060",
+          "label": "Recurring confirmation",
+          "note": "Preserved original design. Compare with its unchanged SRC-INITIAL reference; later proposals are separate."
+        },
+        {
+          "screen_id": "JB-APP-051",
+          "label": "Dated seva detail",
+          "note": "Preserved original design. Compare with its unchanged SRC-INITIAL reference; later proposals are separate."
+        },
+        {
+          "screen_id": "JB-APP-061",
+          "label": "Profile",
+          "note": "Preserved original design. Compare with its unchanged SRC-INITIAL reference; later proposals are separate."
+        }
+      ]
+    },
+    {
       "id": "original",
       "title": "Original final design",
       "status": "Historical final handoff",
@@ -71,9 +140,9 @@
     },
     {
       "id": "app",
-      "title": "Current app journey",
-      "status": "Draft · JB-CHG-0001",
-      "summary": "A suggested review sequence through the proposed booking and updates experience. Steps are independent sample states, not a real account or payment transaction.",
+      "title": "Proposed booking updates",
+      "status": "Draft \u00b7 JB-CHG-0001",
+      "summary": "The later 49-state candidate is retained for discussion. Its simplified listing and checkout do not replace the original complete design.",
       "context": "changes/JB-CHG-0001/README.md",
       "steps": [
         {
@@ -166,7 +235,7 @@
     {
       "id": "exploration",
       "title": "My Bookings exploration",
-      "status": "Active · EXP-0001",
+      "status": "Active \u00b7 EXP-0001",
       "summary": "Compare category tabs with combined sections. Use the same tasks and fixtures. No option has been selected or approved for the next handoff.",
       "context": "explorations/EXP-0001/README.md",
       "steps": [

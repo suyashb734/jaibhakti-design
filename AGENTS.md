@@ -12,9 +12,15 @@ history as the shared source of decisions.
 
 - Optimize for readable, editable design assets and visual review. Keep the static
   preview usable by opening Prototype.html directly, as well as through the server.
-- Screen markup lives in previews/mobile/assets/screens/, shared visual helpers in
-  components.js, sample data in fixtures.js, and preview wiring in app.js. Read
-  previews/mobile/README.md before editing these files.
+- Before any UI task, read docs/11_Original_Design_System.md and
+  tokens/original-ui.tokens.json, and open the corresponding original screen.
+  Reuse the complete original styling and journey: listing, detail, cart, checkout,
+  recurring setup and confirmation. A logo/color match alone is insufficient.
+- Current original markup lives in previews/mobile/source/screens/, with shared
+  fonts/styles and original logic under source/. Assemble it with
+  tools/build_original_design.py. Read previews/mobile/README.md before editing.
+- The later 49-state proposal lives under explorations/EXP-0001/draft/. It must
+  remain clearly labelled and must not replace original screens by default.
 - Keep preview tooling small. Production frameworks, services and account/payment
   integrations belong in the implementation repositories.
 - For three-person collaboration follow docs/10_Design_Collaboration.md. A routine
@@ -32,6 +38,9 @@ history as the shared source of decisions.
 - Use the original-final branding in tokens/original-final.tokens.json and
   assets/brand/. Live images/product facts may be reused; the live header does not
   replace the owner's selected original wordmark, typography or colors.
+- The owner's selection covers the complete original UI, not only branding. Live
+  jaibhakti.com is a dated secondary styling reference. Record differences rather
+  than importing a conflicting header or simplifying original cart/checkout UI.
 - `explorations/` holds alternatives, hypotheses and findings. Selected means
   chosen for integration, not approved for engineering.
 - `previews/` is the integrated working draft. `main`, a merged PR, green CI and
@@ -84,6 +93,8 @@ history as the shared source of decisions.
 - When screen/tour metadata changes, run `python3 tools/build_review_catalog.py`.
   Use walkthroughs/index.html to review the guided flows and all registered states.
 - When live-catalogue inputs change, run `python3 tools/build_live_catalogue.py`.
+- Run `python3 tools/build_original_design.py --check` and
+  `python3 tools/build_style_guide.py --check` for original UI/styling work.
 - Read docs/07_Preview_and_Collaboration.md for branch-per-task editing and the
   connected preview. Edit private source; do not author in the public export repo.
 - Generate transient evidence under ignored artifacts/. Retain approved evidence

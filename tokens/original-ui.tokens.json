@@ -1,0 +1,1251 @@
+{
+  "status": "owner_selected_complete_original_ui",
+  "baseline": "JB-BASELINE-001",
+  "source": "SRC-INITIAL",
+  "selection": "Original branding, styling, listing, detail, cart, checkout and confirmation must be reused; later proposals remain separate",
+  "method": "Computed styles sampled from the restored original at 393x852; exact implementations remain in previews/mobile/source",
+  "clock": "2026-11-13T04:30:00Z",
+  "viewport": {
+    "width": 393,
+    "height": 852
+  },
+  "color": {
+    "ink": "#3a2b1a",
+    "muted": "#7a5530",
+    "brandBrown": "#3a1604",
+    "link": "#8a2406",
+    "cream": "#fff1d6",
+    "canvas": "#fffdf9",
+    "gold": "#ffd24a",
+    "orange": "#ff8a3d",
+    "ctaInk": "#41240a"
+  },
+  "gradient": {
+    "primary": "linear-gradient(100deg, #ffd24a 0%, #ff8a3d 100%)"
+  },
+  "typography": {
+    "body": "Poppins, Noto Sans Devanagari, sans-serif",
+    "wordmark": "Martel 900",
+    "form_input": "16px / weight 400",
+    "offering_title": "22px / 27px / weight 600",
+    "listing_title": "25px / 31px / weight 600",
+    "section_heading": "17–19px / weight 600",
+    "hero_title": "24px / 30px / weight 700"
+  },
+  "components": {
+    "hero-cta": {
+      "screen": "home",
+      "tag": "BUTTON",
+      "text": "Book Seva",
+      "style": {
+        "fontFamily": "Poppins, \"Noto Sans Devanagari\", system-ui, sans-serif",
+        "fontSize": "15px",
+        "fontWeight": "600",
+        "lineHeight": "20px",
+        "letterSpacing": "normal",
+        "color": "rgb(42, 8, 2)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "backgroundImage": "none",
+        "borderRadius": "12px",
+        "padding": "0px 44px",
+        "border": "0px none rgb(42, 8, 2)",
+        "boxShadow": "rgba(0, 0, 0, 0.6) 0px 10px 22px -12px",
+        "height": "48px",
+        "gap": "normal"
+      },
+      "rect": {
+        "x": 113.15625,
+        "y": 494,
+        "width": 166.671875,
+        "height": 48
+      }
+    },
+    "listing-heading": {
+      "screen": "home",
+      "tag": "H1",
+      "text": "Sacred Seva at Top Temples of Bharat",
+      "style": {
+        "fontFamily": "Poppins, \"Noto Sans Devanagari\", sans-serif",
+        "fontSize": "25px",
+        "fontWeight": "600",
+        "lineHeight": "31px",
+        "letterSpacing": "normal",
+        "color": "rgb(58, 43, 26)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backgroundImage": "none",
+        "borderRadius": "0px",
+        "padding": "0px",
+        "border": "0px none rgb(58, 43, 26)",
+        "boxShadow": "none",
+        "height": "62px",
+        "gap": "normal"
+      },
+      "rect": {
+        "x": 20,
+        "y": 630,
+        "width": 353,
+        "height": 62
+      }
+    },
+    "offering-heading": {
+      "screen": "seva",
+      "tag": "H1",
+      "text": "Shukravar Kumkum Laal Chunri Seva",
+      "style": {
+        "fontFamily": "Poppins, \"Noto Sans Devanagari\", sans-serif",
+        "fontSize": "22px",
+        "fontWeight": "600",
+        "lineHeight": "27px",
+        "letterSpacing": "normal",
+        "color": "rgb(58, 43, 26)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backgroundImage": "none",
+        "borderRadius": "0px",
+        "padding": "0px",
+        "border": "0px none rgb(58, 43, 26)",
+        "boxShadow": "none",
+        "height": "54px",
+        "gap": "normal"
+      },
+      "rect": {
+        "x": 20,
+        "y": 344,
+        "width": 353,
+        "height": 54
+      }
+    },
+    "detail-cta": {
+      "screen": "seva",
+      "tag": "BUTTON",
+      "text": "Start seva",
+      "style": {
+        "fontFamily": "Poppins, \"Noto Sans Devanagari\", system-ui, sans-serif",
+        "fontSize": "15px",
+        "fontWeight": "600",
+        "lineHeight": "20px",
+        "letterSpacing": "normal",
+        "color": "rgb(65, 36, 10)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backgroundImage": "linear-gradient(100deg, rgb(255, 210, 74) 0%, rgb(255, 138, 61) 100%)",
+        "borderRadius": "999px",
+        "padding": "0px 24px",
+        "border": "0px none rgb(65, 36, 10)",
+        "boxShadow": "rgba(255, 107, 26, 0.32) 0px 12px 26px 0px",
+        "height": "54px",
+        "gap": "8px"
+      },
+      "rect": {
+        "x": 223.828125,
+        "y": 776,
+        "width": 153.171875,
+        "height": 54
+      }
+    },
+    "quantity-add": {
+      "screen": "detail",
+      "tag": "BUTTON",
+      "text": "+ Add",
+      "style": {
+        "fontFamily": "Poppins, \"Noto Sans Devanagari\", system-ui, sans-serif",
+        "fontSize": "14px",
+        "fontWeight": "600",
+        "lineHeight": "20px",
+        "letterSpacing": "normal",
+        "color": "rgb(217, 72, 15)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "backgroundImage": "none",
+        "borderRadius": "12px",
+        "padding": "1px 6px",
+        "border": "1px solid rgb(240, 138, 60)",
+        "boxShadow": "rgba(200, 90, 0, 0.36) 0px 6px 14px -6px",
+        "height": "38px",
+        "gap": "normal"
+      },
+      "rect": {
+        "x": 260,
+        "y": 1181,
+        "width": 92,
+        "height": 38
+      }
+    },
+    "cart-name": {
+      "screen": "cart",
+      "tag": "INPUT",
+      "text": "Your full name",
+      "style": {
+        "fontFamily": "Poppins, \"Noto Sans Devanagari\", system-ui, sans-serif",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "lineHeight": "20px",
+        "letterSpacing": "normal",
+        "color": "rgb(58, 43, 26)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "backgroundImage": "none",
+        "borderRadius": "16px",
+        "padding": "0px 16px",
+        "border": "1px solid rgba(58, 43, 26, 0.14)",
+        "boxShadow": "none",
+        "height": "54px",
+        "gap": "normal"
+      },
+      "rect": {
+        "x": 33,
+        "y": 564,
+        "width": 327,
+        "height": 56
+      }
+    },
+    "cart-gotra": {
+      "screen": "cart",
+      "tag": "INPUT",
+      "text": "e.g. Bharadwaj",
+      "style": {
+        "fontFamily": "Poppins, \"Noto Sans Devanagari\", system-ui, sans-serif",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "lineHeight": "20px",
+        "letterSpacing": "normal",
+        "color": "rgb(58, 43, 26)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "backgroundImage": "none",
+        "borderRadius": "16px",
+        "padding": "0px 16px",
+        "border": "1px solid rgba(58, 43, 26, 0.14)",
+        "boxShadow": "none",
+        "height": "54px",
+        "gap": "normal"
+      },
+      "rect": {
+        "x": 33,
+        "y": 656,
+        "width": 327,
+        "height": 56
+      }
+    },
+    "cart-pay": {
+      "screen": "cart",
+      "tag": "BUTTON",
+      "text": "Pay\n₹322",
+      "style": {
+        "fontFamily": "Poppins, \"Noto Sans Devanagari\", system-ui, sans-serif",
+        "fontSize": "15px",
+        "fontWeight": "600",
+        "lineHeight": "20px",
+        "letterSpacing": "normal",
+        "color": "rgb(65, 36, 10)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backgroundImage": "linear-gradient(100deg, rgb(255, 210, 74) 0%, rgb(255, 138, 61) 100%)",
+        "borderRadius": "999px",
+        "padding": "0px 24px",
+        "border": "0px none rgb(65, 36, 10)",
+        "boxShadow": "rgba(255, 107, 26, 0.32) 0px 12px 26px 0px",
+        "height": "54px",
+        "gap": "8px"
+      },
+      "rect": {
+        "x": 257.25,
+        "y": 776,
+        "width": 119.75,
+        "height": 54
+      }
+    },
+    "payment-method": {
+      "screen": "pay",
+      "tag": "BUTTON",
+      "text": "Pe\nPhonePe\nUPI",
+      "style": {
+        "fontFamily": "Poppins, \"Noto Sans Devanagari\", system-ui, sans-serif",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "lineHeight": "20px",
+        "letterSpacing": "normal",
+        "color": "rgb(58, 43, 26)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backgroundImage": "linear-gradient(155deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 224, 150, 0.5) 100%)",
+        "borderRadius": "16px",
+        "padding": "8px 10px",
+        "border": "1px solid rgb(255, 178, 92)",
+        "boxShadow": "none",
+        "height": "62px",
+        "gap": "12px"
+      },
+      "rect": {
+        "x": 23,
+        "y": 300,
+        "width": 347,
+        "height": 62
+      }
+    },
+    "payment-confirm": {
+      "screen": "pay",
+      "tag": "BUTTON",
+      "text": "Pay ₹322 with PhonePe",
+      "style": {
+        "fontFamily": "Poppins, \"Noto Sans Devanagari\", system-ui, sans-serif",
+        "fontSize": "16px",
+        "fontWeight": "600",
+        "lineHeight": "20px",
+        "letterSpacing": "0.08px",
+        "color": "rgb(65, 36, 10)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backgroundImage": "linear-gradient(100deg, rgb(255, 210, 74) 0%, rgb(255, 138, 61) 100%)",
+        "borderRadius": "999px",
+        "padding": "1px 6px",
+        "border": "0px none rgb(65, 36, 10)",
+        "boxShadow": "rgba(255, 107, 26, 0.32) 0px 12px 26px 0px",
+        "height": "56px",
+        "gap": "8px"
+      },
+      "rect": {
+        "x": 16,
+        "y": 774,
+        "width": 361,
+        "height": 56
+      }
+    },
+    "recurring-name": {
+      "screen": "sevaSetup",
+      "tag": "INPUT",
+      "text": "As Pandit ji should read it",
+      "style": {
+        "fontFamily": "Poppins, \"Noto Sans Devanagari\", system-ui, sans-serif",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "lineHeight": "20px",
+        "letterSpacing": "normal",
+        "color": "rgb(58, 43, 26)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "backgroundImage": "none",
+        "borderRadius": "16px",
+        "padding": "0px 16px",
+        "border": "1px solid rgba(58, 43, 26, 0.14)",
+        "boxShadow": "none",
+        "height": "54px",
+        "gap": "normal"
+      },
+      "rect": {
+        "x": 33,
+        "y": 486,
+        "width": 327,
+        "height": 56
+      }
+    },
+    "recurring-submit": {
+      "screen": "sevaSetup",
+      "tag": "BUTTON",
+      "text": "Pay ₹51",
+      "style": {
+        "fontFamily": "Poppins, \"Noto Sans Devanagari\", system-ui, sans-serif",
+        "fontSize": "19px",
+        "fontWeight": "600",
+        "lineHeight": "20px",
+        "letterSpacing": "normal",
+        "color": "rgb(65, 36, 10)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backgroundImage": "linear-gradient(100deg, rgb(255, 210, 74) 0%, rgb(255, 138, 61) 100%)",
+        "borderRadius": "16px",
+        "padding": "0px 18px",
+        "border": "0px none rgb(65, 36, 10)",
+        "boxShadow": "rgba(255, 107, 26, 0.32) 0px 12px 26px 0px",
+        "height": "54px",
+        "gap": "normal"
+      },
+      "rect": {
+        "x": 167.75,
+        "y": 776,
+        "width": 209.25,
+        "height": 54
+      }
+    },
+    "support-whatsapp": {
+      "screen": "home",
+      "tag": "BUTTON",
+      "text": "WhatsApp",
+      "style": {
+        "fontFamily": "Poppins, \"Noto Sans Devanagari\", system-ui, sans-serif",
+        "fontSize": "14px",
+        "fontWeight": "600",
+        "lineHeight": "20px",
+        "letterSpacing": "normal",
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backgroundImage": "linear-gradient(160deg, rgb(34, 197, 94) 0%, rgb(21, 128, 61) 100%)",
+        "borderRadius": "14px",
+        "padding": "1px 6px",
+        "border": "0px none rgb(255, 255, 255)",
+        "boxShadow": "rgba(255, 255, 255, 0.4) 0px 1px 0px 0px inset, rgba(21, 128, 61, 0.48) 0px 8px 16px -8px",
+        "height": "48px",
+        "gap": "8px"
+      },
+      "rect": {
+        "x": 201.5,
+        "y": 4956,
+        "width": 158.5,
+        "height": 48
+      }
+    },
+    "confirmation-heading": {
+      "screen": "success",
+      "tag": "H1",
+      "text": "Sankalp liya gaya 🙏",
+      "style": {
+        "fontFamily": "Poppins, \"Noto Sans Devanagari\", sans-serif",
+        "fontSize": "30px",
+        "fontWeight": "600",
+        "lineHeight": "37px",
+        "letterSpacing": "normal",
+        "color": "rgb(58, 43, 26)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backgroundImage": "none",
+        "borderRadius": "0px",
+        "padding": "0px",
+        "border": "0px none rgb(58, 43, 26)",
+        "boxShadow": "none",
+        "height": "37px",
+        "gap": "normal"
+      },
+      "rect": {
+        "x": 41.125,
+        "y": 270,
+        "width": 310.75,
+        "height": 37
+      }
+    }
+  },
+  "source_color_inventory": [
+    {
+      "value": "#ffffff",
+      "occurrences": 81
+    },
+    {
+      "value": "#7a5530",
+      "occurrences": 46
+    },
+    {
+      "value": "#6b4a2e",
+      "occurrences": 38
+    },
+    {
+      "value": "#8a2406",
+      "occurrences": 29
+    },
+    {
+      "value": "#3a2b1a",
+      "occurrences": 28
+    },
+    {
+      "value": "#3a1604",
+      "occurrences": 24
+    },
+    {
+      "value": "#ff8a3d",
+      "occurrences": 24
+    },
+    {
+      "value": "#ffd66b",
+      "occurrences": 24
+    },
+    {
+      "value": "#5a3310",
+      "occurrences": 21
+    },
+    {
+      "value": "#ffd24a",
+      "occurrences": 20
+    },
+    {
+      "value": "#fff1d6",
+      "occurrences": 20
+    },
+    {
+      "value": "#ffe7a3",
+      "occurrences": 16
+    },
+    {
+      "value": "#f5d6b0",
+      "occurrences": 16
+    },
+    {
+      "value": "#15803d",
+      "occurrences": 15
+    },
+    {
+      "value": "#ffe08a",
+      "occurrences": 13
+    },
+    {
+      "value": "#2f7d3a",
+      "occurrences": 13
+    },
+    {
+      "value": "#3a2210",
+      "occurrences": 13
+    },
+    {
+      "value": "#fffdf9",
+      "occurrences": 11
+    },
+    {
+      "value": "#f59e0b",
+      "occurrences": 11
+    },
+    {
+      "value": "#22c55e",
+      "occurrences": 10
+    },
+    {
+      "value": "#b8300f",
+      "occurrences": 10
+    },
+    {
+      "value": "#ffd24d",
+      "occurrences": 9
+    },
+    {
+      "value": "#d24a0e",
+      "occurrences": 9
+    },
+    {
+      "value": "#b91c1c",
+      "occurrences": 8
+    },
+    {
+      "value": "#ff5a1f",
+      "occurrences": 8
+    },
+    {
+      "value": "#000000",
+      "occurrences": 8
+    },
+    {
+      "value": "#9a6a3a",
+      "occurrences": 8
+    },
+    {
+      "value": "#3a0f05",
+      "occurrences": 8
+    },
+    {
+      "value": "#ff9a4f",
+      "occurrences": 7
+    },
+    {
+      "value": "#ffb25c",
+      "occurrences": 7
+    },
+    {
+      "value": "#3e0e04",
+      "occurrences": 7
+    },
+    {
+      "value": "#7a3a00",
+      "occurrences": 7
+    },
+    {
+      "value": "#ffe7a0",
+      "occurrences": 6
+    },
+    {
+      "value": "#e2cfb2",
+      "occurrences": 6
+    },
+    {
+      "value": "#e4572e",
+      "occurrences": 6
+    },
+    {
+      "value": "#2a0802",
+      "occurrences": 6
+    },
+    {
+      "value": "#7a2208",
+      "occurrences": 6
+    },
+    {
+      "value": "#8a6a4a",
+      "occurrences": 6
+    },
+    {
+      "value": "#b5470c",
+      "occurrences": 5
+    },
+    {
+      "value": "#1a1a1a",
+      "occurrences": 5
+    },
+    {
+      "value": "#fff6e0",
+      "occurrences": 5
+    },
+    {
+      "value": "#260802",
+      "occurrences": 5
+    },
+    {
+      "value": "#e8a21c",
+      "occurrences": 5
+    },
+    {
+      "value": "#e0873a",
+      "occurrences": 5
+    },
+    {
+      "value": "#a8340a",
+      "occurrences": 5
+    },
+    {
+      "value": "#9a7a5a",
+      "occurrences": 4
+    },
+    {
+      "value": "#c4571a",
+      "occurrences": 4
+    },
+    {
+      "value": "#b8390a",
+      "occurrences": 4
+    },
+    {
+      "value": "#4a1206",
+      "occurrences": 4
+    },
+    {
+      "value": "#a35f00",
+      "occurrences": 4
+    },
+    {
+      "value": "#b8740f",
+      "occurrences": 4
+    },
+    {
+      "value": "#dc2626",
+      "occurrences": 4
+    },
+    {
+      "value": "#fff6da",
+      "occurrences": 4
+    },
+    {
+      "value": "#ffe2a6",
+      "occurrences": 4
+    },
+    {
+      "value": "#ef4444",
+      "occurrences": 4
+    },
+    {
+      "value": "#12304f",
+      "occurrences": 3
+    },
+    {
+      "value": "#41240a",
+      "occurrences": 3
+    },
+    {
+      "value": "#d9480f",
+      "occurrences": 3
+    },
+    {
+      "value": "#b5601c",
+      "occurrences": 3
+    },
+    {
+      "value": "#ffb547",
+      "occurrences": 3
+    },
+    {
+      "value": "#e97822",
+      "occurrences": 3
+    },
+    {
+      "value": "#ff7a00",
+      "occurrences": 3
+    },
+    {
+      "value": "#e8590c",
+      "occurrences": 3
+    },
+    {
+      "value": "#ffeec0",
+      "occurrences": 3
+    },
+    {
+      "value": "#ffe7c8",
+      "occurrences": 3
+    },
+    {
+      "value": "#14532d",
+      "occurrences": 3
+    },
+    {
+      "value": "#fff1cf",
+      "occurrences": 3
+    },
+    {
+      "value": "#9f1d12",
+      "occurrences": 3
+    },
+    {
+      "value": "#ffe6cc",
+      "occurrences": 3
+    },
+    {
+      "value": "#ffd3a8",
+      "occurrences": 3
+    },
+    {
+      "value": "#fff3d6",
+      "occurrences": 2
+    },
+    {
+      "value": "#5b330f",
+      "occurrences": 2
+    },
+    {
+      "value": "#c2410c",
+      "occurrences": 2
+    },
+    {
+      "value": "#1f8a4c",
+      "occurrences": 2
+    },
+    {
+      "value": "#fff3c4",
+      "occurrences": 2
+    },
+    {
+      "value": "#ff8a00",
+      "occurrences": 2
+    },
+    {
+      "value": "#2a5a8c",
+      "occurrences": 2
+    },
+    {
+      "value": "#7a3b72",
+      "occurrences": 2
+    },
+    {
+      "value": "#3a1638",
+      "occurrences": 2
+    },
+    {
+      "value": "#fff6e6",
+      "occurrences": 2
+    },
+    {
+      "value": "#ffc93c",
+      "occurrences": 2
+    },
+    {
+      "value": "#ffe9a0",
+      "occurrences": 2
+    },
+    {
+      "value": "#5a1806",
+      "occurrences": 2
+    },
+    {
+      "value": "#2e0a03",
+      "occurrences": 2
+    },
+    {
+      "value": "#c9a27e",
+      "occurrences": 2
+    },
+    {
+      "value": "#ff6b4a",
+      "occurrences": 2
+    },
+    {
+      "value": "#3f4e57",
+      "occurrences": 2
+    },
+    {
+      "value": "#7e2305",
+      "occurrences": 2
+    },
+    {
+      "value": "#b98a5a",
+      "occurrences": 2
+    },
+    {
+      "value": "#8a6a2a",
+      "occurrences": 2
+    },
+    {
+      "value": "#fff8dc",
+      "occurrences": 2
+    },
+    {
+      "value": "#555555",
+      "occurrences": 2
+    },
+    {
+      "value": "#e8c27a",
+      "occurrences": 1
+    },
+    {
+      "value": "#d7261e",
+      "occurrences": 1
+    },
+    {
+      "value": "#b8741a",
+      "occurrences": 1
+    },
+    {
+      "value": "#2e2a2a",
+      "occurrences": 1
+    },
+    {
+      "value": "#4a3f3a",
+      "occurrences": 1
+    },
+    {
+      "value": "#eadbb8",
+      "occurrences": 1
+    },
+    {
+      "value": "#f2c35a",
+      "occurrences": 1
+    },
+    {
+      "value": "#5f259f",
+      "occurrences": 1
+    },
+    {
+      "value": "#1a73e8",
+      "occurrences": 1
+    },
+    {
+      "value": "#0b8bd1",
+      "occurrences": 1
+    },
+    {
+      "value": "#e0661b",
+      "occurrences": 1
+    },
+    {
+      "value": "#1f7a3a",
+      "occurrences": 1
+    },
+    {
+      "value": "#ffe2c2",
+      "occurrences": 1
+    },
+    {
+      "value": "#ffc233",
+      "occurrences": 1
+    },
+    {
+      "value": "#9a3a0a",
+      "occurrences": 1
+    },
+    {
+      "value": "#f3efe8",
+      "occurrences": 1
+    },
+    {
+      "value": "#9a9a9a",
+      "occurrences": 1
+    },
+    {
+      "value": "#991b1b",
+      "occurrences": 1
+    },
+    {
+      "value": "#34d399",
+      "occurrences": 1
+    },
+    {
+      "value": "#f2a007",
+      "occurrences": 1
+    },
+    {
+      "value": "#40260e",
+      "occurrences": 1
+    },
+    {
+      "value": "#ffe0a0",
+      "occurrences": 1
+    },
+    {
+      "value": "#9a2a06",
+      "occurrences": 1
+    },
+    {
+      "value": "#145c33",
+      "occurrences": 1
+    },
+    {
+      "value": "#6ee7a8",
+      "occurrences": 1
+    },
+    {
+      "value": "#1f9d55",
+      "occurrences": 1
+    },
+    {
+      "value": "#ff7a1a",
+      "occurrences": 1
+    },
+    {
+      "value": "#e08a00",
+      "occurrences": 1
+    },
+    {
+      "value": "#b7791f",
+      "occurrences": 1
+    },
+    {
+      "value": "#f0643a",
+      "occurrences": 1
+    },
+    {
+      "value": "#9e2a0b",
+      "occurrences": 1
+    },
+    {
+      "value": "#ff5a00",
+      "occurrences": 1
+    },
+    {
+      "value": "#ffb300",
+      "occurrences": 1
+    },
+    {
+      "value": "#fff4b8",
+      "occurrences": 1
+    },
+    {
+      "value": "#d2743a",
+      "occurrences": 1
+    },
+    {
+      "value": "#7a2e10",
+      "occurrences": 1
+    },
+    {
+      "value": "#fffbe0",
+      "occurrences": 1
+    },
+    {
+      "value": "#e86a00",
+      "occurrences": 1
+    },
+    {
+      "value": "#a8350e",
+      "occurrences": 1
+    },
+    {
+      "value": "#5a1606",
+      "occurrences": 1
+    },
+    {
+      "value": "#3b3470",
+      "occurrences": 1
+    },
+    {
+      "value": "#1a1538",
+      "occurrences": 1
+    },
+    {
+      "value": "#0b0918",
+      "occurrences": 1
+    },
+    {
+      "value": "#f07a1a",
+      "occurrences": 1
+    },
+    {
+      "value": "#9a3208",
+      "occurrences": 1
+    },
+    {
+      "value": "#4a1404",
+      "occurrences": 1
+    },
+    {
+      "value": "#c62e22",
+      "occurrences": 1
+    },
+    {
+      "value": "#6e0f0c",
+      "occurrences": 1
+    },
+    {
+      "value": "#330605",
+      "occurrences": 1
+    },
+    {
+      "value": "#1a0819",
+      "occurrences": 1
+    },
+    {
+      "value": "#081626",
+      "occurrences": 1
+    },
+    {
+      "value": "#ff7a8c",
+      "occurrences": 1
+    },
+    {
+      "value": "#d81b3c",
+      "occurrences": 1
+    },
+    {
+      "value": "#8a0a22",
+      "occurrences": 1
+    },
+    {
+      "value": "#8fe08f",
+      "occurrences": 1
+    },
+    {
+      "value": "#1e7a3a",
+      "occurrences": 1
+    },
+    {
+      "value": "#5eead4",
+      "occurrences": 1
+    },
+    {
+      "value": "#0e6377",
+      "occurrences": 1
+    },
+    {
+      "value": "#ffc4d4",
+      "occurrences": 1
+    },
+    {
+      "value": "#e8527a",
+      "occurrences": 1
+    },
+    {
+      "value": "#d99a06",
+      "occurrences": 1
+    },
+    {
+      "value": "#f8d35a",
+      "occurrences": 1
+    },
+    {
+      "value": "#a86a12",
+      "occurrences": 1
+    },
+    {
+      "value": "#f7b27a",
+      "occurrences": 1
+    },
+    {
+      "value": "#d0702f",
+      "occurrences": 1
+    },
+    {
+      "value": "#8a3a12",
+      "occurrences": 1
+    },
+    {
+      "value": "#ff9f1c",
+      "occurrences": 1
+    },
+    {
+      "value": "#c75a00",
+      "occurrences": 1
+    },
+    {
+      "value": "#ffe580",
+      "occurrences": 1
+    },
+    {
+      "value": "#ffc069",
+      "occurrences": 1
+    },
+    {
+      "value": "#b9ccff",
+      "occurrences": 1
+    },
+    {
+      "value": "#3346b8",
+      "occurrences": 1
+    },
+    {
+      "value": "#e6dcc4",
+      "occurrences": 1
+    },
+    {
+      "value": "#fff4c7",
+      "occurrences": 1
+    },
+    {
+      "value": "#c77a00",
+      "occurrences": 1
+    },
+    {
+      "value": "#ffd08a",
+      "occurrences": 1
+    },
+    {
+      "value": "#d08a2e",
+      "occurrences": 1
+    },
+    {
+      "value": "#fffcf7",
+      "occurrences": 1
+    },
+    {
+      "value": "#5b240a",
+      "occurrences": 1
+    },
+    {
+      "value": "#a63a12",
+      "occurrences": 1
+    },
+    {
+      "value": "#681d0b",
+      "occurrences": 1
+    },
+    {
+      "value": "#351006",
+      "occurrences": 1
+    },
+    {
+      "value": "#68200b",
+      "occurrences": 1
+    },
+    {
+      "value": "#fff7e8",
+      "occurrences": 1
+    },
+    {
+      "value": "#ffb36b",
+      "occurrences": 1
+    },
+    {
+      "value": "#ff9d00",
+      "occurrences": 1
+    },
+    {
+      "value": "#f26545",
+      "occurrences": 1
+    },
+    {
+      "value": "#fff9ef",
+      "occurrences": 1
+    },
+    {
+      "value": "#9a8067",
+      "occurrences": 1
+    },
+    {
+      "value": "#f5e6d3",
+      "occurrences": 1
+    },
+    {
+      "value": "#bbf7d0",
+      "occurrences": 1
+    },
+    {
+      "value": "#fff8e6",
+      "occurrences": 1
+    },
+    {
+      "value": "#ffe6b0",
+      "occurrences": 1
+    },
+    {
+      "value": "#34d27a",
+      "occurrences": 1
+    },
+    {
+      "value": "#f4b07a",
+      "occurrences": 1
+    },
+    {
+      "value": "#25d366",
+      "occurrences": 1
+    },
+    {
+      "value": "#ffe7a8",
+      "occurrences": 1
+    },
+    {
+      "value": "#ffb43a",
+      "occurrences": 1
+    },
+    {
+      "value": "#e6e1d8",
+      "occurrences": 1
+    },
+    {
+      "value": "#666666",
+      "occurrences": 1
+    },
+    {
+      "value": "#333333",
+      "occurrences": 1
+    },
+    {
+      "value": "#9a5a1a",
+      "occurrences": 1
+    },
+    {
+      "value": "#1b2a6b",
+      "occurrences": 1
+    },
+    {
+      "value": "#3e8e4e",
+      "occurrences": 1
+    },
+    {
+      "value": "#7a0a1e",
+      "occurrences": 1
+    },
+    {
+      "value": "#b85400",
+      "occurrences": 1
+    },
+    {
+      "value": "#ffd9a8",
+      "occurrences": 1
+    },
+    {
+      "value": "#ffe0b8",
+      "occurrences": 1
+    },
+    {
+      "value": "#e6ffe6",
+      "occurrences": 1
+    },
+    {
+      "value": "#e0a100",
+      "occurrences": 1
+    },
+    {
+      "value": "#7a2305",
+      "occurrences": 1
+    },
+    {
+      "value": "#f08a3c",
+      "occurrences": 1
+    }
+  ],
+  "live_reference": {
+    "observations": "references/live-style/2026-11-13/observations.json",
+    "observed_at_utc": "2026-11-13T12:50:02.198976+00:00",
+    "pages": [
+      "https://jaibhakti.com",
+      "https://jaibhakti.com/seva-detail/51e00dd2c506446db42a67c8607420a1",
+      "https://jaibhakti.com/seva-detail/51e00dd2c506446db42a67c8607420a1/checkout?package=602945bea3394ee2ab7948a6a15b750b"
+    ],
+    "shared": "Poppins, cream canvas, brown ink and 100-degree gold/orange primary CTA",
+    "difference": "Live header uses English Jai Bhakti/by Astrotalk; the owner-selected original Devanagari wordmark remains authoritative"
+  },
+  "layout_rules": [
+    "Original reference artboard: 393 × 852",
+    "Preserve the family hero, full listing cards, detail imagery/content and sticky purchase summary",
+    "Preserve cart quantities, beneficiary/gotra fields, payment method choices and recurring setup layout",
+    "Use each component’s original padding, border, radius and shadow; there is no single radius/button style for every surface",
+    "Preserve inherited original interactions as sample design behavior; product changes require an explicit scoped proposal"
+  ]
+}

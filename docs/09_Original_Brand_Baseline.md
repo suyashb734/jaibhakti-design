@@ -2,7 +2,9 @@
 
 The owner instructed: “The colors and branding used should be same from the
 original final design.” This selects JB-BASELINE-001 / SRC-INITIAL for brand
-foundations. It does not select the open My Bookings layout or approve a new
+foundations. The owner subsequently clarified that the complete original styling
+and journey, including cart and checkout, must be reused. See
+[the full styling policy](11_Original_Design_System.md). It does not select the open My Bookings layout or approve a new
 engineering handoff.
 
 | Element | Original-final value |

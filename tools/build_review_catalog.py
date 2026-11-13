@@ -18,7 +18,7 @@ def catalogue():
         assert tour['steps'],tour['id']
         for step in tour['steps']:
             assert step['screen_id'] in screens,step['screen_id']
-    tours.append({'id':'all-app','title':'All 49 app states','status':'Draft · full inventory','summary':'Browse every registered app draft state, including loading, empty, error, partial-media and long-content examples. Frozen captures are historical reference images.','context':'previews/mobile/README.md','steps':[{'screen_id':item['id'],'label':item['title'],'note':'Review this sample state and its related rules. Use the source registry and change package for scope and approval status.'} for item in records if item['platform']=='app']})
+    tours.append({'id':'all-app','title':'All registered design states','status':'Draft · full inventory','summary':'Browse every registered app draft state, including loading, empty, error, partial-media and long-content examples. Frozen captures are historical reference images.','context':'previews/mobile/README.md','steps':[{'screen_id':item['id'],'label':item['title'],'note':'Review this sample state and its related rules. Use the source registry and change package for scope and approval status.'} for item in records if item['platform']=='app']})
     return {'screens':screens,'tours':tours}
 
 

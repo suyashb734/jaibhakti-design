@@ -13,8 +13,8 @@ performed dates more reliably with category tabs or sections on one page?
 
 | Option | Existing source | States |
 | --- | --- | --- |
-| A: category tabs | [Nirantar](../../previews/mobile/Prototype.html#bookings/nirantar), [Upcoming](../../previews/mobile/Prototype.html#bookings/upcoming), [Completed](../../previews/mobile/Prototype.html#bookings/completed) | JB-APP-003, JB-APP-004, JB-APP-005 |
-| B: sections | [Combined sections](../../previews/mobile/Prototype.html#sections) | JB-APP-006 |
+| A: category tabs | [Nirantar](../../explorations/EXP-0001/draft/Prototype.html#bookings/nirantar), [Upcoming](../../explorations/EXP-0001/draft/Prototype.html#bookings/upcoming), [Completed](../../explorations/EXP-0001/draft/Prototype.html#bookings/completed) | JB-APP-003, JB-APP-004, JB-APP-005 |
+| B: sections | [Combined sections](../../explorations/EXP-0001/draft/Prototype.html#sections) | JB-APP-006 |
 
 These links show the working source. The baseline commit identifies the historical
 version; frozen reference PNGs remain in the screen registry. No new source copy is
