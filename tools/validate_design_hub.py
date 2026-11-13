@@ -58,6 +58,15 @@ def validate():
     screen_ids={s['id'] for s in screens}
     for source in sources:
         assert (ROOT/source['path']).is_file(),source['path']
+    baselines=load('registries/baselines.json')['baselines']
+    assert len({b['id'] for b in baselines})==len(baselines),'Duplicate baseline IDs'
+    for baseline in baselines:
+        assert baseline['source_id'] in source_ids,baseline['id']
+        assert baseline['status']=='historical_final_handed_over_for_execution',baseline['id']
+        assert baseline['confirmation']['statement'] and (ROOT/baseline['confirmation']['record']).is_file(),baseline['id']
+        artifact=ROOT/baseline['artifact']
+        assert artifact.is_file() and hashlib.sha256(artifact.read_bytes()).hexdigest()==baseline['artifact_sha256'],f'Historical baseline artifact differs: {baseline["id"]}'
+        assert set(baseline['screen_ids'])<=screen_ids,baseline['id']
     for screen in screens:
         assert screen['source'] in source_ids,screen['id']
         assert screen['status'] in {'draft','reference','observed_live','in_review','approved_for_build','retired'},screen['id']
@@ -110,7 +119,7 @@ def validate():
 def handoff_gate(conflicts,changes):
     approved=[r for r in load('releases/index.json')['releases'] if r.get('status')=='approved_for_build']
     if not approved:
-        raise ValueError('HANDOFF BLOCKED: No approved release manifest exists. The baseline import and candidate remain unapproved.')
+        raise ValueError('HANDOFF BLOCKED: No approved release manifest exists for a new design handoff. The historical execution baseline is recorded separately; the newer candidate remains unapproved.')
     known_changes={c['id']:c for c in changes}
     screen_ids={s['id'] for s in load('registries/screens.json')['screens']}
     requirement_ids={r['id'] for r in load('registries/requirements.json')['requirements']}

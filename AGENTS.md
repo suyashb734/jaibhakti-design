@@ -1,13 +1,16 @@
 # Shared instructions for design contributors and agents
 
 This is a design workspace for Jai Bhakti web and mobile. Production code lives
-elsewhere. Read README.md, the assigned exploration/change package, and its linked
+elsewhere. Read START_HERE.md, README.md, the assigned exploration/change package, and its linked
 decisions before editing. Use the repository records rather than private chat
 history as the shared source of decisions.
 
 ## Authority and status
 
 - `references/` contains immutable imports. Preserve their files and hashes.
+- JB-BASELINE-001 records Jai Bhakti App.html as the owner's first final design
+  handed over for execution on jaibhakti.com. Preserve that historical status;
+  distinguish it from approval of the newer Daan Seva draft and future releases.
 - `explorations/` holds alternatives, hypotheses and findings. Selected means
   chosen for integration, not approved for engineering.
 - `previews/` is the integrated working draft. `main`, a merged PR, green CI and
@@ -55,6 +58,8 @@ history as the shared source of decisions.
 - For UI edits exercise the affected routes and generate comparable before/after
   evidence using tools/capture_design_evidence.py. Record source commit, fixture,
   clock, viewport and browser. Rendering is not a usability or backend test.
+- When screen/tour metadata changes, run `python3 tools/build_review_catalog.py`.
+  Use walkthroughs/index.html to review the guided flows and all registered states.
 - Generate transient evidence under ignored artifacts/. Retain approved evidence
   with the release; routine Actions artifacts expire.
 - For release work follow docs/05_Engineering_Handoff.md and run the handoff gate.

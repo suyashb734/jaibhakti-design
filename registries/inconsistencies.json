@@ -217,11 +217,11 @@
       "id": "INC-015",
       "severity": "blocker",
       "title": "Source confirmation and release approval are different",
-      "observation": "The DOCX calls its inputs confirmed, but named organizational approvers and an engineering handoff release are not recorded. Earlier prototype validation is not production verification.",
+      "observation": "The owner confirms Jai Bhakti App.html was the first final design handed over for execution on jaibhakti.com (JB-BASELINE-001). The newer DOCX labels its inputs confirmed, but exact-version approval and engineering acknowledgement for the new Daan Seva handoff remain unrecorded. Prototype validation is not production verification.",
       "owner_role": "Product, design and engineering",
       "owner": null,
       "status": "open",
-      "required_resolution": "Record approval evidence for a specific version, tech acknowledgement and implementation links. Keep source imports and candidates outside approved release status.",
+      "required_resolution": "Preserve the confirmed historical handoff. Record human approval and engineering acknowledgement for the exact newer candidate version and its scope before the next release.",
       "blocks": [
         "engineering-handoff"
       ],

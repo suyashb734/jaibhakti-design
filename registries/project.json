@@ -20,5 +20,13 @@
   "verified_capture_run": "https://github.com/suyashb734/jaibhakti-design/actions/runs/43396621315",
   "branch_protection": "not_configured",
   "human_approval_roles": "pending_assignment",
-  "repository": "suyashb734/jaibhakti-design"
+  "repository": "suyashb734/jaibhakti-design",
+  "agent_start": "START_HERE.md",
+  "review_entry": "walkthroughs/index.html",
+  "historical_execution_baseline": "JB-BASELINE-001",
+  "static_preview": {
+    "status": "prepared_not_published",
+    "bundle_command": "python3 tools/build_preview_site.py --require-clean",
+    "visibility_decision": "awaiting_public_access_clarification"
+  }
 }

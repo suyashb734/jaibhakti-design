@@ -12,6 +12,10 @@ working material; a merge is not authorization to build.
 
 Keep the supplied original HTML, dated live observations and imported candidate immutable. Their hash manifest records the import. Future design source belongs in `previews/web` and `previews/mobile`, with shared semantic tokens, copy and fixtures. The first migration should split readable layout, styles, logic and data; retain generated packed HTML as an export, not the routine authoring file.
 
+The original HTML has confirmed historical final-handoff status for website
+execution, recorded as JB-BASELINE-001. That history remains intact while future
+changes use the new review/release process. New agents begin at START_HERE.md.
+
 The current mobile preview is a readable fork of the candidate. The web preview is a baseline entry pending a scoped web design change. Shared source extraction and web authoring should proceed after the first contract decisions. Sharing semantics and tokens is required; sharing DOM/native component code is a separate stack decision.
 
 ## IDs and ownership

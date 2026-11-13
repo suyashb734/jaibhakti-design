@@ -2,6 +2,11 @@
 
 Establish a versioned design hub that lets product, design and engineering agree what changed, which rules apply on web and app, and which exact version is ready to build. Preserve the first complete design and live observations without treating either as the current approved contract.
 
+Owner clarification: Jai Bhakti App.html is the first final design supplied for
+execution on jaibhakti.com, recorded as JB-BASELINE-001. Preserve that historical
+handoff while governing the newer Daan Seva work separately. START_HERE.md is the
+onboarding path; walkthroughs/index.html provides guided and complete screen review.
+
 ## Scope
 
 This repository contains design governance, references, registries, proposed shared contracts and handoff records. Production web/app/backend implementation, a mobile framework migration and real payment integration are outside the baseline import. A shared checkout implementation is proposed for consideration rather than selected.

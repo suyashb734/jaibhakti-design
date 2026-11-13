@@ -1,0 +1,196 @@
+{
+  "tours": [
+    {
+      "id": "original",
+      "title": "Original final design",
+      "status": "Historical final handoff",
+      "summary": "Jai Bhakti App.html was the first final design given for execution on jaibhakti.com. This tour covers its 12 advertised entry states; it does not assert exact current live parity.",
+      "context": "baselines/JB-BASELINE-001.md",
+      "steps": [
+        {
+          "screen_id": "JB-REF-001",
+          "label": "Home and catalogue",
+          "note": "Review the catalogue, trust messaging and original offering identities."
+        },
+        {
+          "screen_id": "JB-REF-003",
+          "label": "Bhent listing",
+          "note": "Review the original one-time offering catalogue."
+        },
+        {
+          "screen_id": "JB-REF-004",
+          "label": "Offering details",
+          "note": "Review offering identity, temple, content and price presentation."
+        },
+        {
+          "screen_id": "JB-REF-005",
+          "label": "Cart",
+          "note": "Review the original cart and beneficiary/order summary."
+        },
+        {
+          "screen_id": "JB-REF-006",
+          "label": "Payment sample",
+          "note": "Review the original payment sample; it is a design simulation."
+        },
+        {
+          "screen_id": "JB-REF-007",
+          "label": "One-time success",
+          "note": "Review the original success and fulfilment expectations."
+        },
+        {
+          "screen_id": "JB-REF-008",
+          "label": "Recurring seva detail",
+          "note": "Review the original recurring offering and its promises."
+        },
+        {
+          "screen_id": "JB-REF-009",
+          "label": "Recurring setup",
+          "note": "Review name/gotra, add-ons and terms as originally handed over."
+        },
+        {
+          "screen_id": "JB-REF-010",
+          "label": "Mandate demonstration",
+          "note": "Inspect the simulated UPI authorization screen without using real credentials."
+        },
+        {
+          "screen_id": "JB-REF-011",
+          "label": "Recurring success",
+          "note": "Review receipt, certificate and video expectations."
+        },
+        {
+          "screen_id": "JB-REF-002",
+          "label": "Dated seva / order",
+          "note": "Review the original dated record, booking certificate and performed stage."
+        },
+        {
+          "screen_id": "JB-REF-012",
+          "label": "Profile",
+          "note": "Review account and support entry points. Other latent routes are not claimed complete."
+        }
+      ]
+    },
+    {
+      "id": "app",
+      "title": "Current app journey",
+      "status": "Draft · JB-CHG-0001",
+      "summary": "A suggested review sequence through the proposed booking and updates experience. Steps are independent sample states, not a real account or payment transaction.",
+      "context": "changes/JB-CHG-0001/README.md",
+      "steps": [
+        {
+          "screen_id": "JB-APP-001",
+          "label": "Discover and book more",
+          "note": "Start from the candidate catalogue. Prices and identity require the linked product decisions."
+        },
+        {
+          "screen_id": "JB-APP-033",
+          "label": "Enter beneficiary details",
+          "note": "Distinguish the beneficiary from the account holder; review name and gotra fields."
+        },
+        {
+          "screen_id": "JB-APP-034",
+          "label": "Verification sample",
+          "note": "This is sample phone verification, not a live account service."
+        },
+        {
+          "screen_id": "JB-APP-035",
+          "label": "Review terms",
+          "note": "Review today and recurring charges, duration and cancellation. Real provider disclosure remains to be confirmed."
+        },
+        {
+          "screen_id": "JB-APP-037",
+          "label": "Payment pending",
+          "note": "Review the pending state independently of confirmation."
+        },
+        {
+          "screen_id": "JB-APP-039",
+          "label": "Booking confirmed sample",
+          "note": "This is a seeded design state; the walkthrough has not performed a payment."
+        },
+        {
+          "screen_id": "JB-APP-003",
+          "label": "My Bookings",
+          "note": "Identify ongoing Nirantar bookings and their beneficiaries. Option A is still exploratory."
+        },
+        {
+          "screen_id": "JB-APP-008",
+          "label": "Ongoing booking",
+          "note": "Locate the next registered date and payment/booking status."
+        },
+        {
+          "screen_id": "JB-APP-015",
+          "label": "Date history",
+          "note": "Distinguish the ongoing booking from its dated occurrences."
+        },
+        {
+          "screen_id": "JB-APP-020",
+          "label": "Performed date",
+          "note": "Review evidence belonging to one performed occurrence."
+        },
+        {
+          "screen_id": "JB-APP-022",
+          "label": "Partial media",
+          "note": "Check that certificate and video readiness are independent."
+        },
+        {
+          "screen_id": "JB-APP-027",
+          "label": "Video viewer",
+          "note": "Review in-app playback of sample media."
+        },
+        {
+          "screen_id": "JB-APP-030",
+          "label": "Beneficiary before first seva",
+          "note": "Review the proposed editable beneficiary state."
+        },
+        {
+          "screen_id": "JB-APP-031",
+          "label": "Beneficiary after first seva",
+          "note": "Review the locked state and support route."
+        },
+        {
+          "screen_id": "JB-APP-009",
+          "label": "Payment recovery",
+          "note": "Review the retry window and discontinued date semantics."
+        },
+        {
+          "screen_id": "JB-APP-047",
+          "label": "Retry success",
+          "note": "Review registration for the next eligible date, without rewriting the failed past date."
+        },
+        {
+          "screen_id": "JB-APP-011",
+          "label": "Cancelled booking",
+          "note": "Review cancellation presentation; actual provider synchronization remains implementation work."
+        }
+      ]
+    },
+    {
+      "id": "exploration",
+      "title": "My Bookings exploration",
+      "status": "Active · EXP-0001",
+      "summary": "Compare category tabs with combined sections. Use the same tasks and fixtures. No option has been selected or approved for the next handoff.",
+      "context": "explorations/EXP-0001/README.md",
+      "steps": [
+        {
+          "screen_id": "JB-APP-003",
+          "label": "Option A: Nirantar tab",
+          "note": "Find an ongoing booking and beneficiary."
+        },
+        {
+          "screen_id": "JB-APP-004",
+          "label": "Option A: Upcoming tab",
+          "note": "Find the next registered dated seva."
+        },
+        {
+          "screen_id": "JB-APP-005",
+          "label": "Option A: Completed tab",
+          "note": "Find a performed date and its media."
+        },
+        {
+          "screen_id": "JB-APP-006",
+          "label": "Option B: Sections",
+          "note": "Repeat the same tasks on combined sections with identical sample data. Neither option has been selected."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "baselines": [
+    {
+      "id": "JB-BASELINE-001",
+      "source_id": "SRC-INITIAL",
+      "status": "historical_final_handed_over_for_execution",
+      "execution_target": "https://jaibhakti.com",
+      "artifact": "references/initial-prototype/Jai Bhakti App.html",
+      "artifact_sha256": "d4de9111f334d428973e85fd4a4add6e311a9afbf718bcd00bfff443565332e1",
+      "artifact_bytes": 6033498,
+      "preserved_at_commit": "7ba437a08cdd7066279553cde47044c7588ef596",
+      "original_handoff_date": null,
+      "implementation_commit": null,
+      "confirmation": {
+        "type": "project_owner_statement_in_conversation",
+        "recorded_on": "2026-11-13",
+        "statement": "Also the Jai Bhakti App.html is kind of the first final design we gave for execution on jaibhakti.com",
+        "record": "baselines/JB-BASELINE-001.md"
+      },
+      "screen_ids": [
+        "JB-REF-001",
+        "JB-REF-002",
+        "JB-REF-003",
+        "JB-REF-004",
+        "JB-REF-005",
+        "JB-REF-006",
+        "JB-REF-007",
+        "JB-REF-008",
+        "JB-REF-009",
+        "JB-REF-010",
+        "JB-REF-011",
+        "JB-REF-012"
+      ]
+    }
+  ]
+}

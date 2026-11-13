@@ -1,8 +1,11 @@
 # Final designs submitted to engineering
 
-**No approved handoff has been issued yet.** The original design, dated live
-observations, 49-state draft and open explorations are available for review; none
-is a newly approved engineering package.
+**Historical first handoff:** [JB-BASELINE-001](../baselines/JB-BASELINE-001.md)
+records Jai Bhakti App.html as the first final design given for execution on
+jaibhakti.com, confirmed by the owner.
+
+**New handoffs:** no design-vX.Y.Z package has been approved through this repository
+process yet. The 49-state Daan Seva draft and open explorations remain in review.
 
 An approved release is the team's final design for an explicitly defined scope
 and source version. Engineering should use its release link, not latest main.

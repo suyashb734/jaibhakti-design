@@ -17,5 +17,9 @@ jobs:
           persist-credentials: false
       - name: Validate references registries and links
         run: python3 tools/validate_design_hub.py
+      - name: Check walkthrough catalogue
+        run: python3 tools/build_review_catalog.py --check
+      - name: Check static preview export and its links
+        run: python3 tools/build_preview_site.py --out artifacts/ci-preview
       - name: Check exploration and handoff boundaries
         run: python3 -m unittest discover -s tests -v

@@ -2,15 +2,21 @@
   "sources": [
     {
       "id": "SRC-INITIAL",
-      "type": "historical_prototype",
+      "type": "historical_final_design",
       "path": "references/initial-prototype/Jai Bhakti App.html",
-      "label": "Original complete design export",
-      "authority": "historical_reference",
+      "label": "First final design handed over for execution on jaibhakti.com",
+      "authority": "owner_confirmed_historical_execution_handoff",
       "bytes": 6033498,
       "bundle_assets": 40,
       "advertised_entry_states": 12,
-      "approval": null,
-      "note": "Not a byte-for-byte export of current production. The source contains legacy and latent behavior."
+      "approval": {
+        "type": "historical_handoff_confirmed_by_project_owner",
+        "recorded_on": "2026-11-13",
+        "record": "baselines/JB-BASELINE-001.md",
+        "original_handoff_date": null
+      },
+      "note": "First final design given for execution, confirmed by the project owner. Preserved unchanged. Historical handoff does not approve newer Daan Seva work or establish exact current production parity.",
+      "baseline_id": "JB-BASELINE-001"
     },
     {
       "id": "SRC-LIVE",

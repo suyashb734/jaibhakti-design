@@ -4,15 +4,25 @@
 
 Versioned product design, decisions and engineering handoff for Jai Bhakti web and mobile. The web acquires bookings; the mobile app will show booking updates, evidence and management, and allow devotees to book more.
 
-**Current status: shared draft workspace. No engineering handoff release is approved yet.** The 49-state Daan Seva prototype is a draft candidate. Its UI checks are useful evidence; they do not establish production readiness or product signoff. `main` contains working material, including unresolved alternatives.
+**First final design:** `Jai Bhakti App.html` was handed over for execution on
+jaibhakti.com, confirmed by the project owner and recorded as
+[JB-BASELINE-001](baselines/JB-BASELINE-001.md).
+
+**Current new work:** the 49-state Daan Seva prototype remains Draft. No new
+design-vX.Y.Z handoff has been issued through this repository process yet.
+`main` contains working material, including unresolved alternatives.
+
+**New here? Read [START_HERE.md](START_HERE.md)** for the product history, user flow,
+source authority, agent starting procedure and complete design-to-engineering path.
 
 ## Find the right version
 
 | You want to… | Start here |
 | --- | --- |
-| Review ideas that are not final | [Explorations](explorations/README.md), including the existing My Bookings A/B comparison |
+| See the complete designs step by step | [Visual walkthrough](walkthroughs/index.html) — run through the local hub or Codespaces |
+| Review ideas that are not final | [Visual explorations](explorations/index.html) and [outcome records](explorations/README.md) |
 | Review the integrated draft | [Mobile preview](previews/mobile/Prototype.html), [web baseline](previews/web/index.html) and [change packages](registries/changes.json) |
-| Find what engineering may build | [Approved handoffs](releases/README.md); currently none |
+| Find historical and new final designs | [Original execution baseline](baselines/JB-BASELINE-001.md); [new handoffs](releases/README.md) are pending |
 | See work and decisions | [Private project](https://github.com/users/suyashb734/projects/1) and linked issues |
 | Run or review the complete folder | [Review guide](docs/00_Review_the_Whole_Design.md) or [open in Codespaces](https://codespaces.new/suyashb734/jaibhakti-design) |
 
@@ -40,11 +50,15 @@ Download the whole repository and open [index.html](index.html), or clone it and
 source. Codespaces configuration is provided for an on-demand private preview; no
 permanent public site is published.
 
+The walkthrough and a static preview export are included. Any public deployment
+must distinguish public access from private GitHub source access; noindex is not
+access control. The current hosting state is tracked in registries/project.json.
+
 ## What was imported
 
 | Source | Role | Evidence |
 | --- | --- | --- |
-| Original complete design | Historical design ancestor | [Jai Bhakti App.html](<references/initial-prototype/Jai Bhakti App.html>), 6,033,498 bytes, 40 bundled assets, 12 advertised entry states |
+| Original complete design | First final design given for website execution, owner-confirmed | [Jai Bhakti App.html](<references/initial-prototype/Jai Bhakti App.html>), 6,033,498 bytes, 40 bundled assets, 12 advertised entry states |
 | Live web on 13 November 2026 | Dated public observations | [Observation manifest](references/live-web/2026-11-13/observations.json), home, three active details and two initial checkout views |
 | My Bookings specification v1.0 | Inputs marked confirmed within the source document | [Specification](references/daan-seva-candidate/references/Daan_Seva_My_Bookings_Update_Specification.docx) |
 | Revised Daan Seva work | Draft candidate with sample data | [49-state gallery](references/daan-seva-candidate/Revised_Designs/Gallery.html) and [clickable prototype](references/daan-seva-candidate/Revised_Designs/Prototype.html) |
@@ -67,7 +81,9 @@ changes/         One reviewable package for each product change
 explorations/    Alternatives, findings and selection/rejection rationale
 docs/            Platform, review, measurement and handoff guidance
 references/      Immutable imports and dated live observations
+baselines/       Recorded historical final-design handoffs and provenance
 previews/        Editable mobile draft and the web baseline entry
+walkthroughs/    Guided review and complete screen browser
 releases/        Approved handoff manifests, separate from live deployment
 tools/           Integrity and handoff validation
 .github/         Review templates, issue forms, code owners and CI
@@ -97,7 +113,11 @@ python3 -m unittest discover -s tests -v
 python3 tools/validate_design_hub.py --handoff
 ```
 
-The first command validates registry links, IDs, reference hashes and document structure. The second deliberately fails until an approved handoff manifest exists with resolved blockers and named approvals. A passing integrity check is not a design approval.
+The first command validates registry links, IDs, reference hashes and document
+structure. The second runs governance tests. The third deliberately fails until
+a new approved handoff manifest exists with resolved blockers and named approvals.
+Historical handoff confirmation is recorded separately. Integrity checks do not
+approve the newer candidate.
 
 ## Ownership
 

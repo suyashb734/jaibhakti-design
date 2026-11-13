@@ -57,7 +57,10 @@ Keep each issued package unchanged by policy and use a new version for correctio
 Record which earlier release/scope it supersedes. Branch/tag/release protections
 must be enabled separately before claiming enforced immutability.
 
-The repository currently has no approved handoff releases. Its source import and 49-state candidate must not be passed to engineering as a final approved product contract.
+The original final design's historical execution handoff is recorded as
+[JB-BASELINE-001](../baselines/JB-BASELINE-001.md). No new approved handoff release
+has been issued through this process. The 49-state candidate remains a proposal
+until the new scoped approval is recorded.
 
 ## Implementation and live verification
 

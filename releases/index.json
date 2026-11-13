@@ -1,4 +1,8 @@
 {
   "releases": [],
-  "note": "No approved engineering handoff or production release has been created by this import."
+  "note": "Jai Bhakti App.html is the owner-confirmed first final design handed over for execution (JB-BASELINE-001). No new design-vX.Y.Z handoff has been approved through this repository process yet.",
+  "historical_baselines": [
+    "JB-BASELINE-001"
+  ],
+  "historical_baseline_register": "registries/baselines.json"
 }

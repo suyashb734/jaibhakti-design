@@ -2,6 +2,11 @@
 
 The original complete design, current live web and revised app candidate should be retained as separate references. They share a design history but differ in catalogue, product rules and implementation status. Resolve the commercial and identity conflicts before approving a recurring booking handoff.
 
+The owner has clarified that `Jai Bhakti App.html` was the first final design given
+for execution on jaibhakti.com. [JB-BASELINE-001](../baselines/JB-BASELINE-001.md)
+records this historical handoff, preserving the original file. The newer candidate
+and future handoff approvals remain separate; the original's status is not Draft.
+
 ## Review scope
 
 The original packed export was unpacked for inspection: 40 embedded assets comprising 33 WOFF2 fonts, 4 JavaScript resources and 3 PNG images. Its 12 advertised start states were rendered and their content and controls inventoried. Product logic, setup, payment simulation, legacy management handlers and the dated seva view were inspected. Generated React/runtime assets were identified as dependencies rather than treated as authored product logic.
@@ -176,14 +181,22 @@ Owner role: Product and payments. Affected scopes: legacy-import, nirantar-manag
 <a id="inc-015"></a>
 ## INC-015 Source confirmation and release approval are different
 
-The DOCX calls its inputs confirmed, but named organizational approvers and an engineering handoff release are not recorded. Earlier prototype validation is not production verification.
+The original final execution handoff is owner-confirmed as JB-BASELINE-001. The
+newer DOCX calls its inputs confirmed, but exact-version approval and engineering
+acknowledgement for the next Daan Seva handoff are not recorded. Earlier prototype
+validation is not production verification.
 
-Resolution needed: Record approval evidence for a specific version, tech acknowledgement and implementation links. Keep source imports and candidates outside approved release status.
+Resolution needed: Preserve the historical handoff record and obtain approval
+evidence, tech acknowledgement and implementation links for the newer version.
 
 Owner role: Product, design and engineering. Affected scopes: engineering-handoff.
 
 ## Source precedence
 
-Use live observations to describe current public presentation. Use the specification to identify its stated intended direction. Keep original exports as historical references and candidate previews as proposals. A named decision or approved release resolves a conflict; a new filename or later timestamp does not. Confirm backend and mandate behavior with the team before documenting it as implemented.
+Use live observations to describe current public presentation. The original export
+is the owner's confirmed first final execution baseline. Use the specification to
+identify its stated newer direction and candidate previews as proposals. A named
+decision or approved new release resolves a changed rule; a later timestamp alone
+does not. Confirm backend and mandate behavior before documenting it as implemented.
 
 See [source metadata](../registries/sources.json), [immutable file hashes](../registries/reference-files.json), [screen registry](../registries/screens.json) and [catalogue observations](../contracts/catalogue-observations.json).

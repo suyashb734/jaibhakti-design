@@ -1,13 +1,16 @@
 # Reviewing and running the whole design
 
-The repository contains a design review hub, editable mobile prototype, historical prototype, dated live-web observations and handoff documents. These can run as static HTML, CSS and JavaScript. A production native app, account backend and payment service are not included.
+The repository contains a design review hub, the first final design supplied for
+website execution, editable mobile draft, dated live-web observations and handoff
+documents. These can run as static HTML, CSS and JavaScript. Start with
+[the project introduction](../START_HERE.md) for the full history and flow.
 
 ## Current status
 
 | Area | Status |
 | --- | --- |
 | Repository | Private and committed to main |
-| Original complete design | Preserved with 12 advertised entry-state references |
+| Original complete design | Owner-confirmed first final design given for execution on jaibhakti.com; JB-BASELINE-001; 12 advertised entry states |
 | Current web | Six dated public observations; production application source not supplied |
 | Mobile design | Editable draft with 49 candidate states |
 | Documentation | Source audit, platform model, measurements, decisions and handoff criteria |
@@ -15,7 +18,7 @@ The repository contains a design review hub, editable mobile prototype, historic
 | Requirements | 22 source criteria mapped; 15 inconsistencies grouped into six open decision issues |
 | GitHub integrity CI | Passing; this is not product approval |
 | GitHub capture workflow | Successfully rendered all 49 working-mobile states and uploaded evidence |
-| Engineering handoff | Not approved; scoped decisions and named approvals remain open |
+| New engineering handoff | Pending; historical original handoff is recorded separately |
 | Interactive hosting | Codespaces configuration is included; no permanent public preview is deployed |
 
 The verified capture run is [43396621315](https://github.com/suyashb734/jaibhakti-design/actions/runs/43396621315). It rendered the working design at commit f3aa8833dd591651463a41d2661c07c06b91ba8a. Its PNGs and report are render evidence, not a backend or native-device test.
@@ -28,12 +31,17 @@ Reviewers need access to the private repository. The owner can add the relevant 
 
 1. Open the repository and choose Code, Download ZIP.
 2. Extract the complete folder and open index.html in Chrome or Edge.
-3. Choose Working mobile prototype to use the revised flow. The left navigation lists every state; on a narrow screen choose All screens.
-4. Use Reference captures and working preview to compare the frozen PNGs with the editable route.
-5. Open Original complete design for the first prototype, and browse its screens folder for all 12 captured entry states.
-6. Read the source audit, platform model and decision issues before evaluating handoff readiness.
-7. Use Explorations for alternatives and Approved handoffs for the exact designs
-   authorized for engineering. There are currently no approved handoffs.
+3. Choose Start guided walkthrough. Select Original final design, Current app
+   journey, My Bookings exploration or All 49 app states. Use Next/Previous or the
+   screen selector; scroll within longer previews. Original interactive stepping
+   requires the local server/Codespaces; a frozen capture is shown as fallback.
+4. Choose Working mobile prototype for free navigation. Its sidebar lists every
+   state; on a narrow screen choose All screens.
+5. Use the reference gallery to compare frozen PNGs with editable routes. Choose
+   Visual explorations to compare both My Bookings layouts.
+6. Read the source audit, platform model and decision issues before evaluating
+   the next handoff. The original final design is a historical execution baseline;
+   newer draft designs have no approved release yet.
 
 Keep the complete folder structure. A lone downloaded HTML file from the working preview will be missing its local styles, fonts and scripts.
 
@@ -46,6 +54,10 @@ python3 tools/serve_design_hub.py
 ```
 
 Open http://localhost:8000. The preview server uses the Python standard library; no application build or package installation is required. Ctrl+C stops the foreground server. The repository’s Markdown documentation is formatted when viewed on GitHub; the local server presents Markdown as readable text.
+
+Direct local routes: [walkthroughs](http://localhost:8000/walkthroughs/index.html),
+[explorations](http://localhost:8000/explorations/index.html) and
+[the full app draft](http://localhost:8000/previews/mobile/Prototype.html).
 
 ## Run in the browser through GitHub Codespaces
 

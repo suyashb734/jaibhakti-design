@@ -4,6 +4,10 @@ Document ideas and alternatives here without authorizing development. Statuses a
 active, selected, parked and rejected. Selected means chosen for integration into
 a linked change; an approved handoff requires its own review and release.
 
+Use [the visual exploration page](index.html) or
+[the guided A/B walkthrough](../walkthroughs/index.html#exploration/0) through the
+local review server or Codespaces. GitHub displays these HTML files as source.
+
 | ID | Question | Status | Result |
 | --- | --- | --- | --- |
 | [EXP-0001](EXP-0001/README.md) | My Bookings tabs or sections? | Active | No option selected; DEC-006 remains open |

@@ -4,11 +4,16 @@ Use GitHub as the record of design work and human decisions. Keep experiments
 discoverable without presenting them as instructions to build. A merged draft is
 useful shared work; only an explicitly approved release is a tech handoff.
 
+For project history and the complete user/agent flow, start with
+[START_HERE.md](../START_HERE.md). The original Jai Bhakti App.html was already
+finalized and given for website execution, as recorded in JB-BASELINE-001; the
+release workflow below governs the newer changes.
+
 ## The four places to look
 
 | Area | Purpose | Authority |
 | --- | --- | --- |
-| references/ | Original exports and dated live observations | Historical evidence, preserved unchanged |
+| references/ and baselines/ | Original exports, owner-confirmed execution handoff and dated live observations | Historical final design and observed evidence, preserved unchanged |
 | explorations/EXP-xxxx/ | Alternatives, hypotheses, experiments and findings | Proposals; even a selected option needs integration and approval |
 | previews/ and changes/JB-CHG-xxxx/ | Integrated web/app draft and its change rationale, scope and evidence | Reviewable working design, with status per revision |
 | releases/ and GitHub Releases | Exact approved source version, included scope, evidence and human approvals | Engineering handoff contract for the specified scope |
