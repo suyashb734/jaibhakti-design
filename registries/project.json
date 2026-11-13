@@ -25,8 +25,16 @@
   "review_entry": "walkthroughs/index.html",
   "historical_execution_baseline": "JB-BASELINE-001",
   "static_preview": {
-    "status": "prepared_not_published",
-    "bundle_command": "python3 tools/build_preview_site.py --require-clean",
-    "visibility_decision": "awaiting_public_access_clarification"
-  }
+    "status": "published_initial_snapshot",
+    "url": "https://suyashb734.github.io/jaibhakti-design-preview/",
+    "repository_url": "https://github.com/suyashb734/jaibhakti-design-preview",
+    "visibility": "public",
+    "source_commit": "dfccf302d16b6e9ec51c3b98f5b81d4dd96155bd",
+    "automatic_publisher_active": false,
+    "automatic_publisher_pending_pr": 9,
+    "note": "Original-brand/live-catalogue update and publisher code are in open PR #9, not merged or deployed. Public access was accepted by the owner; noindex is requested."
+  },
+  "handoff": "HANDOFF.md",
+  "pending_implementation_pr": "https://github.com/suyashb734/jaibhakti-design/pull/9",
+  "pending_implementation_branch": "change/JB-CHG-0001-original-brand-and-live-reference"
 }

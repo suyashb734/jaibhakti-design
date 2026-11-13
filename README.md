@@ -1,5 +1,9 @@
 # Jai Bhakti Design Hub
 
+**Continuing work? Read [HANDOFF.md](HANDOFF.md).** PR #9 contains the pending
+original-brand/live-catalogue update and connected publisher. The public preview
+is live with the earlier snapshot; the new update has not been merged/published.
+
 [![Registry integrity](https://github.com/suyashb734/jaibhakti-design/actions/workflows/validate-design.yml/badge.svg)](https://github.com/suyashb734/jaibhakti-design/actions/workflows/validate-design.yml)
 
 Versioned product design, decisions and engineering handoff for Jai Bhakti web and mobile. The web acquires bookings; the mobile app will show booking updates, evidence and management, and allow devotees to book more.
@@ -47,8 +51,9 @@ Track the [first design change](https://github.com/suyashb734/jaibhakti-design/i
 
 Download the whole repository and open [index.html](index.html), or clone it and run
 `python3 tools/serve_design_hub.py` at http://localhost:8000. GitHub displays HTML as
-source. Codespaces configuration is provided for an on-demand private preview; no
-permanent public site is published.
+source. The [public preview](https://suyashb734.github.io/jaibhakti-design-preview/)
+serves the initial snapshot. The original-brand/live-catalogue update and connected
+publisher remain in PR #9. See HANDOFF.md for the current state and continuation.
 
 The walkthrough and a static preview export are included. Any public deployment
 must distinguish public access from private GitHub source access; noindex is not
