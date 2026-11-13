@@ -102,7 +102,12 @@
         "operations_payments": null
       },
       "github_issue": "https://github.com/suyashb734/jaibhakti-design/issues/7",
-      "package": "changes/JB-CHG-0001/README.md"
+      "package": "changes/JB-CHG-0001/README.md",
+      "human_owner": null,
+      "agent": "Codex (bootstrap; no human product approval)",
+      "originating_explorations": [
+        "EXP-0001"
+      ]
     }
   ]
 }

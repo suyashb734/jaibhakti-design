@@ -1,0 +1,28 @@
+{
+  "explorations": [
+    {
+      "id": "EXP-0001",
+      "title": "My Bookings tabs or sections",
+      "status": "active",
+      "human_owner": null,
+      "agent": null,
+      "baseline_commit": "f3aa8833dd591651463a41d2661c07c06b91ba8a",
+      "package": "explorations/EXP-0001/README.md",
+      "screens": [
+        "JB-APP-003",
+        "JB-APP-004",
+        "JB-APP-005",
+        "JB-APP-006"
+      ],
+      "change_ids": [
+        "JB-CHG-0001"
+      ],
+      "decision_ids": [
+        "DEC-006"
+      ],
+      "selected_option": null,
+      "outcome_evidence": null,
+      "github_issue": "https://github.com/suyashb734/jaibhakti-design/issues/8"
+    }
+  ]
+}

@@ -4,6 +4,10 @@ Use one private `jaibhakti-design` repository for the product contract, referenc
 
 This keeps design changes reviewable without assuming the mobile stack or turning exported prototype code into a second production application. If the team later consolidates into a product monorepo, the design hub can move intact under a design directory while preserving its IDs and release links.
 
+Use [the shared workspace model](06_Shared_Design_Workspace.md) for the distinction
+between explorations, integrated drafts and approved releases. Main holds shared
+working material; a merge is not authorization to build.
+
 ## Authoring and references
 
 Keep the supplied original HTML, dated live observations and imported candidate immutable. Their hash manifest records the import. Future design source belongs in `previews/web` and `previews/mobile`, with shared semantic tokens, copy and fixtures. The first migration should split readable layout, styles, logic and data; retain generated packed HTML as an export, not the routine authoring file.
@@ -12,20 +16,27 @@ The current mobile preview is a readable fork of the candidate. The web preview 
 
 ## IDs and ownership
 
-Use JB-CHG for a change package, JB-REQ for a requirement, JB-WEB and JB-APP for screen states, INC for an inconsistency and DEC for a decision. Preserve D01–D23 as legacy aliases for the imported Daan Seva work. IDs survive filenames and layout changes.
+Use EXP for an exploration, JB-CHG for a change package, JB-REQ for a requirement,
+JB-WEB and JB-APP for screen states, INC for an inconsistency and DEC for a decision.
+Preserve D01–D23 as legacy aliases. IDs survive filenames and layout changes.
 
 Repository maintenance is assigned to @suyashb734. Product, design, operations/payments and engineering approval roles need named people or teams. CODEOWNERS alone does not establish their approval or configure protected branches.
 
 ## One change per reviewable package
 
-1. Create a change issue and `change/JB-CHG-xxxx-description` branch.
+1. Claim an issue with a human owner and scope. Use an EXP record/branch for an alternative; use a `change/JB-CHG-xxxx-owner-description` branch for integration. Give each concurrent task its own checkout/worktree.
 2. Fill `changes/JB-CHG-xxxx/README.md` with the concrete problem, intended behavior, affected platforms, screen and requirement IDs, dependencies and explicit out-of-scope work.
 3. Update readable sources, state fixtures, rule or copy decisions and the change register.
 4. Generate before, after and comparison evidence under the same case IDs. Attach the artifact and summary to the PR. Explain intentional visual differences.
 5. Record the product/design decision, operational confirmations where affected, and engineering acknowledgement of feasibility.
-6. Merge the reviewed change and issue a versioned handoff manifest when its scoped gate passes.
+6. Merge reviewable work without implying approval. Issue a versioned handoff manifest only when its scoped gate passes with human approval of that exact version.
 
-Use a small project board: Draft, In review, Ready for build, In implementation, Staging verification and Verified live. Design state and implementation state are separate fields; merging a design PR does not deploy the product.
+The private [project](https://github.com/users/suyashb734/projects/1) has Work type,
+Status (design state) and Implementation state fields. The design states distinguish
+Exploring, Draft, In review, Approved for build, Parked, Rejected and Superseded.
+Selection of an exploration is recorded in its EXP outcome, not as build approval.
+Keep implementation state independent; issue closure and design approval do not
+prove deployment. Board fields are manual navigation, not authoritative signoff.
 
 ## Repository controls
 
@@ -37,4 +48,9 @@ Use private PR artifacts or an access-controlled preview for routine reviews. A 
 
 The initial 49 PNGs are retained once as reference evidence. Future regenerated screenshots and videos belong in ignored `artifacts/` output and PR artifacts. Promote the approved handoff package to retained release assets before routine CI artifacts expire. Store larger repeated media in the team’s approved asset system or release assets rather than adding every iteration to Git history.
 
-Use candidate versions such as `design-v0.1.0-rc.1` during review. Create a stable `design-v0.1.0` handoff only after the manifest gate passes. Git tags identify the exact design commit; [GitHub Releases](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases) can attach its package and notes. Production deployments have separate version and verification records.
+Use candidate versions such as `design-v0.1.0-rc.1` during review. Create a stable
+`design-v0.1.0` handoff only after the manifest gate passes. Its manifest identifies
+the approved source commit; the release/tag includes the handoff record and assets.
+[GitHub Releases](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases)
+can retain its package and notes. Preserve issued versions and state superseded
+scope explicitly. Production deployments have separate verification records.

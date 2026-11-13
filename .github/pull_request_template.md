@@ -4,7 +4,11 @@ Describe the concrete user problem and final behavior. Include a before/after ex
 
 ## Scope and traceability
 
-- Change ID and issue:
+- Work type: exploration / integrated design change / repository maintenance
+- EXP or change ID and issue:
+- Accountable human and agent used (Codex / Claude / none):
+- Branch and permitted file scope:
+- Originating exploration and selection evidence, if integrating an option:
 - Source baseline IDs and hashes/commit:
 - Affected web/app screen IDs:
 - Requirement IDs:
@@ -21,9 +25,13 @@ Describe the concrete user problem and final behavior. Include a before/after ex
 
 ## Approval and handoff
 
+- Review intent: preserve exploration / integrate draft / approve exact handoff
+- Exact source commit being reviewed:
 - Product/design review evidence:
 - Operations/payment confirmation where affected:
 - Engineering acknowledgement:
 - Candidate or approved release manifest, if applicable:
 
-Passing CI does not create product approval or prove deployment. Link implementation and staging/live verification separately.
+Passing CI, selecting an idea or merging this PR does not create product approval
+or prove deployment. Link named human approval evidence and the approved release
+for a final handoff. Link implementation and staging/live verification separately.

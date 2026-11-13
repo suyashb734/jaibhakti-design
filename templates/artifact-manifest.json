@@ -1,0 +1,5 @@
+{
+  "source_commit": null,
+  "note": "List retained release artifact paths or HTTPS URLs and their actual SHA256 checksums. This empty template is not evidence.",
+  "artifacts": []
+}

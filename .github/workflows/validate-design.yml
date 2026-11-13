@@ -17,3 +17,5 @@ jobs:
           persist-credentials: false
       - name: Validate references registries and links
         run: python3 tools/validate_design_hub.py
+      - name: Check exploration and handoff boundaries
+        run: python3 -m unittest discover -s tests -v

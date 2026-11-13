@@ -4,7 +4,20 @@
 
 Versioned product design, decisions and engineering handoff for Jai Bhakti web and mobile. The web acquires bookings; the mobile app will show booking updates, evidence and management, and allow devotees to book more.
 
-**Current status: baseline import and design review. No engineering handoff release is approved yet.** The 49-state Daan Seva prototype is a draft candidate. Its UI checks are useful evidence; they do not establish production readiness or product signoff.
+**Current status: shared draft workspace. No engineering handoff release is approved yet.** The 49-state Daan Seva prototype is a draft candidate. Its UI checks are useful evidence; they do not establish production readiness or product signoff. `main` contains working material, including unresolved alternatives.
+
+## Find the right version
+
+| You want to… | Start here |
+| --- | --- |
+| Review ideas that are not final | [Explorations](explorations/README.md), including the existing My Bookings A/B comparison |
+| Review the integrated draft | [Mobile preview](previews/mobile/Prototype.html), [web baseline](previews/web/index.html) and [change packages](registries/changes.json) |
+| Find what engineering may build | [Approved handoffs](releases/README.md); currently none |
+| See work and decisions | [Private project](https://github.com/users/suyashb734/projects/1) and linked issues |
+| Run or review the complete folder | [Review guide](docs/00_Review_the_Whole_Design.md) or [open in Codespaces](https://codespaces.new/suyashb734/jaibhakti-design) |
+
+A selected exploration is a direction for integration. A merged change is shared
+work. Human approval of an exact release authorizes the scoped engineering handoff.
 
 ## Review queue
 
@@ -12,6 +25,8 @@ Track the [first design change](https://github.com/suyashb734/jaibhakti-design/i
 
 ## Start here
 
+- [Shared workspace model](docs/06_Shared_Design_Workspace.md) covers explorations, Codex/Claude collaboration and human finalization.
+- [Run and review the whole design](docs/00_Review_the_Whole_Design.md) covers ZIP, clone, Codespaces and screenshot artifacts.
 - [Management recommendation](docs/03_GitHub_Workflow.md) explains the repository and review model.
 - [Source audit and inconsistencies](docs/01_Source_Audit.md) compares the original design, live web and candidate.
 - [Web and mobile model](docs/02_Web_and_Mobile_Model.md) defines proposed responsibilities, shared records and checkout continuity.
@@ -20,7 +35,10 @@ Track the [first design change](https://github.com/suyashb734/jaibhakti-design/i
 - [Tech handoff checklist](docs/05_Engineering_Handoff.md) defines the release gate.
 - [Migration plan](PLANS.md) lists phases, exit criteria and the next concrete work.
 
-Download the repository and open [index.html](index.html) to browse the local references. GitHub displays HTML as source; no public preview site is published by this repository.
+Download the whole repository and open [index.html](index.html), or clone it and run
+`python3 tools/serve_design_hub.py` at http://localhost:8000. GitHub displays HTML as
+source. Codespaces configuration is provided for an on-demand private preview; no
+permanent public site is published.
 
 ## What was imported
 
@@ -46,12 +64,14 @@ fixtures/        Scenario definitions and acceptance scope
 tokens/          Candidate design tokens awaiting visual approval
 registries/      Sources, screen IDs, requirements, changes and decisions
 changes/         One reviewable package for each product change
+explorations/    Alternatives, findings and selection/rejection rationale
 docs/            Platform, review, measurement and handoff guidance
 references/      Immutable imports and dated live observations
 previews/        Editable mobile draft and the web baseline entry
 releases/        Approved handoff manifests, separate from live deployment
 tools/           Integrity and handoff validation
 .github/         Review templates, issue forms, code owners and CI
+.devcontainer/   On-demand Codespaces review environment
 artifacts/       Generated comparison evidence, ignored by Git
 ```
 
@@ -59,7 +79,13 @@ Production web, native app and backend implementations can remain in their exist
 
 ## Review workflow
 
-Create a change branch and package, update its requirements and affected screens, attach comparable before and after evidence, and open a pull request. Record product and design decisions plus engineering acknowledgement. A design release is ready only when its scoped blockers are resolved and its versioned manifest is approved. Track implementation and verified deployment separately.
+Claim an issue and give each concurrent human/agent task its own branch and worktree.
+Document alternatives in an EXP package. Promote a selected direction through a
+JB-CHG package, integrated source diff, measurements and PR. Record named human
+product/design approval for the exact source commit, plus engineering acknowledgement
+and affected operational confirmations. Release only that approved scope. Keep
+implementation and verified deployment separate. Codex and Claude share
+[AGENTS.md](AGENTS.md), with [CLAUDE.md](CLAUDE.md) importing the same policy.
 
 There are currently 49 app candidate states, 12 original entry-state references and 6 live observations in the screen registry. All candidate states remain Draft. The 22 specification acceptance criteria are mapped to representative candidate states, without claiming individual signoff.
 
@@ -67,6 +93,7 @@ There are currently 49 app candidate states, 12 original entry-state references 
 
 ```bash
 python3 tools/validate_design_hub.py
+python3 -m unittest discover -s tests -v
 python3 tools/validate_design_hub.py --handoff
 ```
 
@@ -75,3 +102,8 @@ The first command validates registry links, IDs, reference hashes and document s
 ## Ownership
 
 Repository maintainer: [@suyashb734](https://github.com/suyashb734). Product, design, engineering, operations and payments approvers still need named assignment. CODEOWNERS routes repository review; GitHub branch rules and team review assignments must be configured for the organization’s actual access and plan.
+
+The private project is linked to the repository. Access to the project and the
+private repository must both be granted to actual collaborators. Required-review
+rules and release protections are not yet configured; instructions are guidance,
+not permission enforcement.

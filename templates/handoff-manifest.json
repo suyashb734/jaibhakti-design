@@ -10,6 +10,10 @@
     "my-bookings",
     "web-app-continuity"
   ],
+  "screen_ids": [],
+  "requirement_ids": [],
+  "excluded_scope": [],
+  "supersedes": [],
   "source_ids": [
     "SRC-INITIAL",
     "SRC-LIVE",
@@ -18,6 +22,7 @@
   ],
   "artifact_manifest": null,
   "acceptance_report": null,
+  "operations_payments_affected": true,
   "required_approval_roles": [
     "product",
     "design",

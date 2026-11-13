@@ -2,17 +2,20 @@
 
 Give the tech team one approved, versioned package with an exact commit. It must explain intended behavior, platform responsibilities, source data, changes and outstanding work. An HTML export or a green prototype integrity check is insufficient on its own.
 
+Engineering starts from [the release index](../releases/README.md), not main or
+an exploration. A selected idea or merged draft is not a submitted final design.
+
 ## Required package
 
 - Change ID, problem, final scope and source baseline IDs.
-- Affected web/app screens and requirements with stable IDs.
+- Included web/app screens and requirements with stable IDs, plus explicit omissions.
 - Readable design source, linked preview, brand assets, token version and copy.
 - Representative fixtures with distinct account, beneficiary, product, temple, parent, occurrence, payment and asset IDs.
 - State transitions, empty/loading/error/partial states and notification/deep-link destinations.
 - First and regular price examples for the included offers; duration, cancellation, retry and legacy rules.
 - Before/after/diff artifacts with capture metadata and the intentional changes explained.
 - Acceptance results with tested/not-tested scope and remaining dependencies.
-- Named product/design approvals, operational/payment confirmations where applicable, and engineering acknowledgement.
+- Named human product/design approvals, operational/payment confirmations where applicable, and engineering acknowledgement. Each approval records role, timestamp, exact source commit and review evidence.
 - Implementation issue/PR links and release manifest with source commit and artifact checksums.
 
 ## Readiness checklist
@@ -33,6 +36,26 @@ An approved design may enter implementation while staging/backend tests are sche
 ## Release manifest
 
 Create one manifest from [the template](../templates/handoff-manifest.json), record its exact commit and artifact checksums, and resolve its blockers. Run `python3 tools/validate_design_hub.py --handoff`. That check validates the record, not the authenticity of human approval; link the actual review evidence.
+
+Each approval object needs name, evidence, approved_at (including timezone) and
+commit matching the release's source commit. Product, design and engineering
+acknowledgement cannot be omitted from required_approval_roles. Explicitly state
+operations_payments_affected and include that role when true. Use
+[the artifact manifest template](../templates/artifact-manifest.json) for retained
+paths or release URLs and actual SHA256 hashes. Local artifact bytes are checked;
+remote bytes and the truth of review evidence require human verification.
+
+First commit the candidate source and capture evidence for that source commit.
+Humans review that exact revision. Add the manifest and approval records in a later
+metadata commit without changing the approved source or dependencies. The manifest's
+commit field is the approved source revision; the release tag identifies the
+complete package including its metadata. This avoids a self-referential commit.
+Any source edits after review need approval for the new source revision.
+
+Retain artifacts with the release rather than depending on expiring Actions links.
+Keep each issued package unchanged by policy and use a new version for corrections.
+Record which earlier release/scope it supersedes. Branch/tag/release protections
+must be enabled separately before claiming enforced immutability.
 
 The repository currently has no approved handoff releases. Its source import and 49-state candidate must not be passed to engineering as a final approved product contract.
 

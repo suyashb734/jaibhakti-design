@@ -1,0 +1,14 @@
+{
+  "name": "Jai Bhakti design review",
+  "image": "mcr.microsoft.com/devcontainers/python:3.12-bookworm",
+  "remoteUser": "vscode",
+  "forwardPorts": [8000],
+  "portsAttributes": {
+    "8000": {
+      "label": "Jai Bhakti Design Hub",
+      "onAutoForward": "openBrowser"
+    }
+  },
+  "postCreateCommand": "python3 tools/validate_design_hub.py",
+  "postStartCommand": "python3 tools/serve_design_hub.py --background --bind 0.0.0.0"
+}

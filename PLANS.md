@@ -16,6 +16,12 @@ Exit: files are traceable by hash, links work, imports are labelled correctly an
 
 ## Phase 1 Resolve the shared product contract
 
+Repository collaboration setup now includes an exploration register, EXP-0001 for
+the existing layout alternatives, shared Codex/Claude instructions, a private
+project queue, review/run guidance and on-demand Codespaces configuration. The
+working branch remains a draft workspace; final tech handoffs are scoped releases.
+See docs/06_Shared_Design_Workspace.md. This setup does not resolve product decisions.
+
 Name product, design, engineering and operations/payments owners. Resolve duration/cancellation, catalogue and temple mapping, price and add-ons, account/beneficiary identity, event sources, legacy purchase handling and source approval. Confirm the full consent flow with the payments team. Decide the initial mobile checkout implementation and browser fallback.
 
 Exit: scoped blockers for the first vertical slice have recorded decisions and signed contract inputs. Design exploration can continue for unaffected areas.

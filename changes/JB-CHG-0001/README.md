@@ -2,6 +2,11 @@
 
 Design status: Draft. Implementation status: not started in this repository. Product/design approval and engineering acknowledgement: pending.
 
+Human owner: unassigned. Agents used for repository bootstrap: Codex with a read-only
+review sidecar. No human product approval has been recorded. The existing layout
+comparison is documented as [EXP-0001](../../explorations/EXP-0001/README.md); no
+option has been selected. Integration source lives under previews/, not this folder.
+
 The original and live purchase experience contain duration, identity and pricing differences from the new Nirantar direction. This change must align purchase expectations with ongoing management and dated evidence across web and app before handoff.
 
 ## Baselines and scope
