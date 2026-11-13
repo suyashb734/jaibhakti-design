@@ -1,12 +1,27 @@
 # Shared instructions for design contributors and agents
 
-For continuation, read HANDOFF.md first. It identifies pending work on a separate
-PR branch and distinguishes it from what is already on main or the public site.
+For continuation, read HANDOFF.md first. It records verified preview publishing,
+the design editing map and the remaining product decisions.
 
 This is a design workspace for Jai Bhakti web and mobile. Production code lives
 elsewhere. Read START_HERE.md, README.md, the assigned exploration/change package, and its linked
 decisions before editing. Use the repository records rather than private chat
 history as the shared source of decisions.
+
+## Design asset focus
+
+- Optimize for readable, editable design assets and visual review. Keep the static
+  preview usable by opening Prototype.html directly, as well as through the server.
+- Screen markup lives in previews/mobile/assets/screens/, shared visual helpers in
+  components.js, sample data in fixtures.js, and preview wiring in app.js. Read
+  previews/mobile/README.md before editing these files.
+- Keep preview tooling small. Production frameworks, services and account/payment
+  integrations belong in the implementation repositories.
+- For three-person collaboration follow docs/10_Design_Collaboration.md. A routine
+  design task needs an accountable human, scoped files, evidence and another human
+  reviewer. Exact-version engineering approval applies when issuing a handoff.
+- Open commercial/backend decisions block their affected handoff scope; visual
+  exploration can continue with clearly labelled sample assumptions.
 
 ## Authority and status
 

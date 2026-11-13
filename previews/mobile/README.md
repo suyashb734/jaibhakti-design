@@ -1,7 +1,43 @@
-# Working mobile design source
+# Editable mobile design asset
 
-This is an editable fork of the imported Daan Seva candidate. Open Prototype.html for the working design. Edit assets/styles.css and assets/app.js with the HTML wrapper. All sample interactions and media remain prototype behavior.
+Open Prototype.html directly, or use the local design server. This is a static,
+clickable design with sample data. Classic deferred scripts preserve offline file
+review; there is no package install or application build step.
 
-Gallery.html links the working routes beside frozen imported reference images. Those images do not update when source changes. Generate new evidence into ignored artifacts using the capture tool, and attach it to the change PR.
+## Where to edit
 
-The first source migration still needs shared tokens, catalogue fixtures, copy and state contracts to be extracted after their decisions are approved. No native production framework is selected by this fork.
+| Design area | Source |
+| --- | --- |
+| Home and profile | assets/screens/discovery.js |
+| My Bookings tabs and sections | assets/screens/bookings.js |
+| Nirantar details and history | assets/screens/nirantar.js |
+| Dated seva detail | assets/screens/occurrence.js |
+| Certificate and video designs | assets/screens/media.js |
+| Beneficiary details | assets/screens/beneficiary.js |
+| Details, review and payment sample states | assets/screens/checkout.js |
+| Support design | assets/screens/support.js |
+| Cadence and long-name samples | assets/screens/examples.js |
+| Shared cards, icons, formatting and visual sections | assets/components.js |
+| Sample bookings, people, dates and scenario variants | assets/fixtures.js |
+| Review sidebar routes and labels | assets/screen-index.js |
+| Navigation, forms and demonstration interactions | assets/app.js |
+| Shared layout and screen styles | assets/styles.css |
+| Original-final brand assets and values | ../../assets/brand/original-brand.css |
+
+Each script uses the small shared `window.JBDesign` namespace. Prototype.html loads
+fixtures, the screen index, components, screen files and finally preview wiring,
+in that order. Add any new screen script before app.js. Preserve registered route
+and screen IDs; update the registries deliberately when adding a state.
+
+## Parallel editing
+
+Give each task a human owner, branch and separate checkout. Agree screen file scope
+before starting an agent. Shared CSS, components, fixtures and brand edits need
+coordination because they can affect all screen families. Put independent visual
+variants under explorations/EXP-xxxx/options/ rather than overwriting the integrated
+design. See [the daily workflow](../../docs/10_Design_Collaboration.md).
+
+Gallery.html pairs working routes with frozen imported screenshots. Those images
+do not update with source edits. Capture current evidence under ignored artifacts/
+using tools/capture_design_evidence.py and include the result in the change review.
+All payments, support and media remain design demonstrations.

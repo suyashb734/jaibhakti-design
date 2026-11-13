@@ -98,6 +98,10 @@ behavior. Preserve the accepted terms of existing purchases.
 
 ## Start an agent session
 
+For everyday design collaboration, follow [the three-person workflow](docs/10_Design_Collaboration.md)
+and [mobile editing map](previews/mobile/README.md). Keep tasks focused on design
+assets; handoff approval is a separate activity.
+
 1. Read [AGENTS.md](AGENTS.md), this guide and [CONTRIBUTING.md](CONTRIBUTING.md).
    CLAUDE.md imports the same agent policy.
 2. Check Git status, current branch and commit. Identify the human owner, assigned

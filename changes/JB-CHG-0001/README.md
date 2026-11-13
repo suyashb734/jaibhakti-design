@@ -57,3 +57,7 @@ See docs/08_Live_Seva_Catalogue.md and docs/09_Original_Brand_Baseline.md. Recor
 comparative captures and affected-state checks before the PR merges.
 
 [Brand/reference verification summary](brand-verification.json) records the baseline, checks, source hashes and explicit not-tested scope.
+
+The [design source organization record](collaboration-source.md) describes the
+subsequent maintenance split for three-person editing, its unchanged design scope
+and comparison evidence.

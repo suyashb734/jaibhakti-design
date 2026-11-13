@@ -68,9 +68,10 @@ baseline, human owner and permitted files. An example instruction is:
 1. Claim the issue or record the accountable human and scope. Check other active
    work on the same files before starting.
 2. Choose whether this is a refinement of the integrated draft or an isolated
-   experiment. The existing A/B routes both live in previews/mobile/assets/app.js
-   and share styles/data; editing shared code can affect both. Review both when
-   changing those shared files.
+   experiment. The existing A/B routes both live in
+   previews/mobile/assets/screens/bookings.js and share components, styles and
+   fixtures. Review both when changing shared files. Use the
+   [editing map](../previews/mobile/README.md) to agree file scope.
 3. For a new alternative, put its preview under
    explorations/EXP-0001/options/your-variant/ rather than overwriting another
    option or replacing the integrated draft. Reuse the shared original-brand assets
