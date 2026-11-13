@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Three launched Jai Bhakti Nirantar sevas</title>
+    <link rel="stylesheet" href="../walkthroughs/assets/guide.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <a
+        class="jb-brand"
+        href="../index.html"
+        aria-label="Jai Bhakti design hub"
+        ><img src="../assets/brand/temple-mark.svg" alt="" /><span lang="hi"
+          >जय भक्ति</span
+        ></a
+      >
+      <nav aria-label="Review resources">
+        <a href="../walkthroughs/index.html">Walkthroughs</a
+        ><a href="../explorations/index.html">Explorations</a
+        ><a href="../docs/08_Live_Seva_Catalogue.md">Source notes</a>
+      </nav>
+    </header>
+    <main>
+      <p class="eyebrow">Live product reference · Observed 13 November 2026</p>
+      <h1>The three launched Nirantar sevas</h1>
+      <p class="intro">
+        Actual offering and temple images from jaibhakti.com, with its displayed
+        names, weekly schedule and introductory/regular amounts. The colors,
+        wordmark and typography follow the original final design.
+      </p>
+      <div class="catalogue-cards">{{OFFERING_CARDS}}</div>
+      <section class="context-panel">
+        <h2>How this connects to the design</h2>
+        <div class="flow-grid">
+          <div>
+            <h3>Web: take the booking</h3>
+            <p>
+              Identify the actual offering and temple, show the purchased terms
+              and beneficiary, and confirm payment from the authoritative
+              service.
+            </p>
+          </div>
+          <div>
+            <h3>App: follow the booking</h3>
+            <p>
+              Show ongoing bookings, registered dates, performed dates and
+              independently ready certificates/videos. Book More must preserve
+              the selected offering.
+            </p>
+          </div>
+          <div>
+            <h3>Shared product rules</h3>
+            <p>
+              Keep product/package identity and purchased price snapshots
+              consistent. Account holder, payer and beneficiary are separate
+              concepts.
+            </p>
+          </div>
+        </div>
+      </section>
+      <p class="notice">
+        <strong>Open decisions remain.</strong> The live pages display automatic
+        renewal/cancellation wording alongside a promise referring to a selected
+        number of weeks. Actual mandate duration and later authorization remain
+        to be confirmed. These observed prices are references, not a newly
+        approved payment contract.
+      </p>
+      <p class="hint">
+        The app draft still contains illustrative products and bookings,
+        including Hanuman. Those samples do not establish another launched
+        offer. The catalogue above records the three live offers; later
+        purchases must use confirmed IDs and terms.
+      </p>
+      <p>
+        <a href="../walkthroughs/index.html#app/0"
+          >Review the proposed app journey →</a
+        >
+        ·
+        <a href="../docs/08_Live_Seva_Catalogue.md"
+          >Read the asset provenance and mapping →</a
+        >
+      </p>
+    </main>
+  </body>
+</html>

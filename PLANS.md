@@ -60,3 +60,12 @@ Avoid one repeatedly overwritten packed HTML file: the 6 MB export makes rule ch
 ## First execution brief
 
 Assign owners and resolve the recurring duration, catalogue/pricing and web-to-app ownership decisions first. Produce one approved price and consent example for Rahu ₹51/₹121 and Gaj Mahalakshmi ₹51/₹101, with exact service identity, cadence, cancellation and status transitions. Review existing mandate terms before any legacy conversion. This unlocks a coherent checkout-to-app slice and gives the tech team something concrete to implement.
+
+## Latest authorized preview work
+
+The owner selected the original-final brand and requested the actual imagery and
+facts for the three launched Nirantar sevas. Shared brand assets, the live catalogue
+and practical task-branch guidance are now part of the review update. The connected
+publisher refreshes the public preview after relevant main merges; this is review
+publication, not a new engineering handoff. Layout and scoped commercial/identity
+decisions remain open. See docs/07_Preview_and_Collaboration.md through docs/09_Original_Brand_Baseline.md.

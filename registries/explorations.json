@@ -22,7 +22,20 @@
       ],
       "selected_option": null,
       "outcome_evidence": null,
-      "github_issue": "https://github.com/suyashb734/jaibhakti-design/issues/8"
+      "github_issue": "https://github.com/suyashb734/jaibhakti-design/issues/8",
+      "options": [
+        {
+          "id": "A",
+          "preview": "previews/mobile/Prototype.html#bookings/nirantar",
+          "source": "previews/mobile/assets/app.js"
+        },
+        {
+          "id": "B",
+          "preview": "previews/mobile/Prototype.html#sections",
+          "source": "previews/mobile/assets/app.js"
+        }
+      ],
+      "shared_source_note": "Existing A/B options share integrated source. New isolated alternatives belong under this EXP/options/variant/ and are reviewed through a task branch."
     }
   ]
 }

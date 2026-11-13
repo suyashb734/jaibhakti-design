@@ -31,3 +31,12 @@ python3 -m venv .venv
 ```
 
 The optional GitHub workflow runs captures manually and uploads a review artifact. After source migration, connect captures to scoped PR changes and add comparable visual baselines and behavioral tests as described in the measurement protocol. An artifact report is generated evidence, not proof of usability or production parity.
+
+`build_live_catalogue.py` generates catalogue/index.html from the dated live asset
+manifest and page template. Run --check to detect stale cards.
+
+The owner authorized public review hosting. The Publish review preview Action
+validates relevant main changes, builds a clean export and calls
+`sync_preview_checkout.py` against the dedicated public checkout. The helper checks
+the destination, preserves uncommitted work and verifies asset checksums. Pages
+refreshes the same shared URL. See [the connected workflow](../docs/07_Preview_and_Collaboration.md).

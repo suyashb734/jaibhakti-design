@@ -39,3 +39,21 @@ No approved handoff release exists for this change yet.
 - [DEC-004](https://github.com/suyashb734/jaibhakti-design/issues/4) Beneficiary gotra family add ons and documents
 - [DEC-005](https://github.com/suyashb734/jaibhakti-design/issues/5) Fulfilment payment media events and support
 - [DEC-006](https://github.com/suyashb734/jaibhakti-design/issues/6) Visual baseline layout selection and handoff approval
+
+## Original-brand and live-reference update
+
+The owner selected the original final design’s branding and requested actual images
+and product facts from the three launched sevas. The working draft now reuses the
+extracted wordmark/fonts and original ink/CTA values. A visual catalogue pairs live
+offering and temple images with dated prices, cadence and IDs. This does not approve
+the open layout or commercial/identity decisions.
+
+Before source: dfccf302d16b6e9ec51c3b98f5b81d4dd96155bd. Intentional differences:
+restore the Devanagari wordmark, original Poppins/Noto/Martel assets, brown/cream
+values and gold-to-orange CTA, replacing the draft home co-brand treatment. The
+historical original and imported screenshots are unchanged. Comparison evidence
+belongs under artifacts/JB-CHG-0001-brand/. Product state/rule behavior is unchanged.
+See docs/08_Live_Seva_Catalogue.md and docs/09_Original_Brand_Baseline.md. Record
+comparative captures and affected-state checks before the PR merges.
+
+[Brand/reference verification summary](brand-verification.json) records the baseline, checks, source hashes and explicit not-tested scope.

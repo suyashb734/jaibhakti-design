@@ -25,8 +25,17 @@
   "review_entry": "walkthroughs/index.html",
   "historical_execution_baseline": "JB-BASELINE-001",
   "static_preview": {
-    "status": "prepared_not_published",
-    "bundle_command": "python3 tools/build_preview_site.py --require-clean",
-    "visibility_decision": "awaiting_public_access_clarification"
-  }
+    "status": "published",
+    "url": "https://suyashb734.github.io/jaibhakti-design-preview/",
+    "repository_url": "https://github.com/suyashb734/jaibhakti-design-preview",
+    "visibility": "public",
+    "visibility_decision": "Project owner accepted public access after clarification that links may be forwarded",
+    "source_repository_visibility": "private",
+    "hosting": "GitHub Pages, public export repository main branch",
+    "publisher": "Publish review preview Action; automatic on relevant main changes; first automatic run pending verification",
+    "first_source_commit": "dfccf302d16b6e9ec51c3b98f5b81d4dd96155bd",
+    "first_deployment_run": "https://github.com/suyashb734/jaibhakti-design-preview/actions/runs/43407695644",
+    "search_indexing": "noindex requested; not access control"
+  },
+  "brand_authority": "JB-BASELINE-001"
 }

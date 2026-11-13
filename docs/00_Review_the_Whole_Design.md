@@ -19,7 +19,21 @@ documents. These can run as static HTML, CSS and JavaScript. Start with
 | GitHub integrity CI | Passing; this is not product approval |
 | GitHub capture workflow | Successfully rendered all 49 working-mobile states and uploaded evidence |
 | New engineering handoff | Pending; historical original handoff is recorded separately |
-| Interactive hosting | Codespaces configuration is included; no permanent public preview is deployed |
+| Interactive hosting | Public GitHub Pages review URL; private authoring repo; connected publication workflow |
+
+## Open the shared preview
+
+- [Preview home](https://suyashb734.github.io/jaibhakti-design-preview/).
+- [Original final design: 12 states](https://suyashb734.github.io/jaibhakti-design-preview/walkthroughs/index.html#original/0).
+- [Current app journey](https://suyashb734.github.io/jaibhakti-design-preview/walkthroughs/index.html#app/0).
+- [All 49 app states](https://suyashb734.github.io/jaibhakti-design-preview/walkthroughs/index.html#all-app/0).
+- [Explorations](https://suyashb734.github.io/jaibhakti-design-preview/explorations/index.html).
+- [Three launched sevas and actual imagery](https://suyashb734.github.io/jaibhakti-design-preview/catalogue/index.html).
+
+The URL stays fixed. Relevant merges to main trigger validation and publication;
+branch edits do not change it before merge. Check the publish workflow and the
+site’s preview-info.json for the deployed source revision. Read [the collaboration guide](07_Preview_and_Collaboration.md) before editing an option. Documentation links require private repo access.
+
 
 The verified capture run is [43396621315](https://github.com/suyashb734/jaibhakti-design/actions/runs/43396621315). It rendered the working design at commit f3aa8833dd591651463a41d2661c07c06b91ba8a. Its PNGs and report are render evidence, not a backend or native-device test.
 
@@ -77,4 +91,7 @@ The capture artifact is a screenshot/report bundle. For the complete interactive
 
 The static review hub and prototypes are technically suitable for GitHub Pages, subject to the account plan. Pages does not provide a production payment or application backend. A private repository also does not automatically produce a private Pages website; privately published Pages sites require an organization using GitHub Enterprise Cloud. See [Pages hosting](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages) and [Pages visibility](https://docs.github.com/en/enterprise-cloud@latest/pages/getting-started-with-github-pages/changing-the-visibility-of-your-github-pages-site).
 
-Pages has not been enabled for this repository. Keep the current draft private unless a public review deployment is explicitly selected.
+The owner accepted public preview access. This account plan does not support Pages
+from the private repository, so exported static assets are served through the
+separate public jaibhakti-design-preview repository. Source/decisions stay private.
+Noindex metadata is requested, with no authentication restriction.

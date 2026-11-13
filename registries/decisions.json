@@ -88,7 +88,15 @@
       "owner_role": "Product design and engineering",
       "owner": null,
       "status": "open",
-      "decision": null,
+      "decision": {
+        "brand_baseline": "JB-BASELINE-001",
+        "direction": "Project owner requires colors and branding from the original final design",
+        "record": "docs/09_Original_Brand_Baseline.md",
+        "remaining": [
+          "My Bookings layout selection",
+          "approval of exact newer handoff scope"
+        ]
+      },
       "approval": null,
       "github_issue": "https://github.com/suyashb734/jaibhakti-design/issues/6",
       "record": "decisions/DEC-006.md"

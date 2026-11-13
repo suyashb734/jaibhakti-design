@@ -47,7 +47,7 @@ Severity describes the affected handoff scope. An unresolved billing decision bl
 | [INC-009](#inc-009) | decision | Support configuration differs between live and candidate | Operations |
 | [INC-010](#inc-010) | blocker | Elapsed time is not a fulfilment event | Operations and engineering |
 | [INC-011](#inc-011) | blocker | Initial live checkout displays the first amount without the regular rate | Product and payments |
-| [INC-012](#inc-012) | decision | Visual primitives have no selected approved baseline | Design |
+| [INC-012](#inc-012) | decision | Original-final branding selected; alignment under review | Design |
 | [INC-013](#inc-013) | decision | Information architecture remains a comparison | Product and design |
 | [INC-014](#inc-014) | blocker | Legacy mandate migration is unspecified | Product and payments |
 | [INC-015](#inc-015) | blocker | Source confirmation and release approval are different | Product, design and engineering |
@@ -152,11 +152,15 @@ Resolution needed: Review the full consent flow with the payments owner and show
 Owner role: Product and payments. Affected scopes: recurring-checkout.
 
 <a id="inc-012"></a>
-## INC-012 Visual primitives have no selected approved baseline
+## INC-012 Original-final branding selected; alignment under review
 
 The packed original, live web and candidate differ in branding, typography, CTA sizing and palette values. The original artboard is 393×852; candidate exports use 390 px artboards at 2×.
 
-Resolution needed: Select semantic tokens and brand assets, distinguish web/app differences, and compare only matching fixtures, viewports and render environments.
+Owner update: the original final design is now selected for colors and branding.
+Its wordmark, fonts, ink and CTA values are extracted and applied to working
+previews. See docs/09_Original_Brand_Baseline.md and the JB-CHG-0001 verification
+summary. Compare only matching fixtures, viewports and render environments; the
+next exact-version handoff and open layout selection still need review.
 
 Owner role: Design. Affected scopes: design-system, visual-comparison.
 
