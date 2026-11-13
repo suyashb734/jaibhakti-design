@@ -1,8 +1,14 @@
 # Jai Bhakti Design Hub
 
+[![Registry integrity](https://github.com/suyashb734/jaibhakti-design/actions/workflows/validate-design.yml/badge.svg)](https://github.com/suyashb734/jaibhakti-design/actions/workflows/validate-design.yml)
+
 Versioned product design, decisions and engineering handoff for Jai Bhakti web and mobile. The web acquires bookings; the mobile app will show booking updates, evidence and management, and allow devotees to book more.
 
 **Current status: baseline import and design review. No engineering handoff release is approved yet.** The 49-state Daan Seva prototype is a draft candidate. Its UI checks are useful evidence; they do not establish production readiness or product signoff.
+
+## Review queue
+
+Track the [first design change](https://github.com/suyashb734/jaibhakti-design/issues/7) and its six decision issues in the [handoff milestone](https://github.com/suyashb734/jaibhakti-design/milestone/1). The fifteen inconsistencies remain mapped in the structured register.
 
 ## Start here
 

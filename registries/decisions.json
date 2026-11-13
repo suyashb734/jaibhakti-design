@@ -13,7 +13,7 @@
       "status": "open",
       "decision": null,
       "approval": null,
-      "github_issue": null,
+      "github_issue": "https://github.com/suyashb734/jaibhakti-design/issues/1",
       "record": "decisions/DEC-001.md"
     },
     {
@@ -29,7 +29,7 @@
       "status": "open",
       "decision": null,
       "approval": null,
-      "github_issue": null,
+      "github_issue": "https://github.com/suyashb734/jaibhakti-design/issues/2",
       "record": "decisions/DEC-002.md"
     },
     {
@@ -44,7 +44,7 @@
       "status": "open",
       "decision": null,
       "approval": null,
-      "github_issue": null,
+      "github_issue": "https://github.com/suyashb734/jaibhakti-design/issues/3",
       "record": "decisions/DEC-003.md"
     },
     {
@@ -59,7 +59,7 @@
       "status": "open",
       "decision": null,
       "approval": null,
-      "github_issue": null,
+      "github_issue": "https://github.com/suyashb734/jaibhakti-design/issues/4",
       "record": "decisions/DEC-004.md"
     },
     {
@@ -74,7 +74,7 @@
       "status": "open",
       "decision": null,
       "approval": null,
-      "github_issue": null,
+      "github_issue": "https://github.com/suyashb734/jaibhakti-design/issues/5",
       "record": "decisions/DEC-005.md"
     },
     {
@@ -90,7 +90,7 @@
       "status": "open",
       "decision": null,
       "approval": null,
-      "github_issue": null,
+      "github_issue": "https://github.com/suyashb734/jaibhakti-design/issues/6",
       "record": "decisions/DEC-006.md"
     }
   ]

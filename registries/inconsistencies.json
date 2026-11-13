@@ -14,7 +14,7 @@
         "nirantar-management",
         "legacy-import"
       ],
-      "github_issue": null
+      "github_issue": "https://github.com/suyashb734/jaibhakti-design/issues/1"
     },
     {
       "id": "INC-002",
@@ -29,7 +29,7 @@
         "recurring-checkout",
         "nirantar-management"
       ],
-      "github_issue": null
+      "github_issue": "https://github.com/suyashb734/jaibhakti-design/issues/1"
     },
     {
       "id": "INC-003",
@@ -45,7 +45,7 @@
         "booking-import",
         "booking-more"
       ],
-      "github_issue": null
+      "github_issue": "https://github.com/suyashb734/jaibhakti-design/issues/2"
     },
     {
       "id": "INC-004",
@@ -61,7 +61,7 @@
         "booking-more",
         "billing"
       ],
-      "github_issue": null
+      "github_issue": "https://github.com/suyashb734/jaibhakti-design/issues/2"
     },
     {
       "id": "INC-005",
@@ -77,7 +77,7 @@
         "beneficiary-management",
         "billing"
       ],
-      "github_issue": null
+      "github_issue": "https://github.com/suyashb734/jaibhakti-design/issues/4"
     },
     {
       "id": "INC-006",
@@ -92,7 +92,7 @@
         "web-app-continuity",
         "booking-import"
       ],
-      "github_issue": null
+      "github_issue": "https://github.com/suyashb734/jaibhakti-design/issues/3"
     },
     {
       "id": "INC-007",
@@ -107,7 +107,7 @@
         "evidence",
         "occurrence-detail"
       ],
-      "github_issue": null
+      "github_issue": "https://github.com/suyashb734/jaibhakti-design/issues/4"
     },
     {
       "id": "INC-008",
@@ -122,7 +122,7 @@
         "web-app-continuity",
         "engineering-handoff"
       ],
-      "github_issue": null
+      "github_issue": "https://github.com/suyashb734/jaibhakti-design/issues/3"
     },
     {
       "id": "INC-009",
@@ -137,7 +137,7 @@
         "support",
         "beneficiary-management"
       ],
-      "github_issue": null
+      "github_issue": "https://github.com/suyashb734/jaibhakti-design/issues/5"
     },
     {
       "id": "INC-010",
@@ -153,7 +153,7 @@
         "progress",
         "evidence"
       ],
-      "github_issue": null
+      "github_issue": "https://github.com/suyashb734/jaibhakti-design/issues/5"
     },
     {
       "id": "INC-011",
@@ -167,7 +167,7 @@
       "blocks": [
         "recurring-checkout"
       ],
-      "github_issue": null
+      "github_issue": "https://github.com/suyashb734/jaibhakti-design/issues/2"
     },
     {
       "id": "INC-012",
@@ -182,7 +182,7 @@
         "design-system",
         "visual-comparison"
       ],
-      "github_issue": null
+      "github_issue": "https://github.com/suyashb734/jaibhakti-design/issues/6"
     },
     {
       "id": "INC-013",
@@ -196,7 +196,7 @@
       "blocks": [
         "my-bookings"
       ],
-      "github_issue": null
+      "github_issue": "https://github.com/suyashb734/jaibhakti-design/issues/6"
     },
     {
       "id": "INC-014",
@@ -211,7 +211,7 @@
         "legacy-import",
         "nirantar-management"
       ],
-      "github_issue": null
+      "github_issue": "https://github.com/suyashb734/jaibhakti-design/issues/1"
     },
     {
       "id": "INC-015",
@@ -225,7 +225,7 @@
       "blocks": [
         "engineering-handoff"
       ],
-      "github_issue": null
+      "github_issue": "https://github.com/suyashb734/jaibhakti-design/issues/6"
     }
   ]
 }
