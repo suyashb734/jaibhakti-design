@@ -25,17 +25,24 @@
   "review_entry": "walkthroughs/index.html",
   "historical_execution_baseline": "JB-BASELINE-001",
   "static_preview": {
-    "status": "published",
+    "status": "published_initial_snapshot",
     "url": "https://suyashb734.github.io/jaibhakti-design-preview/",
     "repository_url": "https://github.com/suyashb734/jaibhakti-design-preview",
     "visibility": "public",
     "visibility_decision": "Project owner accepted public access after clarification that links may be forwarded",
     "source_repository_visibility": "private",
     "hosting": "GitHub Pages, public export repository main branch",
-    "publisher": "Publish review preview Action; automatic on relevant main changes; first automatic run pending verification",
+    "publisher": "Publish review preview Action is included in PR #9; first automatic run awaits merge and verification",
     "first_source_commit": "dfccf302d16b6e9ec51c3b98f5b81d4dd96155bd",
     "first_deployment_run": "https://github.com/suyashb734/jaibhakti-design-preview/actions/runs/43407695644",
-    "search_indexing": "noindex requested; not access control"
+    "search_indexing": "noindex requested; not access control",
+    "source_commit": "dfccf302d16b6e9ec51c3b98f5b81d4dd96155bd",
+    "automatic_publisher_active": false,
+    "automatic_publisher_pending_pr": 9,
+    "note": "Original-brand/live-catalogue update and publisher code are in open PR #9, not merged or deployed. Public access was accepted by the owner; noindex is requested."
   },
-  "brand_authority": "JB-BASELINE-001"
+  "brand_authority": "JB-BASELINE-001",
+  "handoff": "HANDOFF.md",
+  "pending_implementation_pr": "https://github.com/suyashb734/jaibhakti-design/pull/9",
+  "pending_implementation_branch": "change/JB-CHG-0001-original-brand-and-live-reference"
 }

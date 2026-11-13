@@ -1,5 +1,8 @@
 # Shared instructions for design contributors and agents
 
+For continuation, read HANDOFF.md first. It identifies pending work on a separate
+PR branch and distinguishes it from what is already on main or the public site.
+
 This is a design workspace for Jai Bhakti web and mobile. Production code lives
 elsewhere. Read START_HERE.md, README.md, the assigned exploration/change package, and its linked
 decisions before editing. Use the repository records rather than private chat
