@@ -95,7 +95,14 @@
         "remaining": [
           "My Bookings layout selection",
           "approval of exact newer handoff scope"
-        ]
+        ],
+        "complete_ui_baseline": {
+          "baseline": "JB-BASELINE-001",
+          "scope": "Original branding, styling, listing, offering detail, cart, checkout, recurring setup and confirmation",
+          "record": "docs/11_Original_Design_System.md",
+          "change": "JB-CHG-0002",
+          "note": "Owner-selected reuse of the complete original UI. Layout selection for later My Bookings and new handoff approval remain separate."
+        }
       },
       "approval": null,
       "github_issue": "https://github.com/suyashb734/jaibhakti-design/issues/6",

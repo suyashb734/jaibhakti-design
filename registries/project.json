@@ -50,5 +50,15 @@
   },
   "brand_authority": "JB-BASELINE-001",
   "handoff": "HANDOFF.md",
-  "design_collaboration_guide": "docs/10_Design_Collaboration.md"
+  "design_collaboration_guide": "docs/10_Design_Collaboration.md",
+  "ui_authority": {
+    "baseline": "JB-BASELINE-001",
+    "scope": "Complete original UI: branding, styling, listing, detail, cart, checkout, setup and confirmation",
+    "policy": "docs/11_Original_Design_System.md",
+    "visual_reference": "design-system/index.html",
+    "tokens": "tokens/original-ui.tokens.json",
+    "current_design": "previews/mobile/index.html",
+    "later_proposal": "explorations/EXP-0001/draft/Prototype.html",
+    "change": "JB-CHG-0002"
+  }
 }

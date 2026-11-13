@@ -4,6 +4,10 @@ The deliverable is a design asset: editable screens, reusable visual elements,
 sample states and evidence that people can review. Keep the source static and easy
 to open. Product implementation happens in its own repositories.
 
+Before UI work, read [the complete original styling policy](11_Original_Design_System.md)
+and open [the visual reference](../design-system/index.html). The original listing,
+detail, cart and checkout are the baseline; the later proposal stays separate.
+
 ## A small daily loop
 
 1. Pick one issue or EXP/JB-CHG task. Record the human owner, design question,
@@ -35,8 +39,8 @@ git worktree add -b explore/EXP-0001-YOURNAME-booking-cards ../jb-booking-cards 
 ## Files that make parallel work practical
 
 Use [the mobile editing map](../previews/mobile/README.md) to choose a screen family.
-For example, one person can refine bookings.js, another media.js, and another
-discovery.js. Agree shared CSS/component/fixture edits first and review the combined
+For example, one person can refine home.html, another cart-sankalp.html, and
+another payment.html under previews/mobile/source/screens/. Agree shared CSS/component/fixture edits first and review the combined
 result. Branch isolation protects files on disk; it does not settle design conflicts.
 
 | Location | Meaning |

@@ -7,6 +7,8 @@ on:
       - 'explorations/**'
       - 'walkthroughs/**'
       - 'catalogue/**'
+      - 'design-system/**'
+      - 'tokens/original-ui.tokens.json'
       - 'site/**'
       - 'assets/brand/**'
       - 'references/**'
@@ -14,6 +16,8 @@ on:
       - 'registries/walkthroughs.json'
       - 'tools/build_review_catalog.py'
       - 'tools/build_live_catalogue.py'
+      - 'tools/build_original_design.py'
+      - 'tools/build_style_guide.py'
       - 'tools/build_preview_site.py'
       - 'tools/sync_preview_checkout.py'
       - '.github/workflows/publish-preview.yml'
@@ -37,6 +41,8 @@ jobs:
           python3 tools/validate_design_hub.py
           python3 tools/build_review_catalog.py --check
           python3 tools/build_live_catalogue.py --check
+          python3 tools/build_original_design.py --check
+          python3 tools/build_style_guide.py --check
           python3 -m unittest discover -s tests -v
       - name: Build the public preview allowlist
         run: python3 tools/build_preview_site.py --require-clean

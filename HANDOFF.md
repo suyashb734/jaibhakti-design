@@ -2,7 +2,14 @@
 
 Updated 13 November 2026. This repository is a design asset for collaborative visual
 work. Production web/app/backend implementations live elsewhere. Begin with
-AGENTS.md, START_HERE.md and docs/10_Design_Collaboration.md.
+AGENTS.md, START_HERE.md, docs/11_Original_Design_System.md and
+docs/10_Design_Collaboration.md.
+
+The project owner clarified that the complete original UI is required, including
+listing, offering detail, cart and checkout. JB-CHG-0002 restores that journey under
+previews/mobile/. The later 49-state proposal is retained separately under
+explorations/EXP-0001/draft/. Do not carry its simplified acquisition flow forward
+as the main design. The public styling reference is design-system/index.html.
 
 ## Preview publishing is verified
 
@@ -45,8 +52,9 @@ private documents private. Noindex is requested and does not restrict access.
 
 ## Editing as a three-person design team
 
-The source is organized into nine screen-family files, shared visual components,
-sample fixtures, review metadata and a small preview controller. See
+The current original UI is organized into editable HTML screen fragments, font/global
+CSS and original binding logic. The separate later proposal retains nine screen-family
+files and shared fixtures/components. See
 previews/mobile/README.md for the editing map. The structure uses plain deferred
 scripts, so downloaded Prototype.html still opens directly without a build step.
 Changes/JB-CHG-0001 records the source organization scope and comparison evidence.
@@ -70,7 +78,7 @@ unrelated visual work can proceed with labelled sample assumptions.
 - Use original-final colors, wordmark and typography from assets/brand/ and
   tokens/original-final.tokens.json. Actual live offering imagery is allowed.
 - The web takes bookings. The proposed app shows updates, history and media and
-  also supports Book More. The 49-state candidate remains Draft.
+  also supports Book More. The 49-state candidate remains a separate Draft proposal.
 - Live references cover Rahu Paithani 51/121, Gaj Mahalakshmi Ujjain 51/101 and
   Triyuginarayan 51/151, in rupees. They are dated presentation observations;
   Triyuginarayan's package ID remains unverified. Sample Hanuman records do not
@@ -94,3 +102,12 @@ preference remain outside the prototype validation.
 Inspect Git status, branch, current PRs and public preview-info.json before new
 work. Do not repeat the source audit, recreate repositories or infer source approval
 from a merged PR, passing tests or publication.
+
+## Original-design restoration checks
+
+changes/JB-CHG-0002/verification.json records the full original template round trip, all
+40 asset byte matches, 12 paired original screen captures and 122 current/proposal
+source/export route checks. Original detail-to-cart-to-payment and recurring setup
+flows were exercised. Fourteen tests pass. Confirmation artwork has animation/raster
+variance recorded explicitly; exact frame equality is not claimed for those captures.
+The shared styling guide and original journey publish through the existing workflow.

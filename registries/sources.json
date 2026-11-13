@@ -48,13 +48,13 @@
     },
     {
       "id": "SRC-WORKING",
-      "type": "editable_draft",
-      "path": "previews/mobile/Prototype.html",
-      "label": "Editable mobile design source fork",
+      "type": "editable_proposal",
+      "path": "explorations/EXP-0001/draft/Prototype.html",
+      "label": "Proposed Daan Seva/My Bookings design",
       "authority": "unapproved_working_source",
       "derived_from": "SRC-CANDIDATE",
       "approval": null,
-      "note": "Readable HTML CSS and JavaScript fork, with prototype-only state and sample data. Future captures belong in artifacts."
+      "note": "49-state later candidate retained separately. It is not the current listing, detail, cart or checkout design."
     },
     {
       "id": "SRC-LIVE-ASSETS",
@@ -63,7 +63,26 @@
       "label": "Three launched Nirantar sevas: live imagery and catalogue facts",
       "authority": "dated_public_presentation_not_provider_contract",
       "approval": null,
-      "note": "Actual public product/temple images reused at the project owner’s request; original-final design remains brand authority."
+      "note": "Actual public product/temple images reused at the project owner\u2019s request; original-final design remains brand authority."
+    },
+    {
+      "id": "SRC-WORKING-BASELINE",
+      "type": "editable_original_baseline",
+      "path": "previews/mobile/Prototype.html",
+      "label": "Original complete UI restored as the working design",
+      "authority": "project_owner_selected_original_complete_design",
+      "derived_from": "SRC-INITIAL",
+      "baseline_id": "JB-BASELINE-001",
+      "approval": null,
+      "note": "Original layout, styling, listing, detail, cart, checkout and confirmation are preserved. This restoration does not approve new product rules or a new engineering release."
+    },
+    {
+      "id": "SRC-LIVE-STYLE",
+      "type": "observed_live_styling",
+      "path": "references/live-style/2026-11-13/observations.json",
+      "label": "Dated live home, offering and initial-checkout styling",
+      "authority": "secondary_observed_reference_original_ui_remains_selected",
+      "approval": null
     }
   ]
 }

@@ -120,7 +120,9 @@ def validate():
             if not link or '{{' in link:continue
             target=unquote(urlsplit(link).path)
             if not target:continue
-            assert (path.parent/target).exists(),f'Broken local link in {path.relative_to(ROOT)}: {link}'
+            # Original screen fragments are assembled at previews/mobile/.
+            base=ROOT/'previews/mobile' if path.is_relative_to(ROOT/'previews/mobile/source') else path.parent
+            assert (base/target).exists(),f'Broken local link in {path.relative_to(ROOT)}: {link}'
             link_count+=1
     counts={platform:sum(s['platform']==platform for s in screens) for platform in ['reference','web','app']}
     print(f'PASS: {len(files)} immutable reference files; screens {counts}; {len(requirements)} mapped source criteria; {len(conflicts)} registered inconsistencies; {len(explorations)} exploration records; {link_count} local links')

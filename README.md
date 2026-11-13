@@ -1,7 +1,7 @@
 # Jai Bhakti Design Hub
 
-**Continuing work? Read [HANDOFF.md](HANDOFF.md).** Original-final branding, the
-live-seva catalogue and automatic preview publishing are integrated and verified.
+**Continuing work? Read [HANDOFF.md](HANDOFF.md).** The complete original UI is the
+working baseline, including listing, detail, cart and checkout.
 Use [the daily design workflow](docs/10_Design_Collaboration.md) for new work.
 
 [![Registry integrity](https://github.com/suyashb734/jaibhakti-design/actions/workflows/validate-design.yml/badge.svg)](https://github.com/suyashb734/jaibhakti-design/actions/workflows/validate-design.yml)
@@ -17,7 +17,8 @@ handed to engineering.
 jaibhakti.com, confirmed by the project owner and recorded as
 [JB-BASELINE-001](baselines/JB-BASELINE-001.md).
 
-**Current new work:** the 49-state Daan Seva prototype remains Draft. No new
+**Current design:** the complete original journey is restored as the editable baseline.
+The later 49-state Daan Seva proposal remains separately labelled Draft. No new
 design-vX.Y.Z handoff has been issued through this repository process yet.
 `main` contains working material, including unresolved alternatives.
 
@@ -25,6 +26,7 @@ design-vX.Y.Z handoff has been issued through this repository process yet.
 source authority, agent starting procedure and complete design-to-engineering path.
 Read [the collaboration guide](docs/07_Preview_and_Collaboration.md) for editing a specific exploration and understanding branches, review and connected publishing.
 For daily work, use [the three-person design workflow](docs/10_Design_Collaboration.md).
+**Before UI work, read [the complete styling policy](docs/11_Original_Design_System.md) and open [the visual styling reference](design-system/index.html).**
 
 ## Find the right version
 
@@ -83,8 +85,8 @@ Named approval evidence must be added to the exact design version. Being newer, 
 
 ## Working source
 
-The [editable mobile prototype](previews/mobile/Prototype.html) has separate screen
-files, shared visual components and sample fixtures, with minimal preview wiring.
+The [editable mobile prototype](previews/mobile/Prototype.html) uses the original
+complete markup, styling and bundled assets, assembled from editable screen fragments.
 See [the editing map](previews/mobile/README.md). Its [gallery](previews/mobile/Gallery.html)
 labels frozen imported references. The [web baseline entry](previews/web/index.html)
 links historical and observed-live sources; production web code has not been supplied.
@@ -125,7 +127,8 @@ and affected operational confirmations. Release only that approved scope. Keep
 implementation and verified deployment separate. Codex and Claude share
 [AGENTS.md](AGENTS.md), with [CLAUDE.md](CLAUDE.md) importing the same policy.
 
-There are currently 49 app candidate states, 12 original entry-state references and 6 live observations in the screen registry. All candidate states remain Draft. The 22 specification acceptance criteria are mapped to representative candidate states, without claiming individual signoff.
+The screen registry contains 12 restored original working states, 49 separate
+proposal states, 12 immutable original references and 6 live observations. All candidate states remain Draft. The 22 specification acceptance criteria are mapped to representative candidate states, without claiming individual signoff.
 
 ## Checks
 

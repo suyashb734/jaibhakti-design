@@ -1,0 +1,177 @@
+<!-- ============ BHENT LIST ============ -->
+<sc-if value="{{is.bhent}}" hint-placeholder-val="{{false}}">
+<div style="position: absolute; left: 0; top: 0; width: 393px; height: 852px; overflow-y: auto; overflow-x: hidden; scrollbar-width: none; {{fx}}">
+  <div style="position: sticky; top: 0; z-index: 20; height: 64px; box-sizing: border-box; padding: 0 16px; display: flex; align-items: center; justify-content: space-between; background: rgba(255,253,249,0.86); backdrop-filter: blur(22px) saturate(150%); -webkit-backdrop-filter: blur(22px) saturate(150%); border-bottom: 1px solid rgba(58,43,26,0.06);">
+    <button type="button" sc-camel-on-click="{{goProfile}}" aria-label="Profile" style="{{avatarBtn}}"><sc-if value="{{hasName}}" hint-placeholder-val="{{true}}">{{initials}}</sc-if><sc-if value="{{noName}}" hint-placeholder-val="{{false}}"><svg sc-camel-view-box="0 0 24 24" width="22" height="22" fill="none" stroke="#4A1206" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display: block; margin: 0 auto;"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c1-4 4-6 8-6s7 2 8 6"></path></svg></sc-if></button>
+    <div style="display: flex; align-items: center; gap: 6px;">
+      <svg sc-camel-view-box="0 0 24 24" width="28" height="28" fill="none" stroke="#3A1604" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 22V13.5C4 9.2 7 5.6 12 3.6C17 5.6 20 9.2 20 13.5V22"></path><path d="M12 3.6V3"></path><path d="M7 13.2h10"></path><path d="M15 13.2V22"></path><path d="M9 22v-5.4c0-1.6 1.2-2.6 2.7-2.6"></path><circle cx="12" cy="2.2" r="0.9" fill="#3A1604" stroke="none"></circle><path d="M12.9 1.2L17.4 2.5L12.9 3.8Z" fill="#E4572E" stroke="none"></path></svg>
+      <span style="font-family: 'Martel', serif; font-weight: 900; font-size: 24px; line-height: 36px; color: #3A1604;">जय भक्ति</span>
+    </div>
+    <button type="button" sc-camel-on-click="{{toggleLang}}" aria-label="Change language" style="{{langBtn}}">{{langChip}}<svg sc-camel-view-box="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></button>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 16px; padding: 18px 0 124px 0;">
+    <div style="padding: 0 20px; display: flex; flex-direction: column; align-items: center; gap: 8px; text-align: center;">
+      <h1 style="font-family: 'Poppins', 'Noto Sans Devanagari', sans-serif; margin: 0; font-size: 25px; line-height: 31px; font-weight: 600;">{{t.bh1}}<span style="{{saffronText}}">{{t.bh2}}</span>{{t.bh3}}</h1>
+    </div>
+
+    <div style="display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; padding: 2px 16px 6px 16px;">
+      <sc-for list="{{deities}}" as="c" hint-placeholder-count="6"><button type="button" sc-camel-on-click="{{c.pick}}" style="{{c.style}}">{{c.l}}</button></sc-for>
+    </div>
+    <sc-if value="{{probOn}}" hint-placeholder-val="{{false}}">
+      <div style="padding: 0 16px;">
+        <button type="button" sc-camel-on-click="{{clearProb}}" style="height: 36px; padding: 0 14px; border-radius: 999px; display: inline-flex; align-items: center; gap: 8px; font: inherit; font-size: 13px; font-weight: 600; cursor: pointer; color: #FFFFFF; border: 0; background: linear-gradient(135deg, #D24A0E 0%, #8A2406 100%); box-shadow: 0 8px 16px -8px rgba(140,40,0,0.48);">For: {{probLabel}}<svg sc-camel-view-box="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
+      </div>
+    </sc-if>
+    <sc-if value="{{sevaShow}}" hint-placeholder-val="{{true}}">
+      <div style="padding: 0 16px;">
+        <button type="button" sc-camel-on-click="{{openSeva}}" style="position: relative; display: flex; flex-direction: column; width: 100%; padding: 0; border-radius: 24px; overflow: hidden; text-align: left; cursor: pointer; font: inherit; color: #FFF1D6; background: radial-gradient(120% 90% at 30% 0%, #7A2208 0%, #3E0E04 60%, #260802 100%); border: 1px solid rgba(255,200,90,0.6); box-shadow: inset 0 1px 0 rgba(255,220,140,0.4), 0 22px 40px -18px rgba(90,20,0,0.51);">
+          <span style="position: relative; display: block; width: 100%; height: 150px; overflow: hidden;">
+            <svg sc-camel-view-box="0 0 360 200" sc-camel-preserve-aspect-ratio="xMidYMid slice" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; display: block;">
+              <rect x="0" y="0" width="360" height="200" fill="url(#bCrimson)"></rect>
+              <circle cx="180" cy="82" r="80" fill="url(#dHalo)"></circle>
+              <circle cx="180" cy="82" r="54" fill="none" stroke="#FFD66B" stroke-width="1" stroke-dasharray="2 5" opacity="0.6"></circle>
+              <path d="M112 168 V139 C112 127 122 119 132 115 C142 119 152 127 152 139 V168 Z" fill="url(#dGold)" opacity="0.92"></path>
+              <path d="M208 168 V139 C208 127 218 119 228 115 C238 119 248 127 248 139 V168 Z" fill="url(#dGold)" opacity="0.92"></path>
+              <path d="M146 168 V120 C146 104 157 90 163 74 C169 56 175 40 180 26 C185 40 191 56 197 74 C203 90 214 104 214 120 V168 Z" fill="url(#dGold)"></path>
+              <path d="M168 168 V143 C168 133 174 127 180 125 C186 127 192 133 192 143 V168 Z" fill="url(#dDoor)"></path>
+              <path d="M180 26 V6 M180 6 L197 10 L180 14 Z" stroke="#FFE7A3" stroke-width="1.4" fill="#FF5A1F"></path>
+              <rect x="0" y="168" width="360" height="32" fill="#000000" opacity="0.3"></rect>
+              <path d="M0 5 C90 30 270 30 360 5" stroke="#2F7D3A" stroke-width="1.4" fill="none"></path>
+              <circle cx="54" cy="15" r="6" fill="url(#dMari2)"></circle><circle cx="126" cy="22.5" r="6" fill="url(#dMari)"></circle><circle cx="234" cy="22.5" r="6" fill="url(#dMari)"></circle><circle cx="306" cy="15" r="6" fill="url(#dMari2)"></circle>
+              <g transform="translate(58 186)"><ellipse cx="0" cy="4" rx="22" ry="5" fill="url(#dGoldDeep)"></ellipse><circle cx="-8" cy="-3" r="7" fill="url(#dLaddoo)"></circle><circle cx="8" cy="-3" r="7" fill="url(#dLaddoo)"></circle><circle cx="0" cy="-13" r="7" fill="url(#dLaddoo)"></circle></g>
+              <g transform="translate(302 186)"><ellipse cx="0" cy="4" rx="22" ry="5" fill="url(#dGoldDeep)"></ellipse><circle cx="-8" cy="-3" r="7" fill="url(#dLaddoo)"></circle><circle cx="8" cy="-3" r="7" fill="url(#dLaddoo)"></circle><circle cx="0" cy="-13" r="7" fill="url(#dLaddoo)"></circle></g>
+            </svg>
+                        <span style="{{sv.pill}}">{{sv.c.short}}</span>
+          </span>
+          <span style="display: flex; flex-direction: column; gap: 6px; padding: 14px 16px 16px 16px;">
+            <span style="font-family: 'Poppins', 'Noto Sans Devanagari', sans-serif; font-size: 17px; line-height: 21px; font-weight: 600; color: #FFF6E0;">{{sv.title}}</span>
+                        <span style="font-size: 13px; line-height: 18px; color: #F5D6B0;">{{sv.temple}} · every Wednesday</span>
+            <span style="display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: 6px;">
+              <span style="display: flex; flex-direction: column;"><span style="font-family: 'Poppins', 'Noto Sans Devanagari', sans-serif; {{goldText}} font-size: 22px; line-height: 27px; font-weight: 600;">₹51</span><span style="font-size: 12px; line-height: 16px; color: #F5D6B0;">then ₹101 per seva · {{sv.devotees}} devotees</span></span>
+              <span style="{{goldMini}} height: 40px; padding: 0 16px; font-size: 14px;">Start seva</span>
+            </span>
+          </span>
+        </button>
+      </div>
+    </sc-if>
+
+    <div style="padding: 0 16px; display: flex; flex-direction: column; gap: 18px;">
+      <sc-for list="{{list}}" as="b" hint-placeholder-count="3">
+        <div role="button" sc-camel-on-click="{{b.open}}" style="{{glassCard}} display: flex; flex-direction: column; width: 100%; padding: 0; border-radius: 24px; overflow: hidden; text-align: left; cursor: {{b.cardCursor}}; font: inherit; color: #3A2B1A;">
+          <span style="position: relative; display: block; width: 100%; height: 196px; overflow: hidden;">
+            <svg sc-camel-view-box="0 0 360 200" sc-camel-preserve-aspect-ratio="xMidYMid slice" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; display: block;">
+              <rect x="0" y="0" width="360" height="200" fill="{{b.bg}}"></rect>
+              <path d="M180 80 L10 -20 M180 80 L80 -20 M180 80 L140 -20 M180 80 L220 -20 M180 80 L280 -20 M180 80 L350 -20 M180 80 L380 50 M180 80 L-20 50 M180 80 L-20 120 M180 80 L380 120" stroke="#FFD66B" stroke-width="1" opacity="0.2"></path>
+              <circle cx="180" cy="82" r="80" fill="url(#dHalo)"></circle>
+              <circle cx="180" cy="82" r="54" fill="none" stroke="#FFD66B" stroke-width="1" stroke-dasharray="2 5" opacity="0.6"></circle>
+              <path d="M112 168 V139 C112 127 122 119 132 115 C142 119 152 127 152 139 V168 Z" fill="url(#dGold)" opacity="0.92"></path>
+              <path d="M208 168 V139 C208 127 218 119 228 115 C238 119 248 127 248 139 V168 Z" fill="url(#dGold)" opacity="0.92"></path>
+              <path d="M132 115 V106 M228 115 V106" stroke="#FFE7A3" stroke-width="1.6"></path>
+              <path d="M146 168 V120 C146 104 157 90 163 74 C169 56 175 40 180 26 C185 40 191 56 197 74 C203 90 214 104 214 120 V168 Z" fill="url(#dGold)"></path>
+              <path d="M149 118 H211 M153 102 H207 M159 86 H201 M165 70 H195 M171 54 H189 M175 40 H185" stroke="#A35F00" stroke-width="1.2" opacity="0.5"></path>
+              <ellipse cx="180" cy="25" rx="8" ry="3.2" fill="#FFE08A"></ellipse>
+              <path d="M180 16 V3" stroke="#FFE7A3" stroke-width="1.4"></path>
+              <path d="M180 3 L199 8 L180 13 Z" fill="#FF5A1F"></path>
+              <path d="M168 168 V143 C168 133 174 127 180 125 C186 127 192 133 192 143 V168 Z" fill="url(#dDoor)"></path>
+              <circle cx="180" cy="150" r="30" fill="url(#dHalo)" opacity="0.7"></circle>
+              <rect x="98" y="166" width="164" height="8" rx="2" fill="#E8A21C"></rect>
+              <rect x="84" y="173" width="192" height="8" rx="2" fill="#B8740F"></rect>
+              <rect x="0" y="180" width="360" height="20" fill="#000000" opacity="0.3"></rect>
+              <path d="M0 5 C90 30 270 30 360 5" stroke="#2F7D3A" stroke-width="1.4" fill="none"></path>
+              <circle cx="18" cy="9.5" r="6" fill="url(#dMari)"></circle><circle cx="54" cy="15" r="6" fill="url(#dMari2)"></circle><circle cx="90" cy="19.5" r="6" fill="url(#dMari)"></circle><circle cx="126" cy="22.5" r="6" fill="url(#dMari2)"></circle><circle cx="162" cy="24" r="6" fill="url(#dMari)"></circle><circle cx="198" cy="24" r="6" fill="url(#dMari2)"></circle><circle cx="234" cy="22.5" r="6" fill="url(#dMari)"></circle><circle cx="270" cy="19.5" r="6" fill="url(#dMari2)"></circle><circle cx="306" cy="15" r="6" fill="url(#dMari)"></circle><circle cx="342" cy="9.5" r="6" fill="url(#dMari2)"></circle>
+              <g transform="translate(40 188)"><circle cx="0" cy="-8" r="16" fill="url(#dHalo)"></circle><path d="M-11 0 H11 C10 5 6 8 0 8 C-6 8 -10 5 -11 0 Z" fill="url(#dClay)"></path><path d="M0 -1 C-3.5 -4.5 -2.5 -10 0 -14 C2.5 -10 3.5 -4.5 0 -1 Z" fill="url(#dFlame)"></path></g>
+              <g transform="translate(320 188)"><circle cx="0" cy="-8" r="16" fill="url(#dHalo)"></circle><path d="M-11 0 H11 C10 5 6 8 0 8 C-6 8 -10 5 -11 0 Z" fill="url(#dClay)"></path><path d="M0 -1 C-3.5 -4.5 -2.5 -10 0 -14 C2.5 -10 3.5 -4.5 0 -1 Z" fill="url(#dFlame)"></path></g>
+            </svg>
+            <span style="position: absolute; left: 7px; top: 7px; right: 7px; bottom: 7px; border-radius: 18px; border: 1.5px solid rgba(255,214,107,0.9); pointer-events: none;"></span>
+            <span style="position: absolute; left: 0; right: 0; bottom: 74px; z-index: 3; height: 28px; display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #FFFFFF; background: linear-gradient(90deg, rgba(185,28,28,0) 0%, #B91C1C 14%, #DC2626 50%, #B91C1C 86%, rgba(185,28,28,0) 100%); box-shadow: 0 6px 14px -6px rgba(120,0,0,0.6); pointer-events: none;"><span style="width: 5px; height: 5px; border-radius: 999px; background: #FFD24A;"></span>Limited time offer<span style="width: 5px; height: 5px; border-radius: 999px; background: #FFD24A;"></span></span>
+            <span style="{{b.pill}}"><svg sc-camel-view-box="0 0 16 16" width="14" height="14" aria-hidden="true"><circle cx="8" cy="8" r="3.5" fill="currentColor"></circle><circle cx="8" cy="8" r="3.5" fill="none" stroke="currentColor" stroke-width="2"><animate sc-camel-attribute-name="r" values="3.5;7.5" dur="1.4s" sc-camel-repeat-count="indefinite"></animate><animate sc-camel-attribute-name="opacity" values="0.9;0" dur="1.4s" sc-camel-repeat-count="indefinite"></animate></circle></svg>{{b.c.short}}</span>
+            <span style="position: absolute; left: 0; right: 0; bottom: 0; padding: 24px 14px 14px 14px; background: linear-gradient(180deg, rgba(42,8,2,0) 0%, rgba(42,8,2,0.74) 58%, rgba(42,8,2,0.92) 100%); display: flex; flex-direction: column; align-items: center; gap: 2px; text-align: center;">
+              <span style="font-family: 'Poppins', 'Noto Sans Devanagari', sans-serif; font-size: 18px; line-height: 22px; font-weight: 600; color: #FFD24D;">{{b.plaque}}</span>
+              <span style="font-size: 12px; line-height: 16px; font-weight: 500; color: #FFF1D6; {{b.blur}}">{{b.plaqueSub}}</span>
+            </span>
+          </span>
+          <span style="display: flex; flex-direction: column; gap: 7px; padding: 14px 16px 10px 16px;">
+            <span style="font-family: 'Poppins', 'Noto Sans Devanagari', sans-serif; font-size: 17px; line-height: 21px; font-weight: 600;">{{b.title}}</span>
+            <span style="font-size: 13px; line-height: 18px; font-weight: 500; color: #B8300F;">{{b.purpose}}</span>
+            <span style="display: flex; align-items: center; gap: 8px; font-size: 13px; line-height: 18px; color: #5A3310; {{b.blur}}"><svg sc-camel-view-box="0 0 24 24" width="17" height="17" fill="none" stroke="#9A6A3A" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0;"><path d="M5 21v-8l7-9 7 9v8"></path><path d="M3 21h18M10 21v-5h4v5M12 4V2"></path></svg>{{b.temple}}</span>
+            <span style="display: flex; align-items: center; gap: 8px; font-size: 13px; line-height: 18px; color: #5A3310; {{b.blur}}"><svg sc-camel-view-box="0 0 24 24" width="17" height="17" fill="none" stroke="#9A6A3A" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0;"><rect x="4" y="5" width="16" height="15" rx="2"></rect><path d="M4 10h16M8 3v4M16 3v4"></path></svg>{{b.dateLine}}</span>
+          </span>
+          <span style="display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: 0 12px 12px 12px; padding: 12px 12px 12px 16px; border-radius: 18px; color: #FFF1D6; background: radial-gradient(120% 120% at 20% 0%, #5A1806 0%, #2E0A03 70%); box-shadow: inset 0 1px 0 rgba(255,220,140,0.25);">
+            <span style="display: flex; flex-direction: column; gap: 2px; min-width: 0;"><span style="display: flex; align-items: baseline; gap: 8px;"><span style="font-family: 'Poppins', 'Noto Sans Devanagari', sans-serif; {{goldText}} font-size: 26px; line-height: 30px; font-weight: 700;">{{b.priceTxt}}</span><span style="font-size: 15px; line-height: 20px; font-weight: 500; color: #C9A27E; text-decoration: line-through; text-decoration-color: #FF6B4A; text-decoration-thickness: 2px;">₹101</span></span><span style="align-self: flex-start; height: 20px; padding: 0 8px; border-radius: 999px; display: inline-flex; align-items: center; font-size: 10.5px; font-weight: 600; letter-spacing: 0.02em; color: #3A1604; background: linear-gradient(100deg, #FFD24A 0%, #FF8A3D 100%);">Offer price · 50% off</span></span>
+            <sc-if value="{{b.live}}" hint-placeholder-val="{{true}}"><span style="{{goldMini}} height: 44px; padding: 0 18px; font-size: 14px; flex-shrink: 0;">Start seva</span></sc-if>
+            <sc-if value="{{b.locked}}" hint-placeholder-val="{{false}}"><button type="button" sc-camel-on-click="{{b.notify}}" aria-pressed="{{b.notified}}" style="{{b.notifyStyle}}">{{b.notifyLabel}}</button></sc-if>
+          </span>
+          <sc-if value="{{b.notified}}" hint-placeholder-val="{{false}}"><span style="display: flex; align-items: center; gap: 8px; margin: -4px 12px 12px 12px; padding: 10px 12px; border-radius: 14px; font-size: 12.5px; line-height: 17px; font-weight: 500; color: #14532D; background: rgba(34,197,94,0.12); border: 1px solid rgba(21,128,61,0.22);">You will be notified on WhatsApp as soon as this seva opens.</span></sc-if>
+        </div>
+      </sc-for>
+    </div>
+
+    <sc-if value="{{listEmpty}}" hint-placeholder-val="{{false}}">
+      <div style="margin: 0 16px; {{glassCard}} border-radius: 24px; padding: 28px 20px; display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center;">
+        <svg sc-camel-view-box="0 0 64 64" width="72" height="72" aria-hidden="true"><path d="M9 38 H55 C53 48 44 55 32 55 C20 55 11 48 9 38 Z" fill="url(#dClay)"></path><ellipse cx="32" cy="38" rx="23" ry="4.2" fill="#E0873A"></ellipse><path d="M32 36 V26" stroke="#8A6A4A" stroke-width="2" stroke-linecap="round"></path></svg>
+        <span style="font-family: 'Poppins', 'Noto Sans Devanagari', sans-serif; font-size: 17px; line-height: 21px; font-weight: 600;">No seva matches that yet</span>
+        <span style="font-size: 13px; line-height: 19px; color: #6B4A2E;">Try Shyam, Shani, Ganesh or Mahadev, or clear the filters.</span>
+        <button type="button" sc-camel-on-click="{{clearAll}}" style="{{goldBtnSm}}">Clear filters</button>
+      </div>
+    </sc-if>
+
+    <div style="padding: 0 16px;">
+      <div style="position: relative; overflow: hidden; border-radius: 24px; padding: 16px; display: flex; gap: 14px; align-items: flex-start; background: linear-gradient(160deg, #FFF6DA 0%, #FFE2A6 100%); border: 1px solid rgba(245,158,11,0.55); box-shadow: inset 0 1px 0 #FFFFFF, 0 14px 28px -16px rgba(200,110,0,0.36);">
+        <svg sc-camel-view-box="0 0 48 48" width="48" height="48" aria-hidden="true" style="flex-shrink: 0;"><path d="M24 4 L40 10 V22 C40 33 33 41 24 45 C15 41 8 33 8 22 V10 Z" fill="url(#dGold)"></path><path d="M24 8 L36 12.5 V22 C36 30.5 31 37 24 40.5 Z" fill="#FFFFFF" opacity="0.25"></path><path d="M16.5 24 L22 29.5 L32 19" stroke="#8A2406" stroke-width="3.4" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        <span style="display: flex; flex-direction: column; gap: 6px;">
+          <span style="font-family: 'Poppins', 'Noto Sans Devanagari', sans-serif; font-size: 16px; line-height: 20px; font-weight: 600;">Jai Bhakti promise</span>
+          <span style="font-size: 13px; line-height: 19px; color: #5A3310;">If your seva is not performed or its video does not reach you, your dakshina is refunded in full. No questions asked.</span>
+        </span>
+      </div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 12px;">
+      <div style="padding: 0 20px; display: flex; flex-direction: column; gap: 2px;">
+        <h2 style="font-family: 'Poppins', 'Noto Sans Devanagari', sans-serif; margin: 0; font-size: 19px; line-height: 23px; font-weight: 600;">What devotees say</h2>
+        <span style="font-size: 12px; line-height: 16px; font-weight: 500; color: #7A5530;">4.8 ★ from 12,400+ reviews · swipe to read more</span>
+      </div>
+      <div style="display: flex; gap: 10px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding: 0 16px; scrollbar-width: none; padding: 2px 16px 8px 16px;">
+        <sc-for list="{{homeReviews}}" as="r" hint-placeholder-count="3">
+          <div style="{{glassCard}} flex: 0 0 280px; box-sizing: border-box; scroll-snap-align: start; border-radius: 20px; padding: 14px; display: flex; flex-direction: column; gap: 8px;">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <span style="{{iniCoin}}">{{r.ini}}</span>
+              <span style="display: flex; flex-direction: column; flex-grow: 1; min-width: 0;"><span style="font-size: 14px; line-height: 18px; font-weight: 600;">{{r.n}}</span><span style="font-size: 11px; line-height: 15px; color: #7A5530; font-weight: 500;">{{r.c}} · {{r.dt}}</span></span>
+              <span style="font-size: 13px; letter-spacing: 1px; color: #F59E0B; flex-shrink: 0;">{{r.on}}<span style="color: #E2CFB2;">{{r.off}}</span></span>
+            </div>
+            <span style="flex-grow: 1; font-size: 14px; line-height: 21px; color: #3A2210; text-wrap: pretty;">{{r.x}}</span>
+            <span style="align-self: flex-start; height: 24px; padding: 0 10px; border-radius: 999px; display: inline-flex; align-items: center; font-size: 11px; font-weight: 500; color: #8A2406; background: rgba(255,210,140,0.45);">{{r.item}}</span>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 12px;">
+      <h2 style="font-family: 'Poppins', 'Noto Sans Devanagari', sans-serif; margin: 0; font-size: 19px; line-height: 23px; font-weight: 600; padding: 0 20px;">FAQ</h2>
+      <div style="padding: 0 16px; display: flex; flex-direction: column; gap: 8px;">
+        <sc-for list="{{homeFaqs}}" as="f" hint-placeholder-count="5">
+          <div style="{{glassCard}} border-radius: 18px; overflow: hidden;">
+            <button type="button" sc-camel-on-click="{{f.toggle}}" aria-expanded="{{f.open}}" style="width: 100%; min-height: 54px; padding: 12px 14px; border: 0; background: none; display: flex; align-items: center; justify-content: space-between; gap: 12px; text-align: left; cursor: pointer; font: inherit; font-size: 14px; line-height: 19px; font-weight: 600; color: #3A2B1A;">
+              <span>{{f.q}}</span>
+              <svg sc-camel-view-box="0 0 24 24" width="18" height="18" fill="none" stroke="#A8340A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="{{f.chev}}"><path d="M6 9l6 6 6-6"></path></svg>
+            </button>
+            <sc-if value="{{f.open}}" hint-placeholder-val="{{false}}"><div style="padding: 0 14px 14px 14px; font-size: 13px; line-height: 20px; color: #5A3310;">{{f.a}}</div></sc-if>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+
+    <div style="padding: 0 16px;">
+      <div style="{{glassCard}} border-radius: 24px; padding: 16px; display: flex; flex-direction: column; gap: 12px;">
+        <span style="display: flex; flex-direction: column; gap: 2px;"><span style="font-family: 'Poppins', 'Noto Sans Devanagari', sans-serif; font-size: 16px; line-height: 20px; font-weight: 600;">Need help with your seva?</span><span style="font-size: 13px; line-height: 19px; color: #6B4A2E;">Our team is available 10:30 AM – 9:00 PM, every day.</span></span>
+        <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px;">
+          <button type="button" sc-camel-on-click="{{callUs}}" style="{{glassCard}} height: 48px; border-radius: 14px; display: flex; align-items: center; justify-content: center; gap: 8px; font: inherit; font-size: 14px; font-weight: 600; color: #8A2406; cursor: pointer;">Call us</button>
+          <button type="button" sc-camel-on-click="{{waUs}}" style="height: 48px; border-radius: 14px; display: flex; align-items: center; justify-content: center; gap: 8px; font: inherit; font-size: 14px; font-weight: 600; color: #FFFFFF; cursor: pointer; border: 0; background: linear-gradient(160deg, #22C55E 0%, #15803D 100%); box-shadow: inset 0 1px 0 rgba(255,255,255,0.4), 0 8px 16px -8px rgba(21,128,61,0.48);">WhatsApp</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</sc-if>
+

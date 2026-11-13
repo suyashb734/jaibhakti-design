@@ -54,8 +54,8 @@ def main():
     # Only this dedicated generated directory is replaced, never repository source.
     if out.exists():shutil.rmtree(out)
     out.mkdir(parents=True)
-    files=[ROOT/'site/index.html.template',ROOT/'explorations/index.html',ROOT/'previews/mobile/Prototype.html',ROOT/'previews/mobile/Gallery.html',ROOT/'references/initial-prototype/Jai Bhakti App.html',ROOT/'catalogue/index.html',ROOT/'catalogue/styles.css']
-    for folder in ['walkthroughs/assets','previews/mobile/assets','assets/brand']:
+    files=[ROOT/'site/index.html.template',ROOT/'explorations/index.html',ROOT/'previews/mobile/Prototype.html',ROOT/'previews/mobile/Gallery.html',ROOT/'references/initial-prototype/Jai Bhakti App.html',ROOT/'catalogue/index.html',ROOT/'catalogue/styles.css',ROOT/'previews/mobile/index.html',ROOT/'design-system/index.html']
+    for folder in ['walkthroughs/assets','previews/mobile/assets','assets/brand','explorations/EXP-0001/draft/assets']:
         files.extend(path for path in (ROOT/folder).rglob('*') if path.is_file())
     option_extensions={'.html','.css','.js','.json','.png','.jpg','.jpeg','.svg','.webp','.woff2','.ttf','.webm'}
     files.extend(path for path in (ROOT/'explorations').glob('*/options/**/*') if path.is_file() and path.suffix in option_extensions)
@@ -65,6 +65,7 @@ def main():
         assert relative.as_posix().startswith('references/live-sevas/') and '..' not in relative.parts,'Unexpected live asset location'
         assert relative.suffix.lower() in {'.jpg','.jpeg','.png','.webp','.svg'},'Only live image assets are exported'
         files.append(ROOT/relative)
+    files.extend([ROOT/'explorations/EXP-0001/draft/Prototype.html',ROOT/'explorations/EXP-0001/draft/Gallery.html'])
     files.append(ROOT/'walkthroughs/index.html')
     files.extend((ROOT/'references/initial-prototype/screens').glob('*.png'))
     files.extend((ROOT/'references/daan-seva-candidate/Revised_Designs/screens').glob('*.png'))

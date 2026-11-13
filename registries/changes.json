@@ -108,6 +108,45 @@
       "originating_explorations": [
         "EXP-0001"
       ]
+    },
+    {
+      "id": "JB-CHG-0002",
+      "title": "Restore the complete original UI and document its styling",
+      "design_status": "draft",
+      "implementation": {
+        "web": "design_asset_only",
+        "app": "design_asset_only"
+      },
+      "scope": [
+        "original-design-baseline",
+        "design-system",
+        "listing-detail",
+        "cart-checkout"
+      ],
+      "screens": [
+        "JB-APP-050",
+        "JB-APP-051",
+        "JB-APP-052",
+        "JB-APP-053",
+        "JB-APP-054",
+        "JB-APP-055",
+        "JB-APP-056",
+        "JB-APP-057",
+        "JB-APP-058",
+        "JB-APP-059",
+        "JB-APP-060",
+        "JB-APP-061"
+      ],
+      "source": "SRC-INITIAL",
+      "approval": {
+        "product": null,
+        "design": null,
+        "engineering_acknowledgement": null
+      },
+      "github_issue": "https://github.com/suyashb734/jaibhakti-design/issues/6",
+      "package": "changes/JB-CHG-0002/README.md",
+      "human_owner": null,
+      "agent": "Codex; restoration explicitly requested by the project owner"
     }
   ]
 }

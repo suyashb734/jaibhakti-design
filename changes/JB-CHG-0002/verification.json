@@ -1,0 +1,346 @@
+{
+  "change": "JB-CHG-0002",
+  "recorded_at_utc": "2026-11-13T13:17:49.731136+00:00",
+  "baseline_commit": "440ca00aaf50d7c20e16566bbd586c549b00d831",
+  "authority": "Owner explicitly selected complete original UI, JB-BASELINE-001",
+  "original_reference_sha256": "d4de9111f334d428973e85fd4a4add6e311a9afbf718bcd00bfff443565332e1",
+  "template_round_trip_matches": true,
+  "normalizations": [
+    "Resolve local asset names to original bundle IDs",
+    "Exclude local resource bootstrap and review-entry script",
+    "Ignore terminal newline"
+  ],
+  "original_asset_byte_matches": 40,
+  "comparison": {
+    "viewport": {
+      "width": 393,
+      "height": 852
+    },
+    "clock": "2026-11-13T04:30:00Z",
+    "browser": {
+      "engine": "Chromium",
+      "version": "130.0.6723.31"
+    },
+    "locale": "en-IN",
+    "timezone": "Asia/Kolkata",
+    "pixel_ratio": 1.0,
+    "environment": "macOS-26.5.1-arm64-arm-64bit",
+    "pixel_exact_screens": 8,
+    "maximum_channel_delta": 55,
+    "screens": [
+      {
+        "screen": "home",
+        "reference_id": "JB-REF-001",
+        "working_id": "JB-APP-050",
+        "geometry_identical": true,
+        "changed_pixels": 0,
+        "maximum_channel_delta": 0,
+        "difference_bbox": null
+      },
+      {
+        "screen": "sevaOrder",
+        "reference_id": "JB-REF-002",
+        "working_id": "JB-APP-051",
+        "geometry_identical": true,
+        "changed_pixels": 0,
+        "maximum_channel_delta": 0,
+        "difference_bbox": null
+      },
+      {
+        "screen": "bhent",
+        "reference_id": "JB-REF-003",
+        "working_id": "JB-APP-052",
+        "geometry_identical": true,
+        "changed_pixels": 11,
+        "maximum_channel_delta": 1,
+        "difference_bbox": [
+          28,
+          574,
+          178,
+          844
+        ]
+      },
+      {
+        "screen": "detail",
+        "reference_id": "JB-REF-004",
+        "working_id": "JB-APP-053",
+        "geometry_identical": true,
+        "changed_pixels": 0,
+        "maximum_channel_delta": 0,
+        "difference_bbox": null
+      },
+      {
+        "screen": "cart",
+        "reference_id": "JB-REF-005",
+        "working_id": "JB-APP-054",
+        "geometry_identical": true,
+        "changed_pixels": 0,
+        "maximum_channel_delta": 0,
+        "difference_bbox": null
+      },
+      {
+        "screen": "pay",
+        "reference_id": "JB-REF-006",
+        "working_id": "JB-APP-055",
+        "geometry_identical": true,
+        "changed_pixels": 2,
+        "maximum_channel_delta": 1,
+        "difference_bbox": [
+          134,
+          346,
+          188,
+          351
+        ]
+      },
+      {
+        "screen": "success",
+        "reference_id": "JB-REF-007",
+        "working_id": "JB-APP-056",
+        "geometry_identical": true,
+        "changed_pixels": 10043,
+        "maximum_channel_delta": 55,
+        "difference_bbox": [
+          52,
+          18,
+          355,
+          304
+        ]
+      },
+      {
+        "screen": "seva",
+        "reference_id": "JB-REF-008",
+        "working_id": "JB-APP-057",
+        "geometry_identical": true,
+        "changed_pixels": 0,
+        "maximum_channel_delta": 0,
+        "difference_bbox": null
+      },
+      {
+        "screen": "sevaSetup",
+        "reference_id": "JB-REF-009",
+        "working_id": "JB-APP-058",
+        "geometry_identical": true,
+        "changed_pixels": 0,
+        "maximum_channel_delta": 0,
+        "difference_bbox": null
+      },
+      {
+        "screen": "mandate",
+        "reference_id": "JB-REF-010",
+        "working_id": "JB-APP-059",
+        "geometry_identical": true,
+        "changed_pixels": 0,
+        "maximum_channel_delta": 0,
+        "difference_bbox": null
+      },
+      {
+        "screen": "sevaSuccess",
+        "reference_id": "JB-REF-011",
+        "working_id": "JB-APP-060",
+        "geometry_identical": true,
+        "changed_pixels": 95,
+        "maximum_channel_delta": 17,
+        "difference_bbox": [
+          39,
+          44,
+          341,
+          353
+        ]
+      },
+      {
+        "screen": "profile",
+        "reference_id": "JB-REF-012",
+        "working_id": "JB-APP-061",
+        "geometry_identical": true,
+        "changed_pixels": 0,
+        "maximum_channel_delta": 0,
+        "difference_bbox": null
+      }
+    ],
+    "note": "CSS/SVG animations were paused for comparison. Residual larger raster deltas are confined to original animated confirmation artwork; per-screen deltas are retained. Listing/detail/cart/setup geometry and original template/asset bytes match. Do not claim every confirmation frame is pixel-identical."
+  },
+  "route_checks": 122,
+  "purchase_flow_checks": [
+    {
+      "version": "source",
+      "flow": "original detail \u2192 cart \u2192 payment; select UPI method",
+      "passed": true
+    },
+    {
+      "version": "source",
+      "flow": "original recurring detail \u2192 original setup",
+      "passed": true
+    },
+    {
+      "version": "export",
+      "flow": "original detail \u2192 cart \u2192 payment; select UPI method",
+      "passed": true
+    },
+    {
+      "version": "export",
+      "flow": "original recurring detail \u2192 original setup",
+      "passed": true
+    }
+  ],
+  "review_page_checks": [
+    {
+      "version": "source",
+      "path": "walkthroughs/index.html#current/0",
+      "passed": true
+    },
+    {
+      "version": "source",
+      "path": "walkthroughs/index.html#current/3",
+      "passed": true
+    },
+    {
+      "version": "source",
+      "path": "walkthroughs/index.html#app/0",
+      "passed": true
+    },
+    {
+      "version": "source",
+      "path": "design-system/index.html",
+      "passed": true
+    },
+    {
+      "version": "source",
+      "path": "previews/mobile/index.html",
+      "passed": true
+    },
+    {
+      "version": "source",
+      "path": "previews/mobile/Gallery.html",
+      "passed": true
+    },
+    {
+      "version": "export",
+      "path": "walkthroughs/index.html#current/0",
+      "passed": true
+    },
+    {
+      "version": "export",
+      "path": "walkthroughs/index.html#current/3",
+      "passed": true
+    },
+    {
+      "version": "export",
+      "path": "walkthroughs/index.html#app/0",
+      "passed": true
+    },
+    {
+      "version": "export",
+      "path": "design-system/index.html",
+      "passed": true
+    },
+    {
+      "version": "export",
+      "path": "previews/mobile/index.html",
+      "passed": true
+    },
+    {
+      "version": "export",
+      "path": "previews/mobile/Gallery.html",
+      "passed": true
+    }
+  ],
+  "script_errors": [],
+  "unit_tests_passed": 14,
+  "exported_files": 168,
+  "source_files": [
+    {
+      "path": "previews/mobile/Prototype.html",
+      "sha256": "34f9e252b438744ced60fc5bc40c574c70aa8163ca3e81f08aeaab5e8433bcf2"
+    },
+    {
+      "path": "previews/mobile/assets/original/preview-navigation.js",
+      "sha256": "7147cf5693f4d2e9182ee2bb9aa88ca44eeddf284408dd3892993a3a10a928fc"
+    },
+    {
+      "path": "tokens/original-ui.tokens.json",
+      "sha256": "cca79023c72008cb799a335fd5f745b32654f3b89b951f4aef145e36a415af67"
+    },
+    {
+      "path": "previews/mobile/source/document.html.template",
+      "sha256": "3fb26d99068f8bf97b93d6b5b9194d2d71673af125f9d6386c5b19b9105f6ef6"
+    },
+    {
+      "path": "previews/mobile/source/fonts.css",
+      "sha256": "30e9e46ff09412307bfdd25bc728d1c0744c1f190cbe860b19a0459c42fb65d0"
+    },
+    {
+      "path": "previews/mobile/source/logic.js",
+      "sha256": "8c4c5939875311cf33ab56ff0b987f8a4c508eaedb8e268ba0eb8d48b4c19382"
+    },
+    {
+      "path": "previews/mobile/source/screens/bhent-detail.html",
+      "sha256": "b98f16be8e0158056641d0f7471a1593432263b7bec35c63e26a538ba8597666"
+    },
+    {
+      "path": "previews/mobile/source/screens/bhent-list.html",
+      "sha256": "59920204a90cf61ff598f3a625828c07f2d5388cb183680aa83ed81af4a5a192"
+    },
+    {
+      "path": "previews/mobile/source/screens/cart-sankalp.html",
+      "sha256": "eaab31caf3540fc8d8f5c651886f3b0fcd9818b1776776f55ce1cfba236a8952"
+    },
+    {
+      "path": "previews/mobile/source/screens/home.html",
+      "sha256": "aef68540acc3acd0b921967bcd44775fe2968921f9d59e84fc872c602209d031"
+    },
+    {
+      "path": "previews/mobile/source/screens/payment.html",
+      "sha256": "5e06dbfcce475ada1f3409baad1faf304ecb8a99bad384ff9c7fe505d67205af"
+    },
+    {
+      "path": "previews/mobile/source/screens/profile.html",
+      "sha256": "50979f33256a72e8fb04e1907365549af0063946fa6f0d1b54a3302424aad618"
+    },
+    {
+      "path": "previews/mobile/source/screens/rashifal.html",
+      "sha256": "1e32d1108424c109e4e5af37da9cb1c3d52b9cdae060ba829ca046a71ce4ceef"
+    },
+    {
+      "path": "previews/mobile/source/screens/seva-order-detail.html",
+      "sha256": "f9952ec660835f11ad3656283c741a88b4604857da0755e27a37c9addfad220f"
+    },
+    {
+      "path": "previews/mobile/source/screens/seva-setup-names-autopay.html",
+      "sha256": "f2c658e03a13f4589336c2c935f15d84eeb162b15d86b23596a99f15b9606a88"
+    },
+    {
+      "path": "previews/mobile/source/screens/seva-started.html",
+      "sha256": "8745b560db25521b74797a234793be0485dbbd0d985eb9c55fa1373251ca4899"
+    },
+    {
+      "path": "previews/mobile/source/screens/sheets.html",
+      "sha256": "8764a0985c49230a8e54ea3aafd5dc10389549394fafc134666a7dd671f527f8"
+    },
+    {
+      "path": "previews/mobile/source/screens/success.html",
+      "sha256": "92102e453d443d00fa1270fd6766490c97e8ea9b2e0b8d3e71e9c56301ef86c0"
+    },
+    {
+      "path": "previews/mobile/source/screens/toast.html",
+      "sha256": "1aff8d7a76a43ae5493423bb194e02cdfd658f2507c9e8e4b043a03f88ee78ba"
+    },
+    {
+      "path": "previews/mobile/source/screens/weekly-seva-detail.html",
+      "sha256": "1e58badeb5505dfda4ad3622145a10a4308c53e331be3ff8417a27e08abb5e8d"
+    },
+    {
+      "path": "previews/mobile/source/sections.json",
+      "sha256": "c8cfc974a9a99be284904e190bc282c9367f6bf06f4642c664a35f509f7d939b"
+    },
+    {
+      "path": "previews/mobile/source/styles.css",
+      "sha256": "1e44939bbe8cfab675b2dbb6bb1a774ea09dda19f40954dc5e6f1efc329218de"
+    }
+  ],
+  "not_tested": [
+    "Real provider/payment/account behavior",
+    "Native devices",
+    "Approval of new My Bookings layout or engineering handoff"
+  ],
+  "raw_local_evidence": "Ignored artifacts/original-reference-final, original-restored-final, restored-behavior.json and original-style-audit; reproduce/retain before final handoff"
+}

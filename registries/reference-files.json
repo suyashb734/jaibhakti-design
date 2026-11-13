@@ -731,6 +731,11 @@
       "path": "references/live-sevas/2026-11-13/triyuginarayan-temple.jpeg",
       "bytes": 361153,
       "sha256": "74492633d08ead01ff2de91c1da75614801e03797a13baf21ecd8c3c2db57741"
+    },
+    {
+      "path": "references/live-style/2026-11-13/observations.json",
+      "bytes": 58257,
+      "sha256": "ab59182e5c15f39c91ed43ab45ba09f1ada02c5a620b496a8e80e4ee3df8cdde"
     }
   ]
 }

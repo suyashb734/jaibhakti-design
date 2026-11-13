@@ -16,7 +16,8 @@ designed to be understood without access to the original agent conversations.
    dated 13 November 2026 document its presentation. The production source and
    authenticated payment/booking implementation are outside this repository.
 3. **New work:** the Daan Seva/My Bookings specification and 49-state app candidate
-   propose the next experience. The editable version is under previews/mobile/.
+   propose the next experience. The proposal is under explorations/EXP-0001/draft/.
+   The complete original UI is the current editable baseline under previews/mobile/.
    It uses sample data and remains Draft.
 4. **Open exploration:** EXP-0001 compares My Bookings tabs and sections. Neither
    option has been selected. Fifteen inconsistencies are grouped into six decision
@@ -59,19 +60,20 @@ download the complete repository and open index.html, or serve it with
 `python3 tools/serve_design_hub.py` and open http://localhost:8000.
 
 - [Guided walkthrough](walkthroughs/index.html): the original's 12 entry states,
-  a suggested current-app journey, the A/B exploration and a browser for all 49
+  a separate proposed-bookings journey, the A/B exploration and a browser for all 49
   app draft states. Use Next, Previous or the screen selector. Historical screen
   stepping works through the local server/Codespaces; file-only review retains
   frozen captures as a fallback.
 - [Visual explorations](explorations/index.html): review both current layout
   alternatives and their open question.
-- [Full editable prototype](previews/mobile/Prototype.html): freely navigate all
-  states using the sidebar or All screens on a narrow display.
+- [Full editable prototype](previews/mobile/Prototype.html): use the preserved original listing, detail, cart, checkout and confirmation.
 - [Reference gallery](previews/mobile/Gallery.html): frozen imported screenshots
   beside links to current working routes. Captures do not update automatically.
 - [Three launched sevas](catalogue/index.html): actual offering/temple images and observed weekly prices, with source provenance.
 
-The owner selected the original-final colors and branding. Use tokens/original-final.tokens.json and assets/brand/. Live imagery/product facts do not replace that wordmark, typography or color direction.
+The owner selected the complete original UI, including listing, cart and checkout,
+as well as colors and branding. Read docs/11_Original_Design_System.md and open
+design-system/index.html before editing any UI. Use tokens/original-final.tokens.json and assets/brand/. Live imagery/product facts do not replace that wordmark, typography or color direction.
 
 GitHub renders Markdown but displays HTML as source. Open HTML through the local
 hub, the public preview or [Codespaces](https://codespaces.new/suyashb734/jaibhakti-design).

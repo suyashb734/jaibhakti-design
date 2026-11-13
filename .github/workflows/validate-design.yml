@@ -21,6 +21,8 @@ jobs:
         run: |
           python3 tools/build_review_catalog.py --check
           python3 tools/build_live_catalogue.py --check
+          python3 tools/build_original_design.py --check
+          python3 tools/build_style_guide.py --check
       - name: Check static preview export and its links
         run: python3 tools/build_preview_site.py --out artifacts/ci-preview
       - name: Check exploration and handoff boundaries

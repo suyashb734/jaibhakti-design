@@ -1,0 +1,35 @@
+<!-- ============ PROFILE ============ -->
+<sc-if value="{{is.profile}}" hint-placeholder-val="{{false}}">
+<div style="position: absolute; left: 0; top: 0; width: 393px; height: 852px; overflow-y: auto; overflow-x: hidden; scrollbar-width: none; {{fx}}">
+  <div style="position: sticky; top: 0; z-index: 20; height: 64px; box-sizing: border-box; padding: 0 16px; display: flex; align-items: center; gap: 12px; background: rgba(255,253,249,0.8); backdrop-filter: blur(20px) saturate(170%); -webkit-backdrop-filter: blur(20px) saturate(170%); border-bottom: 1px solid rgba(255,255,255,0.75);">
+    <button type="button" sc-camel-on-click="{{back}}" aria-label="Back" style="{{backBtn}}"><svg sc-camel-view-box="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></button>
+    <span style="font-family: 'Poppins', 'Noto Sans Devanagari', sans-serif; font-size: 18px; line-height: 22px; font-weight: 600;">Profile</span>
+  </div>
+  <div style="display: flex; flex-direction: column; gap: 16px; padding: 14px 16px 40px 16px;">
+    <div style="position: relative; overflow: hidden; border-radius: 26px; padding: 20px; display: flex; align-items: center; gap: 16px; color: #FFF1D6; background: radial-gradient(120% 90% at 30% 0%, #7A2208 0%, #3E0E04 60%, #260802 100%); border: 1px solid rgba(255,200,90,0.45); box-shadow: inset 0 1px 0 rgba(255,220,140,0.35), 0 18px 34px -16px rgba(90,20,0,0.45);">
+      <svg sc-camel-view-box="0 0 220 220" width="200" height="200" style="position: absolute; right: -60px; top: -60px; opacity: 0.25; pointer-events: none;" fill="none" stroke="#FFD66B" stroke-width="1" aria-hidden="true"><circle cx="110" cy="110" r="100"></circle><circle cx="110" cy="110" r="76" stroke-dasharray="2 4"></circle><ellipse cx="110" cy="110" rx="16" ry="90"></ellipse><ellipse cx="110" cy="110" rx="16" ry="90" transform="rotate(60 110 110)"></ellipse><ellipse cx="110" cy="110" rx="16" ry="90" transform="rotate(120 110 110)"></ellipse></svg>
+      <span style="font-family: 'Poppins', 'Noto Sans Devanagari', sans-serif; position: relative; width: 72px; height: 72px; border-radius: 999px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: 600; color: #4A1206; background: linear-gradient(150deg, #FFE7A0 0%, #FF9A4F 100%); box-shadow: inset 0 4px 8px rgba(255,255,255,0.6), 0 0 0 4px rgba(255,214,107,0.3);">{{initials}}</span>
+      <span style="position: relative; display: flex; flex-direction: column; gap: 4px; min-width: 0;">
+        <span style="font-family: 'Poppins', 'Noto Sans Devanagari', sans-serif; font-size: 20px; line-height: 24px; font-weight: 600;">{{fullName}}</span>
+        <span style="font-size: 13px; line-height: 18px; color: #F5D6B0;">+91 {{phoneFmt}}</span>
+        <span style="display: flex; gap: 6px; flex-wrap: wrap; margin-top: 4px;">
+          <span style="height: 24px; padding: 0 10px; border-radius: 999px; display: inline-flex; align-items: center; font-size: 11px; font-weight: 600; color: #3A1604; background: linear-gradient(100deg, #FFD24A 0%, #FF8A3D 100%);">{{gotraTxt}}</span>
+          <span style="height: 24px; padding: 0 10px; border-radius: 999px; display: inline-flex; align-items: center; font-size: 11px; font-weight: 500; color: #FFE7C8; border: 1px solid rgba(255,214,107,0.5);">Member since Sep 2026</span>
+        </span>
+      </span>
+    </div>
+    <div style="{{glassCard}} border-radius: 22px; padding: 4px 6px;">
+      <sc-for list="{{menu}}" as="m" hint-placeholder-count="8">
+        <button type="button" sc-camel-on-click="{{m.pick}}" style="width: 100%; min-height: 58px; padding: 8px 10px; border: 0; background: none; display: flex; align-items: center; gap: 12px; text-align: left; cursor: pointer; font: inherit; color: #3A2B1A; border-bottom: 1px solid rgba(58,43,26,0.08);">
+          <span style="width: 36px; height: 36px; border-radius: 999px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; background: linear-gradient(150deg, rgba(255,214,102,0.55) 0%, rgba(255,138,61,0.28) 100%);"><svg sc-camel-view-box="0 0 24 24" width="18" height="18" fill="none" stroke="#B5601C" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="{{m.d}}"></path></svg></span>
+          <span style="flex-grow: 1; display: flex; flex-direction: column;"><span style="font-size: 14px; line-height: 19px; font-weight: 600;">{{m.l}}</span><span style="font-size: 12px; line-height: 16px; color: #7A5530;">{{m.s}}</span></span>
+          <svg sc-camel-view-box="0 0 24 24" width="18" height="18" fill="none" stroke="rgba(58,43,26,0.35)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg>
+        </button>
+      </sc-for>
+    </div>
+    <button type="button" sc-camel-on-click="{{logout}}" style="height: 52px; border-radius: 999px; font: inherit; font-size: 15px; font-weight: 600; cursor: pointer; color: #B91C1C; background: rgba(255,255,255,0.6); border: 1.5px solid rgba(185,28,28,0.35);">Log out</button>
+    <span style="text-align: center; font-size: 12px; line-height: 16px; color: #8A6A4A;">Jai Bhakti v0.2 · working prototype</span>
+  </div>
+</div>
+</sc-if>
+

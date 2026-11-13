@@ -5,7 +5,7 @@ on:
       source:
         description: Imported source to capture
         type: choice
-        options: [working-mobile, candidate, initial]
+        options: [working-mobile, proposal, candidate, initial]
         default: working-mobile
         required: true
 permissions:

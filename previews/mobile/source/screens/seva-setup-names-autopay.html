@@ -1,0 +1,117 @@
+<!-- ============ SEVA SETUP: NAMES + AUTOPAY ============ -->
+<sc-if value="{{is.sevaSetup}}" hint-placeholder-val="{{false}}">
+<div style="position: absolute; left: 0; top: 0; width: 393px; height: 852px; overflow-y: auto; overflow-x: hidden; scrollbar-width: none; {{fx}}">
+  <div style="position: sticky; top: 0; z-index: 20; height: 64px; box-sizing: border-box; padding: 0 16px; display: flex; align-items: center; gap: 12px; background: rgba(255,253,249,0.8); backdrop-filter: blur(20px) saturate(170%); -webkit-backdrop-filter: blur(20px) saturate(170%); border-bottom: 1px solid rgba(255,255,255,0.75);">
+    <button type="button" sc-camel-on-click="{{back}}" aria-label="Back" style="{{backBtn}}"><svg sc-camel-view-box="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></button>
+    <span style="font-family: 'Poppins', 'Noto Sans Devanagari', sans-serif; font-size: 18px; line-height: 22px; font-weight: 600;">Start your seva</span>
+  </div>
+  <div style="display: flex; flex-direction: column; gap: 16px; padding: 12px 16px 132px 16px;">
+    <div style="position: sticky; top: 64px; z-index: 19; margin: -12px -16px 0 -16px; padding: 10px 16px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; background: rgba(255,253,249,0.92); backdrop-filter: blur(20px) saturate(160%); -webkit-backdrop-filter: blur(20px) saturate(160%); border-bottom: 1px solid rgba(58,43,26,0.06);">
+      <span style="{{stepOn}}"><span style="{{stepDot}}">1</span>Details</span>
+      <span style="{{stepOn}}"><span style="{{stepDot}}">2</span>Payment</span>
+      <span style="{{stepOff}}"><span style="{{stepDotOff}}">3</span>Started</span>
+    </div>
+
+    <div style="{{glassCard}} border-radius: 22px; padding: 12px; display: flex; gap: 12px; align-items: center;">
+      <span style="position: relative; flex-shrink: 0; width: 72px; height: 72px; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 16px -8px rgba(90,20,0,0.42);">
+        <svg sc-camel-view-box="0 0 100 100" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: 100%; height: 100%;"><rect x="0" y="0" width="100" height="100" fill="{{sv.bg}}"></rect><circle cx="50" cy="44" r="40" fill="url(#dHalo)"></circle><path d="M34 90 V62 C34 54 40 46 44 38 C47 30 49 22 50 14 C51 22 53 30 56 38 C60 46 66 54 66 62 V90 Z" fill="url(#dGold)"></path><path d="M45 90 V74 C45 70 47 67 50 66 C53 67 55 70 55 74 V90 Z" fill="url(#dDoor)"></path><path d="M50 14 V6 M50 6 L59 9 L50 12 Z" stroke="#FFE7A3" stroke-width="1" fill="#FF5A1F"></path></svg>
+      </span>
+      <span style="display: flex; flex-direction: column; gap: 3px; min-width: 0;">
+        <span style="font-size: 14px; line-height: 19px; font-weight: 600;">{{sv.setupName}}</span>
+        <span style="font-size: 12px; line-height: 16px; color: #6B4A2E;">First puja {{firstPujaLong}}, 7:00 PM IST</span>
+      </span>
+    </div>
+
+    <div style="{{glassCard}} border-radius: 22px; padding: 16px; display: flex; flex-direction: column; gap: 10px;">
+      <span style="font-family: 'Poppins', 'Noto Sans Devanagari', sans-serif; font-size: 17px; line-height: 21px; font-weight: 600;">Your information</span>
+      <label for="dh-sp" style="display: flex; align-items: center; gap: 6px; font-size: 12px; line-height: 16px; font-weight: 500; color: #6B4A2E;">WhatsApp number</label>
+      <div style="{{inputStyle}} display: flex; align-items: center; padding: 0; overflow: hidden; border-color: rgba(37,211,102,0.55);">
+        <span style="padding: 0 10px 0 12px; height: 100%; display: flex; align-items: center; gap: 8px; font-weight: 500; border-right: 1px solid rgba(58,43,26,0.1);"><svg sc-camel-view-box="0 0 24 24" width="22" height="22" aria-hidden="true" style="display: block;"><circle cx="12" cy="12" r="11" fill="#25D366"></circle><path d="M8.3 6.9c.3-.4.9-.4 1.1 0l1 2c.1.3.1.6-.2.9l-.6.6c.6 1.2 1.6 2.2 2.8 2.8l.6-.6c.3-.3.6-.3.9-.2l2 1c.4.2.4.8 0 1.1-1.1 1-2.7 1.2-4 .5-2.1-1-3.7-2.6-4.7-4.7-.7-1.3-.5-2.9.5-4z" fill="#FFFFFF"></path></svg>+91</span>
+        <input id="dh-sp" type="tel" inputmode="numeric" value="{{phone}}" sc-camel-on-change="{{onPhone}}" placeholder="98765 43210" style="flex-grow: 1; min-width: 0; height: 100%; border: 0; background: transparent; padding: 0 12px; font: inherit; color: #3A2B1A; outline: none;">
+      </div>
+      <span style="display: flex; align-items: flex-start; gap: 8px; padding: 10px 12px; border-radius: 12px; font-size: 12px; line-height: 17px; color: #14532D; background: rgba(37,211,102,0.1); border: 1px solid rgba(21,128,61,0.18);">Your seva video, live updates and receipt are sent to this number on WhatsApp.</span>
+      <label for="dh-sn" style="font-size: 12px; line-height: 16px; font-weight: 500; color: #6B4A2E;">Your name</label>
+      <input id="dh-sn" type="text" value="{{name}}" sc-camel-on-change="{{onName}}" placeholder="As Pandit ji should read it" style="{{inputStyle}}">
+      <div style="display: flex; align-items: center; gap: 6px;"><label for="dh-sg" style="font-size: 12px; line-height: 16px; font-weight: 500; color: #6B4A2E;">Gotra</label><button type="button" sc-camel-on-click="{{openGotraInfo}}" aria-label="What if I don't know my gotra?" style="width: 28px; height: 28px; margin: -8px 0; padding: 0; border: 0; background: none; display: flex; align-items: center; justify-content: center; cursor: pointer;"><span style="width: 16px; height: 16px; border-radius: 999px; display: flex; align-items: center; justify-content: center; font-size: 11px; line-height: 11px; font-weight: 700; font-style: italic; font-family: Georgia, serif; color: #FFFFFF; background: #B5470C;">i</span></button></div>
+      <input id="dh-sg" type="text" value="{{gotra}}" sc-camel-on-change="{{onGotra}}" placeholder="e.g. Bharadwaj" style="{{inputStyle}}">
+      <button type="button" sc-camel-on-click="{{setKashyap}}" style="{{linkBtn}} align-self: flex-start;">Don't know your gotra?</button>
+      <span style="font-size: 13px; line-height: 19px; color: #1A1A1A; text-wrap: pretty;">The name and gotra shared above will be used for your certificate and for making the seva offering.</span>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 8px;">
+      <span style="font-size: 14px; line-height: 19px; font-weight: 600; padding: 0 4px;">Add-on</span>
+      <label style="{{glassCard}} border-radius: 22px; padding: 14px; display: flex; gap: 12px; align-items: flex-start; cursor: pointer;">
+        <input type="checkbox" checked="{{addSankalp}}" sc-camel-on-change="{{toggleSankalp}}" style="width: 22px; height: 22px; margin: 1px 0 0 0; accent-color: #FF8A3D; flex-shrink: 0;">
+        <span style="flex-grow: 1; display: flex; flex-direction: column; gap: 2px;">
+          <span style="font-size: 15px; line-height: 20px; font-weight: 600;">Personal sankalp</span>
+          <span style="font-size: 12px; line-height: 17px; color: #6B4A2E;">Pandit ji reads your name and gotra aloud before the bhog is offered</span>
+        </span>
+        <span style="font-size: 14px; line-height: 20px; font-weight: 600; color: #B8300F; flex-shrink: 0;">+₹20</span>
+      </label>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 8px;">
+      <span style="font-size: 14px; line-height: 19px; font-weight: 600; padding: 0 4px;">Pay with</span>
+      <div style="{{glassCard}} border-radius: 22px; padding: 6px;">
+        <sc-for list="{{apApps}}" as="p" hint-placeholder-count="4">
+          <button type="button" role="radio" aria-checked="{{p.sel}}" sc-camel-on-click="{{p.pick}}" style="{{p.row}}">
+            <span style="{{p.badge}}">{{p.i}}</span>
+            <span style="flex-grow: 1; display: flex; flex-direction: column; text-align: left;"><span style="font-size: 15px; line-height: 20px; font-weight: 600;">{{p.l}}</span><span style="font-size: 12px; line-height: 16px; color: #7A5530;">UPI</span></span>
+            <span style="{{p.radio}}"></span>
+          </button>
+        </sc-for>
+      </div>
+    </div>
+
+  </div>
+</div>
+<div style="position: absolute; left: 0; right: 0; bottom: 0; z-index: 30; padding: 12px 16px 22px 16px; display: flex; align-items: center; gap: 12px; background: rgba(255,253,249,0.86); backdrop-filter: blur(20px) saturate(160%); -webkit-backdrop-filter: blur(20px) saturate(160%); border-top: 1px solid rgba(255,255,255,0.95); box-shadow: 0 -12px 30px -16px rgba(150,60,0,0.3);">
+  <div style="flex-grow: 1; display: flex; flex-direction: column;"><span style="font-size: 12px; line-height: 16px; font-weight: 500; color: #7A5530;">Today</span><span style="font-family: 'Poppins', 'Noto Sans Devanagari', sans-serif; font-size: 22px; line-height: 26px; font-weight: 600; font-variant-numeric: tabular-nums;">{{payTxt}}</span></div>
+  <button type="button" sc-camel-on-click="{{openMandate}}" style="{{apBtn}} flex-grow: 1; flex-shrink: 1; min-width: 0; max-width: 240px; font-size: 19px; font-weight: 600;">Pay {{payTxt}}</button>
+</div>
+
+<sc-if value="{{mandateOn}}" hint-placeholder-val="{{false}}">
+<div style="position: absolute; left: 0; top: 0; width: 393px; height: 852px; z-index: 75; display: flex; flex-direction: column; justify-content: flex-end; background: rgba(20,8,2,0.6); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);">
+  <div role="dialog" aria-labelledby="dh-mt" style="display: flex; flex-direction: column; border-radius: 28px 28px 0 0; overflow: hidden; background: #FFFFFF; box-shadow: 0 -20px 40px -20px rgba(90,30,0,0.36);">
+    <div style="{{apHead}}">
+      <span style="width: 34px; height: 34px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 600; color: #FFFFFF; background: rgba(255,255,255,0.18); border: 1px solid rgba(255,255,255,0.4);">{{apPick.i}}</span>
+      <span style="flex-grow: 1; display: flex; flex-direction: column;"><span style="font-size: 15px; line-height: 19px; font-weight: 600;">{{apPick.l}}</span><span style="font-size: 11px; line-height: 15px; opacity: 0.85;">Secure UPI · prototype screen</span></span>
+      <sc-if value="{{mandateApprove}}" hint-placeholder-val="{{true}}"><button type="button" sc-camel-on-click="{{closeMandate}}" aria-label="Cancel" style="width: 36px; height: 36px; border-radius: 999px; border: 0; background: rgba(255,255,255,0.18); color: #FFFFFF; cursor: pointer; font: inherit; font-size: 18px; line-height: 18px;">×</button></sc-if>
+    </div>
+
+    <sc-if value="{{mandateApprove}}" hint-placeholder-val="{{true}}">
+      <div style="display: flex; flex-direction: column; gap: 12px; padding: 16px 20px 26px 20px; color: #1A1A1A;">
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <span style="width: 44px; height: 44px; border-radius: 999px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; background: radial-gradient(circle at 34% 26%, #FFE7A8 0%, #FFB43A 30%, #FF7A00 62%, #B8390A 100%);"><svg sc-camel-view-box="0 0 24 24" width="24" height="24" fill="none" stroke="#FFF6E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 22V13.5C4 9.2 7 5.6 12 3.6C17 5.6 20 9.2 20 13.5V22"></path><path d="M7 13.2h10"></path><path d="M15 13.2V22"></path><path d="M9 22v-5.4c0-1.6 1.2-2.6 2.7-2.6"></path></svg></span>
+          <span style="display: flex; flex-direction: column;"><span id="dh-mt" style="font-size: 17px; line-height: 22px; font-weight: 600;">Pay {{payTxt}} · Jai Bhakti Seva</span><span style="font-size: 12px; line-height: 16px; color: #555555;">{{sv.setupName}}, {{sv.templeShort}}</span></span>
+        </div>
+        <div style="display: flex; flex-direction: column; border-radius: 14px; border: 1px solid #E6E1D8; font-size: 13px; line-height: 18px;">
+          <div style="display: flex; justify-content: space-between; padding: 9px 12px;"><span style="color: #666666;">Pay now</span><span style="font-weight: 600;">{{payTxt}}</span></div>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 10px; padding-top: 4px;">
+          <span style="font-size: 13px; line-height: 18px; font-weight: 500; color: #333333;">Enter 6-digit UPI PIN</span>
+          <div style="display: flex; gap: 12px;">
+            <sc-for list="{{pinDots}}" as="o" hint-placeholder-count="6"><span style="{{o.style}}"></span></sc-for>
+          </div>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px;">
+          <sc-for list="{{keys}}" as="k" hint-placeholder-count="12">
+            <button type="button" sc-camel-on-click="{{k.press}}" aria-label="{{k.label}}" style="{{k.style}}">{{k.t}}</button>
+          </sc-for>
+        </div>
+        <button type="button" sc-camel-on-click="{{pinDemo}}" style="{{linkBtn}} align-self: center;">Fill PIN (demo)</button>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{mandateBusy}}" hint-placeholder-val="{{false}}">
+      <div role="status" style="display: flex; flex-direction: column; align-items: center; gap: 14px; padding: 36px 24px 48px 24px; text-align: center; color: #1A1A1A;">
+        <svg sc-camel-view-box="0 0 80 80" width="76" height="76" aria-hidden="true"><circle cx="40" cy="40" r="32" fill="none" stroke="rgba(226,140,40,0.2)" stroke-width="7"></circle><circle cx="40" cy="40" r="32" fill="none" stroke="url(#dSaffron)" stroke-width="7" stroke-linecap="round" stroke-dasharray="60 141"><animateTransform sc-camel-attribute-name="transform" type="rotate" from="0 40 40" to="360 40 40" dur="1s" sc-camel-repeat-count="indefinite"></animateTransform></circle><path d="M40 50 C34 45 35 36 40 29 C45 36 46 45 40 50 Z" fill="url(#dFlame)"></path></svg>
+        <span style="font-size: 17px; line-height: 22px; font-weight: 600;">Processing payment…</span>
+        <span style="font-size: 13px; line-height: 19px; color: #555555;">Paying {{payTxt}} with {{apPick.l}}.</span>
+      </div>
+    </sc-if>
+  </div>
+</div>
+</sc-if>
+</sc-if>
+
