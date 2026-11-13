@@ -25,6 +25,10 @@ Describe the concrete user problem and final behavior. Include a before/after ex
 
 ## Approval and handoff
 
+For routine design exploration or repository maintenance, name the human reviewer
+and record the review outcome. Complete the role-specific handoff fields below
+only when requesting an engineering handoff; use not applicable otherwise.
+
 - Review intent: preserve exploration / integrate draft / approve exact handoff
 - Exact source commit being reviewed:
 - Product/design review evidence:

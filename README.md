@@ -1,12 +1,15 @@
 # Jai Bhakti Design Hub
 
-**Continuing work? Read [HANDOFF.md](HANDOFF.md).** PR #9 contains the pending
-original-brand/live-catalogue update and connected publisher. The public preview
-is live with the earlier snapshot; the new update has not been merged/published.
+**Continuing work? Read [HANDOFF.md](HANDOFF.md).** Original-final branding, the
+live-seva catalogue and automatic preview publishing are integrated and verified.
+Use [the daily design workflow](docs/10_Design_Collaboration.md) for new work.
 
 [![Registry integrity](https://github.com/suyashb734/jaibhakti-design/actions/workflows/validate-design.yml/badge.svg)](https://github.com/suyashb734/jaibhakti-design/actions/workflows/validate-design.yml)
 
-Versioned product design, decisions and engineering handoff for Jai Bhakti web and mobile. The web acquires bookings; the mobile app will show booking updates, evidence and management, and allow devotees to book more.
+Shared design assets, visual explorations and review records for Jai Bhakti web and
+mobile. Three contributors can use agents to propose and refine designs here.
+Production implementations live elsewhere; approved design versions can later be
+handed to engineering.
 
 **[Open the interactive design preview](https://suyashb734.github.io/jaibhakti-design-preview/)** — walkthroughs, complete designs, explorations and the launched-seva reference. Relevant merges to main refresh this same URL through the publish workflow.
 
@@ -21,6 +24,7 @@ design-vX.Y.Z handoff has been issued through this repository process yet.
 **New here? Read [START_HERE.md](START_HERE.md)** for the product history, user flow,
 source authority, agent starting procedure and complete design-to-engineering path.
 Read [the collaboration guide](docs/07_Preview_and_Collaboration.md) for editing a specific exploration and understanding branches, review and connected publishing.
+For daily work, use [the three-person design workflow](docs/10_Design_Collaboration.md).
 
 ## Find the right version
 
@@ -55,11 +59,11 @@ Track the [first design change](https://github.com/suyashb734/jaibhakti-design/i
 
 Download the whole repository and open [index.html](index.html), or clone it and run
 `python3 tools/serve_design_hub.py` at http://localhost:8000. GitHub displays HTML as
-source. The public preview currently serves the initial snapshot. The original-brand
-and live-catalogue update, plus the connected publisher, are being integrated in
-[PR #9](https://github.com/suyashb734/jaibhakti-design/pull/9). See [HANDOFF.md](HANDOFF.md)
-for the published revision and continuation. Codespaces provides a preview of your
-own branch. The authoring repository stays private.
+source. The public preview includes the restored original-final branding and live
+seva catalogue. Relevant main changes publish automatically. See [HANDOFF.md](HANDOFF.md)
+for verified setup and continuation; preview-info.json identifies the public design
+revision. Codespaces provides a preview of your own branch. The authoring repository
+stays private.
 
 The public site is generated from an allowlist of review assets in a separate
 public repository. Documentation and decisions stay private. Noindex is requested;
@@ -79,7 +83,11 @@ Named approval evidence must be added to the exact design version. Being newer, 
 
 ## Working source
 
-The [editable mobile prototype](previews/mobile/Prototype.html) is forked from the candidate with separate HTML, CSS and JavaScript. Its [gallery](previews/mobile/Gallery.html) clearly labels imported reference images. The [web baseline entry](previews/web/index.html) links historical and observed-live sources; production web code has not been supplied. Shared token, catalogue and copy extraction remains part of the scoped migration.
+The [editable mobile prototype](previews/mobile/Prototype.html) has separate screen
+files, shared visual components and sample fixtures, with minimal preview wiring.
+See [the editing map](previews/mobile/README.md). Its [gallery](previews/mobile/Gallery.html)
+labels frozen imported references. The [web baseline entry](previews/web/index.html)
+links historical and observed-live sources; production web code has not been supplied.
 
 ## Working structure
 

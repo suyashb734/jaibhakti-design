@@ -1,0 +1,167 @@
+{
+  "change": "JB-CHG-0001",
+  "work_type": "design_asset_maintenance",
+  "baseline_commit": "eddb9484d490333c6837b747b4edb568932a1e54",
+  "recorded_at_utc": "2026-11-13T12:31:58.383307+00:00",
+  "scope": "Source organization and lightweight three-person design workflow; no selected layout or product-rule change",
+  "source_files": [
+    {
+      "path": "previews/mobile/Prototype.html",
+      "sha256": "9a9907e7be925747fb35cc9e4696f1a0549bbe68274ebb116c1f3bf0d73f5812"
+    },
+    {
+      "path": "previews/mobile/assets/app.js",
+      "sha256": "93377499ec9fad039f3d2c046c6ace643fc26b25ff5aef05f0839b5ec24a5dbb"
+    },
+    {
+      "path": "previews/mobile/assets/components.js",
+      "sha256": "775b4483db8d024cbc361a3cf68d88c7a5884d58930d63d8be92d83cbdfbd7f1"
+    },
+    {
+      "path": "previews/mobile/assets/fixtures.js",
+      "sha256": "2f52ca59519c2072da3a7b1b321ecf59a1768f9ac99b735f21775172ff1f82a7"
+    },
+    {
+      "path": "previews/mobile/assets/sample-media.js",
+      "sha256": "682d2544b1ddfeeaae8715208848d7f676636c4837200158e10b3d9aea7aee7a"
+    },
+    {
+      "path": "previews/mobile/assets/screen-index.js",
+      "sha256": "e261d9e5d1bdca8d68bb0d22a55036365d1694aa46c5422ece2dd0fb94c3fa9d"
+    },
+    {
+      "path": "previews/mobile/assets/screens/beneficiary.js",
+      "sha256": "a6148c1aa343655c5f13e6d0d3532ac121155446ddee6dc67f1e2ed0ce753f6b"
+    },
+    {
+      "path": "previews/mobile/assets/screens/bookings.js",
+      "sha256": "5bf3e0723bf99182d61490ebd9cdb1c0033f5f132bdd9d00f9d4beac52045291"
+    },
+    {
+      "path": "previews/mobile/assets/screens/checkout.js",
+      "sha256": "4f33f382da01241c853923d27d98713a170c989b76ed0e0fce1925a7d52dc4ef"
+    },
+    {
+      "path": "previews/mobile/assets/screens/discovery.js",
+      "sha256": "4f5181089d098cadd18ddf7efb07f84da11c8dc5d93bb50829caa6791f3d0b23"
+    },
+    {
+      "path": "previews/mobile/assets/screens/examples.js",
+      "sha256": "ebfd8b369ff87f4c70130fdf5aecb3249bca5be4f04ecefe588d387434623737"
+    },
+    {
+      "path": "previews/mobile/assets/screens/media.js",
+      "sha256": "46a865c18e14237a3d96c65dbeb789778416a17cb2b6cfa1657b5f7dd22c1e51"
+    },
+    {
+      "path": "previews/mobile/assets/screens/nirantar.js",
+      "sha256": "5f8192eecbb71999cf0f5d9f3eab2f2a2fca2c95b958ac770e51079144b43e7d"
+    },
+    {
+      "path": "previews/mobile/assets/screens/occurrence.js",
+      "sha256": "c81fefb4959da65772e0ba40c1c04235920ed1cb1d9779e157738d9cbc0f7cb4"
+    },
+    {
+      "path": "previews/mobile/assets/screens/support.js",
+      "sha256": "06d52830b8f80e0e5eb1eaa0ee03c0fdc38fb626266495524c317ed074d02e9c"
+    },
+    {
+      "path": "previews/mobile/assets/styles.css",
+      "sha256": "797f026048353ea0135d7875ff45ddc5aef95010553d3986f561cde28a12c99f"
+    }
+  ],
+  "comparison": {
+    "cases": 98,
+    "widths": [
+      360,
+      390
+    ],
+    "dom_identical_cases": 98,
+    "geometry_identical_cases": 98,
+    "pixel_exact_cases": 77,
+    "native_video_surface_variation_cases": 1,
+    "note": "Compared at the same clock, locale, browser, viewport and device scale. Small channel-level raster differences were inspected. Larger differences were confined to unchanged native video surfaces; DOM, dimensions and media source assets match. No pixel-perfect or usability approval is claimed.",
+    "raw_evidence": "Ignored artifacts/collaboration-before-*, collaboration-final-*, collaboration-comparison.json and collaboration-final-comparison.json"
+  },
+  "browser": {
+    "engine": "Chromium",
+    "version": "130.0.6723.31"
+  },
+  "clock": "2026-11-12T04:30:00Z",
+  "timezone": "Asia/Kolkata",
+  "locale": "en-IN",
+  "pixel_ratio": 1.0,
+  "script_errors": [],
+  "horizontal_overflow": false,
+  "interaction_groups": [
+    {
+      "version": "source",
+      "case": "49 registered routes and images",
+      "passed": true
+    },
+    {
+      "version": "source",
+      "case": "validation, OTP, beneficiary and consent simulation",
+      "passed": true
+    },
+    {
+      "version": "source",
+      "case": "checkout-derived occurrence and beneficiary edit",
+      "passed": true
+    },
+    {
+      "version": "source",
+      "case": "keyboard tabs and older dates",
+      "passed": true
+    },
+    {
+      "version": "source",
+      "case": "rating, partial video state and sample certificate download",
+      "passed": true
+    },
+    {
+      "version": "source",
+      "case": "embedded walkthrough Next",
+      "passed": true
+    },
+    {
+      "version": "export",
+      "case": "49 registered routes and images",
+      "passed": true
+    },
+    {
+      "version": "export",
+      "case": "validation, OTP, beneficiary and consent simulation",
+      "passed": true
+    },
+    {
+      "version": "export",
+      "case": "checkout-derived occurrence and beneficiary edit",
+      "passed": true
+    },
+    {
+      "version": "export",
+      "case": "keyboard tabs and older dates",
+      "passed": true
+    },
+    {
+      "version": "export",
+      "case": "rating, partial video state and sample certificate download",
+      "passed": true
+    },
+    {
+      "version": "export",
+      "case": "embedded walkthrough Next",
+      "passed": true
+    }
+  ],
+  "unit_tests_passed": 13,
+  "static_export_files": 122,
+  "not_tested": [
+    "Real account, provider or backend integration",
+    "Native devices",
+    "Human usability preference",
+    "Engineering handoff approval"
+  ],
+  "retention": "Raw local evidence is ignored. Reproduce with tools/capture_design_evidence.py; retain scoped evidence before a final handoff."
+}
