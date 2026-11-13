@@ -1,0 +1,305 @@
+{
+  "requirements": [
+    {
+      "id": "JB-REQ-001",
+      "source": "SRC-SPEC",
+      "source_acceptance_criterion": 1,
+      "requirement": "My Bookings naming",
+      "candidate_screens": [
+        "JB-APP-001",
+        "JB-APP-002",
+        "JB-APP-003"
+      ],
+      "additional_route_examples": [],
+      "coverage": "represented_in_candidate",
+      "verification": "not_individually_signed_off",
+      "approval": null
+    },
+    {
+      "id": "JB-REQ-002",
+      "source": "SRC-SPEC",
+      "source_acceptance_criterion": 2,
+      "requirement": "Remove Chadhava",
+      "candidate_screens": [
+        "JB-APP-003"
+      ],
+      "additional_route_examples": [],
+      "coverage": "represented_in_candidate",
+      "verification": "not_individually_signed_off",
+      "approval": null
+    },
+    {
+      "id": "JB-REQ-003",
+      "source": "SRC-SPEC",
+      "source_acceptance_criterion": 3,
+      "requirement": "Nirantar name with separate cadence",
+      "candidate_screens": [
+        "JB-APP-045"
+      ],
+      "additional_route_examples": [],
+      "coverage": "represented_in_candidate",
+      "verification": "not_individually_signed_off",
+      "approval": null
+    },
+    {
+      "id": "JB-REQ-004",
+      "source": "SRC-SPEC",
+      "source_acceptance_criterion": 4,
+      "requirement": "Separate parent and occurrence",
+      "candidate_screens": [
+        "JB-APP-007",
+        "JB-APP-017"
+      ],
+      "additional_route_examples": [],
+      "coverage": "represented_in_candidate",
+      "verification": "not_individually_signed_off",
+      "approval": null
+    },
+    {
+      "id": "JB-REQ-005",
+      "source": "SRC-SPEC",
+      "source_acceptance_criterion": 5,
+      "requirement": "Compare both information architectures",
+      "candidate_screens": [
+        "JB-APP-003",
+        "JB-APP-006"
+      ],
+      "additional_route_examples": [],
+      "coverage": "represented_in_candidate",
+      "verification": "not_individually_signed_off",
+      "approval": null
+    },
+    {
+      "id": "JB-REQ-006",
+      "source": "SRC-SPEC",
+      "source_acceptance_criterion": 6,
+      "requirement": "Only registered or scheduled upcoming dates",
+      "candidate_screens": [
+        "JB-APP-004"
+      ],
+      "additional_route_examples": [],
+      "coverage": "represented_in_candidate",
+      "verification": "not_individually_signed_off",
+      "approval": null
+    },
+    {
+      "id": "JB-REQ-007",
+      "source": "SRC-SPEC",
+      "source_acceptance_criterion": 7,
+      "requirement": "Retain performed dates and independent evidence",
+      "candidate_screens": [
+        "JB-APP-005"
+      ],
+      "additional_route_examples": [],
+      "coverage": "represented_in_candidate",
+      "verification": "not_individually_signed_off",
+      "approval": null
+    },
+    {
+      "id": "JB-REQ-008",
+      "source": "SRC-SPEC",
+      "source_acceptance_criterion": 8,
+      "requirement": "Beneficiary and gotra on each card",
+      "candidate_screens": [
+        "JB-APP-003",
+        "JB-APP-004",
+        "JB-APP-005"
+      ],
+      "additional_route_examples": [],
+      "coverage": "represented_in_candidate",
+      "verification": "not_individually_signed_off",
+      "approval": null
+    },
+    {
+      "id": "JB-REQ-009",
+      "source": "SRC-SPEC",
+      "source_acceptance_criterion": 9,
+      "requirement": "Editable then locked beneficiary",
+      "candidate_screens": [
+        "JB-APP-030",
+        "JB-APP-031"
+      ],
+      "additional_route_examples": [],
+      "coverage": "represented_in_candidate",
+      "verification": "not_individually_signed_off",
+      "approval": null
+    },
+    {
+      "id": "JB-REQ-010",
+      "source": "SRC-SPEC",
+      "source_acceptance_criterion": 10,
+      "requirement": "Configured milestones without reset",
+      "candidate_screens": [
+        "JB-APP-012"
+      ],
+      "additional_route_examples": [],
+      "coverage": "represented_in_candidate",
+      "verification": "not_individually_signed_off",
+      "approval": null
+    },
+    {
+      "id": "JB-REQ-011",
+      "source": "SRC-SPEC",
+      "source_acceptance_criterion": 11,
+      "requirement": "Milestones do not end AutoPay or issue a certificate",
+      "candidate_screens": [
+        "JB-APP-012"
+      ],
+      "additional_route_examples": [],
+      "coverage": "represented_in_candidate",
+      "verification": "not_individually_signed_off",
+      "approval": null
+    },
+    {
+      "id": "JB-REQ-012",
+      "source": "SRC-SPEC",
+      "source_acceptance_criterion": 12,
+      "requirement": "First and regular price with actual occurrence bill",
+      "candidate_screens": [
+        "JB-APP-035",
+        "JB-APP-007"
+      ],
+      "additional_route_examples": [
+        "occurrence/C4"
+      ],
+      "coverage": "represented_in_candidate",
+      "verification": "not_individually_signed_off",
+      "approval": null
+    },
+    {
+      "id": "JB-REQ-013",
+      "source": "SRC-SPEC",
+      "source_acceptance_criterion": 13,
+      "requirement": "Failed current date and retry window",
+      "candidate_screens": [
+        "JB-APP-009",
+        "JB-APP-024"
+      ],
+      "additional_route_examples": [],
+      "coverage": "represented_in_candidate",
+      "verification": "not_individually_signed_off",
+      "approval": null
+    },
+    {
+      "id": "JB-REQ-014",
+      "source": "SRC-SPEC",
+      "source_acceptance_criterion": 14,
+      "requirement": "Retry registers next eligible date only",
+      "candidate_screens": [
+        "JB-APP-047"
+      ],
+      "additional_route_examples": [],
+      "coverage": "represented_in_candidate",
+      "verification": "not_individually_signed_off",
+      "approval": null
+    },
+    {
+      "id": "JB-REQ-015",
+      "source": "SRC-SPEC",
+      "source_acceptance_criterion": 15,
+      "requirement": "Inactive state and restart after retry expiry",
+      "candidate_screens": [
+        "JB-APP-010"
+      ],
+      "additional_route_examples": [],
+      "coverage": "represented_in_candidate",
+      "verification": "not_individually_signed_off",
+      "approval": null
+    },
+    {
+      "id": "JB-REQ-016",
+      "source": "SRC-SPEC",
+      "source_acceptance_criterion": 16,
+      "requirement": "No pause or skip",
+      "candidate_screens": [
+        "JB-APP-007"
+      ],
+      "additional_route_examples": [],
+      "coverage": "represented_in_candidate",
+      "verification": "not_individually_signed_off",
+      "approval": null
+    },
+    {
+      "id": "JB-REQ-017",
+      "source": "SRC-SPEC",
+      "source_acceptance_criterion": 17,
+      "requirement": "Remove Start Seva from booked cards",
+      "candidate_screens": [
+        "JB-APP-004",
+        "JB-APP-005"
+      ],
+      "additional_route_examples": [],
+      "coverage": "represented_in_candidate",
+      "verification": "not_individually_signed_off",
+      "approval": null
+    },
+    {
+      "id": "JB-REQ-018",
+      "source": "SRC-SPEC",
+      "source_acceptance_criterion": 18,
+      "requirement": "Upcoming uses Track Seva Details",
+      "candidate_screens": [
+        "JB-APP-004"
+      ],
+      "additional_route_examples": [],
+      "coverage": "represented_in_candidate",
+      "verification": "not_individually_signed_off",
+      "approval": null
+    },
+    {
+      "id": "JB-REQ-019",
+      "source": "SRC-SPEC",
+      "source_acceptance_criterion": 19,
+      "requirement": "Independent media readiness and 48 hour expectation",
+      "candidate_screens": [
+        "JB-APP-022",
+        "JB-APP-023"
+      ],
+      "additional_route_examples": [],
+      "coverage": "represented_in_candidate",
+      "verification": "not_individually_signed_off",
+      "approval": null
+    },
+    {
+      "id": "JB-REQ-020",
+      "source": "SRC-SPEC",
+      "source_acceptance_criterion": 20,
+      "requirement": "In app videos and per asset download/share",
+      "candidate_screens": [
+        "JB-APP-027",
+        "JB-APP-026"
+      ],
+      "additional_route_examples": [],
+      "coverage": "represented_in_candidate",
+      "verification": "not_individually_signed_off",
+      "approval": null
+    },
+    {
+      "id": "JB-REQ-021",
+      "source": "SRC-SPEC",
+      "source_acceptance_criterion": 21,
+      "requirement": "Rating after performed only",
+      "candidate_screens": [
+        "JB-APP-017",
+        "JB-APP-020"
+      ],
+      "additional_route_examples": [],
+      "coverage": "represented_in_candidate",
+      "verification": "not_individually_signed_off",
+      "approval": null
+    },
+    {
+      "id": "JB-REQ-022",
+      "source": "SRC-SPEC",
+      "source_acceptance_criterion": 22,
+      "requirement": "Status semantics and distinguishable long names",
+      "candidate_screens": [
+        "JB-APP-049"
+      ],
+      "additional_route_examples": [],
+      "coverage": "represented_in_candidate",
+      "verification": "not_individually_signed_off",
+      "approval": null
+    }
+  ]
+}

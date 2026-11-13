@@ -1,0 +1,23 @@
+name: Product decision
+description: Resolve a contradiction or an open design contract
+title: "[DEC-xxx] "
+labels: [decision]
+body:
+  - type: textarea
+    id: context
+    attributes:
+      label: Inconsistency IDs source evidence and affected scope
+    validations:
+      required: true
+  - type: textarea
+    id: options
+    attributes:
+      label: Options tradeoffs and recommended outcome
+    validations:
+      required: true
+  - type: textarea
+    id: approval
+    attributes:
+      label: Required owners and acceptance of the decision
+    validations:
+      required: true

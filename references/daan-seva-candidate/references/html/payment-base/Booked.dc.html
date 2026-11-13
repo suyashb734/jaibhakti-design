@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Dan Seva · Booked</title>
+<script src="./vendor/react.js"></script>
+<script src="./vendor/react-dom.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&amp;display=swap">
+<style>
+body{margin:0}
+@keyframes popIn{0%{transform:scale(0.3);opacity:0}60%{transform:scale(1.1);opacity:1}100%{transform:scale(1);opacity:1}}
+@keyframes ring{0%{box-shadow:0 0 0 0 rgba(30,138,74,0.35)}100%{box-shadow:0 0 0 22px rgba(30,138,74,0)}}
+@keyframes drawTick{to{stroke-dashoffset:0}}
+.tick-badge{animation:popIn 0.55s cubic-bezier(0.2,0.8,0.2,1) both, ring 1.4s ease-out 0.5s 2}
+.tick-path{stroke-dasharray:1;stroke-dashoffset:1;animation:drawTick 0.5s ease-out 0.45s forwards}
+
+/* ---- delivery scene: one 7s loop ---- */
+@keyframes envX{0%,34%{transform:translateX(0)}70%,100%{transform:translateX(236px)}}
+@keyframes envY{
+0%{transform:translateY(0) rotate(0) scale(1);opacity:0}
+4%{opacity:1}
+34%{transform:translateY(0) rotate(-4deg) scale(1)}
+38.5%{transform:translateY(-21px) rotate(-8deg) scale(1)}
+43%{transform:translateY(-35px) rotate(-6deg) scale(1)}
+47.5%{transform:translateY(-42px) rotate(-2deg) scale(1)}
+52%{transform:translateY(-43px) rotate(2deg) scale(1)}
+56.5%{transform:translateY(-40px) rotate(5deg) scale(1)}
+61%{transform:translateY(-23px) rotate(8deg) scale(1)}
+65.5%{transform:translateY(-2px) rotate(8deg) scale(1)}
+70%{transform:translateY(25px) rotate(4deg) scale(0.9);opacity:1}
+78%{transform:translateY(34px) rotate(0) scale(0.2);opacity:0}
+100%{transform:translateY(34px) rotate(0) scale(0.2);opacity:0}}
+@keyframes cardSlide{
+0%{transform:translateY(-44px);opacity:0}
+6%{transform:translateY(-44px);opacity:1}
+10%{transform:translateY(-44px)}
+24%,100%{transform:translateY(8px);opacity:1}}
+@keyframes flap{0%,24%{transform:scaleY(-1)}32%,100%{transform:scaleY(1)}}
+@keyframes seal{0%,31%{transform:translate(-50%,-50%) scale(0)}35%{transform:translate(-50%,-50%) scale(1.35)}38%,100%{transform:translate(-50%,-50%) scale(1)}}
+@keyframes spark{0%,34%{opacity:0;transform:scale(0)}40%{opacity:1;transform:scale(1)}56%{opacity:0.9;transform:scale(0.8)}68%,100%{opacity:0;transform:scale(0)}}
+@keyframes halo{0%,70%{transform:translate(-50%,-50%) scale(0.5);opacity:0}74%{opacity:0.9}92%,100%{transform:translate(-50%,-50%) scale(1.9);opacity:0}}
+@keyframes halo2{0%,74%{transform:translate(-50%,-50%) scale(0.5);opacity:0}78%{opacity:0.7}96%,100%{transform:translate(-50%,-50%) scale(2.3);opacity:0}}
+@keyframes doorGlow{0%,70%{opacity:0}76%{opacity:1}92%,100%{opacity:0}}
+@keyframes templeBump{0%,72%{transform:scale(1)}78%{transform:scale(1.08)}86%,100%{transform:scale(1)}}
+@keyframes pill{0%,80%{opacity:0;transform:translateY(8px) scale(0.9)}85%{opacity:1;transform:translateY(0) scale(1)}96%{opacity:1;transform:translateY(0) scale(1)}99%,100%{opacity:0;transform:translateY(-4px) scale(1)}}
+@keyframes dash{to{stroke-dashoffset:-24}}
+.env-x{animation:envX 7s linear infinite}
+.env-y{animation:envY 7s linear infinite}
+.env-card{animation:cardSlide 7s cubic-bezier(0.3,0.7,0.3,1) infinite}
+.env-flap{transform-origin:50% 0;animation:flap 7s ease-in-out infinite}
+.env-seal{animation:seal 7s ease-out infinite}
+.sp1{animation:spark 7s ease-out infinite}
+.sp2{animation:spark 7s ease-out 0.12s infinite}
+.sp3{animation:spark 7s ease-out 0.24s infinite}
+.halo-a{animation:halo 7s ease-out infinite}
+.halo-b{animation:halo2 7s ease-out infinite}
+.door-glow{animation:doorGlow 7s ease-in-out infinite}
+.temple-g{transform-origin:50% 100%;animation:templeBump 7s ease-in-out infinite}
+.pill{animation:pill 7s ease-out infinite}
+.path-dash{animation:dash 1.2s linear infinite}
+@media (prefers-reduced-motion: reduce){
+.tick-badge,.tick-path,.env-x,.env-y,.env-card,.env-flap,.env-seal,.sp1,.sp2,.sp3,.halo-a,.halo-b,.door-glow,.temple-g,.pill,.path-dash{animation:none}
+.tick-path{stroke-dashoffset:0}
+.env-x{transform:translateX(120px)}
+.env-card{transform:translateY(8px)}
+.env-seal{transform:translate(-50%,-50%) scale(1)}
+.pill{opacity:1}
+.halo-a,.halo-b,.door-glow,.sp1,.sp2,.sp3{opacity:0}
+}
+</style>
+</helmet>
+<div style="position: relative; width: 393px; height: 852px; overflow: hidden; box-sizing: border-box; font-family: 'Poppins', sans-serif; color: #3A2B1A; background: linear-gradient(180deg, #FFF6DC 0%, #FFE7A8 100%);">
+
+  <div style="display: flex; flex-direction: column; align-items: center; text-align: center; padding: 100px 28px 0 28px; gap: 16px;">
+    <span class="tick-badge" style="width: 96px; height: 96px; border-radius: 999px; display: flex; align-items: center; justify-content: center; background: #1E8A4A; box-shadow: 0 0 0 10px rgba(30,138,74,0.14), 0 16px 30px -10px rgba(20,90,50,0.5);">
+      <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Booked"><path class="tick-path" pathLength="1" d="M5 12.5l4.5 4.5L19 7.5"></path></svg>
+    </span>
+    <h1 style="margin: 12px 0 0 0; font-size: 24px; line-height: 32px; font-weight: 600; text-wrap: balance;">We've booked your Dan Seva for this Friday</h1>
+    <span style="font-size: 18px; line-height: 27px; font-weight: 600; color: #3A2B1A; text-wrap: balance;">Your name and gotra have been sent to Gajalakshmi Mata Mandir temple.</span>
+
+    <!-- delivery scene -->
+    <div aria-hidden="true" style="position: relative; width: 337px; height: 160px; margin-top: 4px;">
+
+      <!-- flight path -->
+      <svg width="337" height="160" viewBox="0 0 337 160" style="position: absolute; left: 0; top: 0;">
+        <path class="path-dash" d="M56 110 Q176 12 296 135" fill="none" stroke="#B5470C" stroke-opacity="0.45" stroke-width="2" stroke-linecap="round" stroke-dasharray="2 10"></path>
+      </svg>
+
+      <!-- temple, right -->
+      <span style="position: absolute; right: 0; bottom: 0; width: 84px; height: 124px;">
+        <span class="halo-a" style="position: absolute; left: 50%; top: 62%; width: 96px; height: 96px; margin: 0; border-radius: 999px; transform: translate(-50%,-50%) scale(0.5); opacity: 0; background: radial-gradient(circle, rgba(255,210,74,0.85) 0%, rgba(255,210,74,0) 70%);"></span>
+        <span class="halo-b" style="position: absolute; left: 50%; top: 62%; width: 96px; height: 96px; border-radius: 999px; transform: translate(-50%,-50%) scale(0.5); opacity: 0; border: 2px solid rgba(232,171,0,0.8);"></span>
+        <svg class="temple-g" viewBox="0 0 84 124" width="84" height="124" style="position: absolute; left: 0; top: 0; overflow: visible;">
+          <defs>
+            <linearGradient id="tg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFD24A"></stop><stop offset="1" stop-color="#E8870C"></stop></linearGradient>
+            <linearGradient id="tb" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C2410C"></stop><stop offset="1" stop-color="#7A2A06"></stop></linearGradient>
+          </defs>
+          <!-- flag -->
+          <path d="M42 6 V0" stroke="#7A2A06" stroke-width="1.5"></path>
+          <path d="M42 1 L54 4.5 L42 8 Z" fill="#E8470C"></path>
+          <!-- kalash -->
+          <ellipse cx="42" cy="12" rx="3.5" ry="4.5" fill="url(#tg)"></ellipse>
+          <!-- shikhara tiers -->
+          <path d="M42 15 C38 22 33 28 30 36 L54 36 C51 28 46 22 42 15 Z" fill="url(#tg)"></path>
+          <path d="M42 30 C36 40 28 48 24 60 L60 60 C56 48 48 40 42 30 Z" fill="url(#tg)" stroke="#B5470C" stroke-width="0.8"></path>
+          <path d="M42 50 C34 62 24 72 18 86 L66 86 C60 72 50 62 42 50 Z" fill="url(#tg)" stroke="#B5470C" stroke-width="0.8"></path>
+          <!-- hall -->
+          <rect x="12" y="84" width="60" height="8" rx="2" fill="#7A2A06"></rect>
+          <rect x="16" y="90" width="52" height="34" fill="url(#tb)"></rect>
+          <rect x="12" y="120" width="60" height="4" rx="1" fill="#4A1A04"></rect>
+          <!-- pillars -->
+          <rect x="20" y="94" width="4" height="26" rx="1" fill="#FFD24A" opacity="0.85"></rect>
+          <rect x="60" y="94" width="4" height="26" rx="1" fill="#FFD24A" opacity="0.85"></rect>
+          <!-- door -->
+          <path d="M33 120 V104 C33 98 37 95 42 95 C47 95 51 98 51 104 V120 Z" fill="#2A0E02"></path>
+          <path class="door-glow" d="M33 120 V104 C33 98 37 95 42 95 C47 95 51 98 51 104 V120 Z" fill="#FFD24A"></path>
+        </svg>
+      </span>
+
+      <!-- envelope -->
+      <span class="env-x" style="position: absolute; left: 0; top: 56px; width: 112px; height: 70px;">
+        <span class="env-y" style="position: absolute; left: 0; top: 0; width: 112px; height: 70px; opacity: 0; filter: drop-shadow(0 8px 10px rgba(122,42,6,0.28));">
+          <!-- sparkles trailing -->
+          <span class="sp1" style="position: absolute; left: -10px; top: 20px; width: 9px; height: 9px; background: #FFD24A; transform: rotate(45deg) scale(0); border-radius: 2px;"></span>
+          <span class="sp2" style="position: absolute; left: -26px; top: 38px; width: 6px; height: 6px; background: #E8870C; transform: rotate(45deg) scale(0); border-radius: 1px;"></span>
+          <span class="sp3" style="position: absolute; left: -38px; top: 12px; width: 5px; height: 5px; background: #FFE7A3; transform: rotate(45deg) scale(0); border-radius: 1px;"></span>
+          <!-- back -->
+          <span style="position: absolute; left: 0; top: 0; width: 112px; height: 70px; border-radius: 10px; background: #F6D98C; border: 1.5px solid #E8AB00; box-sizing: border-box;"></span>
+          <!-- card (name + gotra) -->
+          <span class="env-card" style="position: absolute; left: 6px; top: 0; width: 100px; height: 46px; border-radius: 6px; background: #FFFFFF; border: 1px solid rgba(232,171,0,0.7); box-sizing: border-box; padding: 5px 7px; display: flex; flex-direction: column; justify-content: center; gap: 1px; transform: translateY(-44px); opacity: 0;">
+            <span style="font-size: 12px; line-height: 16px; font-weight: 600; color: #3A2B1A; white-space: nowrap;">Aarav Sharma</span>
+            <span style="font-size: 11px; line-height: 14px; font-weight: 500; color: #A8460F; white-space: nowrap;">Gotra · Bharadwaj</span>
+          </span>
+          <!-- front pocket -->
+          <span style="position: absolute; left: 0; top: 0; width: 112px; height: 70px; border-radius: 10px; background: linear-gradient(180deg, #FFF3C4 0%, #FFE08A 100%); clip-path: polygon(0 28%, 50% 62%, 100% 28%, 100% 100%, 0 100%); border: 0;"></span>
+          <span style="position: absolute; left: 0; top: 0; width: 112px; height: 70px; border-radius: 10px; border: 1.5px solid #E8AB00; box-sizing: border-box; clip-path: polygon(0 28%, 50% 62%, 100% 28%, 100% 100%, 0 100%);"></span>
+          <!-- flap -->
+          <span class="env-flap" style="position: absolute; left: 0; top: 0; width: 112px; height: 44px; transform: scaleY(-1); background: linear-gradient(180deg, #FFE9A8 0%, #FFD24A 100%); clip-path: polygon(0 0, 100% 0, 50% 100%); border-radius: 10px 10px 0 0;"></span>
+          <!-- wax seal -->
+          <span class="env-seal" style="position: absolute; left: 50%; top: 40px; width: 24px; height: 24px; border-radius: 999px; background: radial-gradient(circle at 35% 30%, #F2642A, #A8300A); box-shadow: 0 2px 4px rgba(90,20,0,0.4); transform: translate(-50%,-50%) scale(0); display: flex; align-items: center; justify-content: center;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FFE7A3" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"></path></svg>
+          </span>
+        </span>
+      </span>
+
+      <!-- delivered pill -->
+      <span class="pill" style="position: absolute; left: 50%; top: 100px; margin-left: -66px; height: 32px; padding: 0 14px 0 10px; border-radius: 999px; display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: #FFFFFF; background: #17713C; box-shadow: 0 8px 16px -6px rgba(20,90,50,0.5); opacity: 0; white-space: nowrap;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Delivered to temple
+      </span>
+    </div>
+  </div>
+
+  <div style="position: absolute; left: 0; right: 0; bottom: 0; padding: 16px 16px 22px 16px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px; background: rgba(255,253,249,0.9); border-radius: 28px 28px 0 0; border-top: 1px solid rgba(255,255,255,0.95); box-shadow: 0 -12px 30px -16px rgba(150,60,0,0.3);">
+    <div style="display: flex; flex-direction: column; gap: 2px;">
+      <span style="font-size: 17px; line-height: 22px; font-weight: 600;">Complete your payment</span>
+      <span style="font-size: 12px; line-height: 17px; color: #6B4A2E;">Pay to confirm your Dan Seva</span>
+    </div>
+    <button type="button" style="width: 100%; height: 56px; border-radius: 999px; font: inherit; font-size: 16px; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 8px; color: #41240A; background: linear-gradient(100deg, #FFD24A 0%, #FF8A3D 100%); border: 0; box-shadow: 0 12px 26px rgba(255,107,26,0.32);">Pay ₹51</button>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":393,"height":852}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>

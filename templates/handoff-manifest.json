@@ -1,0 +1,36 @@
+{
+  "id": "design-v0.1.0-rc.1",
+  "status": "draft",
+  "commit": null,
+  "change_ids": [
+    "JB-CHG-0001"
+  ],
+  "scope": [
+    "recurring-checkout",
+    "my-bookings",
+    "web-app-continuity"
+  ],
+  "source_ids": [
+    "SRC-INITIAL",
+    "SRC-LIVE",
+    "SRC-SPEC",
+    "SRC-CANDIDATE"
+  ],
+  "artifact_manifest": null,
+  "acceptance_report": null,
+  "required_approval_roles": [
+    "product",
+    "design",
+    "engineering_acknowledgement",
+    "operations_payments"
+  ],
+  "approvals": {
+    "product": null,
+    "design": null,
+    "engineering_acknowledgement": null,
+    "operations_payments": null
+  },
+  "scoped_blockers": [],
+  "implementation_links": [],
+  "live_verification": null
+}

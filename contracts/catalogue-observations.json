@@ -1,0 +1,40 @@
+{
+  "status": "observed_reference_not_production_configuration",
+  "source": "SRC-LIVE",
+  "observed_date": "2026-11-13",
+  "currency": "INR",
+  "active_offerings": [
+    {
+      "product_id": "29830113aae14686b8dcafaeada6cac7",
+      "package_id": "7304a6bf3828478790db2d1409c8e33b",
+      "name": "Rahu Paithani Neel Vastra and Til Daan Seva",
+      "temple": "Rahu Paithani, Uttarakhand",
+      "cadence": "Weekly",
+      "weekday": "Saturday",
+      "first_amount_minor": 5100,
+      "regular_amount_minor": 12100
+    },
+    {
+      "product_id": "51e00dd2c506446db42a67c8607420a1",
+      "package_id": "602945bea3394ee2ab7948a6a15b750b",
+      "name": "Gaj Mahalakshmi Lal Chunri Kumkum Daan Seva",
+      "temple": "Shri Gaj Mahalakshmi, Ujjain",
+      "cadence": "Weekly",
+      "weekday": "Friday",
+      "first_amount_minor": 5100,
+      "regular_amount_minor": 10100
+    },
+    {
+      "product_id": "b482065a16d14c1bbe472cb732eabb25",
+      "package_id": null,
+      "name": "Triyuginarayan Shiv Parvati Daan Seva",
+      "temple": "Triyuginarayan Temple, Uttarakhand",
+      "cadence": "Weekly",
+      "weekday": "Monday",
+      "first_amount_minor": 5100,
+      "regular_amount_minor": 15100
+    }
+  ],
+  "home_card_count": 8,
+  "other_cards": "Five additional cards showed Notify me rather than active booking actions. They are not assumed to be purchasable."
+}

@@ -1,0 +1,52 @@
+{
+  "status": "draft_reference",
+  "source": "SRC-CANDIDATE",
+  "note": "Values observed in candidate CSS; not an approved cross-platform token system or a claim of adoption by production.",
+  "color": {
+    "text": {
+      "value": "#3d2e21",
+      "type": "color"
+    },
+    "textMuted": {
+      "value": "#775136",
+      "type": "color"
+    },
+    "brandBrown": {
+      "value": "#461c08",
+      "type": "color"
+    },
+    "success": {
+      "value": "#19744e",
+      "type": "color"
+    },
+    "actionStart": {
+      "value": "#ffce4f",
+      "type": "color"
+    },
+    "actionEnd": {
+      "value": "#fb9447",
+      "type": "color"
+    }
+  },
+  "layout": {
+    "gutter": {
+      "value": 16,
+      "unit": "px"
+    },
+    "cardRadius": {
+      "value": 21,
+      "unit": "px"
+    },
+    "buttonMinHeight": {
+      "value": 46,
+      "unit": "px"
+    }
+  },
+  "typography": {
+    "bodyFamily": "Poppins",
+    "buttonSize": {
+      "value": 13,
+      "unit": "px"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "status": "draft_source_glossary_not_yet_integrated",
+  "source": "SRC-SPEC",
+  "locale": "en-IN",
+  "approval": null,
+  "strings": {
+    "navigation.bookings": "My Bookings",
+    "service.name": "Daan Seva",
+    "service.ongoing": "Nirantar Daan Seva",
+    "action.track": "Track Seva Details",
+    "action.watchVideos": "Watch Videos",
+    "action.viewCertificate": "View Certificate",
+    "action.paymentDetails": "View Payment Details",
+    "action.restart": "Restart Nirantar Seva"
+  }
+}

@@ -1,0 +1,34 @@
+name: Capture design evidence
+on:
+  workflow_dispatch:
+    inputs:
+      source:
+        description: Imported source to capture
+        type: choice
+        options: [working-mobile, candidate, initial]
+        default: working-mobile
+        required: true
+permissions:
+  contents: read
+jobs:
+  capture:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - name: Prepare pinned browser tooling
+        run: |
+          python3 -m venv .venv
+          .venv/bin/pip install -r requirements-dev.txt
+          .venv/bin/python -m playwright install --with-deps chromium
+      - name: Render design reference
+        env:
+          DESIGN_SOURCE: ${{ inputs.source }}
+        run: .venv/bin/python tools/capture_design_evidence.py --source "$DESIGN_SOURCE"
+      - name: Upload rendered evidence
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: design-${{ inputs.source }}-${{ github.sha }}
+          path: artifacts/capture/
+          retention-days: 30

@@ -1,0 +1,492 @@
+[
+  {
+    "group": "Main screens",
+    "route": "home",
+    "file": "01_Home",
+    "title": "Home",
+    "image": "screens/01_Home.png",
+    "artboard_width": 390,
+    "artboard_height": 927,
+    "export_scale": 2
+  },
+  {
+    "group": "Main screens",
+    "route": "profile",
+    "file": "02_Profile",
+    "title": "Profile",
+    "image": "screens/02_Profile.png",
+    "artboard_width": 390,
+    "artboard_height": 844,
+    "export_scale": 2
+  },
+  {
+    "group": "My Bookings",
+    "route": "bookings/nirantar",
+    "file": "03_Bookings_Nirantar",
+    "title": "Option A · Nirantar",
+    "image": "screens/03_Bookings_Nirantar.png",
+    "artboard_width": 390,
+    "artboard_height": 1875,
+    "export_scale": 2
+  },
+  {
+    "group": "My Bookings",
+    "route": "bookings/upcoming",
+    "file": "04_Bookings_Upcoming",
+    "title": "Option A · Upcoming",
+    "image": "screens/04_Bookings_Upcoming.png",
+    "artboard_width": 390,
+    "artboard_height": 872,
+    "export_scale": 2
+  },
+  {
+    "group": "My Bookings",
+    "route": "bookings/completed",
+    "file": "05_Bookings_Completed",
+    "title": "Option A · Completed",
+    "image": "screens/05_Bookings_Completed.png",
+    "artboard_width": 390,
+    "artboard_height": 1679,
+    "export_scale": 2
+  },
+  {
+    "group": "My Bookings",
+    "route": "sections",
+    "file": "06_Bookings_Sections",
+    "title": "Option B · Sections",
+    "image": "screens/06_Bookings_Sections.png",
+    "artboard_width": 390,
+    "artboard_height": 1803,
+    "export_scale": 2
+  },
+  {
+    "group": "Nirantar detail",
+    "route": "plan/N1",
+    "file": "07_Nirantar_Active",
+    "title": "Active · Awaiting next payment",
+    "image": "screens/07_Nirantar_Active.png",
+    "artboard_width": 390,
+    "artboard_height": 1858,
+    "export_scale": 2
+  },
+  {
+    "group": "Nirantar detail",
+    "route": "plan/N2",
+    "file": "08_Nirantar_Registered",
+    "title": "Active · Next seva scheduled",
+    "image": "screens/08_Nirantar_Registered.png",
+    "artboard_width": 390,
+    "artboard_height": 1903,
+    "export_scale": 2
+  },
+  {
+    "group": "Nirantar detail",
+    "route": "plan/N3",
+    "file": "09_Nirantar_Retrying",
+    "title": "Payment retrying",
+    "image": "screens/09_Nirantar_Retrying.png",
+    "artboard_width": 390,
+    "artboard_height": 2011,
+    "export_scale": 2
+  },
+  {
+    "group": "Nirantar detail",
+    "route": "plan/inactive",
+    "file": "10_Nirantar_Inactive",
+    "title": "Inactive",
+    "image": "screens/10_Nirantar_Inactive.png",
+    "artboard_width": 390,
+    "artboard_height": 1875,
+    "export_scale": 2
+  },
+  {
+    "group": "Nirantar detail",
+    "route": "plan/cancelled",
+    "file": "11_Nirantar_Cancelled",
+    "title": "Cancelled",
+    "image": "screens/11_Nirantar_Cancelled.png",
+    "artboard_width": 390,
+    "artboard_height": 1856,
+    "export_scale": 2
+  },
+  {
+    "group": "Nirantar detail",
+    "route": "plan/milestone",
+    "file": "12_Nirantar_Milestone",
+    "title": "Milestone · 7 of 14",
+    "image": "screens/12_Nirantar_Milestone.png",
+    "artboard_width": 390,
+    "artboard_height": 1960,
+    "export_scale": 2
+  },
+  {
+    "group": "Nirantar detail",
+    "route": "plan/new",
+    "file": "13_Nirantar_Before_First",
+    "title": "Before the first seva",
+    "image": "screens/13_Nirantar_Before_First.png",
+    "artboard_width": 390,
+    "artboard_height": 1603,
+    "export_scale": 2
+  },
+  {
+    "group": "Nirantar detail",
+    "route": "plan/sync",
+    "file": "14_Nirantar_Synchronizing",
+    "title": "Status synchronizing",
+    "image": "screens/14_Nirantar_Synchronizing.png",
+    "artboard_width": 390,
+    "artboard_height": 1958,
+    "export_scale": 2
+  },
+  {
+    "group": "Nirantar detail",
+    "route": "history/N1",
+    "file": "15_Occurrence_History",
+    "title": "Full date history",
+    "image": "screens/15_Occurrence_History.png",
+    "artboard_width": 390,
+    "artboard_height": 844,
+    "export_scale": 2
+  },
+  {
+    "group": "Nirantar detail",
+    "route": "history/N3",
+    "file": "16_Discontinued_History",
+    "title": "History · Discontinued date",
+    "image": "screens/16_Discontinued_History.png",
+    "artboard_width": 390,
+    "artboard_height": 844,
+    "export_scale": 2
+  },
+  {
+    "group": "Dated seva",
+    "route": "occurrence/U1",
+    "file": "17_Occurrence_Scheduled",
+    "title": "Scheduled",
+    "image": "screens/17_Occurrence_Scheduled.png",
+    "artboard_width": 390,
+    "artboard_height": 1118,
+    "export_scale": 2
+  },
+  {
+    "group": "Dated seva",
+    "route": "occurrence/registered",
+    "file": "18_Occurrence_Registered",
+    "title": "Registered",
+    "image": "screens/18_Occurrence_Registered.png",
+    "artboard_width": 390,
+    "artboard_height": 1118,
+    "export_scale": 2
+  },
+  {
+    "group": "Dated seva",
+    "route": "occurrence/U2",
+    "file": "19_Occurrence_One_Time",
+    "title": "One time scheduled",
+    "image": "screens/19_Occurrence_One_Time.png",
+    "artboard_width": 390,
+    "artboard_height": 964,
+    "export_scale": 2
+  },
+  {
+    "group": "Dated seva",
+    "route": "occurrence/C1",
+    "file": "20_Occurrence_Completed",
+    "title": "Performed · Evidence ready",
+    "image": "screens/20_Occurrence_Completed.png",
+    "artboard_width": 390,
+    "artboard_height": 1712,
+    "export_scale": 2
+  },
+  {
+    "group": "Dated seva",
+    "route": "occurrence/C2",
+    "file": "21_Occurrence_Preparing",
+    "title": "Performed · Evidence preparing",
+    "image": "screens/21_Occurrence_Preparing.png",
+    "artboard_width": 390,
+    "artboard_height": 1525,
+    "export_scale": 2
+  },
+  {
+    "group": "Dated seva",
+    "route": "occurrence/partial-certificate",
+    "file": "22_Certificate_Ready_Only",
+    "title": "Certificate ready only",
+    "image": "screens/22_Certificate_Ready_Only.png",
+    "artboard_width": 390,
+    "artboard_height": 1481,
+    "export_scale": 2
+  },
+  {
+    "group": "Dated seva",
+    "route": "occurrence/partial-video",
+    "file": "23_Videos_Ready_Only",
+    "title": "Videos ready only",
+    "image": "screens/23_Videos_Ready_Only.png",
+    "artboard_width": 390,
+    "artboard_height": 1481,
+    "export_scale": 2
+  },
+  {
+    "group": "Dated seva",
+    "route": "occurrence/D1",
+    "file": "24_Occurrence_Discontinued",
+    "title": "Discontinued",
+    "image": "screens/24_Occurrence_Discontinued.png",
+    "artboard_width": 390,
+    "artboard_height": 1078,
+    "export_scale": 2
+  },
+  {
+    "group": "Dated seva",
+    "route": "occurrence/overdue",
+    "file": "25_Media_Overdue",
+    "title": "Media overdue",
+    "image": "screens/25_Media_Overdue.png",
+    "artboard_width": 390,
+    "artboard_height": 1730,
+    "export_scale": 2
+  },
+  {
+    "group": "Evidence",
+    "route": "certificate/C1",
+    "file": "26_Certificate_Viewer",
+    "title": "Certificate viewer",
+    "image": "screens/26_Certificate_Viewer.png",
+    "artboard_width": 390,
+    "artboard_height": 915,
+    "export_scale": 2
+  },
+  {
+    "group": "Evidence",
+    "route": "videos/C1",
+    "file": "27_Video_Viewer",
+    "title": "In app video player",
+    "image": "screens/27_Video_Viewer.png",
+    "artboard_width": 390,
+    "artboard_height": 965,
+    "export_scale": 2
+  },
+  {
+    "group": "Evidence",
+    "route": "videos/mixed",
+    "file": "28_Videos_Partial_Readiness",
+    "title": "Several videos · Partial readiness",
+    "image": "screens/28_Videos_Partial_Readiness.png",
+    "artboard_width": 390,
+    "artboard_height": 965,
+    "export_scale": 2
+  },
+  {
+    "group": "Evidence",
+    "route": "videos/error",
+    "file": "29_Video_Error",
+    "title": "Video loading error",
+    "image": "screens/29_Video_Error.png",
+    "artboard_width": 390,
+    "artboard_height": 1063,
+    "export_scale": 2
+  },
+  {
+    "group": "Beneficiary",
+    "route": "beneficiary/edit",
+    "file": "30_Edit_Beneficiary",
+    "title": "Edit before first seva",
+    "image": "screens/30_Edit_Beneficiary.png",
+    "artboard_width": 390,
+    "artboard_height": 844,
+    "export_scale": 2
+  },
+  {
+    "group": "Beneficiary",
+    "route": "beneficiary/locked",
+    "file": "31_Beneficiary_Locked",
+    "title": "Locked after first seva",
+    "image": "screens/31_Beneficiary_Locked.png",
+    "artboard_width": 390,
+    "artboard_height": 844,
+    "export_scale": 2
+  },
+  {
+    "group": "Beneficiary",
+    "route": "beneficiary/error",
+    "file": "32_Beneficiary_Validation",
+    "title": "Validation error",
+    "image": "screens/32_Beneficiary_Validation.png",
+    "artboard_width": 390,
+    "artboard_height": 844,
+    "export_scale": 2
+  },
+  {
+    "group": "Details and payment",
+    "route": "details",
+    "file": "33_Your_Details",
+    "title": "Enter beneficiary details",
+    "image": "screens/33_Your_Details.png",
+    "artboard_width": 390,
+    "artboard_height": 847,
+    "export_scale": 2
+  },
+  {
+    "group": "Details and payment",
+    "route": "details/otp",
+    "file": "34_Verify_Phone",
+    "title": "Phone verification",
+    "image": "screens/34_Verify_Phone.png",
+    "artboard_width": 390,
+    "artboard_height": 1025,
+    "export_scale": 2
+  },
+  {
+    "group": "Details and payment",
+    "route": "review",
+    "file": "35_Review_Payment",
+    "title": "Review and payment disclosure",
+    "image": "screens/35_Review_Payment.png",
+    "artboard_width": 390,
+    "artboard_height": 1033,
+    "export_scale": 2
+  },
+  {
+    "group": "Details and payment",
+    "route": "payment/processing",
+    "file": "36_Payment_Processing",
+    "title": "Payment processing",
+    "image": "screens/36_Payment_Processing.png",
+    "artboard_width": 390,
+    "artboard_height": 844,
+    "export_scale": 2
+  },
+  {
+    "group": "Details and payment",
+    "route": "payment/pending",
+    "file": "37_Registration_Pending",
+    "title": "Awaiting confirmation",
+    "image": "screens/37_Registration_Pending.png",
+    "artboard_width": 390,
+    "artboard_height": 844,
+    "export_scale": 2
+  },
+  {
+    "group": "Details and payment",
+    "route": "payment/failed",
+    "file": "38_Payment_Failed",
+    "title": "Payment failed",
+    "image": "screens/38_Payment_Failed.png",
+    "artboard_width": 390,
+    "artboard_height": 844,
+    "export_scale": 2
+  },
+  {
+    "group": "Details and payment",
+    "route": "payment/success",
+    "file": "39_Booking_Confirmed",
+    "title": "Confirmed after payment",
+    "image": "screens/39_Booking_Confirmed.png",
+    "artboard_width": 390,
+    "artboard_height": 844,
+    "export_scale": 2
+  },
+  {
+    "group": "Additional states",
+    "route": "empty/nirantar",
+    "file": "40_Empty_Nirantar",
+    "title": "No Nirantar bookings",
+    "image": "screens/40_Empty_Nirantar.png",
+    "artboard_width": 390,
+    "artboard_height": 844,
+    "export_scale": 2
+  },
+  {
+    "group": "Additional states",
+    "route": "empty/upcoming",
+    "file": "41_Empty_Upcoming",
+    "title": "No upcoming sevas",
+    "image": "screens/41_Empty_Upcoming.png",
+    "artboard_width": 390,
+    "artboard_height": 844,
+    "export_scale": 2
+  },
+  {
+    "group": "Additional states",
+    "route": "empty/completed",
+    "file": "42_Empty_Completed",
+    "title": "No completed sevas",
+    "image": "screens/42_Empty_Completed.png",
+    "artboard_width": 390,
+    "artboard_height": 844,
+    "export_scale": 2
+  },
+  {
+    "group": "Additional states",
+    "route": "loading/nirantar",
+    "file": "43_Loading",
+    "title": "Loading",
+    "image": "screens/43_Loading.png",
+    "artboard_width": 390,
+    "artboard_height": 844,
+    "export_scale": 2
+  },
+  {
+    "group": "Additional states",
+    "route": "error/nirantar",
+    "file": "44_Load_Error",
+    "title": "Unable to load",
+    "image": "screens/44_Load_Error.png",
+    "artboard_width": 390,
+    "artboard_height": 844,
+    "export_scale": 2
+  },
+  {
+    "group": "Additional states",
+    "route": "components/cadences",
+    "file": "45_Cadence_Variants",
+    "title": "Monthly and lunar cadences",
+    "image": "screens/45_Cadence_Variants.png",
+    "artboard_width": 390,
+    "artboard_height": 2173,
+    "export_scale": 2
+  },
+  {
+    "group": "Additional states",
+    "route": "support/N1",
+    "file": "46_Support",
+    "title": "Support with booking reference",
+    "image": "screens/46_Support.png",
+    "artboard_width": 390,
+    "artboard_height": 844,
+    "export_scale": 2
+  },
+  {
+    "group": "Additional states",
+    "route": "plan/retry-success",
+    "file": "47_Retry_Success",
+    "title": "Successful retry · Next eligible date",
+    "image": "screens/47_Retry_Success.png",
+    "artboard_width": 390,
+    "artboard_height": 2026,
+    "export_scale": 2
+  },
+  {
+    "group": "Additional states",
+    "route": "history/older",
+    "file": "48_Older_Certificate",
+    "title": "Older certificate discoverability",
+    "image": "screens/48_Older_Certificate.png",
+    "artboard_width": 390,
+    "artboard_height": 844,
+    "export_scale": 2
+  },
+  {
+    "group": "Additional states",
+    "route": "components/long-names",
+    "file": "49_Long_Beneficiary_Names",
+    "title": "Long names and gotra",
+    "image": "screens/49_Long_Beneficiary_Names.png",
+    "artboard_width": 390,
+    "artboard_height": 1202,
+    "export_scale": 2
+  }
+]

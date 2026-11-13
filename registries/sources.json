@@ -1,0 +1,54 @@
+{
+  "sources": [
+    {
+      "id": "SRC-INITIAL",
+      "type": "historical_prototype",
+      "path": "references/initial-prototype/Jai Bhakti App.html",
+      "label": "Original complete design export",
+      "authority": "historical_reference",
+      "bytes": 6033498,
+      "bundle_assets": 40,
+      "advertised_entry_states": 12,
+      "approval": null,
+      "note": "Not a byte-for-byte export of current production. The source contains legacy and latent behavior."
+    },
+    {
+      "id": "SRC-LIVE",
+      "type": "observed_live",
+      "path": "references/live-web/2026-11-13/observations.json",
+      "label": "Public web observations on 13 November 2026",
+      "authority": "observed_behavior_only",
+      "approval": null,
+      "note": "Home, three active details, and two initial checkout views. No phone verification, UPI authorization, real booking or private history was performed. No forms were filled or submitted."
+    },
+    {
+      "id": "SRC-SPEC",
+      "type": "requirements_document",
+      "path": "references/daan-seva-candidate/references/Daan_Seva_My_Bookings_Update_Specification.docx",
+      "label": "My Bookings specification v1.0 dated 12 November 2026",
+      "authority": "inputs_marked_confirmed_in_document",
+      "approval": null,
+      "note": "Intended product direction; named organizational signoff must be recorded separately."
+    },
+    {
+      "id": "SRC-CANDIDATE",
+      "type": "draft_design_candidate",
+      "path": "references/daan-seva-candidate/Revised_Designs/Prototype.html",
+      "label": "49-state Daan Seva candidate",
+      "authority": "proposal_and_sample_behavior",
+      "state_count": 49,
+      "approval": null,
+      "note": "Prototype UI checks exist. No native app, backend, live payment integration or formal handoff approval is implied."
+    },
+    {
+      "id": "SRC-WORKING",
+      "type": "editable_draft",
+      "path": "previews/mobile/Prototype.html",
+      "label": "Editable mobile design source fork",
+      "authority": "unapproved_working_source",
+      "derived_from": "SRC-CANDIDATE",
+      "approval": null,
+      "note": "Readable HTML CSS and JavaScript fork, with prototype-only state and sample data. Future captures belong in artifacts."
+    }
+  ]
+}

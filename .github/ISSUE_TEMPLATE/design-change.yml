@@ -1,0 +1,29 @@
+name: Design change
+description: A traceable web or mobile product design change
+title: "[JB-CHG-xxxx] "
+labels: [design-change]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: User problem and intended behavior
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Platforms screen IDs requirements and baseline
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Before after measures and acceptance cases
+    validations:
+      required: true
+  - type: textarea
+    id: decisions
+    attributes:
+      label: Owners blocking decisions and dependencies
+    validations:
+      required: true

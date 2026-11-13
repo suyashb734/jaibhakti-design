@@ -1,0 +1,13 @@
+* text=auto
+*.md text eol=lf
+*.json text eol=lf
+*.py text eol=lf
+*.html text eol=lf
+*.png binary
+*.woff2 binary
+*.ttf binary
+*.webm binary
+*.docx binary
+
+# Preserve immutable imported reference bytes on every platform.
+references/** -text

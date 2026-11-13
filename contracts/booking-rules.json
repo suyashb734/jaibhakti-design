@@ -1,0 +1,31 @@
+{
+  "status": "specified_in_document_pending_release_approval",
+  "source": "SRC-SPEC",
+  "approval": null,
+  "rules": {
+    "ongoing_name": "Nirantar Daan Seva",
+    "indefinite_until_upi_cancellation": true,
+    "pause_supported": false,
+    "skip_supported": false,
+    "progress_counts": "performed_occurrences_only",
+    "milestone_does_not_stop_autopay": true,
+    "milestone_certificate": false,
+    "retry_window_max_days": 10,
+    "retry_success_registers": "next_eligible_occurrence",
+    "missed_occurrence_remains_discontinued": true,
+    "media_expectation_hours_from_performed": 48,
+    "certificate_and_video_readiness_independent": true,
+    "beneficiary_lock": "after_first_performed_seva_exact_event_to_confirm",
+    "multiple_parent_bookings": true
+  },
+  "unresolved_inconsistencies": [
+    "INC-001",
+    "INC-002",
+    "INC-004",
+    "INC-005",
+    "INC-006",
+    "INC-010",
+    "INC-014",
+    "INC-015"
+  ]
+}

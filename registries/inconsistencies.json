@@ -1,0 +1,231 @@
+{
+  "inconsistencies": [
+    {
+      "id": "INC-001",
+      "severity": "blocker",
+      "title": "Recurring duration contradicts itself",
+      "observation": "Live detail pages say auto-renews and also that a mandate ends after selected weeks. The original prototype contains fixed 4/8/16-week configuration; the new specification describes indefinite Nirantar Seva.",
+      "owner_role": "Product and payments",
+      "owner": null,
+      "status": "open",
+      "required_resolution": "Decide actual mandate terms for new bookings, correct every purchase and management surface, and preserve the terms of existing purchases.",
+      "blocks": [
+        "recurring-checkout",
+        "nirantar-management",
+        "legacy-import"
+      ],
+      "github_issue": null
+    },
+    {
+      "id": "INC-002",
+      "severity": "blocker",
+      "title": "Pause and cancellation ownership differ",
+      "observation": "The original source contains pause and stop handlers with immediate AutoPay claims. The new specification forbids pause and skip and directs cancellation to the UPI app. Live mandate controls were not tested.",
+      "owner_role": "Product and payments",
+      "owner": null,
+      "status": "open",
+      "required_resolution": "Identify provider-supported operations and authoritative states. Remove or classify obsolete prototype controls; define delayed cancellation updates.",
+      "blocks": [
+        "recurring-checkout",
+        "nirantar-management"
+      ],
+      "github_issue": null
+    },
+    {
+      "id": "INC-003",
+      "severity": "blocker",
+      "title": "Temple and product identity have drifted",
+      "observation": "The original Lakshmi offering is at Mahalakshmi Kolhapur. The live Lakshmi offering is Gaj Mahalakshmi Ujjain. The live catalogue also includes Rahu Paithani and Triyuginarayan.",
+      "owner_role": "Product and operations",
+      "owner": null,
+      "status": "open",
+      "required_resolution": "Create the authoritative product, package and temple ID mapping. Never match bookings by deity name or silently substitute temples.",
+      "blocks": [
+        "catalogue",
+        "booking-import",
+        "booking-more"
+      ],
+      "github_issue": null
+    },
+    {
+      "id": "INC-004",
+      "severity": "blocker",
+      "title": "Recurring pricing must be configurable",
+      "observation": "Live active offerings show first ₹51 then ₹121, ₹101 or ₹151. The revised app uses a ₹101 example in its acquisition and checkout path.",
+      "owner_role": "Product and payments",
+      "owner": null,
+      "status": "open",
+      "required_resolution": "Use per-offer pricing, cadence and purchased price snapshots. Test all three active regular price examples across web and app.",
+      "blocks": [
+        "recurring-checkout",
+        "booking-more",
+        "billing"
+      ],
+      "github_issue": null
+    },
+    {
+      "id": "INC-005",
+      "severity": "blocker",
+      "title": "Sankalp and family rules are unresolved across sources",
+      "observation": "Original setup exposes a personal sankalp add-on for ₹20; legacy family calculation uses an extra ₹51. Initial live checkout collects name and gotra; the revised app assumes a distinct beneficiary per booking.",
+      "owner_role": "Product and operations",
+      "owner": null,
+      "status": "open",
+      "required_resolution": "Define account holder, payer, beneficiaries, assignment of unknown gotra, optional additions and their pricing. Verify later live checkout stages before concluding that an add-on is present or absent.",
+      "blocks": [
+        "recurring-checkout",
+        "beneficiary-management",
+        "billing"
+      ],
+      "github_issue": null
+    },
+    {
+      "id": "INC-006",
+      "severity": "blocker",
+      "title": "Web bookings do not yet have a documented app ownership contract",
+      "observation": "The web uses verified WhatsApp identity. The app prototype uses sample accounts and bookings. Guest claiming, account recovery and legacy mapping are unspecified.",
+      "owner_role": "Product and engineering",
+      "owner": null,
+      "status": "open",
+      "required_resolution": "Agree stable account ownership, authentication/claiming and safe web-to-app handoff. Demonstrate one web-created booking appearing in the same account in the app.",
+      "blocks": [
+        "web-app-continuity",
+        "booking-import"
+      ],
+      "github_issue": null
+    },
+    {
+      "id": "INC-007",
+      "severity": "blocker",
+      "title": "Booking receipt and performed seva certificate are different artifacts",
+      "observation": "Original sevaOrder shows a booking certificate promising future performance beside a completed stage. The new specification ties fulfilment certificates to each performed occurrence.",
+      "owner_role": "Product and operations",
+      "owner": null,
+      "status": "open",
+      "required_resolution": "Name booking receipt and seva certificate separately, define issuance events and keep all media attached to the dated occurrence.",
+      "blocks": [
+        "evidence",
+        "occurrence-detail"
+      ],
+      "github_issue": null
+    },
+    {
+      "id": "INC-008",
+      "severity": "gap",
+      "title": "The candidate is a prototype with separate scenario branches",
+      "observation": "The 49 states use sample fixtures, code 1234 for phone verification and sample media. A confirmed checkout scenario does not prove persistence or cross-platform booking synchronization.",
+      "owner_role": "Design and engineering",
+      "owner": null,
+      "status": "open",
+      "required_resolution": "Approve one connected end-to-end slice with realistic fixture IDs and acceptance cases, then verify the implementation on staging.",
+      "blocks": [
+        "web-app-continuity",
+        "engineering-handoff"
+      ],
+      "github_issue": null
+    },
+    {
+      "id": "INC-009",
+      "severity": "decision",
+      "title": "Support configuration differs between live and candidate",
+      "observation": "The live public pages expose WhatsApp and 10:30 AM–9 PM hours. The candidate support actions are demonstrations and email routing is unconfigured.",
+      "owner_role": "Operations",
+      "owner": null,
+      "status": "open",
+      "required_resolution": "Confirm shared support destinations, channel availability, hours and reference-prefill format before approving those actions.",
+      "blocks": [
+        "support",
+        "beneficiary-management"
+      ],
+      "github_issue": null
+    },
+    {
+      "id": "INC-010",
+      "severity": "blocker",
+      "title": "Elapsed time is not a fulfilment event",
+      "observation": "The original source infers performed and paid progress from the clock. The specification requires actual performance to increment milestones, and independent certificate/video readiness.",
+      "owner_role": "Operations and engineering",
+      "owner": null,
+      "status": "open",
+      "required_resolution": "Define backend event sources and timestamps, including retry discontinuation and per-asset readiness. UI must not infer completion from a scheduled date passing.",
+      "blocks": [
+        "occurrence-detail",
+        "progress",
+        "evidence"
+      ],
+      "github_issue": null
+    },
+    {
+      "id": "INC-011",
+      "severity": "blocker",
+      "title": "Initial live checkout displays the first amount without the regular rate",
+      "observation": "The initial checkout details stage reviewed for Rahu and Gaj Mahalakshmi shows Today ₹51 and Pay ₹51. Later verified-user/mandate stages were not entered.",
+      "owner_role": "Product and payments",
+      "owner": null,
+      "status": "open",
+      "required_resolution": "Review the full consent flow with the payments owner and show the configured recurring amount, cadence, duration and cancellation route before authorization. Do not claim the complete live authorization lacks disclosure based on this initial-stage observation.",
+      "blocks": [
+        "recurring-checkout"
+      ],
+      "github_issue": null
+    },
+    {
+      "id": "INC-012",
+      "severity": "decision",
+      "title": "Visual primitives have no selected approved baseline",
+      "observation": "The packed original, live web and candidate differ in branding, typography, CTA sizing and palette values. The original artboard is 393×852; candidate exports use 390 px artboards at 2×.",
+      "owner_role": "Design",
+      "owner": null,
+      "status": "open",
+      "required_resolution": "Select semantic tokens and brand assets, distinguish web/app differences, and compare only matching fixtures, viewports and render environments.",
+      "blocks": [
+        "design-system",
+        "visual-comparison"
+      ],
+      "github_issue": null
+    },
+    {
+      "id": "INC-013",
+      "severity": "decision",
+      "title": "Information architecture remains a comparison",
+      "observation": "Tabs and sections are both included in the candidate; no named approval or task-test result selects the final layout. Screen count does not establish usability.",
+      "owner_role": "Product and design",
+      "owner": null,
+      "status": "open",
+      "required_resolution": "Run the five specification tasks on both layouts with identical content and record the selected option and rationale.",
+      "blocks": [
+        "my-bookings"
+      ],
+      "github_issue": null
+    },
+    {
+      "id": "INC-014",
+      "severity": "blocker",
+      "title": "Legacy mandate migration is unspecified",
+      "observation": "If existing purchases used a finite mandate, the new indefinite Nirantar model cannot be assumed to describe their purchased terms. Actual provider terms have not been inspected.",
+      "owner_role": "Product and payments",
+      "owner": null,
+      "status": "open",
+      "required_resolution": "Inventory legacy records and accepted terms. Define display, history import and any explicitly authorized new-mandate conversion; do not silently extend prior purchases.",
+      "blocks": [
+        "legacy-import",
+        "nirantar-management"
+      ],
+      "github_issue": null
+    },
+    {
+      "id": "INC-015",
+      "severity": "blocker",
+      "title": "Source confirmation and release approval are different",
+      "observation": "The DOCX calls its inputs confirmed, but named organizational approvers and an engineering handoff release are not recorded. Earlier prototype validation is not production verification.",
+      "owner_role": "Product, design and engineering",
+      "owner": null,
+      "status": "open",
+      "required_resolution": "Record approval evidence for a specific version, tech acknowledgement and implementation links. Keep source imports and candidates outside approved release status.",
+      "blocks": [
+        "engineering-handoff"
+      ],
+      "github_issue": null
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+[
+  {
+    "id": "WEB-home",
+    "name": "home",
+    "url": "https://jaibhakti.com/",
+    "status": 200,
+    "captured_at_utc": "2026-11-13T08:24:07.744833+00:00",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "device_emulation": "mobile-sized viewport; desktop user agent",
+    "browser": "Chromium",
+    "scope": "public page or initial checkout; no form information entered or submitted",
+    "text": "observed-home.txt",
+    "screenshot": "observed-home.png",
+    "non_get_requests_blocked": false
+  },
+  {
+    "id": "WEB-rahu",
+    "name": "rahu",
+    "url": "https://jaibhakti.com/seva-detail/29830113aae14686b8dcafaeada6cac7",
+    "status": 200,
+    "captured_at_utc": "2026-11-13T08:24:10.520159+00:00",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "device_emulation": "mobile-sized viewport; desktop user agent",
+    "browser": "Chromium",
+    "scope": "public page or initial checkout; no form information entered or submitted",
+    "text": "observed-rahu.txt",
+    "screenshot": "observed-rahu.png",
+    "non_get_requests_blocked": false
+  },
+  {
+    "id": "WEB-gajalakshmi",
+    "name": "gajalakshmi",
+    "url": "https://jaibhakti.com/seva-detail/51e00dd2c506446db42a67c8607420a1",
+    "status": 200,
+    "captured_at_utc": "2026-11-13T08:24:13.382909+00:00",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "device_emulation": "mobile-sized viewport; desktop user agent",
+    "browser": "Chromium",
+    "scope": "public page or initial checkout; no form information entered or submitted",
+    "text": "observed-gajalakshmi.txt",
+    "screenshot": "observed-gajalakshmi.png",
+    "non_get_requests_blocked": false
+  },
+  {
+    "id": "WEB-triyuginarayan",
+    "name": "triyuginarayan",
+    "url": "https://jaibhakti.com/seva-detail/b482065a16d14c1bbe472cb732eabb25",
+    "status": 200,
+    "captured_at_utc": "2026-11-13T08:24:16.138936+00:00",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "device_emulation": "mobile-sized viewport; desktop user agent",
+    "browser": "Chromium",
+    "scope": "public page or initial checkout; no form information entered or submitted",
+    "text": "observed-triyuginarayan.txt",
+    "screenshot": "observed-triyuginarayan.png",
+    "non_get_requests_blocked": false
+  },
+  {
+    "id": "WEB-rahu-checkout",
+    "name": "rahu-checkout",
+    "url": "https://jaibhakti.com/seva-detail/29830113aae14686b8dcafaeada6cac7/checkout?package=7304a6bf3828478790db2d1409c8e33b",
+    "status": 200,
+    "captured_at_utc": "2026-11-13T08:24:18.769893+00:00",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "device_emulation": "mobile-sized viewport; desktop user agent",
+    "browser": "Chromium",
+    "scope": "public page or initial checkout; no form information entered or submitted",
+    "text": "observed-rahu-checkout.txt",
+    "screenshot": "observed-rahu-checkout.png",
+    "non_get_requests_blocked": false
+  },
+  {
+    "id": "WEB-gajalakshmi-checkout",
+    "name": "gajalakshmi-checkout",
+    "url": "https://jaibhakti.com/seva-detail/51e00dd2c506446db42a67c8607420a1/checkout?package=602945bea3394ee2ab7948a6a15b750b",
+    "status": 200,
+    "captured_at_utc": "2026-11-13T08:24:21.393401+00:00",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "device_emulation": "mobile-sized viewport; desktop user agent",
+    "browser": "Chromium",
+    "scope": "public page or initial checkout; no form information entered or submitted",
+    "text": "observed-gajalakshmi-checkout.txt",
+    "screenshot": "observed-gajalakshmi-checkout.png",
+    "non_get_requests_blocked": false
+  }
+]

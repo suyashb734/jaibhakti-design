@@ -1,0 +1,97 @@
+{
+  "decisions": [
+    {
+      "id": "DEC-001",
+      "title": "Recurring duration cancellation and legacy mandates",
+      "inconsistencies": [
+        "INC-001",
+        "INC-002",
+        "INC-014"
+      ],
+      "owner_role": "Product and payments",
+      "owner": null,
+      "status": "open",
+      "decision": null,
+      "approval": null,
+      "github_issue": null,
+      "record": "decisions/DEC-001.md"
+    },
+    {
+      "id": "DEC-002",
+      "title": "Catalogue identity configured pricing and consent",
+      "inconsistencies": [
+        "INC-003",
+        "INC-004",
+        "INC-011"
+      ],
+      "owner_role": "Product operations and payments",
+      "owner": null,
+      "status": "open",
+      "decision": null,
+      "approval": null,
+      "github_issue": null,
+      "record": "decisions/DEC-002.md"
+    },
+    {
+      "id": "DEC-003",
+      "title": "Account ownership and web to app continuity",
+      "inconsistencies": [
+        "INC-006",
+        "INC-008"
+      ],
+      "owner_role": "Product and engineering",
+      "owner": null,
+      "status": "open",
+      "decision": null,
+      "approval": null,
+      "github_issue": null,
+      "record": "decisions/DEC-003.md"
+    },
+    {
+      "id": "DEC-004",
+      "title": "Beneficiary gotra family add ons and documents",
+      "inconsistencies": [
+        "INC-005",
+        "INC-007"
+      ],
+      "owner_role": "Product and operations",
+      "owner": null,
+      "status": "open",
+      "decision": null,
+      "approval": null,
+      "github_issue": null,
+      "record": "decisions/DEC-004.md"
+    },
+    {
+      "id": "DEC-005",
+      "title": "Fulfilment payment media events and support",
+      "inconsistencies": [
+        "INC-009",
+        "INC-010"
+      ],
+      "owner_role": "Operations payments and engineering",
+      "owner": null,
+      "status": "open",
+      "decision": null,
+      "approval": null,
+      "github_issue": null,
+      "record": "decisions/DEC-005.md"
+    },
+    {
+      "id": "DEC-006",
+      "title": "Visual baseline layout selection and handoff approval",
+      "inconsistencies": [
+        "INC-012",
+        "INC-013",
+        "INC-015"
+      ],
+      "owner_role": "Product design and engineering",
+      "owner": null,
+      "status": "open",
+      "decision": null,
+      "approval": null,
+      "github_issue": null,
+      "record": "decisions/DEC-006.md"
+    }
+  ]
+}
