@@ -40,8 +40,8 @@
       }
       .primary {
         display: inline-block;
-        background: #5b2c12;
-        color: white;
+        background: var(--jb-cta);
+        color: var(--jb-cta-ink);
         padding: 12px 20px;
         border-radius: 30px;
         text-decoration: none;
@@ -62,8 +62,16 @@
   </head>
   <body>
     <header>
-      <strong>Jai Bhakti · Design preview</strong>
+      <a
+        class="jb-brand"
+        href="index.html"
+        aria-label="Jai Bhakti design preview"
+        ><img src="assets/brand/temple-mark.svg" alt="" /><span lang="hi"
+          >जय भक्ति</span
+        ></a
+      >
       <nav aria-label="Resources">
+        <a href="catalogue/index.html">Live seva catalogue</a>
         <a href="walkthroughs/index.html">Walkthroughs</a
         ><a href="explorations/index.html">Explorations</a
         ><a href="https://github.com/suyashb734/jaibhakti-design"
@@ -88,6 +96,7 @@
         engineering handoff has been issued.
       </p>
       <div class="links">
+        <a href="catalogue/index.html">Three launched sevas — images and details →</a>
         <a class="primary" href="walkthroughs/index.html"
           >Start guided walkthrough →</a
         ><a href="walkthroughs/index.html#all-app/0"

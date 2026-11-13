@@ -8,6 +8,8 @@ is live with the earlier snapshot; the new update has not been merged/published.
 
 Versioned product design, decisions and engineering handoff for Jai Bhakti web and mobile. The web acquires bookings; the mobile app will show booking updates, evidence and management, and allow devotees to book more.
 
+**[Open the interactive design preview](https://suyashb734.github.io/jaibhakti-design-preview/)** — walkthroughs, complete designs, explorations and the launched-seva reference. Relevant merges to main refresh this same URL through the publish workflow.
+
 **First final design:** `Jai Bhakti App.html` was handed over for execution on
 jaibhakti.com, confirmed by the project owner and recorded as
 [JB-BASELINE-001](baselines/JB-BASELINE-001.md).
@@ -18,12 +20,14 @@ design-vX.Y.Z handoff has been issued through this repository process yet.
 
 **New here? Read [START_HERE.md](START_HERE.md)** for the product history, user flow,
 source authority, agent starting procedure and complete design-to-engineering path.
+Read [the collaboration guide](docs/07_Preview_and_Collaboration.md) for editing a specific exploration and understanding branches, review and connected publishing.
 
 ## Find the right version
 
 | You want to… | Start here |
 | --- | --- |
-| See the complete designs step by step | [Visual walkthrough](walkthroughs/index.html) — run through the local hub or Codespaces |
+| See the complete designs step by step | [Hosted walkthrough](https://suyashb734.github.io/jaibhakti-design-preview/walkthroughs/index.html) or [local viewer](walkthroughs/index.html) |
+| Understand the launched products | [Visual live catalogue](catalogue/index.html) and [source notes](docs/08_Live_Seva_Catalogue.md) |
 | Review ideas that are not final | [Visual explorations](explorations/index.html) and [outcome records](explorations/README.md) |
 | Review the integrated draft | [Mobile preview](previews/mobile/Prototype.html), [web baseline](previews/web/index.html) and [change packages](registries/changes.json) |
 | Find historical and new final designs | [Original execution baseline](baselines/JB-BASELINE-001.md); [new handoffs](releases/README.md) are pending |
@@ -51,13 +55,16 @@ Track the [first design change](https://github.com/suyashb734/jaibhakti-design/i
 
 Download the whole repository and open [index.html](index.html), or clone it and run
 `python3 tools/serve_design_hub.py` at http://localhost:8000. GitHub displays HTML as
-source. The [public preview](https://suyashb734.github.io/jaibhakti-design-preview/)
-serves the initial snapshot. The original-brand/live-catalogue update and connected
-publisher remain in PR #9. See HANDOFF.md for the current state and continuation.
+source. The public preview currently serves the initial snapshot. The original-brand
+and live-catalogue update, plus the connected publisher, are being integrated in
+[PR #9](https://github.com/suyashb734/jaibhakti-design/pull/9). See [HANDOFF.md](HANDOFF.md)
+for the published revision and continuation. Codespaces provides a preview of your
+own branch. The authoring repository stays private.
 
-The walkthrough and a static preview export are included. Any public deployment
-must distinguish public access from private GitHub source access; noindex is not
-access control. The current hosting state is tracked in registries/project.json.
+The public site is generated from an allowlist of review assets in a separate
+public repository. Documentation and decisions stay private. Noindex is requested;
+it does not restrict access. Hosting and source records are in
+registries/project.json and the site’s preview-info.json.
 
 ## What was imported
 
@@ -80,7 +87,8 @@ The [editable mobile prototype](previews/mobile/Prototype.html) is forked from t
 contracts/       Shared product rules and proposed data semantics
 content/         Draft glossary and shared copy keys
 fixtures/        Scenario definitions and acceptance scope
-tokens/          Candidate design tokens awaiting visual approval
+tokens/          Owner-selected original branding and earlier candidate references
+assets/brand/    Original-final wordmark, fonts and shared brand values
 registries/      Sources, screen IDs, requirements, changes and decisions
 changes/         One reviewable package for each product change
 explorations/    Alternatives, findings and selection/rejection rationale
@@ -89,6 +97,7 @@ references/      Immutable imports and dated live observations
 baselines/       Recorded historical final-design handoffs and provenance
 previews/        Editable mobile draft and the web baseline entry
 walkthroughs/    Guided review and complete screen browser
+catalogue/       Actual imagery and facts for the three launched sevas
 releases/        Approved handoff manifests, separate from live deployment
 tools/           Integrity and handoff validation
 .github/         Review templates, issue forms, code owners and CI

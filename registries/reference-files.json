@@ -696,6 +696,41 @@
       "path": "references/live-web/2026-11-13/observed-triyuginarayan.txt",
       "bytes": 6899,
       "sha256": "af72882cc2cdbdb6e888bde1e9affda4df92b7f90064eb5a6a23a34e1e991c48"
+    },
+    {
+      "path": "references/live-sevas/2026-11-13/gaj-mahalakshmi-hero.jpeg",
+      "bytes": 197958,
+      "sha256": "989b12bf0479fd0e286cf555730a5c4853b8da41cc83186691d8b57b428e9f93"
+    },
+    {
+      "path": "references/live-sevas/2026-11-13/gaj-mahalakshmi-temple.png",
+      "bytes": 3880626,
+      "sha256": "b130e77f7c1d4ed5a9e12de904e90de37b375d0dea4a7d33089252c09b6d7c6f"
+    },
+    {
+      "path": "references/live-sevas/2026-11-13/manifest.json",
+      "bytes": 6969,
+      "sha256": "e2f979451678766a0bfad72dce845427f580b33d5ca5a8e7b46901ff3b95c5ef"
+    },
+    {
+      "path": "references/live-sevas/2026-11-13/rahu-hero.jpeg",
+      "bytes": 200000,
+      "sha256": "cc04ee0783bfc6b0457b9957e565cb8cba24d3908b1e99f1f69efa06b83dbbe3"
+    },
+    {
+      "path": "references/live-sevas/2026-11-13/rahu-temple.jpeg",
+      "bytes": 321383,
+      "sha256": "2aa3697dcfcbe78b9f934517aa6f2070fb4aa2e85cda102f64c63cbd02d22a31"
+    },
+    {
+      "path": "references/live-sevas/2026-11-13/triyuginarayan-hero.jpeg",
+      "bytes": 198885,
+      "sha256": "9f68a81ad3e9ce12d0b8317976f80c22b7f610139e446e6732adf3dacf452c70"
+    },
+    {
+      "path": "references/live-sevas/2026-11-13/triyuginarayan-temple.jpeg",
+      "bytes": 361153,
+      "sha256": "74492633d08ead01ff2de91c1da75614801e03797a13baf21ecd8c3c2db57741"
     }
   ]
 }

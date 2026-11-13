@@ -172,17 +172,19 @@
     {
       "id": "INC-012",
       "severity": "decision",
-      "title": "Visual primitives have no selected approved baseline",
+      "title": "Original-final brand alignment",
       "observation": "The packed original, live web and candidate differ in branding, typography, CTA sizing and palette values. The original artboard is 393×852; candidate exports use 390 px artboards at 2×.",
       "owner_role": "Design",
       "owner": null,
-      "status": "open",
-      "required_resolution": "Select semantic tokens and brand assets, distinguish web/app differences, and compare only matching fixtures, viewports and render environments.",
+      "status": "in_progress",
+      "required_resolution": "Apply the owner-selected original-final brand, record intentional differences and comparable measurements, and keep exact-version handoff approval separate.",
       "blocks": [
         "design-system",
         "visual-comparison"
       ],
-      "github_issue": "https://github.com/suyashb734/jaibhakti-design/issues/6"
+      "github_issue": "https://github.com/suyashb734/jaibhakti-design/issues/6",
+      "resolution_progress": "Owner selected the original-final branding. Exact wordmark, font subsets, ink and CTA gradient extracted and applied to working previews. Comparison/measurement and next handoff approval remain separate.",
+      "decision_record": "docs/09_Original_Brand_Baseline.md"
     },
     {
       "id": "INC-013",

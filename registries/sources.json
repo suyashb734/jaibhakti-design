@@ -55,6 +55,15 @@
       "derived_from": "SRC-CANDIDATE",
       "approval": null,
       "note": "Readable HTML CSS and JavaScript fork, with prototype-only state and sample data. Future captures belong in artifacts."
+    },
+    {
+      "id": "SRC-LIVE-ASSETS",
+      "type": "observed_live_asset_reference",
+      "path": "references/live-sevas/2026-11-13/manifest.json",
+      "label": "Three launched Nirantar sevas: live imagery and catalogue facts",
+      "authority": "dated_public_presentation_not_provider_contract",
+      "approval": null,
+      "note": "Actual public product/temple images reused at the project owner’s request; original-final design remains brand authority."
     }
   ]
 }

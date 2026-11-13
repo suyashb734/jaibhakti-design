@@ -46,7 +46,7 @@ prove deployment. Board fields are manual navigation, not authoritative signoff.
 
 The included CI job checks integrity and traceability. Configure required checks and PR reviews on main once collaborator roles and repository plan support are confirmed. Prefer no direct pushes for normal feature work. Use code owner review for shared contracts, tokens and release manifests. GitHub documents [PR templates, ownership and required checks](https://docs.github.com/en/pull-requests/reference/managing-and-standardizing-pull-requests) as review controls.
 
-Use private PR artifacts or an access-controlled preview for routine reviews. A private repository is not, by itself, a private GitHub Pages website; privately published Pages sites require the supported organization setup described in [GitHub’s visibility documentation](https://docs.github.com/en/enterprise-cloud@latest/pages/getting-started-with-github-pages/changing-the-visibility-of-your-github-pages-site). No Pages deployment is configured here.
+Use private PR artifacts or an access-controlled preview for routine reviews. A private repository is not, by itself, a private GitHub Pages website; privately published Pages sites require the supported organization setup described in [GitHub’s visibility documentation](https://docs.github.com/en/enterprise-cloud@latest/pages/getting-started-with-github-pages/changing-the-visibility-of-your-github-pages-site). The public review site is served from a separate generated export repository; private source/decision documents remain private. See [connected collaboration](07_Preview_and_Collaboration.md).
 
 ## Generated files and releases
 

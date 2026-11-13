@@ -1,3 +1,11 @@
 # Design tokens
 
-candidate.tokens.json records candidate CSS values as a draft reference. Design must select the approved visual baseline and web/app differences before these values become canonical or are published to implementation repositories. A future generator can produce CSS variables and native constants from shared semantic tokens.
+original-final.tokens.json is the brand baseline selected by the owner: the first
+final Jai Bhakti App.html supplied for execution. Its exact wordmark, fonts, colors
+and main CTA gradient are shared through assets/brand/original-brand.css. See
+[the brand record](../docs/09_Original_Brand_Baseline.md).
+
+candidate.tokens.json preserves earlier candidate values as draft reference. It is
+not the selected brand authority. Brand selection does not approve a new product
+flow or engineering release. Platform spacing and semantic status colors still
+require their own review and accessibility checks.

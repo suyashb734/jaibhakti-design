@@ -1,0 +1,62 @@
+name: Publish review preview
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'previews/**'
+      - 'explorations/**'
+      - 'walkthroughs/**'
+      - 'catalogue/**'
+      - 'site/**'
+      - 'assets/brand/**'
+      - 'references/**'
+      - 'registries/screens.json'
+      - 'registries/walkthroughs.json'
+      - 'tools/build_review_catalog.py'
+      - 'tools/build_live_catalogue.py'
+      - 'tools/build_preview_site.py'
+      - 'tools/sync_preview_checkout.py'
+      - '.github/workflows/publish-preview.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: public-design-review-preview
+  cancel-in-progress: false
+jobs:
+  publish:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Check out private design source
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - name: Validate the reviewed source
+        run: |
+          python3 tools/validate_design_hub.py
+          python3 tools/build_review_catalog.py --check
+          python3 tools/build_live_catalogue.py --check
+          python3 -m unittest discover -s tests -v
+      - name: Build the public preview allowlist
+        run: python3 tools/build_preview_site.py --require-clean
+      - name: Check out the public preview repository
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          repository: suyashb734/jaibhakti-design-preview
+          ref: main
+          path: artifacts/preview-checkout
+          ssh-key: ${{ secrets.DESIGN_PREVIEW_DEPLOY_KEY }}
+      - name: Stage generated review assets
+        run: python3 tools/sync_preview_checkout.py artifacts/preview-checkout
+      - name: Publish the snapshot
+        run: |
+          git -C artifacts/preview-checkout config user.name 'Jai Bhakti Design Publisher'
+          git -C artifacts/preview-checkout config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          if git -C artifacts/preview-checkout diff --cached --quiet; then
+            echo 'No exported preview changes'
+            exit 0
+          fi
+          source_revision="$(git rev-parse HEAD)"
+          git -C artifacts/preview-checkout commit -m "Publish design review snapshot ${source_revision}"
+          git -C artifacts/preview-checkout push origin HEAD:main

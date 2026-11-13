@@ -58,6 +58,17 @@ def validate():
     screen_ids={s['id'] for s in screens}
     for source in sources:
         assert (ROOT/source['path']).is_file(),source['path']
+    brand=load('tokens/original-final.tokens.json')
+    assert brand['source']=='SRC-INITIAL' and brand['baseline']=='JB-BASELINE-001','Brand must retain its original-final provenance'
+    for font in brand['extracted_fonts']:
+        path=ROOT/brand['brand_assets']/font['file']
+        assert path.is_file() and hashlib.sha256(path.read_bytes()).hexdigest()==font['sha256'],f'Original font asset differs: {font["file"]}'
+    live=load('references/live-sevas/2026-11-13/manifest.json')
+    known_offers={item['product_id']:item for item in load('contracts/catalogue-observations.json')['active_offerings']}
+    for offering in live['offerings']:
+        assert offering['product_id'] in known_offers,'Unmapped live offering'
+        for field in ('first_amount_minor','regular_amount_minor','weekday'):
+            assert offering[field]==known_offers[offering['product_id']][field],f'Live catalogue mapping differs: {offering["slug"]} {field}'
     baselines=load('registries/baselines.json')['baselines']
     assert len({b['id'] for b in baselines})==len(baselines),'Duplicate baseline IDs'
     for baseline in baselines:

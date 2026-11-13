@@ -36,5 +36,7 @@
     }
   ],
   "home_card_count": 8,
-  "other_cards": "Five additional cards showed Notify me rather than active booking actions. They are not assumed to be purchasable."
+  "other_cards": "Five additional cards showed Notify me rather than active booking actions. They are not assumed to be purchasable.",
+  "visual_reference": "references/live-sevas/2026-11-13/manifest.json",
+  "brand_authority": "JB-BASELINE-001; imagery and product facts do not replace original-final branding"
 }

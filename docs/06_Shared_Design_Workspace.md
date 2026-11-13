@@ -9,6 +9,8 @@ For project history and the complete user/agent flow, start with
 finalized and given for website execution, as recorded in JB-BASELINE-001; the
 release workflow below governs the newer changes.
 
+Read [the connected collaboration guide](07_Preview_and_Collaboration.md) for task branches, isolated options, the existing shared A/B source and preview refresh after main merges.
+
 ## The four places to look
 
 | Area | Purpose | Authority |

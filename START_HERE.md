@@ -50,6 +50,10 @@ initially reuses web checkout or uses native checkout is an open decision.
 
 ## See the designs before editing
 
+Open [the shared interactive preview](https://suyashb734.github.io/jaibhakti-design-preview/).
+Relevant merges to main refresh the same URL. Branch work can be reviewed locally
+or in a branch Codespace before merging. See [the connected collaboration guide](docs/07_Preview_and_Collaboration.md).
+
 Read [the access guide](docs/00_Review_the_Whole_Design.md). For a visual review,
 download the complete repository and open index.html, or serve it with
 `python3 tools/serve_design_hub.py` and open http://localhost:8000.
@@ -65,9 +69,12 @@ download the complete repository and open index.html, or serve it with
   states using the sidebar or All screens on a narrow display.
 - [Reference gallery](previews/mobile/Gallery.html): frozen imported screenshots
   beside links to current working routes. Captures do not update automatically.
+- [Three launched sevas](catalogue/index.html): actual offering/temple images and observed weekly prices, with source provenance.
+
+The owner selected the original-final colors and branding. Use tokens/original-final.tokens.json and assets/brand/. Live imagery/product facts do not replace that wordmark, typography or color direction.
 
 GitHub renders Markdown but displays HTML as source. Open HTML through the local
-hub or [Codespaces](https://codespaces.new/suyashb734/jaibhakti-design).
+hub, the public preview or [Codespaces](https://codespaces.new/suyashb734/jaibhakti-design).
 An export for static hosting can be prepared with tools/build_preview_site.py;
 building it is not publication. Public hosting allows anyone to view/share it.
 Noindex requests reduce discoverability and do not restrict access.
