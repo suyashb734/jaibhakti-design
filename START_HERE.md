@@ -51,7 +51,7 @@ initially reuses web checkout or uses native checkout is an open decision.
 
 ## See the designs before editing
 
-Open [the shared interactive preview](https://suyashb734.github.io/jaibhakti-design-preview/).
+Open [the shared interactive preview](https://suyashb734.github.io/jaibhakti-design/).
 Relevant merges to main refresh the same URL. Branch work can be reviewed locally
 or in a branch Codespace before merging. See [the connected collaboration guide](docs/07_Preview_and_Collaboration.md).
 
@@ -144,7 +144,7 @@ history and states its superseded scope.
 
 ## Current next work
 
-The [private project](https://github.com/users/suyashb734/projects/1) contains six
+The [repository issue queue](https://github.com/suyashb734/jaibhakti-design/issues) contains six
 decision issues, JB-CHG-0001 and EXP-0001. Next, assign actual human owners and
 reviewers, resolve the scoped commercial/identity decisions and compare the two
 layouts with identical tasks and fixtures. Implement one coherent checkout-to-app

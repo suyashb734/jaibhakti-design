@@ -6,12 +6,15 @@ Use [the daily design workflow](docs/10_Design_Collaboration.md) for new work.
 
 [![Registry integrity](https://github.com/suyashb734/jaibhakti-design/actions/workflows/validate-design.yml/badge.svg)](https://github.com/suyashb734/jaibhakti-design/actions/workflows/validate-design.yml)
 
+**One public repository:** source, collaboration and preview publishing all live here.
+Isha (@ishaamalhotra) has collaborator access. See [the single-repository guide](docs/12_Single_Public_Repository.md).
+
 Shared design assets, visual explorations and review records for Jai Bhakti web and
 mobile. Three contributors can use agents to propose and refine designs here.
 Production implementations live elsewhere; approved design versions can later be
 handed to engineering.
 
-**[Open the interactive design preview](https://suyashb734.github.io/jaibhakti-design-preview/)** — walkthroughs, complete designs, explorations and the launched-seva reference. Relevant merges to main refresh this same URL through the publish workflow.
+**[Open the interactive design preview](https://suyashb734.github.io/jaibhakti-design/)** — walkthroughs, complete designs, explorations and the launched-seva reference. Relevant merges to main refresh this same URL through the publish workflow.
 
 **First final design:** `Jai Bhakti App.html` was handed over for execution on
 jaibhakti.com, confirmed by the project owner and recorded as
@@ -32,12 +35,12 @@ For daily work, use [the three-person design workflow](docs/10_Design_Collaborat
 
 | You want to… | Start here |
 | --- | --- |
-| See the complete designs step by step | [Hosted walkthrough](https://suyashb734.github.io/jaibhakti-design-preview/walkthroughs/index.html) or [local viewer](walkthroughs/index.html) |
+| See the complete designs step by step | [Hosted walkthrough](https://suyashb734.github.io/jaibhakti-design/walkthroughs/index.html) or [local viewer](walkthroughs/index.html) |
 | Understand the launched products | [Visual live catalogue](catalogue/index.html) and [source notes](docs/08_Live_Seva_Catalogue.md) |
 | Review ideas that are not final | [Visual explorations](explorations/index.html) and [outcome records](explorations/README.md) |
 | Review the integrated draft | [Mobile preview](previews/mobile/Prototype.html), [web baseline](previews/web/index.html) and [change packages](registries/changes.json) |
 | Find historical and new final designs | [Original execution baseline](baselines/JB-BASELINE-001.md); [new handoffs](releases/README.md) are pending |
-| See work and decisions | [Private project](https://github.com/users/suyashb734/projects/1) and linked issues |
+| See work and decisions | [Repository issues](https://github.com/suyashb734/jaibhakti-design/issues) and pull requests |
 | Run or review the complete folder | [Review guide](docs/00_Review_the_Whole_Design.md) or [open in Codespaces](https://codespaces.new/suyashb734/jaibhakti-design) |
 
 A selected exploration is a direction for integration. A merged change is shared
@@ -64,13 +67,13 @@ Download the whole repository and open [index.html](index.html), or clone it and
 source. The public preview includes the restored original-final branding and live
 seva catalogue. Relevant main changes publish automatically. See [HANDOFF.md](HANDOFF.md)
 for verified setup and continuation; preview-info.json identifies the public design
-revision. Codespaces provides a preview of your own branch. The authoring repository
-stays private.
+revision. Codespaces provides a preview of your own branch. The same public repository contains source, review records and publishing.
 
-The public site is generated from an allowlist of review assets in a separate
-public repository. Documentation and decisions stay private. Noindex is requested;
-it does not restrict access. Hosting and source records are in
-registries/project.json and the site’s preview-info.json.
+The site is generated from review assets and deployed directly from this repository
+with GitHub Actions and GitHub Pages. No second publishing repository or deploy key
+is needed. Source, branches, documentation, decisions and history are public.
+The old preview address redirects to the canonical site. Hosting and source records
+are in registries/project.json and the site’s preview-info.json.
 
 ## What was imported
 
@@ -148,7 +151,8 @@ approve the newer candidate.
 
 Repository maintainer: [@suyashb734](https://github.com/suyashb734). Product, design, engineering, operations and payments approvers still need named assignment. CODEOWNERS routes repository review; GitHub branch rules and team review assignments must be configured for the organization’s actual access and plan.
 
-The private project is linked to the repository. Access to the project and the
-private repository must both be granted to actual collaborators. Required-review
-rules and release protections are not yet configured; instructions are guidance,
-not permission enforcement.
+Isha (@ishaamalhotra) has active collaborator access to this public repository,
+including editing, pushing branches and merging PRs. Personal repositories retain
+owner-only administrative settings. Use repository issues and PRs for the shared
+queue; the older separate project board is optional and not required. Required-review
+rules and release protections are not configured; instructions are workflow guidance.

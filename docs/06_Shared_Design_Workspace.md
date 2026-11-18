@@ -118,16 +118,16 @@ the new revision. Repository tooling maintenance is separate from product signof
 
 ## A lightweight project view
 
-Use the private [Jai Bhakti Design Workspace](https://github.com/users/suyashb734/projects/1)
-for the queue. The built-in Status column represents design state; Work type and
+Use [repository issues and PRs](https://github.com/suyashb734/jaibhakti-design/issues)
+for the queue. The older project board is optional. The built-in Status column represents design state; Work type and
 Implementation state are separate fields, with the responsible human recorded in
 Assignees and the package. Issue closure means that task ended; it does not prove
 the design was approved, submitted or shipped.
 
 Useful views are explorations, review queue and engineering handoffs. Treat the
 board as navigation; the change record and approved release are the evidence.
-Project access and private-repository access are separate: add actual collaborators
-to both as needed. No collaborator roster or review teams have been supplied yet.
+The repository is public; Isha has active collaborator access. The optional older
+project board has separate permissions and is not required for the workflow. No collaborator roster or review teams have been supplied yet.
 
 The current project and issue links are in registries/project.json. Board fields
 are maintained manually, not synchronized to JSON by an agent. Required PR checks,

@@ -2,37 +2,21 @@ name: Publish review preview
 on:
   push:
     branches: [main]
-    paths:
-      - 'previews/**'
-      - 'explorations/**'
-      - 'walkthroughs/**'
-      - 'catalogue/**'
-      - 'design-system/**'
-      - 'tokens/original-ui.tokens.json'
-      - 'site/**'
-      - 'assets/brand/**'
-      - 'references/**'
-      - 'registries/screens.json'
-      - 'registries/walkthroughs.json'
-      - 'tools/build_review_catalog.py'
-      - 'tools/build_live_catalogue.py'
-      - 'tools/build_original_design.py'
-      - 'tools/build_style_guide.py'
-      - 'tools/build_preview_site.py'
-      - 'tools/sync_preview_checkout.py'
-      - '.github/workflows/publish-preview.yml'
   workflow_dispatch:
 permissions:
   contents: read
 concurrency:
-  group: public-design-review-preview
+  group: github-pages
   cancel-in-progress: false
 jobs:
-  publish:
+  build:
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+      pages: read
     steps:
-      - name: Check out private design source
+      - name: Check out design source
         uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
         with:
           persist-credentials: false
@@ -46,23 +30,22 @@ jobs:
           python3 -m unittest discover -s tests -v
       - name: Build the public preview allowlist
         run: python3 tools/build_preview_site.py --require-clean
-      - name: Check out the public preview repository
-        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5
+      - name: Upload review site
+        uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b # v4
         with:
-          repository: suyashb734/jaibhakti-design-preview
-          ref: main
-          path: artifacts/preview-checkout
-          ssh-key: ${{ secrets.DESIGN_PREVIEW_DEPLOY_KEY }}
-      - name: Stage generated review assets
-        run: python3 tools/sync_preview_checkout.py artifacts/preview-checkout
-      - name: Publish the snapshot
-        run: |
-          git -C artifacts/preview-checkout config user.name 'Jai Bhakti Design Publisher'
-          git -C artifacts/preview-checkout config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          if git -C artifacts/preview-checkout diff --cached --quiet; then
-            echo 'No exported preview changes'
-            exit 0
-          fi
-          source_revision="$(git rev-parse HEAD)"
-          git -C artifacts/preview-checkout commit -m "Publish design review snapshot ${source_revision}"
-          git -C artifacts/preview-checkout push origin HEAD:main
+          path: artifacts/preview-site
+  deploy:
+    needs: build
+    runs-on: ubuntu-24.04
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy review site
+        id: deployment
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4

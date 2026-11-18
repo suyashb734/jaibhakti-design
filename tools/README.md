@@ -11,7 +11,7 @@ Python standard library and supports offline ZIP review without fetch requests.
 artifacts/preview-site. It copies an explicit set of design HTML, scripts, fonts,
 sample media and reference PNGs. Private Markdown, DOCX, contracts, repository
 settings and agent policy are not copied. Documentation links point back to the
-private repository. The bundle has noindex/robots requests, not access control.
+public source repository. The bundle has noindex/robots requests, not access control.
 Copied HTML receives robots metadata; immutable source files remain unchanged.
 Use `--require-clean` for a publishable snapshot with an exact source commit.
 Building does not publish anything. Hosting visibility is a separate decision.
@@ -35,11 +35,11 @@ The optional GitHub workflow runs captures manually and uploads a review artifac
 `build_live_catalogue.py` generates catalogue/index.html from the dated live asset
 manifest and page template. Run --check to detect stale cards.
 
-The owner authorized public review hosting. The Publish review preview Action
-validates relevant main changes, builds a clean export and calls
-`sync_preview_checkout.py` against the dedicated public checkout. The helper checks
-the destination, preserves uncommitted work and verifies asset checksums. Pages
-refreshes the same shared URL. See [the connected workflow](../docs/07_Preview_and_Collaboration.md).
+The public jaibhakti-design repository also hosts its preview. Publish review
+preview validates a clean main revision, builds this artifact and deploys directly
+with GitHub Pages Actions. No external checkout, SSH key or publishing secret is
+required. The retired preview repository only redirects older links. See
+[the workflow](../docs/07_Preview_and_Collaboration.md).
 
 `build_original_design.py` assembles the editable original screen fragments into
 the ready-to-open current Prototype.html. Use --check to detect stale output.

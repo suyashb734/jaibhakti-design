@@ -52,9 +52,10 @@ result. Branch isolation protects files on disk; it does not settle design confl
 | references/ | Preserved imports and dated evidence |
 | releases/ | Exact approved design versions for engineering |
 
-The public export repository is generated. Author in the private design repository.
+Source and publishing live in the same public jaibhakti-design repository.
+Edit source files; generated artifacts/ output is not an authoring surface.
 Review unmerged branches locally or in Codespaces. After merging, use the shared
-[preview](https://suyashb734.github.io/jaibhakti-design-preview/) and its preview-info.json
+[preview](https://suyashb734.github.io/jaibhakti-design/) and its preview-info.json
 to identify the successfully published design revision.
 
 ## What a normal review needs
@@ -71,8 +72,9 @@ Useful agent brief:
 > branding and registered routes. Check affected states, capture comparable
 > evidence, and prepare a PR. Record assumptions and review questions.
 
-Named collaborator access and GitHub review controls still need the actual roster
-and supported repository settings. The written workflow does not configure them.
+Isha (@ishaamalhotra) has active collaborator access. Additional collaborators and
+required-review controls can be configured with the remaining roster. GitHub
+personal repositories keep owner-only administrative settings.
 
 ## Final design handoff
 

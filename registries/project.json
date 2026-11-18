@@ -1,7 +1,7 @@
 {
   "name": "Jai Bhakti Design Hub",
   "repository_url": "https://github.com/suyashb734/jaibhakti-design",
-  "visibility": "private",
+  "visibility": "public",
   "created_at_utc": "2026-11-13T08:25:45.360761+00:00",
   "stage": "shared_draft_workspace_and_review",
   "maintainer": "suyashb734",
@@ -9,8 +9,6 @@
   "milestone_url": "https://github.com/suyashb734/jaibhakti-design/milestone/1",
   "change_issue": "https://github.com/suyashb734/jaibhakti-design/issues/7",
   "bootstrap_commit": "7ba437a08cdd7066279553cde47044c7588ef596",
-  "project_url": "https://github.com/users/suyashb734/projects/1",
-  "project_visibility": "private",
   "project_fields": {
     "Status": "Design state; not evidence of approval",
     "Work type": "Exploration, Design change or Decision",
@@ -26,18 +24,18 @@
   "historical_execution_baseline": "JB-BASELINE-001",
   "static_preview": {
     "status": "published",
-    "url": "https://suyashb734.github.io/jaibhakti-design-preview/",
-    "repository_url": "https://github.com/suyashb734/jaibhakti-design-preview",
+    "url": "https://suyashb734.github.io/jaibhakti-design/",
+    "repository_url": "https://github.com/suyashb734/jaibhakti-design",
     "visibility": "public",
-    "visibility_decision": "Project owner accepted public access after clarification that links may be forwarded",
-    "source_repository_visibility": "private",
-    "hosting": "GitHub Pages, public export repository main branch",
-    "publisher": "Publish review preview Action; automatic on relevant main changes; first end-to-end publication verified",
+    "visibility_decision": "Owner requested one public repository for source and preview on 18 November 2026",
+    "source_repository_visibility": "public",
+    "hosting": "GitHub Pages Actions artifact from this repository",
+    "publisher": "Publish review preview; every main revision builds and deploys directly",
     "first_source_commit": "dfccf302d16b6e9ec51c3b98f5b81d4dd96155bd",
     "first_deployment_run": "https://github.com/suyashb734/jaibhakti-design-preview/actions/runs/43407695644",
     "search_indexing": "noindex requested; not access control",
     "automatic_publisher_active": true,
-    "note": "The publisher and public refresh have been verified. Read the public preview-info.json for the current design snapshot.",
+    "note": "Source, documentation, branches and review site are public. No second publishing checkout or deploy key is used. preview-info.json identifies the deployed source commit.",
     "first_automatic_publication": {
       "source_commit": "eddb9484d490333c6837b747b4edb568932a1e54",
       "export_commit": "100114614cbc4d02e7f9dd598cb63243218bc623",
@@ -46,7 +44,10 @@
       "verified_at_utc": "2026-11-13T12:21:57.837293+00:00",
       "exported_files": 110,
       "checked": "Landing, restored wordmark/fonts, original/app walkthroughs, explorations and catalogue; no script errors or broken images"
-    }
+    },
+    "legacy_preview_url": "https://suyashb734.github.io/jaibhakti-design-preview/",
+    "legacy_repository_url": "https://github.com/suyashb734/jaibhakti-design-preview",
+    "legacy_role": "Read-only redirect; not an authoring or publishing dependency"
   },
   "brand_authority": "JB-BASELINE-001",
   "handoff": "HANDOFF.md",
@@ -60,5 +61,25 @@
     "current_design": "previews/mobile/index.html",
     "later_proposal": "explorations/EXP-0001/draft/Prototype.html",
     "change": "JB-CHG-0002"
+  },
+  "legacy_project": {
+    "url": "https://github.com/users/suyashb734/projects/1",
+    "visibility": "private",
+    "required_for_workflow": false
+  },
+  "work_queue_url": "https://github.com/suyashb734/jaibhakti-design/issues",
+  "collaborators": {
+    "ishaamalhotra": {
+      "status": "active",
+      "permission": "write",
+      "scope": "Full collaborator access on this personal repository; owner-only settings remain with suyashb734"
+    }
+  },
+  "single_repository_migration": {
+    "requested_on": "2026-11-18",
+    "repository": "suyashb734/jaibhakti-design",
+    "canonical_preview": "https://suyashb734.github.io/jaibhakti-design/",
+    "preserved": "Original design, history, source branches including isha, requirements and prior approvals",
+    "authentication": "Native GitHub Actions token and OIDC for Pages"
   }
 }
