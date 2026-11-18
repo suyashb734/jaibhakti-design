@@ -19,27 +19,27 @@ documents. These can run as static HTML, CSS and JavaScript. Start with
 | GitHub integrity CI | Passing; this is not product approval |
 | GitHub capture workflow | Successfully rendered all 49 working-mobile states and uploaded evidence |
 | New engineering handoff | Pending; historical original handoff is recorded separately |
-| Interactive hosting | Public GitHub Pages review URL; private authoring repo; connected publication workflow |
+| Interactive hosting | Public repository with its own GitHub Pages deployment |
 
 ## Open the shared preview
 
-- [Preview home](https://suyashb734.github.io/jaibhakti-design-preview/).
-- [Original final design: 12 states](https://suyashb734.github.io/jaibhakti-design-preview/walkthroughs/index.html#original/0).
-- [Current app journey](https://suyashb734.github.io/jaibhakti-design-preview/walkthroughs/index.html#app/0).
-- [All 49 app states](https://suyashb734.github.io/jaibhakti-design-preview/walkthroughs/index.html#all-app/0).
-- [Explorations](https://suyashb734.github.io/jaibhakti-design-preview/explorations/index.html).
-- [Three launched sevas and actual imagery](https://suyashb734.github.io/jaibhakti-design-preview/catalogue/index.html).
+- [Preview home](https://suyashb734.github.io/jaibhakti-design/).
+- [Original final design: 12 states](https://suyashb734.github.io/jaibhakti-design/walkthroughs/index.html#original/0).
+- [Current app journey](https://suyashb734.github.io/jaibhakti-design/walkthroughs/index.html#app/0).
+- [All 49 app states](https://suyashb734.github.io/jaibhakti-design/walkthroughs/index.html#all-app/0).
+- [Explorations](https://suyashb734.github.io/jaibhakti-design/explorations/index.html).
+- [Three launched sevas and actual imagery](https://suyashb734.github.io/jaibhakti-design/catalogue/index.html).
 
 The URL stays fixed. Relevant merges to main trigger validation and publication;
 branch edits do not change it before merge. Check the publish workflow and the
-site’s preview-info.json for the deployed source revision. Read [the collaboration guide](07_Preview_and_Collaboration.md) before editing an option. Documentation links require private repo access.
+site’s preview-info.json for the deployed source revision. Read [the collaboration guide](07_Preview_and_Collaboration.md) before editing an option. Documentation links open the public source repository.
 
 
 The verified capture run is [43396621315](https://github.com/suyashb734/jaibhakti-design/actions/runs/43396621315). It rendered the working design at commit f3aa8833dd591651463a41d2661c07c06b91ba8a. Its PNGs and report are render evidence, not a backend or native-device test.
 
 ## Access for reviewers
 
-Reviewers need access to the private repository. The owner can add the relevant GitHub accounts through Settings, Collaborators. No reviewer accounts have been invited automatically. Once access is granted, use either download, clone or Codespaces.
+Anyone can view or clone the public repository. Isha has collaborator access for editing, branches and PR merges. Use download, clone or Codespaces to review the design.
 
 ## Easiest local review
 
@@ -92,6 +92,7 @@ The capture artifact is a screenshot/report bundle. For the complete interactive
 The static review hub and prototypes are technically suitable for GitHub Pages, subject to the account plan. Pages does not provide a production payment or application backend. A private repository also does not automatically produce a private Pages website; privately published Pages sites require an organization using GitHub Enterprise Cloud. See [Pages hosting](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages) and [Pages visibility](https://docs.github.com/en/enterprise-cloud@latest/pages/getting-started-with-github-pages/changing-the-visibility-of-your-github-pages-site).
 
 The owner accepted public preview access. This account plan does not support Pages
-from the private repository, so exported static assets are served through the
-separate public jaibhakti-design-preview repository. Source/decisions stay private.
+from the private repository. It has since been consolidated into one public
+jaibhakti-design repository with direct Actions-to-Pages publishing. The older
+preview repository is retained only as a read-only redirect.
 Noindex metadata is requested, with no authentication restriction.

@@ -1,113 +1,68 @@
 # Jai Bhakti design workspace handoff
 
-Updated 13 November 2026. This repository is a design asset for collaborative visual
-work. Production web/app/backend implementations live elsewhere. Begin with
-AGENTS.md, START_HERE.md, docs/11_Original_Design_System.md and
-docs/10_Design_Collaboration.md.
+Updated 18 November 2026. The owner requested one public repository for source and
+preview, with full collaborator access for Isha. Use
+https://github.com/suyashb734/jaibhakti-design for all design work, issues and PRs.
+The repository, branches, documentation and history are public.
 
-The project owner clarified that the complete original UI is required, including
-listing, offering detail, cart and checkout. JB-CHG-0002 restores that journey under
-previews/mobile/. The later 49-state proposal is retained separately under
-explorations/EXP-0001/draft/. Do not carry its simplified acquisition flow forward
-as the main design. The public styling reference is design-system/index.html.
+## Current workflow
 
-## Preview publishing is verified
+- Canonical preview: https://suyashb734.github.io/jaibhakti-design/
+- Original design: https://suyashb734.github.io/jaibhakti-design/previews/mobile/
+- Styling reference: https://suyashb734.github.io/jaibhakti-design/design-system/
+- Publishing: .github/workflows/publish-preview.yml validates a clean main
+  revision, builds the static artifact and deploys directly through GitHub Pages.
+- Authentication: GitHub Actions token and OIDC. No separate repository checkout,
+  SSH deploy key or personal token is needed.
+- The old jaibhakti-design-preview repository is retired as a read-only redirect.
+  Existing review links continue to the corresponding canonical page. Do not edit
+  it or reinstate the old cross-repository sync helper.
+- The site's preview-info.json identifies the actual deployed source revision.
+  A merge or workflow start alone is not proof of successful publication.
 
-[PR #9](https://github.com/suyashb734/jaibhakti-design/pull/9) was reconciled with main
-and merged. Original-final branding, the three-seva visual reference and connected
-publishing are integrated. The old handoff describing PR #9 as open is superseded;
-its history remains in Git.
+ishaamalhotra has accepted collaborator access and can edit, push branches, work
+with issues, review/merge PRs and manage releases. GitHub personal repositories
+have one owner and collaborators; owner-only settings cannot be delegated as a
+separate admin role. Do not claim admin access was granted. The existing isha
+source branch is preserved; inspect its current state before working on it.
+Use repository issues/PRs as the shared queue. The older separate project board is
+optional and is not required for Isha's normal design workflow.
 
-- Shared preview: https://suyashb734.github.io/jaibhakti-design-preview/
-- Walkthrough: https://suyashb734.github.io/jaibhakti-design-preview/walkthroughs/index.html
-- Catalogue: https://suyashb734.github.io/jaibhakti-design-preview/catalogue/index.html
-- Private authoring repository: https://github.com/suyashb734/jaibhakti-design
-- Public generated repository: https://github.com/suyashb734/jaibhakti-design-preview
+## Design authority
 
-First verified automatic publication:
+This repository is a design asset. Production implementations live elsewhere.
+Read AGENTS.md, START_HERE.md and docs/11_Original_Design_System.md before UI work.
+The project owner selected the complete original UI: branding, styling, listing,
+offering detail, cart, checkout, recurring setup and confirmation. JB-BASELINE-001
+is the source authority, and its immutable imported file must remain unchanged.
 
-| Record | Exact value |
-| --- | --- |
-| Source revision | eddb9484d490333c6837b747b4edb568932a1e54 |
-| Generated public commit | 100114614cbc4d02e7f9dd598cb63243218bc623 |
-| Publisher | [Successful run](https://github.com/suyashb734/jaibhakti-design/actions/runs/43424046140) |
-| Pages | [Successful run](https://github.com/suyashb734/jaibhakti-design-preview/actions/runs/43424078118) |
-| Export | 110 static assets in that first publication |
+The current editable original is under previews/mobile/source/. Screen fragments,
+fonts/global CSS and original logic assemble into the ready-to-open Prototype.html.
+All 40 original bundled assets are reused. The later 49-state proposal remains
+separately labelled under explorations/EXP-0001/draft/. Its simplified acquisition
+flow must not silently replace the original. Machine-readable styling recipes are
+in tokens/original-ui.tokens.json; the public styling guide is design-system/.
 
-Public browser checks covered the landing page, original/app embedded walkthroughs,
-explorations, restored wordmark/fonts and catalogue at mobile/desktop widths. All
-six catalogue images loaded, with no script errors or broken images. Verification
-time and proof are recorded in registries/project.json. Subsequent main changes can
-publish newer snapshots; preview-info.json is the current public source revision.
+Original restoration evidence is in changes/JB-CHG-0002/verification.json. It
+records source/asset equivalence, 12 paired original screen geometries and 122
+source/export route checks. Confirmation artwork has documented animation/raster
+variance; blanket pixel-perfect equality is not claimed.
 
-The publisher validates relevant main changes, builds a clean allowlisted export
-and pushes to the public repository. Pages then deploys it. Branch work stays in
-local/Codespaces review until merged. If publishing fails, inspect the actual Action
-logs and verify the public result rather than assuming it refreshed.
+## Working together
 
-The existing DESIGN_PREVIEW_DEPLOY_KEY secret and repository-scoped write deploy
-key work. Reuse them. No credentials need recreation or rotation for continuation.
-The owner accepted public review hosting; keep the authoring repository and its
-private documents private. Noindex is requested and does not restrict access.
+Use a short-lived task branch and separate checkout per active human/agent. Agree
+shared style/logic/fixture edits first. Another human reviews the scoped design
+and evidence. Main is the integrated draft; merging and publishing do not select
+a proposed layout or issue a final engineering handoff. Exact-version handoff
+approval remains separate, and no new approved design-vX.Y.Z release exists.
 
-## Editing as a three-person design team
+Run registry integrity, generated-output checks and the existing test suite before
+committing. build_preview_site.py --require-clean builds the site artifact. The
+site tests check artifact provenance, stale-output removal and source-directory
+protection. No native/backend/provider integration or usability preference is
+established by these design checks.
 
-The current original UI is organized into editable HTML screen fragments, font/global
-CSS and original binding logic. The separate later proposal retains nine screen-family
-files and shared fixtures/components. See
-previews/mobile/README.md for the editing map. The structure uses plain deferred
-scripts, so downloaded Prototype.html still opens directly without a build step.
-Changes/JB-CHG-0001 records the source organization scope and comparison evidence.
-
-Use one human owner, issue/EXP/JB-CHG scope, short-lived branch and separate checkout
-per active task or agent. One of the other humans reviews the design/evidence;
-rotate reviewers. Agree shared CSS, fixture, component and brand edits before
-parallel work. Independent alternatives belong under explorations/EXP-xxxx/options/.
-Main remains the integrated working draft. Author in the private source, never the
-public generated export. AGENTS.md is shared; CLAUDE.md imports it.
-
-Routine exploration needs proportionate visual evidence and review. Exact-version
-product/design approval and engineering acknowledgement apply when issuing a
-handoff. Unresolved commercial decisions block their affected handoff scope, while
-unrelated visual work can proceed with labelled sample assumptions.
-
-## Established design authority
-
-- Jai Bhakti App.html is the owner's first final design supplied for execution on
-  jaibhakti.com, recorded as JB-BASELINE-001. Preserve it and its historical status.
-- Use original-final colors, wordmark and typography from assets/brand/ and
-  tokens/original-final.tokens.json. Actual live offering imagery is allowed.
-- The web takes bookings. The proposed app shows updates, history and media and
-  also supports Book More. The 49-state candidate remains a separate Draft proposal.
-- Live references cover Rahu Paithani 51/121, Gaj Mahalakshmi Ujjain 51/101 and
-  Triyuginarayan 51/151, in rupees. They are dated presentation observations;
-  Triyuginarayan's package ID remains unverified. Sample Hanuman records do not
-  establish another launched offering.
-- Immutable imports, screen/requirement IDs, open layout alternatives and prior
-  release records must be preserved. Agents cannot invent human design approval.
-
-## Remaining design and handoff decisions
-
-The six decision issues (#1–#6), JB-CHG-0001 (#7) and EXP-0001 (#8) remain the product
-queue. Brand authority is selected; tabs versus sections is not. Duration and
-cancellation, legacy/catalogue mapping, recurring consent, account/beneficiary
-continuity, fulfilment/media events and exact handoff scope still need human review.
-No new approved design-vX.Y.Z engineering handoff exists.
-
-The actual three collaborator identities/access and review controls remain to be
-configured with their roster. Existing documentation is workflow guidance, not
-permission enforcement. Native/backend/provider/staging behavior and usability
-preference remain outside the prototype validation.
-
-Inspect Git status, branch, current PRs and public preview-info.json before new
-work. Do not repeat the source audit, recreate repositories or infer source approval
-from a merged PR, passing tests or publication.
-
-## Original-design restoration checks
-
-changes/JB-CHG-0002/verification.json records the full original template round trip, all
-40 asset byte matches, 12 paired original screen captures and 122 current/proposal
-source/export route checks. Original detail-to-cart-to-payment and recurring setup
-flows were exercised. Fourteen tests pass. Confirmation artwork has animation/raster
-variance recorded explicitly; exact frame equality is not claimed for those captures.
-The shared styling guide and original journey publish through the existing workflow.
+Inspect Git status, current PRs and live preview-info.json before continuing. The
+original 13 November two-repository hosting setup and its first publication records
+remain in Git history and registries/project.json as historical evidence; they are
+not the current operating instructions.

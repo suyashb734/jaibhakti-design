@@ -1,4 +1,4 @@
-"""Export only the static review assets, without private repository documents."""
+"""Build the review site artifact from this public design repository."""
 from pathlib import Path
 from urllib.parse import quote, unquote, urlsplit
 from html.parser import HTMLParser
@@ -106,7 +106,7 @@ def main():
             assert target.is_relative_to(out) and target.exists(),f'Missing exported link in {path.relative_to(out)}: {link}'
     manifest={'source_repository':REPOSITORY,'source_commit':commit,'working_tree_dirty':dirty,'built_at_utc':datetime.now(timezone.utc).isoformat(),'status':'design_review_snapshot_not_new_handoff_approval','search_indexing':'noindex requested; public hosting is not access control','files':[{'path':path.relative_to(out).as_posix(),'sha256':hashlib.sha256(path.read_bytes()).hexdigest()} for path in sorted(out.rglob('*')) if path.is_file()]}
     (out/'preview-info.json').write_text(json.dumps(manifest,indent=2)+'\n')
-    print(f'Exported {len(manifest["files"])} static preview files into {out.relative_to(ROOT)}. Private documentation and repository configuration were excluded.')
+    print(f'Exported {len(manifest["files"])} static review files into {out.relative_to(ROOT)}. Source documentation and repository configuration are linked rather than copied.')
 
 
 if __name__=='__main__':main()

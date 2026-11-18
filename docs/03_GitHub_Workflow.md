@@ -1,6 +1,6 @@
 # GitHub design management
 
-Use one private `jaibhakti-design` repository for the product contract, reference history and design handoff. Keep production web, app and backend code in their implementation repositories. Link implementation work to an exact design release and commit.
+Use one public `jaibhakti-design` repository for the product contract, reference history and design handoff. Keep production web, app and backend code in their implementation repositories. Link implementation work to an exact design release and commit.
 
 This keeps design changes reviewable without assuming the mobile stack or turning exported prototype code into a second production application. If the team later consolidates into a product monorepo, the design hub can move intact under a design directory while preserving its IDs and release links.
 
@@ -35,7 +35,7 @@ Repository maintenance is assigned to @suyashb734. Product, design, operations/p
 5. Record the product/design decision, operational confirmations where affected, and engineering acknowledgement of feasibility.
 6. Merge reviewable work without implying approval. Issue a versioned handoff manifest only when its scoped gate passes with human approval of that exact version.
 
-The private [project](https://github.com/users/suyashb734/projects/1) has Work type,
+The optional historical [project](https://github.com/users/suyashb734/projects/1) has Work type,
 Status (design state) and Implementation state fields. The design states distinguish
 Exploring, Draft, In review, Approved for build, Parked, Rejected and Superseded.
 Selection of an exploration is recorded in its EXP outcome, not as build approval.
@@ -46,7 +46,10 @@ prove deployment. Board fields are manual navigation, not authoritative signoff.
 
 The included CI job checks integrity and traceability. Configure required checks and PR reviews on main once collaborator roles and repository plan support are confirmed. Prefer no direct pushes for normal feature work. Use code owner review for shared contracts, tokens and release manifests. GitHub documents [PR templates, ownership and required checks](https://docs.github.com/en/pull-requests/reference/managing-and-standardizing-pull-requests) as review controls.
 
-Use private PR artifacts or an access-controlled preview for routine reviews. A private repository is not, by itself, a private GitHub Pages website; privately published Pages sites require the supported organization setup described in [GitHub’s visibility documentation](https://docs.github.com/en/enterprise-cloud@latest/pages/getting-started-with-github-pages/changing-the-visibility-of-your-github-pages-site). The public review site is served from a separate generated export repository; private source/decision documents remain private. See [connected collaboration](07_Preview_and_Collaboration.md).
+The public repository is the single workspace. Use issues and PRs as the shared
+queue. Publish review preview deploys a generated static artifact directly through
+GitHub Pages. No second repository or deploy key is needed. Source and decisions
+are public too. See [connected collaboration](07_Preview_and_Collaboration.md).
 
 ## Generated files and releases
 

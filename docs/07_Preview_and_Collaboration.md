@@ -1,45 +1,34 @@
-# Connected preview and collaborative editing
+# One public repository for design and preview
 
-The shared review URL is
-[suyashb734.github.io/jaibhakti-design-preview](https://suyashb734.github.io/jaibhakti-design-preview/).
-The URL stays the same as the exported designs change. Its content is a review
-preview, with original-final, draft and exploration statuses shown explicitly.
+Use [suyashb734/jaibhakti-design](https://github.com/suyashb734/jaibhakti-design)
+for source, assets, styling, issues, pull requests and review records. The canonical
+[preview](https://suyashb734.github.io/jaibhakti-design/) is deployed from the same
+repository. Source and branches are public. Only main updates the shared site.
 
-## How it stays connected
+## Publishing
 
-The private jaibhakti-design repository is the authoring source. Its Publish review
-preview Action validates a clean main revision, builds an explicit static export,
-and pushes the generated files to the public jaibhakti-design-preview repository.
-GitHub Pages publishes that repository's main branch. Relevant preview changes
-merged into main refresh the site; a branch by itself does not change the shared
-preview. The Action can also be run manually on main.
+Every main revision runs Publish review preview. It validates registries, generated
+original/style/walkthrough/catalogue output and tests, builds the static review
+artifact, then deploys it through GitHub Pages. The workflow uses GitHub's automatic
+Actions token and OIDC; no SSH key, personal token or second checkout is required.
 
-```mermaid
-flowchart LR
-  B[Task branch] --> P[Pull request and review]
-  P --> M[Merge to main]
-  M --> V[Validate and export]
-  V --> S[Same public preview URL]
-  M --> H[Separate human approval of exact design revision]
-  H --> R[Final engineering handoff release]
-```
+The page's preview-info.json identifies its exact source commit. A failed publish
+leaves the prior deployment available. Review task branches locally or in Codespaces;
+merge reviewed work into main to update the public site.
 
-The site shows the latest successfully published snapshot, not changes still being
-edited in a branch. Check [the publish workflow](https://github.com/suyashb734/jaibhakti-design/actions/workflows/publish-preview.yml)
-and the site's preview-info.json for the source commit. If publishing fails, the
-previous site remains available. Pages deployment can take a few minutes.
+The former jaibhakti-design-preview repository is retired as a read-only redirect
+for existing links. It is not an editing or publishing dependency. Work exclusively
+in jaibhakti-design; generated artifacts/ output stays ignored. Source documents
+are linked from the preview to this public repository.
 
-Public preview files, imagery and code are accessible to anyone and can be shared.
-Noindex requests are included; they are not authentication. The full documentation,
-requirements, decision records and source history stay in the private design
-repository. The account's current plan does not support Pages from this private
-repository, which is why the generated export has its own public repository.
+## Isha's access
 
-The automation uses a deploy key scoped to the public preview repository and an
-encrypted Actions secret in the private repository. No personal access token or
-private key belongs in source files. The maintainer can revoke the public deploy
-key and rotate DESIGN_PREVIEW_DEPLOY_KEY if needed. Never edit the generated public
-files to author a design; change the private source and publish from there.
+ishaamalhotra has active collaborator access: read/write source, push task branches,
+work with issues, review/merge PRs and manage releases. GitHub personal repositories
+have one owner and collaborators; owner-only settings cannot be delegated as a
+separate admin role. See [GitHub permissions](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/repository-access-and-collaboration/permission-levels-for-a-personal-account-repository).
+The repository issue/PR queue is shared; access to an external project board is not
+needed for normal collaboration.
 
 ## Does every exploration need its own permanent branch?
 

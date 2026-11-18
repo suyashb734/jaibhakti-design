@@ -66,7 +66,8 @@ history as the shared source of decisions.
   Branch isolation does not prevent conflicting product decisions.
 - Submit a PR. Merging preserves reviewed work; it does not approve a handoff.
   Relevant merges to main also publish the review preview, including open
-  explorations. Branch changes remain private until merged and published.
+  explorations. The repository and all branches are public; only main updates
+  the shared preview.
   Tooling/documentation maintenance also does not confer product approval.
 - Use each human's own GitHub access. Do not commit credentials, private agent
   transcripts or real devotee/payment information.
@@ -96,7 +97,8 @@ history as the shared source of decisions.
 - Run `python3 tools/build_original_design.py --check` and
   `python3 tools/build_style_guide.py --check` for original UI/styling work.
 - Read docs/07_Preview_and_Collaboration.md for branch-per-task editing and the
-  connected preview. Edit private source; do not author in the public export repo.
+  connected preview. This public repository contains both source and publishing.
+  Edit source files; generated artifacts/ output is not an authoring surface.
 - Generate transient evidence under ignored artifacts/. Retain approved evidence
   with the release; routine Actions artifacts expire.
 - For release work follow docs/05_Engineering_Handoff.md and run the handoff gate.
