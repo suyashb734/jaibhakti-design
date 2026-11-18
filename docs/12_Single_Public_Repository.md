@@ -24,12 +24,30 @@ not transfer ownership. See [GitHub's permission model](https://docs.github.com/
 
 The old jaibhakti-design-preview repository is retained only to preserve its history
 and redirect existing page links, including query strings and screen fragments.
-After the canonical deployment and redirect are verified, it is archived/read-only.
+The canonical deployment and redirects were verified; the old repository is now
+archived/read-only.
 All active work happens in jaibhakti-design. The obsolete SSH publishing secret,
-deploy key and cross-repository sync helper are retired after cutover.
+deploy key and cross-repository sync helper have been removed.
 
 The old private project board is optional. Repository issues and PRs provide the
 shared queue without another access requirement. Source, documentation, branches
 and the complete repository history are now public; a branch is not a private space.
 Original design authority, reference hashes and exact-version engineering approval
 rules remain unchanged.
+
+## Verified cutover
+
+The [first native deployment](https://github.com/suyashb734/jaibhakti-design/actions/runs/44292403112)
+published clean source revision `3ae322e1d9f49c85e7521c135c29838720f906a4`
+with 168 exported files. Browser checks covered all 12 original screen routes,
+the detail → cart → checkout flow, the styling guide, walkthrough and retained
+proposal. No script errors or broken images occurred on the checked guide pages.
+
+The [legacy redirect deployment](https://github.com/suyashb734/jaibhakti-design-preview/actions/runs/44292939269)
+published revision `bb25727cc125e1b2210f6dacf85304b1e502f89b`. All 12 tested
+legacy entry URLs reached their matching canonical page with query strings and
+anchors intact, including the original cart, after the old repository was archived.
+The original design source, assets, immutable references and `isha` branch were
+unchanged by this consolidation. Migration facts are retained in
+[registries/project.json](../registries/project.json). These publication checks
+do not issue a new design or engineering approval.
