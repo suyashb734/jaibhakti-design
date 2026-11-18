@@ -80,6 +80,48 @@
     "repository": "suyashb734/jaibhakti-design",
     "canonical_preview": "https://suyashb734.github.io/jaibhakti-design/",
     "preserved": "Original design, history, source branches including isha, requirements and prior approvals",
-    "authentication": "Native GitHub Actions token and OIDC for Pages"
+    "authentication": "Native GitHub Actions token and OIDC for Pages",
+    "completed_at_utc": "2026-11-18T11:16:57.880670+00:00",
+    "status": "complete",
+    "first_native_publication": {
+      "source_commit": "3ae322e1d9f49c85e7521c135c29838720f906a4",
+      "workflow_run_url": "https://github.com/suyashb734/jaibhakti-design/actions/runs/44292403112",
+      "pull_request_url": "https://github.com/suyashb734/jaibhakti-design/pull/12",
+      "exported_files": 168,
+      "original_screen_routes_verified": [
+        "home",
+        "sevaOrder",
+        "bhent",
+        "detail",
+        "cart",
+        "pay",
+        "success",
+        "seva",
+        "sevaSetup",
+        "mandate",
+        "sevaSuccess",
+        "profile"
+      ],
+      "original_journey_verified": "detail \u2192 cart \u2192 checkout \u2192 select Google Pay (design prototype only)",
+      "script_errors": []
+    },
+    "legacy_preview_retirement": {
+      "repository": "suyashb734/jaibhakti-design-preview",
+      "redirect_commit": "bb25727cc125e1b2210f6dacf85304b1e502f89b",
+      "pull_request_url": "https://github.com/suyashb734/jaibhakti-design-preview/pull/1",
+      "workflow_run_url": "https://github.com/suyashb734/jaibhakti-design-preview/actions/runs/44292939269",
+      "archived": true,
+      "live_redirects_verified_after_archive": 12,
+      "query_strings_and_fragments_preserved": true,
+      "history_and_old_media_preserved": true
+    },
+    "obsolete_publishing_credentials_removed": true,
+    "original_assets_and_source_unchanged_from": "571bcc201cdeb2d959454bb15f6425cf1a1ba8c9",
+    "isha_branch_preserved_at": "571bcc201cdeb2d959454bb15f6425cf1a1ba8c9",
+    "collaborator_permission_verified": {
+      "login": "ishaamalhotra",
+      "permission": "write",
+      "personal_repository_maximum": true
+    }
   }
 }

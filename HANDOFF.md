@@ -28,6 +28,18 @@ source branch is preserved; inspect its current state before working on it.
 Use repository issues/PRs as the shared queue. The older separate project board is
 optional and is not required for Isha's normal design workflow.
 
+## Verified consolidation
+
+The first native deployment published clean source
+3ae322e1d9f49c85e7521c135c29838720f906a4 with 168 files. All 12 original
+screen routes and the detail/cart/checkout journey passed browser checks. The old
+preview repository is archived; all 12 tested entry URLs still redirect with query
+strings and anchors intact after archive. The obsolete source publishing secret
+and old deploy key have been removed. Isha's active write access was verified.
+See docs/12_Single_Public_Repository.md and registries/project.json for exact
+source/deployment references. Later documentation merges publish newer snapshots;
+read the live preview-info.json rather than treating the first deployment as latest.
+
 ## Design authority
 
 This repository is a design asset. Production implementations live elsewhere.
