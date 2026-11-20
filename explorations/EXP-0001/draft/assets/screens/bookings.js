@@ -44,12 +44,12 @@
     } else if (special === "error") {
       content = `<div class="empty-state"><div class="empty-icon">${icon("alert")}</div><h2>We couldn’t load your bookings</h2><p>Your bookings are safe. Check your connection and try again.</p>${button("Try Again", `bookings/${category}`)}</div>`;
     } else if (category === "nirantar") {
-      content = `<p class="list-intro"><strong>3 ongoing sevas</strong> · Your sankalp continues until you cancel AutoPay in your UPI app.</p>${notice("1 seva needs payment attention", '<a href="#plan/N3">View Meera Sharma’s payment details</a>', "red", "alert")}${Object.values(plans).map(planCard).join("")}`;
+      content = `<p class="list-intro"><strong>4 ongoing sevas</strong> · Your Daan Seva continues until you cancel AutoPay in your UPI app.</p>${notice("1 seva needs payment attention", '<a href="#plan/N3">View Meera Sharma’s payment details</a>', "red", "alert")}${[...Object.values(plans).map((p) => ({ date: p.next, html: planCard(p) })), ...upcoming.filter((o) => !o.parent).map((o) => ({ date: o.date, html: occurrenceCard(o) }))].sort((a, b) => (a.date || "9999").localeCompare(b.date || "9999")).map((x) => x.html).join("")}`;
     } else if (category === "upcoming") {
       content = `<p class="list-intro"><strong>2 upcoming sevas</strong> · Nearest date first. Only registered or scheduled sevas appear here.</p>${upcoming.map(occurrenceCard).join("")}`;
     } else {
       const shown = completed.slice(0, state.completedLimit);
-      content = `<p class="list-intro"><strong>${completed.length} completed sevas</strong> · Each date has its own certificate and videos.</p>${shown.map(occurrenceCard).join("")}${state.completedLimit < completed.length ? action("Load Older Sevas", "older", "secondary") : ""}<p class="list-end">Showing ${shown.length} of ${completed.length} performed sevas</p>`;
+      content = `${shown.map(occurrenceCard).join("")}${state.completedLimit < completed.length ? action("Load Older Sevas", "older", "secondary") : ""}<p class="list-end">Showing ${shown.length} of ${completed.length} performed sevas</p>`;
     }
     return `<div class="screen"><header><a href="#home" class="circle-button" aria-label="Back to Home">${icon("back")}</a><h1 tabindex="-1">My Bookings</h1></header>${tabs(category)}<div class="body fill" role="tabpanel" id="booking-panel" aria-labelledby="tab-${category}">${content}</div></div>`;
   }

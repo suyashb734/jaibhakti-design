@@ -296,14 +296,15 @@
     if (!tab || !["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key))
       return;
     event.preventDefault();
-    const ids = ["nirantar", "upcoming", "completed"],
+    const ids = ["nirantar", "completed"],
+
       i = ids.indexOf(tab.dataset.tab),
       n =
         event.key === "Home"
           ? 0
           : event.key === "End"
-            ? 2
-            : (i + (event.key === "ArrowRight" ? 1 : 2)) % 3;
+            ? 1
+            : (i + 1) % ids.length;
     location.hash = "bookings/" + ids[n];
     setTimeout(() => document.getElementById("tab-" + ids[n])?.focus(), 0);
   });

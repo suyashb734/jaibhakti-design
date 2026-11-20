@@ -30,7 +30,7 @@
             ? "bookings/completed"
             : o.status === "Discontinued"
               ? "history/N3"
-              : "bookings/upcoming",
+              : "bookings/nirantar",
       },
     );
   }

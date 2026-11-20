@@ -103,7 +103,7 @@
     return `<div class="beneficiary"><strong>For ${esc(p.beneficiary)}</strong><span class="gotra">${esc(p.gotra)} gotra</span></div>`;
   }
   function progress(p) {
-    return `<div class="progress-wrap"><div class="progress-heading"><strong>Recommended sankalp</strong><span>${p.completed} of ${p.target}</span></div><div class="progress-track" role="progressbar" aria-label="Recommended milestone" aria-valuemin="0" aria-valuemax="${p.target}" aria-valuenow="${p.completed}" aria-valuetext="${p.completed} of ${p.target} recommended ${esc(p.unit)} completed"><div class="progress-fill" style="width:${Math.min(100, (p.completed / p.target) * 100)}%"></div></div><p class="progress-copy">${p.completed} of ${p.target} recommended ${esc(p.unit)} completed</p></div>`;
+    return `<div class="progress-wrap"><div class="progress-heading"><strong>Recommended Daan Seva</strong><span>${p.completed} of ${p.target}</span></div><div class="progress-track" role="progressbar" aria-label="Recommended milestone" aria-valuemin="0" aria-valuemax="${p.target}" aria-valuenow="${p.completed}" aria-valuetext="${p.completed} of ${p.target} recommended ${esc(p.unit)} completed"><div class="progress-fill" style="width:${Math.min(100, (p.completed / p.target) * 100)}%"></div></div><p class="progress-copy">${p.completed} of ${p.target} recommended ${esc(p.unit)} completed</p></div>`;
   }
   function paymentBadge(p) {
     return badge(
@@ -130,12 +130,12 @@
   }
   function occurrenceCard(o) {
     const done = o.status === "Performed";
-    return `<article class="card" data-occurrence="${esc(o.id)}"><div class="type-row"><span class="type-label">${o.parent ? "Nirantar" : "One time"}</span>${badge(done ? "Performed" : o.status, done ? "green" : "")}</div>${identity(o)}${beneficiary(o)}<p class="occurrence-date">${done ? "Performed · " : ""}${esc(date(o.date))}</p><p class="offering">${esc(o.offering)}</p>${done ? `<div class="card-footer"><span>Amount paid</span><strong>₹${o.amount}${o.intro ? " · Introductory price" : ""}</strong></div>${evidenceSummary(o)}${!o.videos && o.certificate === "Preparing" ? `<p class="micro muted spaced">Your certificate and videos will be available within 48 hours of completion.</p>` : ""}<div class="button-row">${o.videos ? button("Watch Videos", `videos/${o.id}`, "", "play") : button("View Seva Details", `occurrence/${o.id}`, "")}${o.certificate === "Ready" ? button("View Certificate", `certificate/${o.id}`, "secondary") : ""}</div>` : button("Track Seva Details", `occurrence/${o.id}`, "", "arrow")}</article>`;
+    return `<article class="card" data-occurrence="${esc(o.id)}"><div class="type-row">${o.parent ? '<span class="type-label">Nirantar</span>' : badge("One time", "brown")}${badge(done ? "Performed" : o.status, done ? "green" : "")}</div>${identity(o)}${beneficiary(o)}<p class="occurrence-date">${done ? "Performed · " : ""}${esc(date(o.date))}</p><p class="offering">${esc(o.offering)}</p>${done ? `<div class="card-footer"><span>Amount paid</span><strong>₹${o.amount}${o.intro ? " · Introductory price" : ""}</strong></div>${evidenceSummary(o)}${!o.videos && o.certificate === "Preparing" ? `<p class="micro muted spaced">Your certificate and videos will be available within 48 hours of completion.</p>` : ""}<div class="button-row">${o.videos ? button("Watch Videos", `videos/${o.id}`, "", "play") : button("View Seva Details", `occurrence/${o.id}`, "")}${o.certificate === "Ready" ? button("View Certificate", `certificate/${o.id}`, "secondary") : ""}</div>` : button("Track Seva Details", `occurrence/${o.id}`, "", "arrow")}</article>`;
   }
   function tabs(selected) {
     return `<nav class="tabs" role="tablist" aria-label="Booking categories">${[
       ["nirantar", "Nirantar Sevas"],
-      ["upcoming", "Upcoming"],
+      [],
       ["completed", "Completed"],
     ]
       .map(
