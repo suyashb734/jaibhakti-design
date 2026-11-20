@@ -1815,3 +1815,94 @@ h1[tabindex="-1"]:focus {
     height: 44px;
   }
 }
+/* ---- EXP-0001 Option A refinements (appended) ---- */
+.date-rail {
+  scrollbar-width: thin;
+  scrollbar-color: #c65522 #efe3cf;
+  padding-bottom: 12px;
+}
+.date-rail::-webkit-scrollbar {
+  height: 6px;
+}
+.date-rail::-webkit-scrollbar-track {
+  background: #efe3cf;
+  border-radius: 6px;
+}
+.date-rail::-webkit-scrollbar-thumb {
+  background: #c65522;
+  border-radius: 6px;
+}
+.detail-hero .progress-wrap {
+  margin: 14px 0 6px;
+}
+.detail-hero > .micro {
+  margin-top: 8px;
+}
+.asset-preview {
+  display: block;
+  margin: 14px auto 0;
+  border: 1px solid #e3d2b4;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fffaf0;
+  box-shadow: 0 2px 8px rgba(111, 45, 16, 0.08);
+}
+.asset-preview.portrait {
+  max-width: 230px;
+}
+.asset-preview.large {
+  margin-top: 12px;
+}
+.asset-preview.large.portrait {
+  max-width: 320px;
+}
+.asset-art {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.video-thumb {
+  position: relative;
+  display: block;
+  margin: 14px auto 0;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid #735334;
+}
+.video-thumb.portrait {
+  max-width: 160px;
+}
+.video-thumb svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.video-item + .video-item {
+  margin-top: 22px;
+}
+.asset-preview + .button-row,
+.video-thumb + .button-row,
+.asset-preview.large ~ .button-row {
+  margin-top: 14px;
+}
+.video-frame.landscape {
+  aspect-ratio: 16 / 9;
+}
+.video-frame.portrait {
+  aspect-ratio: 9 / 16;
+  max-width: 260px;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: contain;
+}
+.sample-switch {
+  font-size: 10px;
+  color: var(--muted);
+  margin: 6px 0 10px;
+}
+.sample-switch strong {
+  color: var(--ink);
+}
+.asset-preview.large + .small {
+  margin-top: 12px;
+}

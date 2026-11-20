@@ -161,11 +161,62 @@
     items.sort((a, b) => a.date.localeCompare(b.date));
     return `<div class="section-title" style="margin-top:0"><span class="micro muted">Nirantar Daan Seva</span><a href="#plan/${esc(o.parent)}">View booking</a></div><nav class="date-rail" aria-label="Seva dates">${items.map((i) => `<a href="#occurrence/${esc(i.id)}" class="date-pill ${i.status === "Performed" ? "done" : i.status === "Discontinued" ? "failed" : ""}" ${i.date === o.date ? 'aria-current="date"' : ""} aria-label="${esc(date(i.date))}, ${esc(i.status)}${i.date === o.date ? ", selected" : ""}">${esc(shortDate(i.date))}<small>${icon(i.status === "Performed" ? "check" : i.status === "Discontinued" ? "close" : "calendar")}${i.status === "Performed" ? "Performed" : esc(i.status)}</small></a>`).join("")}</nav>`;
   }
+  const sampleTimes = ["10:15 AM", "11:40 AM", "2:05 PM", "4:30 PM", "6:50 PM", "8:20 PM"];
+  const sampleTime = (ref) =>
+    sampleTimes[Number(String(ref).replace(/\D/g, "")) % sampleTimes.length];
+  const SEVA_TIME = "9:00 AM";
+  function certificateSvg(o, standalone = false) {
+    const land = o.orient === "landscape";
+    const [w, h] = land ? [1100, 800] : [900, 1100];
+    const rows = land
+      ? [["Jai Bhakti", 120, 28], ["Certificate of Daan Seva", 205, 46], ["This seva was performed for", 270, 22], [o.beneficiary, 345, 40], [`${o.gotra} gotra`, 390, 22], [o.name, 470, 20], [o.temple, 510, 18], [formatted(o.date), 580, 24], [`Seva reference ${o.ref}`, 650, 16], ["SAMPLE CERTIFICATE", 725, 20, "#a78a67"]]
+      : [["Jai Bhakti", 160, 30], ["Certificate of Daan Seva", 260, 52], ["This seva was performed for", 345, 24], [o.beneficiary, 430, 44], [`${o.gotra} gotra`, 480, 25], [o.name, 600, 22], [o.temple, 655, 20], [formatted(o.date), 740, 28], [`Seva reference ${o.ref}`, 850, 18], ["SAMPLE CERTIFICATE", 970, 24, "#a78a67"]];
+    const text = rows
+      .map(([t, y, s, f]) => `<text x="${w / 2}" y="${y}" font-size="${s}"${f ? ` fill="${f}"` : ""}>${esc(t)}</text>`)
+      .join("");
+    const attrs = standalone
+      ? `xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}"`
+      : `class="asset-art" role="img" aria-label="${esc("Certificate for " + o.beneficiary + ", " + formatted(o.date))}"`;
+    return `<svg ${attrs} viewBox="0 0 ${w} ${h}"><rect width="${w}" height="${h}" fill="#fffaf0"/><rect x="35" y="35" width="${w - 70}" height="${h - 70}" fill="none" stroke="#ac8250"/><rect x="50" y="50" width="${w - 100}" height="${h - 100}" fill="none" stroke="#d3ba95"/><g text-anchor="middle" fill="#3a1604" font-family="Poppins,sans-serif">${text}</g></svg>`;
+  }
+  function posterSvg(land, standalone = false) {
+    const [w, h] = land ? [640, 400] : [360, 640];
+    const move = land ? "translate(260 105)" : "translate(120 260)";
+    const id = land ? "poster-land" : "poster-port";
+    const attrs = standalone
+      ? `xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}"`
+      : 'aria-hidden="true"';
+    return `<svg ${attrs} viewBox="0 0 ${w} ${h}"><defs><radialGradient id="${id}"><stop stop-color="#835328"/><stop offset="1" stop-color="#38200f"/></radialGradient></defs><rect width="${w}" height="${h}" fill="url(#${id})"/><rect x="15" y="15" width="${w - 30}" height="${h - 30}" rx="18" fill="none" stroke="#a77c43" opacity=".6"/><g transform="${move} scale(5)" fill="none" stroke="#efc877" stroke-width=".65" stroke-linecap="round" stroke-linejoin="round">${paths.temple}</g></svg>`;
+  }
+  const orientClass = (o) => (o.orient === "landscape" ? "landscape" : "portrait");
+  const certificatePreview = (o, link = true) =>
+    link
+      ? `<a class="asset-preview ${orientClass(o)}" href="#certificate/${esc(o.id)}" aria-label="Open certificate for ${esc(date(o.date))}">${certificateSvg(o)}</a>`
+      : `<div class="asset-preview large ${orientClass(o)}">${certificateSvg(o)}</div>`;
+  const videoThumb = (o, n = 1, total = 1) =>
+    `<a class="video-thumb ${orientClass(o)}" href="#videos/${esc(o.id)}" aria-label="Play seva video ${n} of ${total}, ${esc(date(o.date))}">${posterSvg(o.orient === "landscape")}<span class="play-control">${icon("play")}</span></a>`;
+  function assetButtons(o, kind, n = 1) {
+    const download =
+      kind === "certificate"
+        ? action("Download", "certificate-download", "", `data-id="${esc(o.id)}"`, "download")
+        : `<a class="button" href="assets/sample-seva-preview.webm" download="sample-seva-video-${n}.webm">${icon("download")}Download</a>`;
+    return `<div class="button-row">${download}${action("Share", "asset-share", "secondary", `data-id="${esc(o.id)}" data-kind="${kind}"`, "share")}</div>`;
+  }
+  const videoBlocks = (o) =>
+    Array.from(
+      { length: o.videos },
+      (_, i) =>
+        `<div class="video-item">${o.videos > 1 ? `<p class="micro muted spaced">Video ${i + 1} of ${o.videos}</p>` : ""}${videoThumb(o, i + 1, o.videos)}${assetButtons(o, "video", i + 1)}</div>`,
+    ).join("");
+  const sampleSwitch = (kind, o) => {
+    const route = kind === "certificate" ? "certificate" : "videos";
+    return `<p class="sample-switch">Sample layout: ${o.orient === "landscape" ? `<a href="#${route}/C1">Portrait</a> · <strong>Landscape</strong>` : `<strong>Portrait</strong> · <a href="#${route}/landscape">Landscape</a>`}</p>`;
+  };
   function timeline(o) {
     if (o.status === "Discontinued")
-      return `<ol class="timeline"><li class="failed"><span class="timeline-dot">${icon("close")}</span><div><strong>Seva discontinued</strong><p>Payment was unsuccessful for ${esc(date(o.date))}. This seva was not performed.</p></div></li></ol>`;
+      return `<ol class="timeline"><li class="failed"><span class="timeline-dot">${icon("close")}</span><div><strong>Seva discontinued</strong><p>Payment was unsuccessful for the seva on ${esc(date(o.date))} · ${SEVA_TIME}. This seva was not performed.</p></div></li></ol>`;
     const done = o.status === "Performed";
-    return `<ol class="timeline"><li class="done"><span class="timeline-dot">${icon("check")}</span><div><strong>Seva booked</strong><p>Payment received · ${esc(date(o.booked))}</p></div></li><li class="${done ? "done" : o.status === "Scheduled" ? "current" : ""}"><span class="timeline-dot">${icon(done ? "check" : "calendar")}</span><div><strong>${o.status === "Registered" ? "Schedule confirmation pending" : "Seva scheduled"}</strong><p>${esc(date(o.date))}</p></div></li><li class="${done ? "done" : ""}"><span class="timeline-dot">${icon(done ? "check" : "temple")}</span><div><strong>${done ? "Seva performed" : "Seva to be performed"}</strong><p>${done ? esc(date(o.date)) + " · 9:00 AM" : "Updates will appear here after the seva."}</p></div></li></ol>`;
+    return `<ol class="timeline"><li class="done"><span class="timeline-dot">${icon("check")}</span><div><strong>Seva booked</strong><p>Payment received · ${esc(date(o.booked))} · ${sampleTime(o.ref)}</p></div></li><li class="${done ? "done" : o.status === "Scheduled" ? "current" : ""}"><span class="timeline-dot">${icon(done ? "check" : "calendar")}</span><div><strong>${o.status === "Registered" ? "Schedule confirmation pending" : "Seva scheduled"}</strong><p>${esc(date(o.date))} · ${SEVA_TIME}</p></div></li><li class="${done ? "done" : ""}"><span class="timeline-dot">${icon(done ? "check" : "temple")}</span><div><strong>${done ? "Seva performed" : "Seva to be performed"}</strong><p>${done ? esc(date(o.date)) + " · " + SEVA_TIME : "Planned for " + esc(date(o.date)) + " · " + SEVA_TIME + ". Updates will appear here after the seva."}</p></div></li></ol>`;
   }
   function instructions(o) {
     if (o.name.includes("Gajalakshmi"))
@@ -175,7 +226,7 @@
   function assetSections(o) {
     const performed = o.status === "Performed";
     if (!performed) return "";
-    return `<section class="detail-section"><h2>Certificate and videos</h2>${o.certificate === "Preparing" && !o.videos ? notice("Your seva has been performed", "Your certificate and seva videos are being prepared. They will be available within 48 hours of completion.", "", "clock") : ""}<div class="card"><div class="asset-card"><span class="asset-icon">${icon("certificate")}</span><div><h3>Seva certificate</h3>${badge(o.certificate === "Ready" ? "Certificate ready" : "Preparing", o.certificate === "Ready" ? "green" : "", o.certificate === "Ready" ? "check" : "clock")}<p class="spaced">${o.certificate === "Ready" ? "Your certificate for this performed date." : "Available within 48 hours of completion."}</p></div></div>${o.certificate === "Ready" ? button("View Certificate", `certificate/${o.id}`, "secondary") : ""}</div><div class="card"><div class="asset-card"><span class="asset-icon">${icon("video")}</span><div><h3>Seva videos</h3>${badge(o.videos ? `${o.videos} videos ready` : o.overdue ? "Taking longer than expected" : "Preparing", o.videos ? "green" : o.overdue ? "red" : "", o.videos ? "check" : "clock")}<p class="spaced">${o.videos ? "Watch, download and share each video." : o.overdue ? "More than 48 hours have passed since completion. Contact support for an update." : "Available within 48 hours of completion."}</p></div></div>${o.videos ? button("Watch Videos", `videos/${o.id}`, "", "play") : o.overdue ? button("Contact Support", `support/${o.ref}`, "secondary", "chat") : ""}</div></section>`;
+    return `<section class="detail-section"><h2>Certificate and videos</h2>${o.certificate === "Preparing" && !o.videos ? notice("Your seva has been performed", "Your certificate and seva videos are being prepared. They will be available within 48 hours of completion.", "", "clock") : ""}<div class="card"><div class="asset-card"><span class="asset-icon">${icon("certificate")}</span><div><h3>Seva certificate</h3>${badge(o.certificate === "Ready" ? "Certificate ready" : "Preparing", o.certificate === "Ready" ? "green" : "", o.certificate === "Ready" ? "check" : "clock")}<p class="spaced">${o.certificate === "Ready" ? "Your certificate for this performed date." : "Available within 48 hours of completion."}</p></div></div>${o.certificate === "Ready" ? certificatePreview(o) + assetButtons(o, "certificate") : ""}</div><div class="card"><div class="asset-card"><span class="asset-icon">${icon("video")}</span><div><h3>Seva videos</h3>${badge(o.videos ? `${o.videos} videos ready` : o.overdue ? "Taking longer than expected" : "Preparing", o.videos ? "green" : o.overdue ? "red" : "", o.videos ? "check" : "clock")}<p class="spaced">${o.videos ? "Watch, download and share each video." : o.overdue ? "More than 48 hours have passed since completion. Contact support for an update." : "Available within 48 hours of completion."}</p></div></div>${o.videos ? videoBlocks(o) : o.overdue ? button("Contact Support", `support/${o.ref}`, "secondary", "chat") : ""}</div></section>`;
   }
   function bill(o) {
     if (o.status === "Discontinued")
@@ -215,6 +266,13 @@
     timeline,
     instructions,
     assetSections,
+    certificateSvg,
+    posterSvg,
+    certificatePreview,
+    videoThumb,
+    assetButtons,
+    videoBlocks,
+    sampleSwitch,
     bill,
     rating,
   });

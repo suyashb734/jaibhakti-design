@@ -380,6 +380,8 @@
         status: "Registered",
       };
     }
+    if (id === "landscape")
+      return { ...occurrences.C1, id, orient: "landscape" };
     if (id === "registered")
       return { ...occurrences.U1, id, status: "Registered" };
     if (id === "retry-success")
