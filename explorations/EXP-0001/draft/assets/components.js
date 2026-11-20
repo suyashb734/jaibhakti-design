@@ -135,7 +135,6 @@
   function tabs(selected) {
     return `<nav class="tabs" role="tablist" aria-label="Booking categories">${[
       ["nirantar", "Nirantar Sevas"],
-      [],
       ["completed", "Completed"],
     ]
       .map(
