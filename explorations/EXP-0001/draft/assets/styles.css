@@ -1906,3 +1906,28 @@ h1[tabindex="-1"]:focus {
 .asset-preview.large + .small {
   margin-top: 12px;
 }
+
+/* ---- EXP-0001 booking card top row (appended) ---- */
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+.next-date {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+  text-align: right;
+}
+.next-date span,
+.next-date small {
+  font-size: 10px;
+  color: var(--muted);
+}
+.next-date strong {
+  font-size: 12px;
+  font-weight: 600;
+}

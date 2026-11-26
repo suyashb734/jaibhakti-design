@@ -122,19 +122,20 @@
   }
   function planCard(p) {
     const active = p.status === "Active";
-    const nextLabel = p.next ? date(p.next) : "No upcoming seva registered";
-    return `<article class="card ${p.status === "Payment retrying" ? "soft" : ""}" data-plan="${esc(p.id)}"><div class="type-row"><span class="type-label">Nirantar Daan Seva</span>${badge(p.cadence, "brown")}</div>${identity(p)}${beneficiary(p)}<p class="schedule">${icon("repeat")}${esc(p.schedule)}</p>${progress(p)}<div class="data-rows">${row("Next seva", nextLabel, p.next ? p.registration : "")}</div>${p.status === "Payment retrying" ? notice("Payment retrying", `The 10 November seva was discontinued. We will retry until ${esc(formatted(p.retryEnd))} for the next eligible seva.`, "red", "alert") : ""}${button(active ? "View Details" : p.status === "Payment retrying" ? "View Payment Details" : p.status === "Inactive" ? "Restart Nirantar Seva" : "Book This Seva Again", active || p.status === "Payment retrying" ? `plan/${p.id}` : "details", "", active ? "arrow" : "")}</article>`;
+    const nextLabel = p.next ? date(p.next) : "None registered";
+    return `<article class="card ${p.status === "Payment retrying" ? "soft" : ""}" data-plan="${esc(p.id)}"><div class="card-top">${badge(p.cadence, "brown")}<div class="next-date"><span>Next seva</span><strong>${esc(nextLabel)}</strong></div></div>${identity(p)}${beneficiary(p)}<p class="schedule">${icon("repeat")}${esc(p.schedule)}</p>${progress(p)}${p.status === "Payment retrying" ? notice("Payment retrying", `The 10 November seva was discontinued. We will retry until ${esc(formatted(p.retryEnd))} for the next eligible seva.`, "red", "alert") : ""}${button(active ? "View Details" : p.status === "Payment retrying" ? "View Payment Details" : p.status === "Inactive" ? "Restart Nirantar Seva" : "Book This Seva Again", active || p.status === "Payment retrying" ? `plan/${p.id}` : "details", "", active ? "arrow" : "")}</article>`;
   }
   function evidenceSummary(o) {
     return `<div class="asset-status"><div>Certificate<strong class="${o.certificate === "Ready" ? "ready" : ""}">${icon(o.certificate === "Ready" ? "check" : "clock")}${esc(o.certificate)}</strong></div><div>Seva videos<strong class="${o.videos ? "ready" : ""}">${icon(o.videos ? "check" : "clock")}${o.videos ? `${o.videos} ${o.videos === 1 ? "video" : "videos"} ready` : "Preparing"}</strong></div></div>`;
   }
   function occurrenceCard(o) {
     const done = o.status === "Performed";
-    return `<article class="card" data-occurrence="${esc(o.id)}"><div class="type-row">${o.parent ? '<span class="type-label">Nirantar</span>' : badge("One time", "brown")}${badge(done ? "Performed" : o.status, done ? "green" : "")}</div>${identity(o)}${beneficiary(o)}<p class="occurrence-date">${done ? "Performed · " : ""}${esc(date(o.date))}</p><p class="offering">${esc(o.offering)}</p>${done ? `<div class="card-footer"><span>Amount paid</span><strong>₹${o.amount}${o.intro ? " · Introductory price" : ""}</strong></div>${evidenceSummary(o)}${!o.videos && o.certificate === "Preparing" ? `<p class="micro muted spaced">Your certificate and videos will be available within 48 hours of completion.</p>` : ""}<div class="button-row">${o.videos ? button("Watch Videos", `videos/${o.id}`, "", "play") : button("View Seva Details", `occurrence/${o.id}`, "")}${o.certificate === "Ready" ? button("View Certificate", `certificate/${o.id}`, "secondary") : ""}</div>` : button("Track Seva Details", `occurrence/${o.id}`, "", "arrow")}</article>`;
+    const cadence = ((window.JBDesign.getPlan && o.parent && window.JBDesign.getPlan(o.parent)) || {}).cadence || "Weekly";
+    return `<article class="card" data-occurrence="${esc(o.id)}"><div class="card-top">${o.parent ? badge(cadence, "brown") : badge("One time", "brown")}<div class="next-date"><span>${done ? "Performed" : "Next seva"}</span><strong>${esc(date(o.date))}</strong></div></div>${identity(o)}${beneficiary(o)}<p class="offering">${esc(o.offering)}</p>${done ? `<div class="card-footer"><span>Amount paid</span><strong>₹${o.amount}${o.intro ? " · Introductory price" : ""}</strong></div>${evidenceSummary(o)}${!o.videos && o.certificate === "Preparing" ? `<p class="micro muted spaced">Your certificate and videos will be available within 48 hours of completion.</p>` : ""}<div class="button-row">${o.videos ? button("Watch Videos", `videos/${o.id}`, "", "play") : button("View Seva Details", `occurrence/${o.id}`, "")}${o.certificate === "Ready" ? button("View Certificate", `certificate/${o.id}`, "secondary") : ""}</div>` : button("Track Seva Details", `occurrence/${o.id}`, "", "arrow")}</article>`;
   }
   function tabs(selected) {
     return `<nav class="tabs" role="tablist" aria-label="Booking categories">${[
-      ["nirantar", "Nirantar Sevas"],
+      ["nirantar", "Upcoming Sevas"],
       ["completed", "Completed"],
     ]
       .map(
