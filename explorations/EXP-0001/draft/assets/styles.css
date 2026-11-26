@@ -1931,3 +1931,16 @@ h1[tabindex="-1"]:focus {
   font-size: 12px;
   font-weight: 600;
 }
+
+/* ---- EXP-0001 Inactive Sevas grouping (appended) ---- */
+.group-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: #8b441b;
+  margin: 18px 0 4px;
+}
+.group-note {
+  font-size: 11px;
+  color: var(--muted);
+  margin: 0 0 12px;
+}

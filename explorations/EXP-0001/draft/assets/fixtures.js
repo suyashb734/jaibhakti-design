@@ -61,6 +61,23 @@
       charge: 101,
       regular: 101,
     },
+    N4: {
+      id: "N4",
+      ref: "JB-N1047",
+      name: "Maa Gajalakshmi Kumkum Arpan Seva",
+      temple: "Gajalakshmi Mata Mandir, Ujjain",
+      beneficiary: "Anjali Sharma",
+      gotra: "Vashishtha",
+      cadence: "Weekly",
+      schedule: "Every Sunday",
+      completed: 3,
+      target: 7,
+      unit: "weeks",
+      status: "Cancelled",
+      next: null,
+      charge: 101,
+      regular: 101,
+    },
   };
   const occurrences = {
     U1: {
@@ -341,6 +358,22 @@
       ].sort((a, b) => b.date.localeCompare(a.date));
     if (id === "retry-success")
       return [getOccurrence("retry-success"), ...historyItems("N3")];
+    if (id === "N4")
+      return ["2026-11-01", "2026-10-25", "2026-10-18"].map((d, i) => ({
+        ...occurrences.C5,
+        id: `A${i}`,
+        ref: `JB-A${i + 2050}`,
+        parent: "N4",
+        name: plans.N4.name,
+        temple: plans.N4.temple,
+        beneficiary: "Anjali Sharma",
+        gotra: "Vashishtha",
+        date: d,
+        booked: d,
+        offering: "1 × Kumkum arpan",
+        amount: i === 2 ? 51 : 101,
+        intro: i === 2,
+      }));
     if (id === "N3")
       return [
         occurrences.D1,
@@ -367,6 +400,7 @@
         historyItems("milestone").find((o) => o.id === id) || occurrences.C1
       );
     if (/^M\d$/.test(id)) return historyItems("N3").find((o) => o.id === id);
+    if (/^A\d$/.test(id)) return historyItems("N4").find((o) => o.id === id);
     if (id === "checkout") {
       const p = checkoutIdentity();
       return {

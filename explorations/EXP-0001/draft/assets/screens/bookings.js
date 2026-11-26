@@ -44,7 +44,19 @@
     } else if (special === "error") {
       content = `<div class="empty-state"><div class="empty-icon">${icon("alert")}</div><h2>We couldn’t load your bookings</h2><p>Your bookings are safe. Check your connection and try again.</p>${button("Try Again", `bookings/${category}`)}</div>`;
     } else if (category === "nirantar") {
-      content = `<p class="list-intro"><strong>4 ongoing sevas</strong> · Your Daan Seva continues until you cancel AutoPay in your UPI app.</p>${notice("1 seva needs payment attention", '<a href="#plan/N3">View Meera Sharma’s payment details</a>', "red", "alert")}${[...Object.values(plans).map((p) => ({ date: p.next, html: planCard(p) })), ...upcoming.filter((o) => !o.parent).map((o) => ({ date: o.date, html: occurrenceCard(o) }))].sort((a, b) => (a.date || "9999").localeCompare(b.date || "9999")).map((x) => x.html).join("")}`;
+      const all = Object.values(plans),
+        ended = (p) => ["Cancelled", "Inactive", "Payment retrying"].includes(p.status),
+        ongoing = [
+          ...all.filter((p) => !ended(p)).map((p) => ({ date: p.next, html: planCard(p) })),
+          ...upcoming.filter((o) => !o.parent).map((o) => ({ date: o.date, html: occurrenceCard(o) })),
+        ].sort((a, b) => (a.date || "9999").localeCompare(b.date || "9999")),
+        cancelled = all.filter((p) => p.status === "Cancelled"),
+        failed = all.filter((p) => ["Inactive", "Payment retrying"].includes(p.status)),
+        group = (title, copy, items) =>
+          items.length
+            ? `<h3 class="group-title">${title} · ${items.length}</h3><p class="group-note">${copy}</p>${items.map(planCard).join("")}`
+            : "";
+      content = `<p class="list-intro"><strong>${ongoing.length} ongoing sevas</strong> · Your Daan Seva continues until you cancel AutoPay in your UPI app.</p>${notice("1 seva needs payment attention", '<a href="#plan/N3">View Meera Sharma’s payment details</a>', "red", "alert")}${ongoing.map((x) => x.html).join("")}${cancelled.length || failed.length ? `<div class="section-title"><h2>Inactive Sevas</h2></div>${group("AutoPay cancelled", "You cancelled AutoPay in your UPI app.", cancelled)}${group("AutoPay payment failed", "AutoPay payment could not be completed.", failed)}` : ""}`;
     } else if (category === "upcoming") {
       content = `<p class="list-intro"><strong>2 upcoming sevas</strong> · Nearest date first. Only registered or scheduled sevas appear here.</p>${upcoming.map(occurrenceCard).join("")}`;
     } else {
