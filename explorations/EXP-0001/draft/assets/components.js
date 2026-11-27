@@ -134,7 +134,7 @@
   function occurrenceCard(o) {
     const done = o.status === "Performed";
     const cadence = ((window.JBDesign.getPlan && o.parent && window.JBDesign.getPlan(o.parent)) || {}).cadence || "Weekly";
-    return `<article class="card" data-occurrence="${esc(o.id)}"><div class="card-top">${o.parent ? badge(cadence, "brown") : badge("One time", "brown")}<div class="next-date"><span>${done ? "Performed" : "Next seva"}</span><strong>${esc(date(o.date))}</strong></div></div>${identity(o)}${beneficiary(o)}<p class="offering">${esc(o.offering)}</p>${done ? `<div class="card-footer"><span>Amount paid</span><strong>₹${o.amount}${o.intro ? " · Introductory price" : ""}</strong></div>${evidenceSummary(o)}${!o.videos && o.certificate === "Preparing" ? `<p class="micro muted spaced">Your certificate and videos will be available within 48 hours of completion.</p>` : ""}<div class="button-row">${o.videos ? button("Watch Videos", `videos/${o.id}`, "", "play") : button("View Seva Details", `occurrence/${o.id}`, "")}${o.certificate === "Ready" ? button("View Certificate", `certificate/${o.id}`, "secondary") : ""}</div>` : button("Track Seva Details", `occurrence/${o.id}`, "", "arrow")}</article>`;
+    return `<article class="card" data-occurrence="${esc(o.id)}"><div class="card-top">${o.parent ? badge(cadence, "brown") : badge("One time", "brown")}<div class="next-date"><span>${done ? "Performed" : "Next seva"}</span><strong>${esc(date(o.date))}</strong></div></div>${identity(o)}${beneficiary(o)}<p class="offering">${esc(o.offering)}</p>${done ? `${evidenceSummary(o)}${!o.videos && o.certificate === "Preparing" ? `<p class="micro muted spaced">Your certificate and videos will be available within 48 hours of completion.</p>` : ""}<div class="button-row">${o.videos ? button("Watch Videos", `videos/${o.id}`, "", "play") : button("View Seva Details", `occurrence/${o.id}`, "")}${o.certificate === "Ready" ? button("View Certificate", `certificate/${o.id}`, "secondary") : ""}</div>` : button("Track Seva Details", `occurrence/${o.id}`, "", "arrow")}</article>`;
   }
   function tabs(selected) {
     return `<nav class="tabs" role="tablist" aria-label="Booking categories">${[
@@ -152,7 +152,7 @@
     const mon = new Intl.DateTimeFormat("en", { month: "short" }).format(
       new Date(o.date + "T06:00:00+05:30"),
     );
-    return `<a class="history-item" href="#occurrence/${esc(o.id)}" aria-label="${esc(date(o.date))}, ${esc(o.status)}, for ${esc(o.beneficiary)}"><span class="history-date"><strong>${Number(iso[2])}</strong>${mon}</span><span class="history-content"><strong>${esc(date(o.date))}</strong><span>For ${esc(o.beneficiary)} · ${esc(o.gotra)} gotra</span><span>${o.status === "Performed" ? `Certificate ${o.certificate === "Ready" ? "ready" : "preparing"} · ${o.videos ? `${o.videos} videos` : "Videos preparing"}` : o.status === "Discontinued" ? "Payment unsuccessful" : esc(o.status)}</span></span>${badge(o.status, o.status === "Performed" ? "green" : o.status === "Discontinued" ? "red" : "")}${icon("arrow", "arrow")}</a>`;
+    return `<a class="history-item" href="#occurrence/${esc(o.id)}" aria-label="${esc(date(o.date))}, ${esc(o.status)}, for ${esc(o.beneficiary)}"><span class="history-date"><strong>${Number(iso[2])}</strong>${mon}</span><span class="history-content"><strong>${esc(date(o.date))}</strong><span>For ${esc(o.beneficiary)} · ${esc(o.gotra)} gotra</span>${o.status === "Performed" ? `<span>Certificate ${o.certificate === "Ready" ? "ready" : "preparing"} · ${o.videos ? `${o.videos} videos` : "Videos preparing"}</span>` : o.status === "Discontinued" ? "<span>Payment unsuccessful</span>" : ""}</span>${badge(o.status, o.status === "Performed" ? "green" : o.status === "Discontinued" ? "red" : "")}${icon("arrow", "arrow")}</a>`;
   }
   function support(ref) {
     return `<section class="detail-section"><h2>Help and support</h2><div class="support-row">${button("WhatsApp Support", `support/${ref}`, "green", "chat")}${button("Email Support", `support/${ref}`, "secondary", "mail")}</div><p class="support-caption">We’ll include reference ${esc(ref)} with your request.</p></section>`;
@@ -165,10 +165,6 @@
     items.sort((a, b) => a.date.localeCompare(b.date));
     return `<div class="section-title" style="margin-top:0"><span class="micro muted">Nirantar Daan Seva</span><a href="#plan/${esc(o.parent)}">View booking</a></div><nav class="date-rail" aria-label="Seva dates">${items.map((i) => `<a href="#occurrence/${esc(i.id)}" class="date-pill ${i.status === "Performed" ? "done" : i.status === "Discontinued" ? "failed" : ""}" ${i.date === o.date ? 'aria-current="date"' : ""} aria-label="${esc(date(i.date))}, ${esc(i.status)}${i.date === o.date ? ", selected" : ""}">${esc(shortDate(i.date))}<small>${icon(i.status === "Performed" ? "check" : i.status === "Discontinued" ? "close" : "calendar")}${i.status === "Performed" ? "Performed" : esc(i.status)}</small></a>`).join("")}</nav>`;
   }
-  const sampleTimes = ["10:15 AM", "11:40 AM", "2:05 PM", "4:30 PM", "6:50 PM", "8:20 PM"];
-  const sampleTime = (ref) =>
-    sampleTimes[Number(String(ref).replace(/\D/g, "")) % sampleTimes.length];
-  const SEVA_TIME = "9:00 AM";
   function certificateSvg(o, standalone = false) {
     const land = o.orient === "landscape";
     const [w, h] = land ? [1100, 800] : [900, 1100];
@@ -218,9 +214,9 @@
   };
   function timeline(o) {
     if (o.status === "Discontinued")
-      return `<ol class="timeline"><li class="failed"><span class="timeline-dot">${icon("close")}</span><div><strong>Seva discontinued</strong><p>Payment was unsuccessful for the seva on ${esc(date(o.date))} · ${SEVA_TIME}. This seva was not performed.</p></div></li></ol>`;
+      return `<ol class="timeline"><li class="failed"><span class="timeline-dot">${icon("close")}</span><div><strong>Seva discontinued</strong><p>Payment was unsuccessful for the seva on ${esc(date(o.date))}. This seva was not performed.</p></div></li></ol>`;
     const done = o.status === "Performed";
-    return `<ol class="timeline"><li class="done"><span class="timeline-dot">${icon("check")}</span><div><strong>Seva booked</strong><p>Payment received · ${esc(date(o.booked))} · ${sampleTime(o.ref)}</p></div></li><li class="${done ? "done" : o.status === "Scheduled" ? "current" : ""}"><span class="timeline-dot">${icon(done ? "check" : "calendar")}</span><div><strong>${o.status === "Registered" ? "Schedule confirmation pending" : "Seva scheduled"}</strong><p>${esc(date(o.date))} · ${SEVA_TIME}</p></div></li><li class="${done ? "done" : ""}"><span class="timeline-dot">${icon(done ? "check" : "temple")}</span><div><strong>${done ? "Seva performed" : "Seva to be performed"}</strong><p>${done ? esc(date(o.date)) + " · " + SEVA_TIME : "Planned for " + esc(date(o.date)) + " · " + SEVA_TIME + ". Updates will appear here after the seva."}</p></div></li></ol>`;
+    return `<ol class="timeline"><li class="${done ? "done" : o.status === "Scheduled" ? "current" : ""}"><span class="timeline-dot">${icon(done ? "check" : "calendar")}</span><div><strong>${o.status === "Registered" ? "Schedule confirmation pending" : "Seva scheduled"}</strong><p>${esc(date(o.date))}</p></div></li><li class="${done ? "done" : ""}"><span class="timeline-dot">${icon(done ? "check" : "temple")}</span><div><strong>${done ? "Seva performed" : "Seva to be performed"}</strong><p>${done ? esc(date(o.date)) : "Planned for " + esc(date(o.date)) + ". Updates will appear here after the seva."}</p></div></li></ol>`;
   }
   function instructions(o) {
     if (o.name.includes("Gajalakshmi"))
