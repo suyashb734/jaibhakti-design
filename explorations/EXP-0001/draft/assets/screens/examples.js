@@ -16,7 +16,7 @@
             id: "N1",
             beneficiary: "Venkata Subramanian Chandrasekhar Sharma",
             gotra: "Bharadwaj",
-            name: "Mangalvar Sankat Mochan Laddoo Churma Daan Seva for Family Wellbeing",
+            name: "Rahu Gochar Vishesh: Rahu Dosh Shanti & Sarva Badha Mukti Weekly Daan Seva for Family Wellbeing",
           },
           {
             ...plans.N1,

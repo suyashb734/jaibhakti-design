@@ -102,11 +102,12 @@
   function beneficiary(p) {
     return `<div class="beneficiary"><strong>For ${esc(p.beneficiary)}</strong><span class="gotra">${esc(p.gotra)} gotra</span></div>`;
   }
+  const daanItems = (p) => (p.items ? `<p class="offering">${esc(p.items)}</p>` : "");
   function progress(p) {
     // Never reaches 100%: 30% after the 1st seva, 40% after the 2nd, 50% after the 3rd, then slower and slower.
     const n = p.completed || 0;
     const pct = n <= 0 ? 0 : n === 1 ? 30 : n === 2 ? 40 : n === 3 ? 50 : 95 - 45 * Math.pow(0.8, n - 3);
-    return `<div class="progress-wrap"><div class="progress-heading"><strong>Recommended Daan Seva</strong></div><div class="progress-track" role="progressbar" aria-label="Daan Seva progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${Math.round(pct)}"><div class="progress-fill" style="width:${pct.toFixed(1)}%"></div></div></div>`;
+    return `<div class="progress-wrap"><div class="progress-heading"><strong>Recommended Daan Seva</strong></div><div class="progress-track" role="progressbar" aria-label="Daan Seva progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${Math.round(pct)}"><div class="progress-fill" style="width:${pct.toFixed(1)}%"></div></div><p class="progress-copy">${Math.round(pct)}%</p></div>`;
   }
   function paymentBadge(p) {
     return badge(
@@ -126,7 +127,7 @@
   function planCard(p) {
     const active = p.status === "Active";
     const nextLabel = p.next ? date(p.next) : "None registered";
-    return `<article class="card ${p.status === "Payment retrying" ? "soft" : ""}" data-plan="${esc(p.id)}"><div class="card-top">${badge(p.cadence, "brown")}${p.next ? `<div class="next-date"><span>Next seva</span><strong>${esc(nextLabel)}</strong></div>` : ""}</div>${identity(p)}${beneficiary(p)}<p class="schedule">${icon("repeat")}${esc(p.schedule)}</p>${progress(p)}${p.status === "Payment retrying" ? notice("Payment retrying", `The 10 November seva was discontinued. We will retry until ${esc(formatted(p.retryEnd))} for the next eligible seva.`, "red", "alert") : ""}${button(active ? "View Details" : p.status === "Payment retrying" ? "View Payment Details" : p.status === "Inactive" ? "Restart Nirantar Seva" : "Book This Seva Again", active || p.status === "Payment retrying" ? `plan/${p.id}` : "details", "", active ? "arrow" : "")}</article>`;
+    return `<article class="card ${p.status === "Payment retrying" ? "soft" : ""}" data-plan="${esc(p.id)}"><div class="card-top">${badge(p.cadence, "brown")}${p.next ? `<div class="next-date"><span>Next seva</span><strong>${esc(nextLabel)}</strong></div>` : ""}</div>${identity(p)}${beneficiary(p)}${daanItems(p)}<p class="schedule">${icon("repeat")}${esc(p.schedule)}</p>${progress(p)}${p.status === "Payment retrying" ? notice("Payment retrying", `The 9 November seva was discontinued. We will retry until ${esc(formatted(p.retryEnd))} for the next eligible seva.`, "red", "alert") : ""}${button(active || p.status === "Cancelled" ? "View Details" : p.status === "Payment retrying" ? "View Payment Details" : "Restart Nirantar Seva", active || p.status === "Payment retrying" || p.status === "Cancelled" ? `plan/${p.id}` : "details", "", active || p.status === "Cancelled" ? "arrow" : "")}</article>`;
   }
   function evidenceSummary(o) {
     return `<div class="asset-status"><div>Certificate<strong class="${o.certificate === "Ready" ? "ready" : ""}">${icon(o.certificate === "Ready" ? "check" : "clock")}${esc(o.certificate)}</strong></div><div>Seva videos<strong class="${o.videos ? "ready" : ""}">${icon(o.videos ? "check" : "clock")}${o.videos ? `${o.videos} ${o.videos === 1 ? "video" : "videos"} ready` : "Preparing"}</strong></div></div>`;
@@ -155,7 +156,7 @@
     return `<a class="history-item" href="#occurrence/${esc(o.id)}" aria-label="${esc(date(o.date))}, ${esc(o.status)}, for ${esc(o.beneficiary)}"><span class="history-date"><strong>${Number(iso[2])}</strong>${mon}</span><span class="history-content"><strong>${esc(date(o.date))}</strong><span>For ${esc(o.beneficiary)} · ${esc(o.gotra)} gotra</span>${o.status === "Performed" ? `<span>Certificate ${o.certificate === "Ready" ? "ready" : "preparing"} · ${o.videos ? `${o.videos} videos` : "Videos preparing"}</span>` : o.status === "Discontinued" ? "<span>Payment unsuccessful</span>" : ""}</span>${badge(o.status, o.status === "Performed" ? "green" : o.status === "Discontinued" ? "red" : "")}${icon("arrow", "arrow")}</a>`;
   }
   function support(ref) {
-    return `<section class="detail-section"><h2>Help and support</h2><div class="support-row">${button("WhatsApp Support", `support/${ref}`, "green", "chat")}${button("Email Support", `support/${ref}`, "secondary", "mail")}</div><p class="support-caption">We’ll include reference ${esc(ref)} with your request.</p></section>`;
+    return `<section class="detail-section"><h2>Help and support</h2><div class="support-row">${button("WhatsApp Support", `support/${ref}`, "green", "chat")}${button("Customer Support", `support/${ref}`, "secondary", "phone")}</div><p class="support-caption">We’ll include reference ${esc(ref)} with your request.</p></section>`;
   }
   function dateRail(o) {
     if (!o.parent) return "";
@@ -168,11 +169,20 @@
   function certificateSvg(o, standalone = false) {
     const land = o.orient === "landscape";
     const [w, h] = land ? [1100, 800] : [900, 1100];
+    const wrap = (t, max) => {
+      const lines = [];
+      let cur = "";
+      String(t).split(" ").forEach((w) => {
+        if ((cur + " " + w).trim().length > max) { lines.push(cur); cur = w; } else cur = (cur + " " + w).trim();
+      });
+      lines.push(cur);
+      return lines;
+    };
     const rows = land
-      ? [["Jai Bhakti", 120, 28], ["Certificate of Daan Seva", 205, 46], ["This seva was performed for", 270, 22], [o.beneficiary, 345, 40], [`${o.gotra} gotra`, 390, 22], [o.name, 470, 20], [o.temple, 510, 18], [formatted(o.date), 580, 24], [`Seva reference ${o.ref}`, 650, 16], ["SAMPLE CERTIFICATE", 725, 20, "#a78a67"]]
-      : [["Jai Bhakti", 160, 30], ["Certificate of Daan Seva", 260, 52], ["This seva was performed for", 345, 24], [o.beneficiary, 430, 44], [`${o.gotra} gotra`, 480, 25], [o.name, 600, 22], [o.temple, 655, 20], [formatted(o.date), 740, 28], [`Seva reference ${o.ref}`, 850, 18], ["SAMPLE CERTIFICATE", 970, 24, "#a78a67"]];
+      ? [["Jai Bhakti", 120, 28], ["Certificate of Daan Seva", 205, 46], ["This seva was performed for", 270, 22], [o.beneficiary, 345, 40], [`${o.gotra} gotra`, 390, 22], [o.name, 470, 20], [o.temple, 535, 18], [formatted(o.date), 580, 24], [`Seva reference ${o.ref}`, 650, 16], ["SAMPLE CERTIFICATE", 725, 20, "#a78a67"]]
+      : [["Jai Bhakti", 160, 30], ["Certificate of Daan Seva", 260, 52], ["This seva was performed for", 345, 24], [o.beneficiary, 430, 44], [`${o.gotra} gotra`, 480, 25], [o.name, 600, 22], [o.temple, 675, 20], [formatted(o.date), 740, 28], [`Seva reference ${o.ref}`, 850, 18], ["SAMPLE CERTIFICATE", 970, 24, "#a78a67"]];
     const text = rows
-      .map(([t, y, s, f]) => `<text x="${w / 2}" y="${y}" font-size="${s}"${f ? ` fill="${f}"` : ""}>${esc(t)}</text>`)
+      .map(([t, y, s, f], i) => (i === 5 ? wrap(t, land ? 60 : 48) : [t]).map((line, k) => `<text x="${w / 2}" y="${y + k * (s + 8)}" font-size="${s}"${f ? ` fill="${f}"` : ""}>${esc(line)}</text>`).join(""))
       .join("");
     const attrs = standalone
       ? `xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}"`
@@ -219,9 +229,7 @@
     return `<ol class="timeline"><li class="${done ? "done" : o.status === "Scheduled" ? "current" : ""}"><span class="timeline-dot">${icon(done ? "check" : "calendar")}</span><div><strong>${o.status === "Registered" ? "Schedule confirmation pending" : "Seva scheduled"}</strong><p>${esc(date(o.date))}</p></div></li><li class="${done ? "done" : ""}"><span class="timeline-dot">${icon(done ? "check" : "temple")}</span><div><strong>${done ? "Seva performed" : "Seva to be performed"}</strong><p>${done ? esc(date(o.date)) : "Planned for " + esc(date(o.date)) + ". Updates will appear here after the seva."}</p></div></li></ol>`;
   }
   function instructions(o) {
-    if (o.name.includes("Gajalakshmi"))
-      return `<details class="details-block"><summary>${icon("info")}Seva instructions${icon("down", "chevron")}</summary><div class="details-content">Instructions will appear here once confirmed by the temple.</div></details>`;
-    return `<details class="details-block"><summary>${icon("info")}Seva instructions${icon("down", "chevron")}</summary><div class="details-content">Light a diya at home on the day of seva.<br>Chant “Om Hanumate Namah” 108 times.<br>Choose sattvic food and avoid alcohol.</div></details>`;
+    return `<details class="details-block"><summary>${icon("info")}Seva instructions${icon("down", "chevron")}</summary><div class="details-content">Instructions will appear here once confirmed by the temple.</div></details>`;
   }
   function assetSections(o) {
     const performed = o.status === "Performed";
@@ -254,6 +262,7 @@
     page,
     identity,
     beneficiary,
+    daanItems,
     progress,
     paymentBadge,
     planCard,

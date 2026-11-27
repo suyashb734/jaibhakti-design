@@ -1944,3 +1944,12 @@ h1[tabindex="-1"]:focus {
   color: var(--muted);
   margin: 0 0 12px;
 }
+
+/* Inactive Sevas zone + attention banner */
+.attention-link{text-decoration:none;align-items:center;cursor:pointer}
+.attention-link>div{flex:1}
+.attention-link strong{display:block;font-size:12px}
+.attention-link p{margin:2px 0 0;font-size:11px}
+.attention-link svg:last-child{flex:none}
+.inactive-zone{background:#fff0e8;border:1px solid #f0c9b7;border-radius:14px;padding:12px;margin-top:16px;scroll-margin-top:12px}
+.inactive-zone .section-title{margin-top:0}

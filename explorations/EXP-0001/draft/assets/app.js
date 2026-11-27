@@ -184,6 +184,12 @@
       });
   }
   app.addEventListener("click", async (event) => {
+    const jump = event.target.closest("[data-scroll]");
+    if (jump) {
+      event.preventDefault();
+      document.getElementById(jump.dataset.scroll)?.scrollIntoView({ behavior: "smooth", block: "start" });
+      return;
+    }
     const tab = event.target.closest("[data-tab]");
     if (tab) {
       location.hash = "bookings/" + tab.dataset.tab;
