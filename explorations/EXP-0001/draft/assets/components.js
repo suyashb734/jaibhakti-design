@@ -96,14 +96,17 @@
   ) {
     return `<div class="screen"><header><a href="#${back}" class="circle-button" aria-label="Back">${icon("back")}</a><h1 tabindex="-1">${esc(title)}</h1>${end ? `<div class="header-end">${end}</div>` : ""}</header><div class="body fill">${content}</div>${footer}</div>`;
   }
-  function identity(p, { large = false } = {}) {
-    return `<div class="identity">${temple()}<div class="identity-content"><h${large ? "2" : "3"}>${esc(p.name)}</h${large ? "2" : "3"}><p class="temple-name">${esc(p.temple)}</p></div></div>`;
+  function identity(p, { large = false, schedule = "" } = {}) {
+    return `<div class="identity">${temple()}<div class="identity-content"><h${large ? "2" : "3"}>${esc(p.name)}</h${large ? "2" : "3"}><p class="temple-name">${esc(p.temple)}</p>${schedule ? `<p class="temple-name">${esc(schedule)}</p>` : ""}</div></div>`;
   }
   function beneficiary(p) {
     return `<div class="beneficiary"><strong>For ${esc(p.beneficiary)}</strong><span class="gotra">${esc(p.gotra)} gotra</span></div>`;
   }
   function progress(p) {
-    return `<div class="progress-wrap"><div class="progress-heading"><strong>Recommended Daan Seva</strong><span>${p.completed} of ${p.target}</span></div><div class="progress-track" role="progressbar" aria-label="Recommended milestone" aria-valuemin="0" aria-valuemax="${p.target}" aria-valuenow="${p.completed}" aria-valuetext="${p.completed} of ${p.target} recommended ${esc(p.unit)} completed"><div class="progress-fill" style="width:${Math.min(100, (p.completed / p.target) * 100)}%"></div></div><p class="progress-copy">${p.completed} of ${p.target} recommended ${esc(p.unit)} completed</p></div>`;
+    // Never reaches 100%: 30% after the 1st seva, 40% after the 2nd, 50% after the 3rd, then slower and slower.
+    const n = p.completed || 0;
+    const pct = n <= 0 ? 0 : n === 1 ? 30 : n === 2 ? 40 : n === 3 ? 50 : 95 - 45 * Math.pow(0.8, n - 3);
+    return `<div class="progress-wrap"><div class="progress-heading"><strong>Recommended Daan Seva</strong></div><div class="progress-track" role="progressbar" aria-label="Daan Seva progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${Math.round(pct)}"><div class="progress-fill" style="width:${pct.toFixed(1)}%"></div></div></div>`;
   }
   function paymentBadge(p) {
     return badge(
